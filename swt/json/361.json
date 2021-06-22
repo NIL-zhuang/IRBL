@@ -1,0 +1,35 @@
+{
+	"variables":[
+		"lStructSize",
+		"hwndOwner",
+		"hInstance",
+		"lpstrFilter",
+		"lpstrCustomFilter",
+		"nMaxCustFilter",
+		"nFilterIndex",
+		"lpstrFile",
+		"nMaxFile",
+		"lpstrFileTitle",
+		"nMaxFileTitle",
+		"lpstrInitialDir",
+		"lpstrTitle",
+		"Flags",
+		"nFileOffset",
+		"nFileExtension",
+		"lpstrDefExt",
+		"lCustData",
+		"lpfnHook",
+		"lpTemplateName",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"OPENFILENAME"
+	]
+}

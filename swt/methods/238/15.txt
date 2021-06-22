@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+int
+lresult
+from
+object
+lresultfromobject
+guid
+riid
+int
+param
+wparam
+int
+acc
+pacc

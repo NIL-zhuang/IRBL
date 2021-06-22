@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+int
+get
+window
+getwindow
+int
+wnd
+hwnd
+int
+cmd
+ucmd

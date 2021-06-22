@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+boolean
+destroy
+menu
+destroymenu
+int
+menu
+hmenu

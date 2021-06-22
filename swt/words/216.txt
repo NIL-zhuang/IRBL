@@ -1,0 +1,9 @@
+left
+right
+children
+code
+prefix
+suffix
+lzw
+node
+lzwnode

@@ -1,0 +1,40 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"pStm",
+		"COM",
+		"address",
+		"address",
+		"pStm"
+	],
+	"extendORImplementFiles":[
+		"IPersist"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"Load",
+		"InitNew",
+		"VtblCall",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int InitNew()":{
+			"methodBody":"{\n    return COM.VtblCall(8, address);\n}",
+			"comments":"",
+			"methodName":"public int InitNew()"
+		},
+		"public int Load(int pStm)":{
+			"methodBody":"{\n    return COM.VtblCall(5, address, pStm);\n}",
+			"comments":"",
+			"methodName":"public int Load(int pStm)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IPersistStreamInit"
+	]
+}

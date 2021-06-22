@@ -1,0 +1,10 @@
+public
+static
+final
+nativ
+void
+gdiplus
+shutdown
+gdiplusshutdown
+int
+token

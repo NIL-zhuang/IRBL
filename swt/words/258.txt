@@ -1,0 +1,14 @@
+address
+com
+address
+phfont
+address
+phfont
+get
+font
+hfont
+vtbl
+call
+vtblcall
+font
+ifont

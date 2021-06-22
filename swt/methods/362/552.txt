@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+int
+creat
+acceler
+tabl
+createacceleratortablea
+byte
+lpaccl
+int
+entri
+centri

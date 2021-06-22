@@ -1,0 +1,14 @@
+int
+get
+height
+getheight
+return
+get
+height
+data
+offset
+get
+the
+imag
+height
+pixel

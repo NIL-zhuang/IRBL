@@ -1,0 +1,16 @@
+caption
+font
+lfcaptionfont
+caption
+font
+lfsmcaptionfont
+menu
+font
+lfmenufont
+status
+font
+lfstatusfont
+messag
+font
+lfmessagefont
+sizeof

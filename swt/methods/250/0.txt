@@ -1,0 +1,14 @@
+public
+int
+unadvis
+int
+cooki
+dwcooki
+return
+com
+vtbl
+call
+vtblcall
+address
+cooki
+dwcooki

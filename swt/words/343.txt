@@ -1,0 +1,13 @@
+start
+istart
+flag
+psz
+param
+lparam
+direct
+vkdirect
+sizeof
+nmlvfinditem
+lvfindinfo
+lvfi
+point

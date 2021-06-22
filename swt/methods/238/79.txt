@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+int
+revok
+drag
+drop
+revokedragdrop
+int
+hwnd

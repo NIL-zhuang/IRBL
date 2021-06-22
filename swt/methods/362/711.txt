@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+boolean
+get
+client
+rect
+getclientrect
+int
+wnd
+hwnd
+rect
+rect
+lprect

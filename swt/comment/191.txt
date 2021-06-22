@@ -1,0 +1,1 @@
+This interface is the cross platform version of the java io Serializable interface p It is part of our effort to provide support for both 2SE and 2ME platforms Under this scheme classes need to implement SerializableCompatibility instead of java io Serializable p p Note java io Serializable is not part of CLDC p

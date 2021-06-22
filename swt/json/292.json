@@ -1,0 +1,23 @@
+{
+	"variables":[
+		"hwndOwner",
+		"pidlRoot",
+		"pszDisplayName",
+		"lpszTitle",
+		"ulFlags",
+		"lpfn",
+		"lParam",
+		"iImage",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"BROWSEINFO"
+	]
+}

@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+boolean
+screen
+client
+screentocli
+int
+wnd
+hwnd
+point
+point
+lppoint

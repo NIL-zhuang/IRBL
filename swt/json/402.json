@@ -1,0 +1,96 @@
+{
+	"variables":[
+		"defaultWidth",
+		"defaultHeight",
+		"currentWhint",
+		"currentHhint",
+		"currentWidth",
+		"currentHeight",
+		"size",
+		"size",
+		"flushCache",
+		"wHint",
+		"SWT",
+		"hHint",
+		"SWT",
+		"defaultWidth",
+		"defaultHeight",
+		"control",
+		"wHint",
+		"hHint",
+		"flushCache",
+		"defaultWidth",
+		"size",
+		"defaultHeight",
+		"size",
+		"defaultWidth",
+		"defaultHeight",
+		"currentWidth",
+		"currentHeight",
+		"wHint",
+		"currentWhint",
+		"hHint",
+		"currentHhint",
+		"control",
+		"wHint",
+		"hHint",
+		"flushCache",
+		"currentWhint",
+		"wHint",
+		"currentHhint",
+		"hHint",
+		"currentWidth",
+		"size",
+		"currentHeight",
+		"size",
+		"currentWidth",
+		"currentHeight",
+		"defaultWidth",
+		"defaultHeight",
+		"currentWidth",
+		"currentHeight",
+		"DEFAULT",
+		"DEFAULT",
+		"x",
+		"y",
+		"x",
+		"y",
+		"control",
+		"wHint",
+		"hHint",
+		"flushCache"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.layout"
+	],
+	"import":[
+		"org.eclipse.swt",
+		"org.eclipse.swt.graphics",
+		"org.eclipse.swt.widgets"
+	],
+	"methods":[
+		"computeSize",
+		"flushCache",
+		"flushCache",
+		"computeSize",
+		"computeSize",
+		"Point",
+		"Point"
+	],
+	"methodsBody":{
+		"Point computeSize(Control control, int wHint, int hHint, boolean flushCache)":{
+			"methodBody":"{\n    if (flushCache)\n        flushCache();\n    if (wHint == SWT.DEFAULT && hHint == SWT.DEFAULT) {\n        if (defaultWidth == -1 || defaultHeight == -1) {\n            Point size = control.computeSize(wHint, hHint, flushCache);\n            defaultWidth = size.x;\n            defaultHeight = size.y;\n        }\n        return new Point(defaultWidth, defaultHeight);\n    }\n    if (currentWidth == -1 || currentHeight == -1 || wHint != currentWhint || hHint != currentHhint) {\n        Point size = control.computeSize(wHint, hHint, flushCache);\n        currentWhint = wHint;\n        currentHhint = hHint;\n        currentWidth = size.x;\n        currentHeight = size.y;\n    }\n    return new Point(currentWidth, currentHeight);\n}",
+			"comments":"",
+			"methodName":"Point computeSize(Control control, int wHint, int hHint, boolean flushCache)"
+		},
+		"void flushCache()":{
+			"methodBody":"{\n    defaultWidth = defaultHeight = -1;\n    currentWidth = currentHeight = -1;\n}",
+			"comments":"",
+			"methodName":"void flushCache()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"FillData"
+	]
+}

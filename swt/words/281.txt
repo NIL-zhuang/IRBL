@@ -1,0 +1,5 @@
+cmd
+cmdid
+cmdf
+sizeof
+olecmd

@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+boolean
+restor
+restoredc
+int
+hdc
+int
+save
+nsaveddc

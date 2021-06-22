@@ -1,0 +1,9 @@
+boolean
+check
+text
+checktext
+object
+object
+return
+object
+null

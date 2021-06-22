@@ -1,0 +1,8 @@
+event
+item
+close
+itemclos
+tab
+folder
+adapt
+ctabfolderadapt

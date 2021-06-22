@@ -1,0 +1,15 @@
+string
+get
+name
+text
+getnametext
+style
+swt
+separ
+return
+return
+super
+get
+name
+text
+getnametext

@@ -1,0 +1,27 @@
+{
+	"variables":[
+		"event"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.browser"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"open"
+	],
+	"methodsBody":{
+		"public void open(WindowEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* This method is called when a new window needs to be created.\n* <p>\n* A particular <code>Browser</code> can be passed to the event.browser\n* field to host the content of a new window.\n* <p>\n* A standalone system browser is used to host the new window\n* if the event.required field value is false and if the event.browser\n* field is left <code>null</code>. The event.required field\n* is true on platforms that don't support a standalone system browser for\n* new window requests.\n* <p>\n* The navigation is cancelled if the event.required field is set to\n* true and the event.browser field is left <code>null</code>.\n* <p>\n* <p>The following fields in the <code>WindowEvent</code> apply:\n* <ul>\n* <li>(in/out) required true if the platform requires the user to provide a\n* <code>Browser</code> to handle the new window or false otherwise.\n* <li>(out) browser the new <code>Browser</code> that will host the\n* content of the new window.\n* <li>(in) widget the <code>Browser</code> that is requesting to open a\n* new window\n* </ul>\n*\n* @param event the <code>WindowEvent</code> that needs to be passed a new\n* <code>Browser</code> to handle the new window request\n*\n* @since 3.0\n*/\n",
+			"methodName":"public void open(WindowEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"OpenWindowListener"
+	]
+}

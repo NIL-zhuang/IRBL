@@ -1,0 +1,10 @@
+public
+int
+get
+max
+factor
+getmaxvfactor
+return
+max
+factor
+maxvfactor

@@ -1,0 +1,12 @@
+lic
+info
+cblicinfo
+runtim
+key
+avail
+fruntimekeyavail
+lic
+verifi
+flicverifi
+sizeof
+licinfo

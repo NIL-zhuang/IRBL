@@ -1,0 +1,10 @@
+public
+static
+final
+nativ
+int
+get
+color
+getbkcolor
+int
+hdc

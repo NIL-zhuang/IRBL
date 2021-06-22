@@ -1,0 +1,15 @@
+void
+redraw
+visibl
+isvis
+return
+style
+swt
+bar
+display
+add
+bar
+addbar
+this
+els
+updat

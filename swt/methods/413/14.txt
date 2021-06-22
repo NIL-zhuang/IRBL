@@ -1,0 +1,16 @@
+public
+rectangl
+get
+indent
+getind
+return
+new
+rectangl
+indent
+left
+indent
+right
+indent
+top
+indent
+bottom

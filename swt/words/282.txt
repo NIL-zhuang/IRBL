@@ -1,0 +1,7 @@
+cmdtextf
+actual
+cwactual
+buf
+cwbuf
+rgwz
+olecmdtext

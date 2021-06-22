@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+boolean
+get
+version
+getversionexa
+osversioninfoa
+version
+info
+lpversioninfo

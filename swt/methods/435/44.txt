@@ -1,0 +1,8 @@
+void
+regist
+display
+add
+control
+addcontrol
+handl
+this

@@ -1,0 +1,11 @@
+bidi
+style
+text
+styledtext
+doe
+not
+convert
+european
+number
+arab
+number

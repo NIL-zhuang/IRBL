@@ -1,0 +1,8 @@
+tchar
+window
+class
+windowclass
+return
+bar
+class
+rebarclass

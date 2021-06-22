@@ -1,0 +1,10 @@
+int
+hwnd
+scroll
+bar
+hwndscrollbar
+return
+parent
+scroll
+handl
+scrolledhandl

@@ -1,0 +1,7 @@
+draw
+imag
+drawimag
+doesn
+honor
+clip
+rect

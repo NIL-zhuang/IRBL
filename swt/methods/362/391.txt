@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+boolean
+hung
+app
+window
+ishungappwindow
+int
+wnd
+hwnd

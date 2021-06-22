@@ -1,0 +1,8 @@
+boolean
+mnemon
+match
+mnemonicmatch
+char
+key
+return
+fals

@@ -1,0 +1,14 @@
+public
+int
+int
+arg
+return
+get
+window
+context
+getwindowcontext
+arg
+arg
+arg
+arg
+arg

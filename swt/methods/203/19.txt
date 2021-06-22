@@ -1,0 +1,14 @@
+int
+receiv
+int
+bit
+nbit
+int
+for
+int
+bit
+nbit
+next
+bit
+nextbit
+return

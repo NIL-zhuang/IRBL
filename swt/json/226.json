@@ -1,0 +1,54 @@
+{
+	"variables":[
+		"reference",
+		"readState",
+		"headerChunk",
+		"readState",
+		"readState",
+		"readState",
+		"SWT",
+		"SWT",
+		"readState",
+		"readState",
+		"headerChunk",
+		"SWT",
+		"SWT",
+		"readIHDR",
+		"readPLTE",
+		"readIDAT",
+		"readIEND",
+		"ERROR_INVALID_IMAGE",
+		"readIEND",
+		"ERROR_INVALID_IMAGE",
+		"reference",
+		"readState",
+		"headerChunk"
+	],
+	"extendORImplementFiles":[
+		"PngChunk"
+	],
+	"package":[
+		"org.eclipse.swt.internal.image"
+	],
+	"import":[
+		"org.eclipse.swt"
+	],
+	"methods":[
+		"validate",
+		"getMustHavePalette",
+		"error",
+		"validate",
+		"getLength",
+		"error"
+	],
+	"methodsBody":{
+		"void validate(PngFileReadState readState, PngIhdrChunk headerChunk)":{
+			"methodBody":"{\n    \n    if (!readState.readIHDR || (headerChunk.getMustHavePalette() && !readState.readPLTE) || !readState.readIDAT || readState.readIEND) {\n        SWT.error(SWT.ERROR_INVALID_IMAGE);\n    } else {\n        readState.readIEND = true;\n    }\n    super.validate(readState, headerChunk);\n    \n    if (getLength() > 0)\n        SWT.error(SWT.ERROR_INVALID_IMAGE);\n}",
+			"comments":"/**\n* Answer whether the chunk is a valid IEND chunk.\n*/\n// An IEND chunk is invalid if no IHDR has been read.\n// Or if a palette is required and has not been read.\n// Or if no IDAT chunk has been read.\n// IEND chunks are not allowed to have any data.\n",
+			"methodName":"void validate(PngFileReadState readState, PngIhdrChunk headerChunk)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"PngIendChunk"
+	]
+}

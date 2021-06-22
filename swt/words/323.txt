@@ -1,0 +1,9 @@
+valu
+one
+zero
+valu
+valu
+valu
+lresult
+lresult
+lresult

@@ -1,0 +1,21 @@
+{
+	"variables":[
+		"id",
+		"name",
+		"type",
+		"flags",
+		"kind",
+		"description",
+		"helpFile"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.ole.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"OlePropertyDescription"
+	]
+}

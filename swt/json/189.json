@@ -1,0 +1,17 @@
+{
+	"variables":[],
+	"extendORImplementFiles":[
+		"EventListener"
+	],
+	"package":[
+		"org.eclipse.swt.internal"
+	],
+	"import":[
+		"java.util.EventListener"
+	],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"SWTEventListener"
+	]
+}

@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+boolean
+set
+prop
+setpropw
+int
+wnd
+hwnd
+int
+string
+lpstring
+int
+data
+hdata

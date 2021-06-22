@@ -1,0 +1,32 @@
+{
+	"variables":[
+		"event",
+		"event"
+	],
+	"extendORImplementFiles":[
+		"VisibilityWindowListener"
+	],
+	"package":[
+		"org.eclipse.swt.browser"
+	],
+	"import":[],
+	"methods":[
+		"hide",
+		"show"
+	],
+	"methodsBody":{
+		"public void show(WindowEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"",
+			"methodName":"public void show(WindowEvent event)"
+		},
+		"public void hide(WindowEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"",
+			"methodName":"public void hide(WindowEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"VisibilityWindowAdapter"
+	]
+}

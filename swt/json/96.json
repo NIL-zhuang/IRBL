@@ -1,0 +1,41 @@
+{
+	"variables":[
+		"event",
+		"event",
+		"event"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.dnd"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"dragStart",
+		"dragSetData",
+		"dragFinished"
+	],
+	"methodsBody":{
+		"public void dragStart(DragSourceEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* The user has begun the actions required to drag the widget. This event gives the application\n* the chance to decide if a drag should be started.\n*\n* <p>The following fields in the DragSourceEvent apply:\n* <ul>\n* <li>(in)widget\n* <li>(in)time\n* <li>(in,out)doit\n* </ul></p>\n*\n* @param event the information associated with the drag start event\n*\n* @see DragSourceEvent\n*/\n",
+			"methodName":"public void dragStart(DragSourceEvent event)"
+		},
+		"public void dragFinished(DragSourceEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* The drop has successfully completed(mouse up over a valid target) or has been terminated (such as hitting\n* the ESC key). Perform cleanup such as removing data from the source side on a successful move operation.\n*\n* <p>The following fields in the DragSourceEvent apply:\n* <ul>\n* <li>(in)widget\n* <li>(in)time\n* <li>(in)doit\n* <li>(in)detail\n* </ul></p>\n*\n* @param event the information associated with the drag finished event\n*\n* @see DragSourceEvent\n*/\n",
+			"methodName":"public void dragFinished(DragSourceEvent event)"
+		},
+		"public void dragSetData(DragSourceEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* The data is required from the drag source.\n*\n* <p>The following fields in the DragSourceEvent apply:\n* <ul>\n* <li>(in)widget\n* <li>(in)time\n* <li>(in)dataType - the type of data requested.\n* <li>(out)data    - the application inserts the actual data here (must match the dataType)\n* </ul></p>\n*\n* @param event the information associated with the drag set data event\n*\n* @see DragSourceEvent\n*/\n",
+			"methodName":"public void dragSetData(DragSourceEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"DragSourceListener"
+	]
+}

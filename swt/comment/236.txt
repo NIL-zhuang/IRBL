@@ -1,0 +1,9 @@
+Answer the size in bytes of the file representation of the given icon
+Load one icon from the byte stream
+the number of colors is in the low byte but the high byte must be 0
+this is specified 00 represents 256 0x100 colors
+Seek to the specified offset
+Unload a single icon
+Unload the icon header for the given icon calculating the offset
+Unload the mask data for an icon The data is flipped vertically and inverted
+Unload the shape data for an icon The data is flipped vertically

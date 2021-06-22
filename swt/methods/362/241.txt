@@ -1,0 +1,10 @@
+public
+static
+final
+nativ
+boolean
+fill
+path
+fillpath
+int
+hdc

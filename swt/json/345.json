@@ -1,0 +1,27 @@
+{
+	"variables":[
+		"uBand",
+		"wID",
+		"rcChild_left",
+		"rcChild_top",
+		"rcChild_right",
+		"rcChild_bottom",
+		"rcBand_left",
+		"rcBand_top",
+		"rcBand_right",
+		"rcBand_bottom",
+		"sizeof"
+	],
+	"extendORImplementFiles":[
+		"NMHDR"
+	],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"NMREBARCHILDSIZE"
+	]
+}

@@ -1,0 +1,32 @@
+{
+	"variables":[
+		"e",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"FocusListener"
+	],
+	"package":[
+		"org.eclipse.swt.events"
+	],
+	"import":[],
+	"methods":[
+		"focusGained",
+		"focusLost"
+	],
+	"methodsBody":{
+		"public void focusGained(FocusEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when a control gets focus.\n* The default behavior is to do nothing.\n*\n* @param e an event containing information about the focus change\n*/\n",
+			"methodName":"public void focusGained(FocusEvent e)"
+		},
+		"public void focusLost(FocusEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when a control loses focus.\n* The default behavior is to do nothing.\n*\n* @param e an event containing information about the focus change\n*/\n",
+			"methodName":"public void focusLost(FocusEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"FocusAdapter"
+	]
+}

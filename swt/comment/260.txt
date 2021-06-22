@@ -1,0 +1,10 @@
+Pointer to command group
+Identifier of command to execute
+Options for executing the command
+Pointer to input arguments
+Pointer to command output
+we only support querying for one command at a time
+Pointer to command group
+Number of commands in prgCmds array
+Array of commands
+Pointer to name or status of command

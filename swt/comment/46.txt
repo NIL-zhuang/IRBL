@@ -1,0 +1,5 @@
+This class provides the layout for CTabFolder see CTabFolder
+preferred width of tab area to show all tabs
+chevron
+preferred size of controls in tab items
+resize content

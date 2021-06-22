@@ -1,0 +1,7 @@
+accel
+haccel
+accel
+caccel
+flag
+dwflag
+sizeof

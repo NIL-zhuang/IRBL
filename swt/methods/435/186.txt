@@ -1,0 +1,11 @@
+void
+enabl
+widget
+enablewidget
+boolean
+enabl
+enabl
+window
+enablewindow
+handl
+enabl

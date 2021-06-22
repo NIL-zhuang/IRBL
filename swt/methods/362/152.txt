@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+boolean
+imm
+disabl
+text
+frame
+servic
+immdisabletextframeservic
+int
+thread
+idthread

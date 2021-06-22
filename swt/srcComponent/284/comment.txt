@@ -1,0 +1,8 @@
+filetim
+mtime
+filetim
+ctime
+filetim
+atim
+guid
+clsid

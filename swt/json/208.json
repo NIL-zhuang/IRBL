@@ -1,0 +1,42 @@
+{
+	"variables":[
+		"byteStream",
+		"JPEGFileFormat",
+		"reference",
+		"reference",
+		"DRI",
+		"byteStream"
+	],
+	"extendORImplementFiles":[
+		"JPEGFixedSizeSegment"
+	],
+	"package":[
+		"org.eclipse.swt.internal.image"
+	],
+	"import":[],
+	"methods":[
+		"signature",
+		"getRestartInterval",
+		"fixedSize"
+	],
+	"methodsBody":{
+		"public int fixedSize()":{
+			"methodBody":"{\n    return 6;\n}",
+			"comments":"",
+			"methodName":"public int fixedSize()"
+		},
+		"public int signature()":{
+			"methodBody":"{\n    return JPEGFileFormat.DRI;\n}",
+			"comments":"",
+			"methodName":"public int signature()"
+		},
+		"public int getRestartInterval()":{
+			"methodBody":"{\n    return ((reference[4] & 0xFF) << 8 | (reference[5] & 0xFF));\n}",
+			"comments":"",
+			"methodName":"public int getRestartInterval()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"JPEGRestartInterval"
+	]
+}

@@ -1,0 +1,14 @@
+void
+tabl
+focus
+tablefocusin
+event
+event
+dispos
+isdispos
+return
+visibl
+isvis
+set
+focus
+setfocus

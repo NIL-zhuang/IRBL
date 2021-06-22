@@ -1,0 +1,45 @@
+{
+	"variables":[
+		"imageData",
+		"incrementCount",
+		"endOfImage",
+		"serialVersionUID",
+		"source",
+		"imageData",
+		"incrementCount",
+		"endOfImage",
+		"source",
+		"imageData",
+		"incrementCount",
+		"endOfImage",
+		"imageData",
+		"incrementCount",
+		"endOfImage",
+		"source",
+		"imageData",
+		"incrementCount",
+		"endOfImage"
+	],
+	"extendORImplementFiles":[
+		"SWTEventObject"
+	],
+	"package":[
+		"org.eclipse.swt.graphics"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventObject"
+	],
+	"methods":[
+		"toString"
+	],
+	"methodsBody":{
+		"public String toString()":{
+			"methodBody":"{\n    \n    return \"ImageLoaderEvent {source=\" + source + \" imageData=\" + imageData + \" incrementCount=\" + incrementCount + \" endOfImage=\" + endOfImage + \"}\";\n}",
+			"comments":"/**\n* Returns a string containing a concise, human-readable\n* description of the receiver.\n*\n* @return a string representation of the event\n*/\n//$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$\n",
+			"methodName":"public String toString()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"ImageLoaderEvent"
+	]
+}

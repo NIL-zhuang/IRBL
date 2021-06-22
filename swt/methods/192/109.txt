@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+int
+graphic
+set
+smooth
+mode
+setsmoothingmod
+int
+graphic
+int
+smooth
+mode
+smoothingmod

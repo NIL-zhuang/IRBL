@@ -1,0 +1,5 @@
+Offset of the file list from the beginning of this structure in bytes
+POINT pt Drop point The coordinates depend on fNC
+Nonclient area flag If this member is TRUE pt specifies the screen
+Value that indicates whether the file contains ANSI or Unicode
+contains Unicode characters

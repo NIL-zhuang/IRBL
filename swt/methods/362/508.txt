@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+int
+load
+bitmap
+loadbitmapw
+int
+instanc
+hinstanc
+int
+bitmap
+name
+lpbitmapnam

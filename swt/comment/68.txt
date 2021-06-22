@@ -1,0 +1,11 @@
+style start offset 0 based from the document start
+style length
+may be SWT NORMAL SWT ITALIC or SWT BOLD
+Create a new style range p param start start offset of the style param length length of the style param foreground foreground color of the style null if none param background background color of the style null if none
+Create a new style range p param start start offset of the style param length length of the style param foreground foreground color of the style null if none param background background color of the style null if none param fontStyle font style of the style may be SWT NORMAL SWT ITALIC or SWT BOLD
+Compares the argument to the receiver and returns true if they represent the em same em object using a class specific comparison param object the object to compare with this object return code true code if the object is the same as this object and code false code otherwise see hashCode
+Returns an integer hash code for the receiver Any two objects that return code true code when passed to code equals code must return the same value for this method return the receiver s hash see equals Object
+Returns whether or not the receiver is unstyled i e does not have any style attributes specified p return true if the receiver is unstyled false otherwise
+Compares the specified object to this StyleRange and answer if the two are similar The object must be an instance of StyleRange and have the same field values for except for start and length p param style the object to compare with this object return true if the objects are similar false otherwise
+Answers a new StyleRange with the same values as this StyleRange p return a shallow copy of this StyleRange
+Returns a string containing a concise human readable description of the receiver return a string representation of the event

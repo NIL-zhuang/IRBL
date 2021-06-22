@@ -1,0 +1,19 @@
+Construct a PNGChunk using the reference bytes given
+Get the image s width in pixels
+Set the image s width in pixels
+Get the image s height in pixels
+Set the image s height in pixels
+Get the image s bit depth This is limited to the values 1 2 4 8 or 16
+Set the image s bit depth This is limited to the values 1 2 4 8 or 16
+Get the image s color type This is limited to the values 0 Grayscale image 2 RGB triple 3 Palette 4 Grayscale with Alpha channel 6 RGB with Alpha channel
+Set the image s color type This is limited to the values 0 Grayscale image 2 RGB triple 3 Palette 4 Grayscale with Alpha channel 6 RGB with Alpha channel
+Get the image s compression method This value must be 0
+Set the image s compression method This value must be 0
+Get the image s filter method This value must be 0
+Set the image s filter method This value must be 0
+Get the image s interlace method This value is limited to 0 No interlacing used 1 Adam7 interlacing used
+Set the image s interlace method This value is limited to 0 No interlacing used 1 Adam7 interlacing used
+been read
+Answer whether the chunk is a valid IHDR chunk
+Answer the pixel size in bits based on the color type and bit depth
+Answer the pixel size in bits based on the color type and bit depth

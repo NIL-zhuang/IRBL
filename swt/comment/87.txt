@@ -1,0 +1,42 @@
+An instance of class code WrappedContent code is used by StyledText to display wrapped lines Lines are wrapped at word breaks which are marked by a space character Trailing space behind words is kept on the current line If the last remaining word on a line can not be fully displayed the line is wrapped character by character WrappedContent wraps a StyledTextContent which provides the line data The start offset and length of wrapped lines is calculated and updated based on recalculation requests and text changes p All public methods in this class implement the code StyledTextContent code interface Package visible methods are internal API for use by code StyledText code p
+index of line offset in visualLines array
+index of line lenght in visualLines array
+start and length of each visual line
+Create a new instance param renderer class StyledTextRenderer class that renders the lines wrapped by the new instance param logicalContent StyledTextContent that provides the line data
+see StyledTextContent addTextChangeListener TextChangeListener
+Grow the lines array to at least the specified size p param numLines number of elements that the array should have at a minimum
+see StyledTextContent getCharCount
+redirect call to logical content if there are no wrapped lines
+return the visual wrapped line at the specified index see StyledTextContent getLine int
+redirect call to logical content if there are no wrapped lines
+count which is only available in the visual content
+last character for inserting
+they have the same offset always return the first visual line
+Returns the visual wrapped line at given offset p The offset is ambiguous if it identifies the end of a visual line and there is another visual line below In this case the end of the visual line has the same offset as the beginning of the next visual line since the visual line break is not represented by any character in the logical line In this ambiguous case the offset is assumed to represent the end of a visual line and the index of the first visual line is returned p param offset offset of the desired line return the index of the visual wrapped line at the specified offset see StyledTextContent getLineAtOffset int
+redirect call to logical content if there are no wrapped lines
+return the number of visual wrapped lines see StyledTextContent getLineCount
+see StyledTextContent getLineDelimiter
+redirect call to logical content if there are no wrapped lines
+return the start offset of the visual wrapped line at the given index see StyledTextContent getOffsetAtLine int
+see StyledTextContent getTextRange int int
+Returns the number of visual wrapped lines return the number of visual wrapped lines
+see StyledTextContent removeTextChangeListener TextChangeListener
+Reset the visual wrapped lines in the specified range If the range specifies partial logical lines e g startLine is the second of two visual lines it is extended to reset all visual lines of a logical line Following the reset the logical lines in the reset visual range are rewrapped p param startLine index of the first visual line param lineCount number of visual lines
+first logical line that has at least one visual line reset
+being reset
+i e there must not be any reset but unwrapped lines
+Reset the visual wrapped lines in the specified range If the range specifies partial logical lines e g startLine is the second of two visual lines it is extended to reset all visual lines of a logical line p param startLine index of the first visual line param lineCount number of visual lines param wrap true rewrap the logical lines in the reset visual range false don t rewrap lines Visual lines will be left in an inconsistent state since there will be a range of unwrapped and unknown lines return the first visual line that was reset
+Reset the visual wrapped lines in the specified range p param startLine index of the first visual line param lineCount number of visual lines
+see StyledTextContent replaceTextRange int int String
+see StyledTextContent setText String
+there are more visual lines for a given logical line than before
+Set the line wrap data for the specified visual wrapped line p param visualLineIndex index of the visual line param visualLineOffset start offset of the visual line relative to the start of the document param visualLineLength length of the visual line
+do nothing if there are no wrapped lines
+at the start of a visual line end of the previous visual line
+Recalculates the line wrap for the lines affected by the text change p param startOffset the start offset of the text change param newLineCount the number of inserted lines param replaceLineCount the number of deleted lines param newCharCount the number of new characters param replaceCharCount the number of deleted characters
+visual lines for a given logical line than before
+Wrap the logical lines in the given range at the current client area width of the StyledText widget p param startLine first logical line to wrap param endLine line after last logical line param visualLineIndex visual wrapped line index that startLine corresponds to return index of the line following the last wrapped line
+is known
+Wrap the lines in the given range Skip lines that have already been wrapped p param startLine first logical line to wrap param endLine line after last logical line param visualLineIndex visual wrapped line index that startLine corresponds to param width line width to wrap at return index of last wrapped line
+Wrap all logical lines at the current client area width of the StyledText widget
+Wrap all logical lines at the given width p param width width to wrap lines at

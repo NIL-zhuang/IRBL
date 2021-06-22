@@ -1,0 +1,17 @@
+int
+get
+filter
+byte
+offset
+getfilterbyteoffset
+get
+bit
+depth
+getbitdepth
+return
+return
+get
+bit
+per
+pixel
+getbitsperpixel

@@ -1,0 +1,27 @@
+{
+	"variables":[
+		"event"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.browser"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"changed"
+	],
+	"methodsBody":{
+		"public void changed(StatusTextEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* This method is called when the status text is changed. The\n* status text is typically displayed in the status bar of a browser\n* application.\n* <p>\n*\n* <p>The following fields in the <code>StatusTextEvent</code> apply:\n* <ul>\n* <li>(in) text the modified status text\n* <li>(in) widget the <code>Browser</code> whose status text is changed\n* </ul>\n*\n* @param event the <code>StatusTextEvent</code> that contains the updated\n* status description of a <code>Browser</code>\n*\n* @since 3.0\n*/\n",
+			"methodName":"public void changed(StatusTextEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"StatusTextListener"
+	]
+}

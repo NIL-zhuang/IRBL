@@ -1,0 +1,15 @@
+static
+png
+huffman
+tabl
+pnghuffmant
+get
+fix
+tabl
+getfixedt
+return
+new
+png
+huffman
+tabl
+pnghuffmant

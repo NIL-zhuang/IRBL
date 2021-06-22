@@ -1,0 +1,17 @@
+lresult
+mousewheel
+int
+param
+wparam
+int
+param
+lparam
+return
+mous
+wheel
+wmmousewheel
+handl
+param
+wparam
+param
+lparam

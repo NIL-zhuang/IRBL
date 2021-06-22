@@ -1,0 +1,12 @@
+name
+type
+flag
+kind
+descript
+help
+file
+helpfil
+ole
+properti
+descript
+olepropertydescript

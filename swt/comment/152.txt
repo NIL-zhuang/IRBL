@@ -1,0 +1,9 @@
+This is the super class for all typed event classes provided by SWT Typed events contain particular information which is applicable to the event occurance see org eclipse swt widgets Event
+the display where the event occurred since 2 0
+the widget that issued the event
+the time that the event occurred NOTE This field is an unsigned integer and should be AND ed with 0xFFFFFFFFL so that it can be treated as a signed long
+a field for application use
+Constructs a new instance of this class param object the object that fired the event
+Constructs a new instance of this class based on the information in the argument param e the low level event to initialize the receiver with
+Returns the name of the event This is the name of the class without the package name return the name of the event
+Returns a string containing a concise human readable description of the receiver return a string representation of the event

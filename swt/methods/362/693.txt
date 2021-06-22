@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+int
+local
+free
+localfre
+int
+mem
+hmem

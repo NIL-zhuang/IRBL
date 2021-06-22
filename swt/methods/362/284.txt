@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+boolean
+imm
+set
+composit
+font
+immsetcompositionfonta
+int
+imc
+himc
+logfonta
+lplf

@@ -1,0 +1,81 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"ppstm",
+		"COM",
+		"address",
+		"grfCommitFlags",
+		"COM",
+		"address",
+		"pv",
+		"cb",
+		"pcbWritten",
+		"COM",
+		"address",
+		"COM",
+		"address",
+		"pv",
+		"cb",
+		"pcbWritten",
+		"address",
+		"ppstm",
+		"grfCommitFlags",
+		"pv",
+		"cb",
+		"pcbWritten",
+		"pv",
+		"cb",
+		"pcbWritten"
+	],
+	"extendORImplementFiles":[
+		"IUnknown"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"Clone",
+		"Commit",
+		"Read",
+		"Revert",
+		"Write",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int Clone(int[] ppstm)":{
+			"methodBody":"{\n    return COM.VtblCall(13, address, ppstm);\n}",
+			"comments":"//Pointer to location for pointer to the new stream object\n",
+			"methodName":"public int Clone(int[] ppstm)"
+		},
+		"public int Revert()":{
+			"methodBody":"{\n    return COM.VtblCall(9, address);\n}",
+			"comments":"",
+			"methodName":"public int Revert()"
+		},
+		"public int Commit(int grfCommitFlags)":{
+			"methodBody":"{\n    return COM.VtblCall(8, address, grfCommitFlags);\n}",
+			"comments":"//Specifies how changes are committed\n",
+			"methodName":"public int Commit(int grfCommitFlags)"
+		},
+		"public int Read(int pv, int cb, int[] pcbWritten)":{
+			"methodBody":"{\n    return COM.VtblCall(3, address, pv, cb, pcbWritten);\n}",
+			"comments":"",
+			"methodName":"public int Read(int pv, int cb, int[] pcbWritten)"
+		},
+		"public int Write(int pv, int cb, int[] pcbWritten)":{
+			"methodBody":"{\n    return COM.VtblCall(4, address, pv, cb, pcbWritten);\n}",
+			"comments":"",
+			"methodName":"public int Write(int pv, int cb, int[] pcbWritten)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IStream"
+	]
+}

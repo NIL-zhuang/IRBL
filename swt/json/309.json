@@ -1,0 +1,24 @@
+{
+	"variables":[
+		"mask",
+		"cxy",
+		"pszText",
+		"hbm",
+		"cchTextMax",
+		"fmt",
+		"lParam",
+		"iImage",
+		"iOrder",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"HDITEM"
+	]
+}

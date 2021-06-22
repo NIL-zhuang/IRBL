@@ -1,0 +1,17 @@
+lresult
+contextmenu
+int
+param
+wparam
+int
+param
+lparam
+return
+context
+menu
+wmcontextmenu
+handl
+param
+wparam
+param
+lparam

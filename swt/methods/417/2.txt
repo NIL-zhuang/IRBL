@@ -1,0 +1,13 @@
+boolean
+has
+entri
+hasentri
+for
+int
+type
+length
+type
+return
+true
+return
+fals

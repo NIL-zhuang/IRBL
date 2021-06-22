@@ -1,0 +1,13 @@
+void
+write
+string
+string
+buffer
+append
+string
+append
+the
+given
+string
+the
+data

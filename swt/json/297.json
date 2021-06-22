@@ -1,0 +1,22 @@
+{
+	"variables":[
+		"dwStyle",
+		"x",
+		"y",
+		"left",
+		"top",
+		"right",
+		"bottom",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"COMPOSITIONFORM"
+	]
+}

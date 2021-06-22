@@ -1,0 +1,16 @@
+clone
+next
+reset
+skip
+vtbl
+call
+vtblcall
+vtbl
+call
+vtblcall
+vtbl
+call
+vtblcall
+vtbl
+call
+vtblcall

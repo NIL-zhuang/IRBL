@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+int
+sys
+string
+byte
+len
+sysstringbytelen
+int
+bstr

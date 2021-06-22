@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+int
+set
+cursor
+setcursor
+int
+cursor
+hcursor

@@ -1,0 +1,54 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"dwAspect",
+		"lindex",
+		"ptd",
+		"lpsizel",
+		"COM",
+		"address",
+		"dwAspects",
+		"dwAdvf",
+		"pIAdviseSink",
+		"address",
+		"dwAspect",
+		"lindex",
+		"ptd",
+		"lpsizel",
+		"dwAspects",
+		"dwAdvf",
+		"pIAdviseSink"
+	],
+	"extendORImplementFiles":[
+		"IUnknown"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"methods":[
+		"GetExtent",
+		"SetAdvise",
+		"VtblCall",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int GetExtent(int dwAspect, int lindex, DVTARGETDEVICE ptd, SIZE lpsizel)":{
+			"methodBody":"{\n    return COM.VtblCall(9, address, dwAspect, lindex, ptd, lpsizel);\n}",
+			"comments":"",
+			"methodName":"public int GetExtent(int dwAspect, int lindex, DVTARGETDEVICE ptd, SIZE lpsizel)"
+		},
+		"public int SetAdvise(int dwAspects, int dwAdvf, int pIAdviseSink)":{
+			"methodBody":"{\n    return COM.VtblCall(7, address, dwAspects, dwAdvf, pIAdviseSink);\n}",
+			"comments":"",
+			"methodName":"public int SetAdvise(int dwAspects, int dwAdvf, int pIAdviseSink)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IViewObject2"
+	]
+}

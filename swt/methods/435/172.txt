@@ -1,0 +1,10 @@
+lresult
+mouseactiv
+int
+param
+wparam
+int
+param
+lparam
+return
+null

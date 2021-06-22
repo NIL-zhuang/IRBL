@@ -1,0 +1,4 @@
+A code LocationEvent code is sent by a link Browser to link LocationListener s when the code Browser code navigates to a different URL This notification typically occurs when the application navigates to a new location with link Browser setUrl String or when the user activates a hyperlink since 3 0
+current location
+A flag indicating whether the location opens in the top frame or not
+A flag indicating whether the location loading should be allowed Setting this field to code false code will cancel the operation

@@ -1,0 +1,53 @@
+{
+	"variables":[
+		"e",
+		"e",
+		"e",
+		"e",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"ShellListener"
+	],
+	"package":[
+		"org.eclipse.swt.events"
+	],
+	"import":[],
+	"methods":[
+		"shellActivated",
+		"shellClosed",
+		"shellDeactivated",
+		"shellDeiconified",
+		"shellIconified"
+	],
+	"methodsBody":{
+		"public void shellActivated(ShellEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when a shell becomes the active window.\n* The default behavior is to do nothing.\n*\n* @param e an event containing information about the activation\n*/\n",
+			"methodName":"public void shellActivated(ShellEvent e)"
+		},
+		"public void shellDeactivated(ShellEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when a shell stops being the active window.\n* The default behavior is to do nothing.\n*\n* @param e an event containing information about the deactivation\n*/\n",
+			"methodName":"public void shellDeactivated(ShellEvent e)"
+		},
+		"public void shellIconified(ShellEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when a shell is minimized.\n* The default behavior is to do nothing.\n*\n* @param e an event containing information about the minimization\n*/\n",
+			"methodName":"public void shellIconified(ShellEvent e)"
+		},
+		"public void shellClosed(ShellEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when a shell is closed.\n* The default behavior is to do nothing.\n*\n* @param e an event containing information about the close\n*/\n",
+			"methodName":"public void shellClosed(ShellEvent e)"
+		},
+		"public void shellDeiconified(ShellEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when a shell is un-minimized.\n* The default behavior is to do nothing.\n*\n* @param e an event containing information about the un-minimization\n*/\n",
+			"methodName":"public void shellDeiconified(ShellEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"ShellAdapter"
+	]
+}

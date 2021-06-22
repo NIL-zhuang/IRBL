@@ -1,0 +1,6 @@
+focus
+gain
+focusgain
+focus
+lost
+focuslost

@@ -1,0 +1,46 @@
+{
+	"variables":[
+		"e",
+		"e",
+		"e",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"AccessibleListener"
+	],
+	"package":[
+		"org.eclipse.swt.accessibility"
+	],
+	"import":[],
+	"methods":[
+		"getName",
+		"getHelp",
+		"getKeyboardShortcut",
+		"getDescription"
+	],
+	"methodsBody":{
+		"public void getName(AccessibleEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when an accessibility client requests the name\n* of the control, or the name of a child of the control.\n* The default behavior is to do nothing.\n* <p>\n* Return the name of the control or specified child in the\n* <code>result</code> field of the event object. Returning\n* an empty string tells the client that the control or child\n* does not have a name, and returning null tells the client\n* to use the platform name.\n* </p>\n*\n* @param e an event object containing the following fields:<ul>\n*    <li>childID [IN] - an identifier specifying the control or one of its children</li>\n*    <li>result [OUT] - the requested name string, or null</li>\n* </ul>\n*/\n",
+			"methodName":"public void getName(AccessibleEvent e)"
+		},
+		"public void getHelp(AccessibleEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when an accessibility client requests the help string\n* of the control, or the help string of a child of the control.\n* The default behavior is to do nothing.\n* <p>\n* The information in this property should be similar to the help\n* provided by toolTipText. It describes what the control or child\n* does or how to use it, as opposed to getDescription, which\n* describes appearance.\n* </p><p>\n* Return the help string of the control or specified child in\n* the <code>result</code> field of the event object. Returning\n* an empty string tells the client that the control or child\n* does not have a help string, and returning null tells the\n* client to use the platform help string.\n* </p>\n*\n* @param e an event object containing the following fields:<ul>\n*    <li>childID [IN] - an identifier specifying the control or one of its children</li>\n*    <li>result [OUT] - the requested help string, or null</li>\n* </ul>\n*/\n",
+			"methodName":"public void getHelp(AccessibleEvent e)"
+		},
+		"public void getDescription(AccessibleEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when an accessibility client requests a description\n* of the control, or a description of a child of the control.\n* The default behavior is to do nothing.\n* <p>\n* This is a textual description of the control or child's visual\n* appearance, which is typically only necessary if it cannot be\n* determined from other properties such as role.\n* </p><p>\n* Return the description of the control or specified child in\n* the <code>result</code> field of the event object. Returning\n* an empty string tells the client that the control or child\n* does not have a description, and returning null tells the\n* client to use the platform description.\n* </p>\n*\n* @param e an event object containing the following fields:<ul>\n*    <li>childID [IN] - an identifier specifying the control or one of its children</li>\n*    <li>result [OUT] - the requested description string, or null</li>\n* </ul>\n*/\n",
+			"methodName":"public void getDescription(AccessibleEvent e)"
+		},
+		"public void getKeyboardShortcut(AccessibleEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when an accessibility client requests the keyboard shortcut\n* of the control, or the keyboard shortcut of a child of the control.\n* The default behavior is to do nothing.\n* <p>\n* A keyboard shortcut can either be a mnemonic, or an accelerator.\n* As a general rule, if the control or child can receive keyboard focus,\n* then you should expose its mnemonic, and if it cannot receive keyboard\n* focus, then you should expose its accelerator.\n* </p><p>\n* Return the keyboard shortcut string of the control or specified child\n* in the <code>result</code> field of the event object. Returning an\n* empty string tells the client that the control or child does not\n* have a keyboard shortcut string, and returning null tells the client\n* to use the platform keyboard shortcut string.\n* </p>\n*\n* @param e an event object containing the following fields:<ul>\n*    <li>childID [IN] - an identifier specifying the control or one of its children</li>\n*    <li>result [OUT] - the requested keyboard shortcut string (example: \"ALT+N\"), or null</li>\n* </ul>\n*/\n",
+			"methodName":"public void getKeyboardShortcut(AccessibleEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"AccessibleAdapter"
+	]
+}

@@ -1,0 +1,13 @@
+get
+name
+getnam
+get
+help
+gethelp
+get
+keyboard
+shortcut
+getkeyboardshortcut
+get
+descript
+getdescript

@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+boolean
+move
+movetoex
+int
+hdc
+int
+int
+int
+point
+lpoint

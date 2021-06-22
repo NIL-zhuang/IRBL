@@ -1,0 +1,8 @@
+memori
+leak
+clipboard
+proxi
+clipboardproxi
+get
+func
+getfunc

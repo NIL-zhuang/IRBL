@@ -1,0 +1,25 @@
+{
+	"variables":[
+		"effect",
+		"x",
+		"y"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.dnd"
+	],
+	"import":[],
+	"methods":[
+		"show"
+	],
+	"methodsBody":{
+		"abstract void show(int effect, int x, int y)":{
+			"methodBody":"",
+			"comments":"",
+			"methodName":"abstract void show(int effect, int x, int y)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"DragUnderEffect"
+	]
+}

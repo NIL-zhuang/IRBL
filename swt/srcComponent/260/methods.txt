@@ -1,0 +1,10 @@
+exec
+queri
+status
+querystatus
+vtbl
+call
+vtblcall
+vtbl
+call
+vtblcall

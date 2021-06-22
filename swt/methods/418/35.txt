@@ -1,0 +1,12 @@
+privat
+int
+context
+sensit
+help
+contextsensitivehelp
+int
+enter
+mode
+fentermod
+return
+com

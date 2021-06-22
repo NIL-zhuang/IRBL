@@ -1,0 +1,14 @@
+static
+int
+check
+style
+checkstyl
+int
+style
+style
+swt
+left
+right
+style
+return
+style

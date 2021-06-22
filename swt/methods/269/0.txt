@@ -1,0 +1,16 @@
+public
+int
+get
+class
+getclassid
+guid
+class
+pclassid
+return
+com
+vtbl
+call
+vtblcall
+address
+class
+pclassid

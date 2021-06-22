@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+int
+ole
+set
+contain
+object
+olesetcontainedobject
+int
+unk
+punk
+boolean
+contain
+fcontain

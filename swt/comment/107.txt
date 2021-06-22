@@ -1,0 +1,3 @@
+milli seconds
+Some effects are mutually exclusive Make sure that only one of the mutually exclusive effects has been specified
+

@@ -1,0 +1,14 @@
+public
+synchron
+void
+stop
+activ
+fals
+stop
+the
+anim
+freez
+the
+present
+current
+appear

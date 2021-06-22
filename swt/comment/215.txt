@@ -1,0 +1,27 @@
+Decode the input
+Decode the LZW encoded bytes in the given byte stream into the given DeviceIndependentImage
+Last byte has data
+Nothing in last byte
+Write out last partial block
+Write out empty block to indicate the end if needed
+Encode the image
+Encode the bytes into the given byte stream from the given DeviceIndependentImage
+Off by one
+Encoding loop broken out to allow early return
+Initialize the receiver for decoding the given byte array
+Force a read
+Initialize the receiver for encoding the given byte array
+Answer the next code from the input byte array
+Answer the next pixel to encode in the image
+Copy a row of pixel values from the image
+high order bits of the code
+The whole code fit in the first byte so we are done
+for the next one
+Fill in any remaining whole bytes i e not the last one
+Fill the low order bits of the last byte with the remainder
+Output aCode to the output stream
+Slight optimization for depth 8
+Copy a row of pixel values to the image
+Copy duplicate rows of pixel values to the image This is to fill in rows if the image is interlaced
+Read a block from the byte stream Return the number of bytes read Throw an exception if the block could not be read
+Write a block to the byte stream Throw an exception if the block could not be written

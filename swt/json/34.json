@@ -1,0 +1,27 @@
+{
+	"variables":[
+		"event"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.custom"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"lineGetSegments"
+	],
+	"methodsBody":{
+		"public void lineGetSegments(BidiSegmentEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* This method is called when a line needs to be reordered for\n* measuring or rendering in a bidi locale.\n* <p>\n* The following event fields are used:<ul>\n* <li>event.lineOffset line start offset (input)</li>\n* <li>event.lineText line text (input)</li>\n* <li>event.segments text segments that should be reordered\n*\tseparately. (output)</li>\n* </ul>\n*\n* @param event the given event\n*\tseparately. (output)\n* @see BidiSegmentEvent\n*/\n",
+			"methodName":"public void lineGetSegments(BidiSegmentEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"BidiSegmentListener"
+	]
+}

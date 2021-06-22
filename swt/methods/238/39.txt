@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+void
+move
+memori
+movememori
+funcdesc
+destin
+int
+sourc
+int
+length

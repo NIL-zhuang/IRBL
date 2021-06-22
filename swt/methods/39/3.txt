@@ -1,0 +1,12 @@
+public
+void
+paint
+control
+paintcontrol
+paint
+event
+paintev
+event
+paint
+onpaint
+event

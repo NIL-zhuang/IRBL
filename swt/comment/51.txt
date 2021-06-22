@@ -1,0 +1,70 @@
+the number of styles
+the expansion exponent used to increase the lines array exponentially
+Creates a new default line styler p param content the text to which the styles apply
+Inserts a style at the given location p param style the new style param index the index at which to insert the style the new style will reside at this index
+shift the styles down to make room for the new styles
+add the new styles
+Insert the styles at the given location p param insertStyles the new styles param index the index at which to insert the styles the first new style will reside at this index
+Inserts a style merging it with adjacent styles if possible p param style the new style param index the index at which to insert the style the new style will reside at this index return true if the style was inserted false if the style was merged with an adjacent style
+and the end of style needs to be the start of the next style
+styles if possible
+Merges the style with the style before it if possible p param style the new style param index the index at which to attempt the merge return true if the style was merged false otherwise
+the start of style needs to be the end of the previous style
+merge the styles if possible
+Merges the style with the style after it if possible p param style the new style param index the index at which to attempt the merge return true if the style was merged false otherwise
+no overlapped styles exist
+styles
+beginning of overlap needs to be cleared
+entire overlap needs to be cleared
+cause overlap to be broken into two
+the end of overlap needs to be cleared
+Removes style information that is defined for the range of text in code clearStyle code p param clearStyle the style information to use for clearing
+Increases the code linebackgrounds code array to accomodate new line background information p param numLines the number to increase the array by
+Deletes the style at code index code p param index the index of the style to be deleted
+shift the styles up
+Delete count styles starting at code index code p param index the index of the style to be deleted param count the number of styles to be deleted
+Returns the styles that are defined p return the copied array of styles
+Handles the get line background color callback p param event the lineOffset line number input lineText line text input and background line background color output
+style starts after the line end looping
+starts before the line ends after the line add range
+Handles the get line style information callback p param event the lineOffset line number input lineText line text input and styles array of StyleRanges need to be in order output
+find the index of the first style for the given range use a binary search
+Searches for the first style in the code start code code end code range p return the index of the first style that overlaps the input range
+Updates the line background colors to reflect a new color Called by StyledText p param startLine index of the first line to color param count number of lines to color starting at startLine param background the background color for the lines
+no styles exist
+newStyle does not overlap any other styles
+indicates whether or not the new style has been added
+beginning of overlap needs to be replaced by newStyle
+that processing is done no more overlapped styles
+hasn t already been added if it has just delete overlap
+cause overlap to be broken into two
+processing is done no more overlapped styles
+processing is done
+styles after it so continue processing
+update overlap to accomodate the new style
+the end of overlap needs to be replaced by newStyle
+styles
+Update the styles to reflect the new style code newStyle code will replace any old style for the range When this method is called the DefaultLineStyler may merge the new style with an existing style if possible Called by StyledText when a style is added Called by StyledText p param newStyle the new style information
+find insert point
+Replace the styles for the given range param start the initial style range to replace param length the number of ranges to replace param ranges the new styles must be in order and non overlapping
+Sets the array of styles and discards old styles Called by StyledText p param styles the new styles must be in order and non overlapping
+all text is going to be replaced clear line backgrounds
+Updates the style ranges and line backgrounds to reflect a pending text change Called by StyledText when a TextChangingEvent is received p param event the event with the text change information
+shift up the lines
+shift the lines down to make room for new lines
+Updates the line backgrounds to reflect a pending text change p param start the starting line of the change that is about to take place param delta the number of lines in the change 0 indicates lines inserted 0 indicates lines deleted
+to find the index
+style starts in change range ends after change range
+style starts in change range ends in change range
+style starts before change range ends after change range
+style starts before change range ends in change range
+affected
+it will need to be split into two and then the newStyle inserted
+update the styles that are in the affected range
+change the offsets of the styles after the affected styles
+Updates the style ranges to reflect a text change p param start the starting offset of the change that is about to take place param delta the length of the change 0 indicates text inserted 0 indicates text deleted
+to find the index
+Returns the indexes of the styles that overlap the given range Styles that partially or fully overlap the range will be returned p return Point where x is the index of the starting overlap style y is the number of styles that overlap the range
+Returns the background color of a line Called by StyledText It is safe to return the existing Color object since the colors are set and managed by the client p param index the line index return the background color of the line at the given index
+Returns the style for the character at code offset code Called by StyledText Returns a new style Does not return the existing style p param offset the character position in the text return a cloned StyleRange with start offset and length 1 if a style is specified or null if no style is specified
+Returns the styles for the given range Returns the existing styles so be careful not to modify the return value Styles are not cloned in order to make this method as efficient as possible p param offset the start position of the text range param length the length of the text range return a StyleRange array or null if no styles are specified for the text range

@@ -1,0 +1,19 @@
+Workaround for javac 1 1 8 bug
+Workaround for javac 1 1 8 bug
+Show default IE popup menu
+Feature on Internet Explorer By default the embedded Internet Explorer control runs the Internet Explorer shortcuts e g F5 for refresh This overrides the shortcuts defined by SWT The workaround is to forward the accelerator keys to the parent window and have Internet Explorer ignore the ones handled by the parent window
+Feature on Internet Explorer By default the embedded Internet Explorer control runs the Internet Explorer shortcuts F5 causes refresh CTRL N opens a standalone Internet Explorer These behaviours are undesired when rendering HTML in memory The workaround is to block the default CTRL N and F5 handling by IE when the URL is about blank
+NON NLS 1
+resource identifier in shdoclc dll for window caption Your current security settings prohibit running ActiveX controls on this page
+NON NLS 1
+Note lpstrText is a LPOLESTR i e a null terminated unicode string LPWSTR i e a WCHAR It is not a BSTR A BSTR is a null terminated unicode string that contains its length at the beginning
+Note lpstrText is unicode on both unicode and ansi platforms The nbr of chars is multiplied by the constant 2 and not by TCHAR sizeof since TCHAR sizeof returns 1 on ansi platforms
+provide a buffer large enough to hold the string to compare to and a null terminated character
+Note One of the arguments of ShowHelp is a POINT struct and not a pointer to a POINT struct Because of the way Callback gets int parameters from a va list of C arguments 2 integer arguments must be declared ptMouse x and ptMouse y Otherwise the Browser crashes when the user presses F1 to invoke the help
+Feature in IE 6 sp1 HTML rendered in memory does not enable local links but the exact same HTML document loaded through a local file is permitted to follow local links The workaround is to return URLZONE INTRANET instead of the default value URLZONE LOCAL MACHINE
+Feature in IE 6 sp1 HTML rendered in memory containing an OBJECT tag referring to a local file brings up a warning dialog asking the user whether it should proceed or not The workaround is to set the policy to URLPOLICY ALLOW in this case dwAction value of 0x1406 Feature in IE Security Patches and user settings affect the way the embedded web control behaves The current approach is to consider the content trusted and allow all URLs by default
+Note The URLACTION AVA flags refer to the applet tag that normally resolve to the Microsoft VM not to the java OBJECT tag that resolves to the Sun plugin Return URLPOLICY AVA LOW to authorize applets instead of URLPOLICY ALLOW that is interpreted as URLPOLICY AVA PROHIBIT in this context
+Note Some ActiveX plugins crash when executing inside the embedded explorer itself running into a VM The current workaround is to detect when such ActiveX is about to be started and refuse to execute it
+IOleCommandTarget
+If a javascript error occurred then suppress IE s default script error dialog
+Bug in Internet Explorer OnToolBar TRUE is also fired when any of the address bar or menu bar are requested but not the tool bar A workaround has been posted by a Microsoft developer on the public webbrowser ctl newsgroup The workaround is to implement the IOleCommandTarget interface to test the argument of an undocumented command

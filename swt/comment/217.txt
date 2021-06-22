@@ -1,0 +1,18 @@
+Round up to 4 byte multiple
+Seek to the specified offset
+Answer a byte array containing the BMP representation of the given device independent palette
+BMP pads scanlines to multiples of 4 bytes
+Start at last line
+Unload the given image s data into the given byte stream Answer the number of bytes written
+Fill in file header except for bfsize which is done later
+Signature
+File size filled in later
+Reserved 1
+Reserved 2
+Offset to data
+the stream and fill in the details later
+Calculate file size
+Write the headers
+Unload palette
+Unload the data
+Unload a DeviceIndependentImage using Windows BMP format into the given byte stream

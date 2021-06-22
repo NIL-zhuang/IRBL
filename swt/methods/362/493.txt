@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+int
+get
+window
+text
+length
+getwindowtextlengthw
+int
+wnd
+hwnd

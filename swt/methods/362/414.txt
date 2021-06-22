@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+boolean
+imm
+destroy
+context
+immdestroycontext
+int
+imc
+himc

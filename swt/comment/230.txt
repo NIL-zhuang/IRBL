@@ -1,0 +1,8 @@
+Three 2 byte values RGB
+Three 2 byte values RGB
+One 2 byte value
+Cannot use both Alpha and tRNS
+Answer whether the chunk is a valid tRNS chunk
+Answer the transparent pixel RGB value This is not valid for palette color types This is not valid for alpha color types This will convert a grayscale value into a palette index It will compress a 6 byte RGB into a 3 byte RGB
+Any palette entries which do not have a corresponding alpha value in the tRNS chunk are spec d to have an alpha of 255
+Answer an array of Alpha values that correspond to the colors in the palette This is only valid for the COLOR TYPE PALETTE color type

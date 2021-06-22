@@ -1,0 +1,70 @@
+{
+	"variables":[
+		"handle",
+		"x",
+		"y",
+		"width",
+		"height",
+		"clientX",
+		"clientY",
+		"clientWidth",
+		"clientHeight",
+		"monitor",
+		"object",
+		"object",
+		"object",
+		"handle",
+		"monitor",
+		"x",
+		"y",
+		"width",
+		"height",
+		"clientX",
+		"clientY",
+		"clientWidth",
+		"clientHeight",
+		"handle",
+		"handle",
+		"object"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.widgets"
+	],
+	"import":[
+		"org.eclipse.swt.graphics"
+	],
+	"methods":[
+		"equals",
+		"getBounds",
+		"getClientArea",
+		"hashCode",
+		"Rectangle",
+		"Rectangle"
+	],
+	"methodsBody":{
+		"public Rectangle getClientArea()":{
+			"methodBody":"{\n    return new Rectangle(clientX, clientY, clientWidth, clientHeight);\n}",
+			"comments":"/**\n* Returns a rectangle which describes the area of the\n* receiver which is capable of displaying data.\n*\n* @return the client area\n*/\n",
+			"methodName":"public Rectangle getClientArea()"
+		},
+		"public int hashCode()":{
+			"methodBody":"{\n    return handle;\n}",
+			"comments":"/**\n* Returns an integer hash code for the receiver. Any two\n* objects that return <code>true</code> when passed to\n* <code>equals</code> must return the same value for this\n* method.\n*\n* @return the receiver's hash\n*\n* @see #equals(Object)\n*/\n",
+			"methodName":"public int hashCode()"
+		},
+		"public Rectangle getBounds()":{
+			"methodBody":"{\n    return new Rectangle(x, y, width, height);\n}",
+			"comments":"/**\n* Returns a rectangle describing the receiver's size and location\n* relative to its device.\n*\n* @return the receiver's bounding rectangle\n*/\n",
+			"methodName":"public Rectangle getBounds()"
+		},
+		"public boolean equals(Object object)":{
+			"methodBody":"{\n    if (object == this)\n        return true;\n    if (!(object instanceof Monitor))\n        return false;\n    Monitor monitor = (Monitor) object;\n    return handle == monitor.handle;\n}",
+			"comments":"/**\n* Compares the argument to the receiver, and returns true\n* if they represent the <em>same</em> object using a class\n* specific comparison.\n*\n* @param object the object to compare with this object\n* @return <code>true</code> if the object is the same as this object and <code>false</code> otherwise\n*\n* @see #hashCode()\n*/\n",
+			"methodName":"public boolean equals(Object object)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"Monitor"
+	]
+}

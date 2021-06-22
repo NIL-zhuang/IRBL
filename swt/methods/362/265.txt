@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+void
+send
+back
+focus
+window
+shsendbacktofocuswindow
+int
+msg
+umsg
+int
+int

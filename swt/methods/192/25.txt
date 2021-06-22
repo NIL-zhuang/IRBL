@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+void
+textur
+brush
+texturebrush
+set
+transform
+settransform
+int
+brush
+int
+matrix

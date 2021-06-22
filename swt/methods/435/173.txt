@@ -1,0 +1,17 @@
+void
+set
+cursor
+setcursor
+int
+param
+lparam
+htclient
+mousemov
+send
+messag
+sendmessag
+handl
+setcursor
+handl
+param
+lparam

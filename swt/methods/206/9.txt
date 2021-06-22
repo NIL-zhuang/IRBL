@@ -1,0 +1,13 @@
+public
+jpeg
+huffman
+tabl
+jpeghuffmant
+get
+all
+tabl
+getallt
+return
+all
+tabl
+alltabl

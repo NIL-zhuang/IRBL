@@ -1,0 +1,492 @@
+{
+    "14654": {
+        "OT": "This is a common and convenient behavior for text editors/IDEs which is missing. Would be nice to have it. Switching to keyboard and doing &quot;shift+arrow down&quot; seems like a lot more effort for achieving the same effect.",
+        "ST": "",
+        "SM": "[typing] Single line selection on triple-click"
+    },
+    "58185": {
+        "OT": "I have several old style BMP files. When I attempt to load them into an image eclipse runs out of memory. The problem appears to be that the WinBMPFileFormat class does not check the header of the file correctly before reading the image. In my case, I have a BMP file with the following header: 0x42 0x4d 0xca 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x4a 0x00 0x00 0x00 0xC0 0x00 0x00 0x00 0x10 0x00 0x10 0x00 0x01 0x00 0x04 0x00 Notice the 0x0c at offset 14. This indicates that the Bitmap info header is only 12 bytes long and not the 42 that is being assumed. This conforms to the BITMAPCOREHEADER. According to microsoft the information starting at offset 14 is either a BITMAPINFO or a BITMAPCOREINFO. The only way to tell the difference is to check the size. see: <a href=\"http://msdn.microsoft.com/library/default.asp?url=/library/en\">http://msdn.microsoft.com/library/default.asp?url=/library/en</a>- us/gdi/bitmaps_7jaq.asp",
+        "ST": "",
+        "SM": "Eclipse fails to load oldstyle BMP files"
+    },
+    "75739": {
+        "OT": "The Variant class has no toString() and one cannot call getString() in all cases since it throws an Exception if the type is VT_EMPTY. So I suggest: /** * Always returns a String. * &#64;param variant * &#64;return a String */ public static String toString() { if (this.getType() == COM.VT_EMPTY) { return &quot;&quot;; } return this.getString(); } Version 3.1.M2.",
+        "ST": "",
+        "SM": "Variant has no toString()"
+    },
+    "77948": {
+        "OT": "I200411041200, GTK+ 2.4.9, KDE 3.3.0, Linux 2.6.9 I was creating new simple files in existing projects, and then deleting them. I was using the keyboard heavily for navigation. I found the exception below in the log. There was no major effect from this null pointer, but it might have been responsible for some buttons not disabling when they should. I'll investiage more. !ENTRY org.eclipse.ui 4 4 2004-11-05 08:51:21.199 !MESSAGE Unhandled event loop exception !ENTRY org.eclipse.ui 4 0 2004-11-05 08:51:21.235 !MESSAGE ",
+        "ST": "java.lang.NullPointerException !STACK 0 java.lang.NullPointerException at org.eclipse.swt.custom.CLabel.findMnemonic(CLabel.java:194) at org.eclipse.swt.custom.CLabel.onMnemonic(CLabel.java:334) at org.eclipse.swt.custom.CLabel$3.keyTraversed(CLabel.java:126) at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:221) at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:82) at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:989) at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1013) at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:998) at org.eclipse.swt.widgets.Control.traverse(Control.java:3088) at org.eclipse.swt.widgets.Control.translateMnemonic(Control.java:2992) at org.eclipse.swt.widgets.Composite.translateMnemonic(Composite.java:811) at org.eclipse.swt.widgets.Composite.translateMnemonic(Composite.java:816) at org.eclipse.swt.widgets.Composite.translateMnemonic(Composite.java:816) at org.eclipse.swt.widgets.Composite.translateMnemonic(Composite.java:816) at org.eclipse.swt.widgets.Composite.translateMnemonic(Composite.java:816) at org.eclipse.swt.widgets.Composite.translateMnemonic(Composite.java:816) at org.eclipse.swt.widgets.Composite.translateMnemonic(Composite.java:816) at org.eclipse.swt.widgets.Control.translateMnemonic(Control.java:3011) at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:1855) at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:451) at org.eclipse.swt.widgets.Tree.gtk_key_press_event(Tree.java:637) at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1325) at org.eclipse.swt.widgets.Display.windowProc(Display.java:3214) at org.eclipse.swt.internal.gtk.OS.gtk_widget_event(Native Method) at org.eclipse.swt.widgets.Control.gtk_mnemonic_activate(Control.java:1899) at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1330) at org.eclipse.swt.widgets.Display.windowProc(Display.java:3214) at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(Native Method) at org.eclipse.swt.widgets.Display.eventProc(Display.java:901) at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(Native Method) at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2363) at org.eclipse.jface.window.Window.runEventLoop(Window.java:718) at org.eclipse.jface.window.Window.open(Window.java:696) at org.eclipse.ui.actions.NewWizardAction.run(NewWizardAction.java:172) at org.eclipse.jface.action.Action.runWithEvent(Action.java:988) at org.eclipse.ui.commands.ActionHandler.execute(ActionHandler.java:188) at org.eclipse.ui.internal.commands.Command.execute(Command.java:130) at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:445) at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:724) at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:767) at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:536) at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$2 (WorkbenchKeyboard.java:479) at org.eclipse.ui.internal.keys.WorkbenchKeyboard$1.handleEvent(WorkbenchKeyboard.java:221) at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:82) at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1058) at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:988) at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1013) at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:998) at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1025) at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:593) at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:1866) at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:451) at org.eclipse.swt.widgets.Tree.gtk_key_press_event(Tree.java:637) at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1325) at org.eclipse.swt.widgets.Display.windowProc(Display.java:3214) at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(Native Method) at org.eclipse.swt.widgets.Display.eventProc(Display.java:901) at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(Native Method) at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2363) at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1527) at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1498) at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:276) at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:144) at org.eclipse.ui.internal.ide.IDEApplication.run(IDEApplication.java:102) at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:335) at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:273) at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:129) at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:85) at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:58) at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:60) at java.lang.reflect.Method.invoke(Method.java:391) at org.eclipse.core.launcher.Main.basicRun(Main.java:185) at org.eclipse.core.launcher.Main.run(Main.java:684) at org.eclipse.core.launcher.Main.main(Main.java:668)",
+        "SM": "NullPointerException in CLabel.findMnemonic"
+    },
+    "78548": {
+        "OT": "- run the ControlExample, Button tab - turn on listeners MouseUp and Selection - click on an example Button -&gt; on OSX you'll get Selection - MouseUp -&gt; everywhere else you'll get MouseUp - Selection",
+        "ST": "",
+        "SM": "[consistency] Button Selection fires before MouseUp"
+    },
+    "78559": {
+        "OT": "- run the ControlExample, Slider/Scale tab - turn on the MouseDown and Selection listeners - click on the example Slider's thumb -&gt; on OSX the following is fired: Selection, Selection, MouseDown -&gt; on win32 the following is fired: MouseDown, Selection, Selection (<span class=\"bz_closed\"><a href=\"show_bug.cgi?id=78558\" title=\"RESOLVED WONTFIX - [consistency] Slider fires two selection events on single click\">bug 78558</a></span>) -&gt; everywhere else: MouseDown, Selection",
+        "ST": "",
+        "SM": "[consistency] Slider fires two Selection events before MouseDown"
+    },
+    "78634": {
+        "OT": "The implementation of getTransparencyMask appears to return a fully opaque mask when the image has no transparency. The javadoc seems to infer that it would return null in that case. /** * Returns an &lt;code&gt;ImageData&lt;/code&gt; which specifies the * transparency mask information for the receiver, or null if the * receiver has no transparency and is not an icon. * * &#64;return the transparency mask or null if none exists */ public ImageData getTransparencyMask() (see implementation of ImageData.colorMask) On a different note, should we return a transparent mask based on the the alphaData values with the 127 threshold?",
+        "ST": "",
+        "SM": "ImageData.getTransparencyMask - incorrect javadoc or implementation wrong"
+    },
+    "78854": {
+        "OT": "At the end of ClipboardProxy.getFunc() OS.gtk_selection_data_set() function is used. However this function copies data so tdata.pValue should be freed using OS.g_free().",
+        "ST": "",
+        "SM": "Memory leak in ClipboardProxy.getFunc()"
+    },
+    "78856": {
+        "OT": "This is now supported in JDK 1.4 but there is no way to access this through the SWT clipboard. Eclipse plug-ins have to by-pass SWT and utilize the awt clipboard in order to support copy / paste into external applications. SWT should support this for their Image class. Additionally it would be good to have a delayed render capability, where the image isn't requested until the user pastes into Word. This would allow an interim format (SVG) to be stored until the bitmap render is required thereby saving the expensive memory requirements for bitmaps.",
+        "ST": "",
+        "SM": "[Clipboard] SWT has no support for Image copy to clipboard"
+    },
+    "79107": {
+        "OT": "Check if all platforms stop at null or ignore null elements.",
+        "ST": "",
+        "SM": "[consistency] setItems(String[]) with null elements"
+    },
+    "79268": {
+        "OT": "I200411170800-gtk Not sure what triggers it, neither who is doing it. I get the following stderr output once in a while: (&lt;unknown&gt;:27693): libgnomevfs-WARNING **: Deprecated function. User modifications to the MIME database are no longer supported. In my development workbench, the output reads: (Gecko:11501): libgnomevfs-WARNING **: Deprecated function. User modifications to the MIME database are no longer supported. So I suspect the mozilla/gecko library is doing this, hence I punted it to SWT. Probably nothing we can do much about, but here's the bug anyway.",
+        "ST": "",
+        "SM": "Program API does not work with GNOME 2.8 (libgnomevfs-WARNING)"
+    },
+    "79419": {
+        "OT": "We need to create a some sort of component for preference pages to use for linking. We should look into pushing down the org.eclipse.ui.views.framelist mechanism possibly.",
+        "ST": "",
+        "SM": "[Preferences] Need a link component"
+    },
+    "79481": {
+        "OT": "Hi, see this snippet: public class Main { public static void main(String[] args) { final Display display = new Display(); Shell shell = new Shell(display); shell.setLayout(new FillLayout()); SashForm form = new SashForm(shell, SWT.HORIZONTAL | SWT.SMOOTH); form.setLayout(new FillLayout()); Composite child1 = new Composite(form, SWT.NONE); child1.setLayout(new FillLayout()); new Label(child1, SWT.NONE).setText(&quot;Label in pane 1&quot;); Composite child2 = new Composite(form, SWT.NONE); child2.setLayout(new FillLayout()); new Button(child2, SWT.PUSH).setText(&quot;Button in pane2&quot;); Composite child3 = new Composite(form, SWT.NONE); child3.setLayout(new FillLayout()); new Label(child3, SWT.PUSH).setText(&quot;Label in pane3&quot;); form.setWeights(new int[] { 30, 40, 30 }); shell.open(); while (!shell.isDisposed()) { if (!display.readAndDispatch()) display.sleep(); } display.dispose(); } } Grab the second Sash (right to the button), move it as far as possible to the left (the button becomes very thin). Try to grab the same Sash again. Notice that its not possible. Note: Bug does not occur when not using SWT.SMOOTH Suggestion: Its possible to size the button thiner, as without SWT.SMOOTH. I guess when using SWT.SMOOTh the button becomes that thin, that the Sash itself becomes invisible. The SashForm should not allow to resize the Sash to a smaller value than possible when not using SWT.SMOOTH. Ben",
+        "ST": "",
+        "SM": "Sash no longer draggable when too small"
+    },
+    "80120": {
+        "OT": "see the attachment, I have a toolbar on top right and it cuts a pixel out of the top corner, the layout should take into account the border of the CTabFolder.",
+        "ST": "",
+        "SM": "CTabFolder layout puts top right item one pixel to far to the right"
+    },
+    "80276": {
+        "OT": "CBannerLayout.layout() calls Control.update() all the time. Using update() is good for interactive resizing, but otherwise it is slow and should not be used. This code should be fixed to only call update() during resize, if at all.",
+        "ST": "",
+        "SM": "CBannerLayout calls Control.update too often"
+    },
+    "80506": {
+        "OT": "If a shell that hasn't been opened is forced active: on windows and mac, the current app loses focus, the shell becomes active, but can't be seen. on gtk and motif, if the shell isn't visible, nothing is done. import org.eclipse.swt.widgets.Display; import org.eclipse.swt.widgets.Shell; public class pr79504 { public static void main(String[] args) { final Display display = new Display(); Shell shell = new Shell(display); // shell.setActive(); shell.forceActive(); while (!shell.isDisposed()) { if (!display.readAndDispatch()) display.sleep(); } display.dispose(); } }",
+        "ST": "",
+        "SM": "[consistency] forceActive and setActive are inconsistent across platforms"
+    },
+    "80830": {
+        "OT": "I20041208-gtk GC.drawFocus simply draws a solid line. This is correctly following the javadoc, that says that this may happend if drawing the focus is not supported. However: this seems like a serious limitation to anyone implementing custom widgets. Is there any chance that this will be implemented on GTK? This is really a dup of point 2 of <span class=\"bz_closed\"><a href=\"show_bug.cgi?id=62424\" title=\"RESOLVED WONTFIX - gc.drawFocus on linux does not use XOR drawing\">bug 62424</a></span>, however, it also mentions other things, so I filed this one separately.",
+        "ST": "",
+        "SM": "implement GC.drawFocus"
+    },
+    "81242": {
+        "OT": "PLUGIN_PATH &lt;null&gt; Resolved file name for empty.txt = bluebird/teamswt/torres/linux/motif/eclipse/workspace/org.eclipse.swt.tests/bin/empty.txt An unexpected exception has been detected in native code outside the VM. Unexpected Signal : 11 occurred at PC=0x0 Function=[Unknown.] Library=(N/A) NOTE: We are unable to locate the function name symbol for the error just occurred. Please refer to release documentation for possible reason and solutions. Current Java thread: at org.eclipse.swt.internal.motif.OS._XtGetSelectionValue(Native Method) at org.eclipse.swt.internal.motif.OS.XtGetSelectionValue(OS.java:3688) at org.eclipse.swt.dnd.ClipboardProxy.getAvailableTypes(ClipboardProxy.java:150) at org.eclipse.swt.dnd.ClipboardProxy.getContents(ClipboardProxy.java:118) at org.eclipse.swt.dnd.Clipboard.getContents(Clipboard.java:275) at org.eclipse.swt.dnd.Clipboard.getContents(Clipboard.java:223) at org.eclipse.swt.tests.junit.Test_org_eclipse_swt_custom_StyledText.test_copy(Test_org_eclipse_swt_custom_StyledText.java:555) at org.eclipse.swt.tests.junit.Test_org_eclipse_swt_custom_StyledText.runTest(Test_org_eclipse_swt_custom_StyledText.java:4198) at junit.framework.TestCase.runBare(TestCase.java:127) at junit.framework.TestResult$1.protect(TestResult.java:106) at junit.framework.TestResult.runProtected(TestResult.java:124) at junit.framework.TestResult.run(TestResult.java:109) at junit.framework.TestCase.run(TestCase.java:118) at junit.framework.TestSuite.runTest(TestSuite.java:208) at junit.framework.TestSuite.run(TestSuite.java:203) at junit.framework.TestSuite.runTest(TestSuite.java:208) at junit.framework.TestSuite.run(TestSuite.java:203) at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:468) at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:343) at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:195) Dynamic libraries: 08048000-08056000 r-xp 00000000 00:0a 538294580 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/bin/java 08056000-08059000 rw-p 0000d000 00:0a 538294580 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/bin/java 40000000-40014000 r-xp 00000000 03:03 505027 /lib/ld-2.3.2.so 40014000-40015000 rw-p 00014000 03:03 505027 /lib/ld-2.3.2.so 40015000-4001d000 r-xp 00000000 00:0a 337128161 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/i386/native_threads/libhpi.so 4001d000-4001e000 rw-p 00007000 00:0a 337128161 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/i386/native_threads/libhpi.so 4001e000-40022000 rw-s 00000000 03:03 1988430 /tmp/hsperfdata_torres/20700 40022000-40030000 r--s 00000000 00:0a 386697846 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/ext/ldapsec.jar 40030000-40031000 r--s 00000000 00:0a 539462609 /bluebird/teamswt/torres/linux/motif/eclipse/plugins/org.eclipse.swt.motif_3.1.0/ws/motif/swt-gtk.jar 40032000-4003f000 r-xp 00000000 03:03 505047 /lib/libpthread.so.0 4003f000-40040000 rw-p 0000d000 03:03 505047 /lib/libpthread.so.0 40083000-40085000 r-xp 00000000 03:03 505036 /lib/libdl.so.2 40085000-40086000 rw-p 00001000 03:03 505036 /lib/libdl.so.2 40086000-401b5000 r-xp 00000000 03:03 505033 /lib/libc.so.6 401b5000-401b9000 rw-p 0012f000 03:03 505033 /lib/libc.so.6 401bc000-405b8000 r-xp 00000000 00:0a 369997783 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/i386/client/libjvm.so 405b8000-405d4000 rw-p 003fb000 00:0a 369997783 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/i386/client/libjvm.so 405e6000-405f8000 r-xp 00000000 03:03 505039 /lib/libnsl.so.1 405f8000-405f9000 rw-p 00011000 03:03 505039 /lib/libnsl.so.1 405fb000-4061c000 r-xp 00000000 03:03 505037 /lib/libm.so.6 4061c000-4061d000 rw-p 00020000 03:03 505037 /lib/libm.so.6 4061d000-4062d000 r-xp 00000000 00:0a 318930479 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/i386/libverify.so 4062d000-4062f000 rw-p 0000f000 00:0a 318930479 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/i386/libverify.so 4062f000-4064f000 r-xp 00000000 00:0a 318930480 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/i386/libjava.so 4064f000-40651000 rw-p 0001f000 00:0a 318930480 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/i386/libjava.so 40651000-40665000 r-xp 00000000 00:0a 318930482 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/i386/libzip.so 40665000-40668000 rw-p 00013000 00:0a 318930482 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/i386/libzip.so 40668000-413c9000 r--s 00000000 00:0a 285807727 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/rt.jar 41416000-4142d000 r--s 00000000 00:0a 285807737 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/sunrsasign.jar 4142d000-4149e000 r--s 00000000 00:0a 285800486 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/jsse.jar 4149e000-414b0000 r--s 00000000 00:0a 285807731 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/jce.jar 414b0000-41791000 r--s 00000000 00:0a 285807720 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/charsets.jar 43839000-4383c000 r--s 00000000 00:0a 386722929 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/ext/dnsns.jar 4383c000-4383e000 r-xp 00000000 03:03 684353 /usr/X11R6/lib/X11/locale/lib/common/xlcDef.so.2 4383e000-4383f000 rw-p 00001000 03:03 684353 /usr/X11R6/lib/X11/locale/lib/common/xlcDef.so.2 4b8c0000-4bac0000 r--p 00000000 03:03 2117686 /usr/lib/locale/locale-archive 4bac0000-4bb28000 r--s 00000000 00:0a 386697841 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/ext/localedata.jar 4bb28000-4bb44000 r--s 00000000 00:0a 386725087 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/ext/sunjce_provider.jar 4bb44000-4bb90000 r--s 00000000 00:0a 269221741 /bluebird/teamswt/torres/linux/motif/eclipse/plugins/org.eclipse.jdt.junit_3.1.0/junitsupport.jar 4bb90000-4bb95000 r--s 00000000 00:0a 253875361 /bluebird/teamswt/torres/linux/motif/eclipse/plugins/org.eclipse.jdt.junit.runtime_3.1.0/junitruntime.jar 4bb95000-4bbb3000 r--s 00000000 00:0a 386176619 /bluebird/teamswt/torres/linux/motif/eclipse/plugins/org.junit_3.8.1/junit.jar 4bbb3000-4bbc3000 r-xp 00000000 00:0a 319238016 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/i386/libnet.so 4bbc3000-4bbc4000 rw-p 0000f000 00:0a 319238016 /bluebird/teamswt/torres/linux/vm/jdk1.4.2_06/jre/lib/i386/libnet.so 4bbc4000-4bcc6000 r--s 00000000 00:0a 539462612 /bluebird/teamswt/torres/linux/motif/eclipse/plugins/org.eclipse.swt.motif_3.1.0/ws/motif/swt.jar 4bcc6000-4bcd3000 r--s 00000000 00:0a 539462610 /bluebird/teamswt/torres/linux/motif/eclipse/plugins/org.eclipse.swt.motif_3.1.0/ws/motif/swt-mozilla.jar 4bcd3000-4bce5000 r--s 00000000 00:0a 539462611 /bluebird/teamswt/torres/linux/motif/eclipse/plugins/org.eclipse.swt.motif_3.1.0/ws/motif/swt-pi.jar 4bce5000-4bd2c000 r-xp 00000000 00:0a 589158311 /bluebird/teamswt/torres/linux/motif/eclipse/plugins/org.eclipse.swt.motif_3.1.0/os/linux/x86/libswt-motif-3116.so 4bd2c000-4bd2f000 rw-p 00046000 00:0a 589158311 /bluebird/teamswt/torres/linux/motif/eclipse/plugins/org.eclipse.swt.motif_3.1.0/os/linux/x86/libswt-motif-3116.so 4bd30000-4beb4000 r-xp 00000000 00:0a 138076468 /bluebird/teamswt/torres/linux/motif/eclipse/libXm.so.2.1 4beb4000-4bec7000 rw-p 00183000 00:0a 138076468 /bluebird/teamswt/torres/linux/motif/eclipse/libXm.so.2.1 4bec8000-4bece000 r--s 00000000 03:03 602997 /usr/lib/gconv/gconv-modules.cache 4bece000-4bed0000 r-xp 00000000 03:03 602948 /usr/lib/gconv/ISO8859-1.so 4bed0000-4bed1000 rw-p 00001000 03:03 602948 /usr/lib/gconv/ISO8859-1.so 4bed1000-4beda000 r-xp 00000000 03:03 684357 /usr/X11R6/lib/X11/locale/lib/common/xomGeneric.so.2 4beda000-4bedb000 rw-p 00008000 03:03 684357 /usr/X11R6/lib/X11/locale/lib/common/xomGeneric.so.2 4bee5000-4bfaf000 r-xp 00000000 03:03 2150128 /usr/X11R6/lib/libX11.so.6.2 4bfaf000-4bfb3000 rw-p 000c9000 03:03 2150128 /usr/X11R6/lib/libX11.so.6.2 4bfb3000-4bfc1000 r-xp 00000000 03:03 2150138 /usr/X11R6/lib/libXext.so.6.4 4bfc1000-4bfc2000 rw-p 0000d000 03:03 2150138 /usr/X11R6/lib/libXext.so.6.4 4bfc2000-4c012000 r-xp 00000000 03:03 2150160 /usr/X11R6/lib/libXt.so.6.0 4c012000-4c015000 rw-p 00050000 03:03 2150160 /usr/X11R6/lib/libXt.so.6.0 4c016000-4c01d000 r-xp 00000000 03:03 2150152 /usr/X11R6/lib/libXp.so.6.2 4c01d000-4c01e000 rw-p 00006000 03:03 2150152 /usr/X11R6/lib/libXp.so.6.2 4c01e000-4c023000 r-xp 00000000 03:03 2150162 /usr/X11R6/lib/libXtst.so.6.1 4c023000-4c024000 rw-p 00004000 03:03 2150162 /usr/X11R6/lib/libXtst.so.6.1 4c024000-4c02c000 r-xp 00000000 03:03 2150126 /usr/X11R6/lib/libSM.so.6.0 4c02c000-4c02d000 rw-p 00007000 03:03 2150126 /usr/X11R6/lib/libSM.so.6.0 4c02d000-4c041000 r-xp 00000000 03:03 2150124 /usr/X11R6/lib/libICE.so.6.3 4c041000-4c043000 rw-p 00013000 03:03 2150124 /usr/X11R6/lib/libICE.so.6.3 4c044000-4c04c000 r-xp 00000000 03:03 2150136 /usr/X11R6/lib/libXcursor.so.1.0 4c04c000-4c04d000 rw-p 00007000 03:03 2150136 /usr/X11R6/lib/libXcursor.so.1.0 4c04d000-4c054000 r-xp 00000000 03:03 2150158 /usr/X11R6/lib/libXrender.so.1.2 4c054000-4c055000 rw-p 00006000 03:03 2150158 /usr/X11R6/lib/libXrender.so.1.2 4c055000-4c072000 r-xp 00000000 03:03 684352 /usr/X11R6/lib/X11/locale/lib/common/ximcp.so.2 4c072000-4c074000 rw-p 0001c000 03:03 684352 /usr/X11R6/lib/X11/locale/lib/common/ximcp.so.2 Heap at VM Abort: Heap def new generation total 2240K, used 108K [0x43840000, 0x43aa0000, 0x43d20000) eden space 2048K, 2% used [0x43840000, 0x4384b998, 0x43a40000) from space 192K, 32% used [0x43a70000, 0x43a7f870, 0x43aa0000) to space 192K, 0% used [0x43a40000, 0x43a40000, 0x43a70000) tenured generation total 28844K, used 28004K [0x43d20000, 0x4594b000, 0x47840000) the space 28844K, 97% used [0x43d20000, 0x458793e0, 0x45879400, 0x4594b000) compacting perm gen total 5120K, used 5054K [0x47840000, 0x47d40000, 0x4b840000) the space 5120K, 98% used [0x47840000, 0x47d2f920, 0x47d2fa00, 0x47d40000) Local Time = Wed Dec 15 11:11:45 2004 Elapsed Time = 107 # # The exception above was detected in native code outside the VM # # Java VM: Java HotSpot(TM) Client VM (1.4.2_06-b02 mixed mode) # # An error report file has been saved as hs_err_pid20700.log. # Please refer to the file for further information. #",
+        "ST": "",
+        "SM": "[JUnit] GP in Clipboard.getContents"
+    },
+    "81264": {
+        "OT": "I am working on a table viewer that keeps track of the scroll bar and loads content into the table dynamically as the user scrolls to the end of the table. Items could be added/removed from the table as the user scrolls. To maintain the position of the table, I call setTopIndex at the end of the update. I have created a small testcase to simulate the process. Here's my testcase to demonstrate the problem: public static void main(String[] args) { final Display display = new Display(); Shell shell = new Shell(display); shell.setBounds(10,10,200,200); final Table table = new Table(shell, SWT.NONE); table.setBounds(10,10,100,100); for (int i = 0; i &lt; 99; i++) { new TableItem(table, SWT.NONE).setText(&quot;item &quot; + i); } table.setTopIndex(20); shell.open(); System.out.println(&quot;top visible index: &quot; + table.getTopIndex()); for (int i = 0; i &lt; 5; i++) { new TableItem(table, SWT.NONE).setText(&quot;item &quot; + i); } table.setTopIndex(40); System.out.println(&quot;top visible index: &quot; + table.getTopIndex()); while (!shell.isDisposed()) { if (!display.readAndDispatch()) display.sleep(); } display.dispose(); } Table.setTopIndex fails to position to the correct table item if new items are added to the table after the shell is opened. The first call to setTopIndex succeeds. The table is correctly positioned at item 20. After adding new table items to the table, calling setTopTable(40) has no effect. Calling getTopIndex continues to return 20. Expected Result: Calling setTopIndex(40) should move table item #40 to the top of the table. Calling getTopIndex after should return 40. If the last 5 items are added before the shell is opened, setTopIndex to 40 will also succeed. The testcase works as expected on Windows.",
+        "ST": "",
+        "SM": "Table fails to setTopIndex after new items are added to the table"
+    },
+    "81265": {
+        "OT": "In Control Example, go to tree tab 1. change the background colour. 2. uncheck the enabled checbox The background of the node names changes to the default background, while the rest of the background remains the new background. In tabletree, the entire background of the table tree goes back to the default colour.",
+        "ST": "",
+        "SM": "background of tree is incorrect when disabled"
+    },
+    "81834": {
+        "OT": "StyledText does not convert European Number(EN) to Arabic Number(AN) on WinXP. How to reproduce: 1. Change the user language to Arabic on &quot;Regional and Language Options&quot; panel on Windows. (do not specify &quot;-nl&quot; command line arguments.) 2. Create Shell with SWT.RIGHT_TO_LEFT flag. 3. add StyledText on the shell. 4. Set text &quot;012345 abc 012345&quot; in StyledText widget. 5. Open and run the shell. Result: All the numbers are still European Number characters on StyledText widget. Text widget displays the first &quot;012345&quot; as Arabic Numbers. This is reproducible on swt-I20041221-0800-win32. (also, in Eclipse3.0GA) Thanks, Hiro",
+        "ST": "",
+        "SM": "BIDI: StyledText does not convert European Number to Arabic Number"
+    },
+    "82277": {
+        "OT": "a gradient background in coolbars in combination with win xp visula themes will give us an &quot;office 2003 like&quot; toolbar <a href=\"http://www.eclipse.org/newsportal/article.php?id=16763&amp;group=eclipse.platform.swt\">http://www.eclipse.org/newsportal/article.php?id=16763&amp;group=eclipse.platform.swt</a>",
+        "ST": "",
+        "SM": "[XP theme] coolbars gradient background"
+    },
+    "82346": {
+        "OT": "Not working (CLabel disappears): ... CLabel label = new CLabel(composite, SWT.SHADOW_IN | SWT.CENTER); label.setLayoutData(new GridData(GridData.FILL_HORIZONTAL)); ... Workaround: ... CLabel label = new CLabel(composite, SWT.SHADOW_IN); label.setAlignment(SWT.CENTER); label.setLayoutData(new GridData(GridData.FILL_HORIZONTAL)); ... Noticed this on Linux (gtk) , Eclipse 3.1M4",
+        "ST": "",
+        "SM": "CLabel disappears when given SWT.CENTER flag in constructor"
+    },
+    "82500": {
+        "OT": "Due to the nature of the widget PtPanelGroup, you cannot use PtCalcCanvas to get the widgets drawing area. There is a limitation in photon where you cannot draw a surface outside of a widgets canvas. The tabs are control surfaces. Therefore if you use PtCalcCanvas to determine the drawing area, you will overwrite the tabs. I will attach a patch to fix this.",
+        "ST": "",
+        "SM": "TabFolder should not use PtCalcCanvas in getClientArea"
+    },
+    "82905": {
+        "OT": "I tried both I20050104-1600 and 3.1M4 on different linux versions with gtk 2.2 and gtk 2.4. It seems that GC#drawImage(Image,int,int,int,int,int,int.int,int) will not honor the GC's clipping but draw over the whole client area if and only if SWT.NO_BACKGROUND is set and the image has an alpha channel. This should not happen! Steps to reproduce: I've attached a demo application which displays two custom tab stripe created by a custom canvas subclass. The first stripe uses NO_BACKGROUND. I think, that's valid (and works on Windows) because the canvas draws its own background (the real application does more than just filling it with a simple color) and otherwise, it would flicker (unfortunately, blitting alpha-images is quite slow with SWT). You will notice that in the first stripe, the tab text will vanish if you move the mouse over the tabs. This seems happen because everything is redrawn is parts of the stripe are updated and the images are drawn always and the texts only inside the clipping region. So the images overwrite the text outside of the clipping region.",
+        "ST": "",
+        "SM": "drawImage doesn't honor clip rect"
+    },
+    "83251": {
+        "OT": "I will attach a patch to get rid of them.",
+        "ST": "",
+        "SM": "Javadoc warnings in latest builds"
+    },
+    "83262": {
+        "OT": "When pasting using the middle mouse button from StyledText into an rxvt window, it contains a null terminator at the end. Pasting from other applications like gedit or mozilla into rxvt does not show this behaviour, and this is not reproducable when pasting into an xterm. This problem exists on both Motif and GTK+. Since the X clipboard protocol has a string length field, we do not need to be null terminating these strings.",
+        "ST": "",
+        "SM": "rxvt pastes null terminator"
+    },
+    "83408": {
+        "OT": "StyledText should allow hyperlinks to be specified. The links must become active (cursor changes, underlined, colour change) when the mouse is over the link or when the user tabs to the link. Links must be traversable by tabbing. There needs to be an event when the link is selected and when the link is activated (e.g. in IE the status bar shows detailed info about the link when the user hovers over it). The link should support a tooltip. Must be able to specify whether the link is always underlined or only when active.",
+        "ST": "",
+        "SM": "Support links in StyledText"
+    },
+    "83699": {
+        "OT": "I20050125-0800 All editors and views using a StyledText widget have the font reset to default after coming back from my screen saver. Makes build I20050125-0800 unusable for me. Works if I replace org.eclipse.swt.win32_3.1.0 with the one from last I-build. This breakpoint gets hit when I return from the screen saver Thread [main] (Suspended (breakpoint at line 6820 in StyledText)) StyledText.setFont(Font) line: 6820 StyledText(Control).updateFont(Font, Font) line: 2913 StyledText(Composite).updateFont(Font, Font) line: 810 Canvas(Composite).updateFont(Font, Font) line: 807 Composite.updateFont(Font, Font) line: 807 Composite.updateFont(Font, Font) line: 807 Composite.updateFont(Font, Font) line: 807 Composite.updateFont(Font, Font) line: 807 Composite.updateFont(Font, Font) line: 807 Composite.updateFont(Font, Font) line: 807 Composite.updateFont(Font, Font) line: 807 Shell(Composite).updateFont(Font, Font) line: 807 Display.updateFont() line: 3379 Display.messageProc(int, int, int, int) line: 2276 OS.PeekMessageW(MSG, int, int, int, int) line: not available [native method] OS.PeekMessage(MSG, int, int, int, int) line: 2016 Display.readAndDispatch() line: 2510 Workbench.runEventLoop(Window$IExceptionHandler, Display) line: 1584 Workbench.runUI() line: 1550 Workbench.createAndRunWorkbench(Display, WorkbenchAdvisor) line: 288 PlatformUI.createAndRunWorkbench(Display, WorkbenchAdvisor) line: 144 IDEApplication.run(Object) line: 102 1.run(Object) line: 225 EclipseStarter.run(Object) line: 274 EclipseStarter.run(String[], Runnable) line: 129 NativeMethodAccessorImpl.invoke0(Method, Object, Object[]) line: not available [native method] NativeMethodAccessorImpl.invoke(Object, Object[]) line: 39 DelegatingMethodAccessorImpl.invoke(Object, Object[]) line: 25 Method.invoke(Object, Object[]) line: 324 Main.basicRun(String[]) line: 255 Main.run(String[]) line: 811 Main.main(String[]) line: 795",
+        "ST": "",
+        "SM": "Font reset to default after screen saver"
+    },
+    "84012": {
+        "OT": "When selecting text in the native Windows text widget, it is possible to extend the selection to the beginning (end) of a line by moving the mouse cursor beyond the left (right) edge of the widget's client area. In a StyledText widget with SWT.WRAP style, this does not work. When handling mouse move events, the StyledText discards all cases in which the horizontal mouse position lies outside its client area while the vertical coordinate translates to the same line the caret is currently on. This means that if the mouse movement is too quick (resulting in not receiving enough mouse move events to cover all the caret positions up to the left(right)most one), the selection will remain incomplete. See the attached screenshot for some visual clarification. Ignoring events outside the client area is apparently done in order not to confuse the (horizontal) auto-scroll mechanism that may also kick in on mouse movements. However, when the SWT.WRAP style is set, there is no horizontal auto-scrolling. Therefore, the fix is to introduce a check to see if the word-wrap option is turned on and allow extending the selection if it is. --- import org.eclipse.swt.*; import org.eclipse.swt.custom.*; import org.eclipse.swt.graphics.*; import org.eclipse.swt.layout.*; import org.eclipse.swt.widgets.*; public class StyledTextSelectionTest { public static void main(String[] args) { Display display = new Display(); Shell shell = new Shell(display); FillLayout layout = new FillLayout(SWT.VERTICAL); layout.marginWidth = 20; layout.marginHeight = 20; layout.spacing = 20; shell.setLayout(layout); Font font = new Font(display, &quot;Arial&quot;, 12, SWT.NORMAL); StyledText text1 = new StyledText(shell, SWT.BORDER | SWT.MULTI | SWT.WRAP | SWT.V_SCROLL); text1.setFont(font); text1.setText(&quot;StyledText widget with SWT.WRAP style.&quot;); Text text2 = new Text(shell, SWT.BORDER | SWT.MULTI | SWT.WRAP | SWT.V_SCROLL); text2.setFont(font); text2.setText(&quot;Native text widget with SWT.WRAP style.&quot;); shell.setSize(400, 300); shell.open(); while (!shell.isDisposed()) { if (!display.readAndDispatch()) { display.sleep(); } } font.dispose(); display.dispose(); } }",
+        "ST": "",
+        "SM": "StyledText with SWT.WRAP style does not adjust selection correctly"
+    },
+    "84557": {
+        "OT": "I am running I20050202-0800 linux gtk ctrl esc E brings up the handy switch to editor window, but unfortuantley the list is empty :(",
+        "ST": "",
+        "SM": "Table item does not appear in table"
+    },
+    "84609": {
+        "OT": "Consider followed code, table has only 3 columns: // refresh table on new data lvtTable.getColumn(0).pack(); lvtTable.getColumn(1).pack(); lvtTable.getColumn(2).pack(); On third call I get caught NPE (in debugger) in TableColumn (line 356), because parent.getColumns() (in TableColumn:354) returns array with 4 elements (always one more as existing in the table), and the last element is always null. My system is WinXP, Eclipse Version: 3.1.0, Build id: I20050202-0800, JDK 1.5.0. 1",
+        "ST": "",
+        "SM": "TableColumn has NPE while calling pack() on last column"
+    },
+    "84906": {
+        "OT": "See file attached.",
+        "ST": "",
+        "SM": "We found some typos or broken links."
+    },
+    "84911": {
+        "OT": "In the specs there are some methods that are probably intended to be platform/implementation specific. We feel this should be stated. You find the details in the file attached. However, broadly speaking, the functionality of methods such as toString(), hashCode() ane equals() has not been specified. Could you either say that these are totally implementation dependent, or, if this is not the case, give some functionality guidelines.",
+        "ST": "",
+        "SM": "Unspecified methods"
+    },
+    "85072": {
+        "OT": "[This problem affects all NT-based Windows variants, including Win2k and XP] The Windows NT kernel has a well-known problem: When you minimize an application, Windows will trim the working set of the process. This is described in the following Microsoft knowledgebase entry, which also provides a solution: <a href=\"http://support.microsoft.com/default.aspx?scid=kb;en-us;293215\">http://support.microsoft.com/default.aspx?scid=kb;en-us;293215</a> Certain applications seem particularly affected by this problem -- Java GUI applications and the Mozilla suite seem particularly sensitive. (Mozilla-based apps include a hidden configuration option to enable the solution mentioned above.) When you bring back the minimized application, the OS will start swapping the pages back into physical memory, &quot;trashing&quot; the disk and meanwhile making the application completely unresponsive. Waits up to a minute have been observed with large (300-350MB) working sets. The aforementioned solution prevents the OS from immediately swapping out the application, but will still swap out the application to give priority to other focused applications, so the fix has no significant negative effects on a running system. A patch was offered on the SWT dev mailing list some time ago, but it does not seem to have been recorded or accepted: <a href=\"http://dev.eclipse.org/mhonarc/lists/platform-swt-dev/msg03710.html\">http://dev.eclipse.org/mhonarc/lists/platform-swt-dev/msg03710.html</a> Further references: <a href=\"http://www.javagaming.org/cgi-bin/JGNetForums/YaBB.cgi?board=Tuning;action=display;num=1090286158\">http://www.javagaming.org/cgi-bin/JGNetForums/YaBB.cgi?board=Tuning;action=display;num=1090286158</a> <a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=76831\">https://bugzilla.mozilla.org/show_bug.cgi?id=76831</a> <a href=\"http://www.eclipsepowered.org/archives/2004/11/18/best-jvm-settings-for-eclipse/\">http://www.eclipsepowered.org/archives/2004/11/18/best-jvm-settings-for-eclipse/</a>",
+        "ST": "",
+        "SM": "Eclipse working set aggressively trimmed by Windows"
+    },
+    "86000": {
+        "OT": "The ImageLoader Save function appears to be producing bad JPG images. I have only verified this with JPEG output. Simple test case below loads PNG Files and Saves them as JPEG. Many files were tested and the majority did produced the proper JPG images as expected. The attached Zip file contains only those files that did not save correctly to JPEG. package com.ibm.test.image; import org.eclipse.swt.*; import org.eclipse.swt.graphics.*; public class ImageLoaderTest { public static void main(String[] args) { ImageLoader loader; String dir=&quot;c:\\\\image-problems\\\\&quot;; String files[]={ &quot;s34i3p04&quot;, &quot;s34n3p04&quot;, &quot;s35i3p04&quot;, &quot;s35n3p04&quot;, &quot;s36i3p04&quot;, &quot;s36n3p04&quot;, &quot;s37i3p04&quot;, &quot;s37n3p04&quot;, &quot;s38i3p04&quot;, &quot;s38n3p04&quot;, &quot;s39i3p04&quot;, &quot;s39n3p04&quot; }; try { for (int i=0; i&lt;files.length; i++) { String filein = dir+files[i]+&quot;.png&quot;; String fileout = dir+files[i]+&quot;.jpg&quot;; loader = new ImageLoader(); loader.load(filein); loader.save(fileout,SWT.IMAGE_JPEG); } } catch (SWTException e) { e.printStackTrace(); } } }",
+        "ST": "",
+        "SM": "ImageLoader Save - produces invalid JPEG images"
+    },
+    "86294": {
+        "OT": "I can't do a search on a java file with the M5a build on the Mac. Find: mask4 &quot;Illegal/unsupported escape&quot; comes up in the Find / Replace dialog.",
+        "ST": "",
+        "SM": "Find/Replace not working \"Illegal/Unsupported escape on the Mac"
+    },
+    "86631": {
+        "OT": "The example code in the Javadoc indicates the stream doesn't have to be closed but it does. This needs to be fixed here and in other places in SWT where we accept streams. We need to determine the correct pattern of try {} catch () and apply it everywhere in the doc.",
+        "ST": "",
+        "SM": "Javadoc wrong for Image(stream)"
+    },
+    "87363": {
+        "OT": "Bug introduced Nov 5, 2004. Prior to change Control.showMenu did this: boolean showMenu (int x, int y) { Event event = new Event (); event.x = x; event.y = y; sendEvent (SWT.MenuDetect, event); if (!event.doit) return true; if (menu != null &amp;&amp; !menu.isDisposed ()) { if (x != event.x || y != event.y) { menu.setLocation (event.x, event.y); } menu.setVisible (true); return true; } return false; } If a menu was created during the MenuDetect listener notification, the menu field was updated and the menu was set visible. After Nov 5, 2004 the method was moved to Widget and now looks like this: boolean showMenu (Menu menu, int x, int y) { Event event = new Event (); event.x = x; event.y = y; sendEvent (SWT.MenuDetect, event); if (!event.doit) return true; if (menu != null &amp;&amp; !menu.isDisposed ()) { if (x != event.x || y != event.y) { menu.setLocation (event.x, event.y); } menu.setVisible (true); return true; } return false; } Since menu is just a local variable, it is not updated when a menu is created in the MenuDetect event. The following example demonstrates the problem: public static void main(String[] args) { Display display = new Display(); final Shell shell = new Shell(display); shell.addListener(SWT.MenuDetect, new Listener() { int count = 0; public void handleEvent(Event event) { Menu menu = shell.getMenu(); if (menu != null) menu.dispose(); menu = new Menu(shell, SWT.POP_UP); MenuItem item = new MenuItem(menu, SWT.PUSH); item.setText(&quot;Menu &quot; + count++); shell.setMenu(menu); } }); shell.pack(); shell.open(); while (!shell.isDisposed()) { if (!display.readAndDispatch()) display.sleep(); } display.dispose(); }",
+        "ST": "",
+        "SM": "Regression: MenuDetect no longer opens new menus"
+    },
+    "87460": {
+        "OT": "SWT-win32, v3124 In the snippet below, there is a StyledText with a line style listener. In the line style listener, a bold font style is set, changing the width of the rendered text. I would have expected the on-screen caret location (not the offset) to be adjusted to the change. However, this does not happen. For an italic style, it does not look right either. Might be a bug? --- import org.eclipse.swt.*; import org.eclipse.swt.custom.*; import org.eclipse.swt.graphics.*; import org.eclipse.swt.layout.*; import org.eclipse.swt.widgets.*; public class LineStyleCaretTest { public static void main(String[] args) { Display display = new Display(); Shell shell = new Shell(display); shell.setLayout(new FillLayout()); Font font = new Font(display, &quot;Arial&quot;, 12, SWT.NORMAL); final StyledText text = new StyledText(shell, SWT.MULTI); text.setFont(font); text.setText(&quot;Standard Widget Toolkit&quot;); text.setCaretOffset(text.getText().length()); text.addLineStyleListener(new LineStyleListener() { public void lineGetStyle(LineStyleEvent event) { StyleRange[] styles = new StyleRange[1]; styles[0] = new StyleRange(); styles[0].start = 0; styles[0].length = text.getText().length(); styles[0].fontStyle = SWT.BOLD; event.styles = styles; } }); shell.setSize(300, 100); shell.open(); while (!shell.isDisposed()) { if (!display.readAndDispatch()) { display.sleep(); } } font.dispose(); display.dispose(); } }",
+        "ST": "",
+        "SM": "StyledText: Caret location not updated when line style is used"
+    },
+    "87676": {
+        "OT": "Build I-20050308 Using the log view as an example, double-clicking on column0 brings up the event dialog as it should. double-clicking on column1, column2 results in no notification to our double- click listener.",
+        "ST": "",
+        "SM": "Double-click only works on a tree's column0"
+    },
+    "87855": {
+        "OT": "Here is a stack trace I found when trying to kill a running process by pressing the &quot;kill&quot; button in the console view. I use 3.1M5a. !ENTRY org.eclipse.ui 4 0 2005-03-12 14:26:25.58 !MESSAGE ",
+        "ST": "java.lang.NullPointerException !STACK 0 java.lang.NullPointerException at org.eclipse.swt.widgets.Table.callWindowProc(Table.java:156) at org.eclipse.swt.widgets.Table.sendMouseDownEvent(Table.java:2084) at org.eclipse.swt.widgets.Table.WM_LBUTTONDOWN(Table.java:3174) at org.eclipse.swt.widgets.Control.windowProc(Control.java:3057) at org.eclipse.swt.widgets.Display.windowProc(Display.java:3480) at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method) at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:1619) at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2539) at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:1612) at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:1578) at org.eclipse.ui.internal.Workbench.createAndRunWorkbench (Workbench.java:293) at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:144) at org.eclipse.ui.internal.ide.IDEApplication.run (IDEApplication.java:102) at org.eclipse.core.internal.runtime.PlatformActivator$1.run (PlatformActivator.java:228) at org.eclipse.core.runtime.adaptor.EclipseStarter.run (EclipseStarter.java:333) at org.eclipse.core.runtime.adaptor.EclipseStarter.run (EclipseStarter.java:150) at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:39) at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:25) at java.lang.reflect.Method.invoke(Method.java:585) at org.eclipse.core.launcher.Main.invokeFramework(Main.java:268) at org.eclipse.core.launcher.Main.basicRun(Main.java:260) at org.eclipse.core.launcher.Main.run(Main.java:887) at org.eclipse.core.launcher.Main.main(Main.java:871)",
+        "SM": "NullPointerException in Table.callWindowProc"
+    },
+    "87997": {
+        "OT": "Found in 3.1 I20050308-0835. TableEdtior.dispose( ) calls methods on it's owning Table to remove some listeners from the table's columns. If the table is in the process of being disposed, the columns will have already been disposed and this will result in a NPE. Specifically this prevents one from adding a dispose listener on the Table or a TableItem and trying to dispose of the associated editor, as in the code below. Further if the dispose listener is set on the parent of the Table, a &quot;Widget is disposed&quot; exception will be thrown instead of the NPE. This leaves no place to hook to trigger the disposal of the TableEditor. import org.eclipse.swt.custom.TableEditor; import org.eclipse.swt.events.*; import org.eclipse.swt.widgets.*; public class Test { public static void main( String[ ] args ) { Shell shell = new Shell( ); Table table = new Table( shell, 0 ); new TableColumn( table, 0 ); TableItem item = new TableItem( table, 0 ); final TableEditor editor = new TableEditor( table ); final Text text = new Text( table, 0 ); editor.setEditor( text, item, 0 ); item.addDisposeListener( new DisposeListener( ) { public void widgetDisposed( DisposeEvent e ) { text.dispose( ); editor.dispose( ); // Triggers a NPE } } ); shell.dispose( ); } }",
+        "ST": "",
+        "SM": "TableEditor.dispose( ) causes NPE if linked Table is being disposed"
+    },
+    "88717": {
+        "OT": "Create a Tree with some items and implement DND support as explained in this Snippet: <a href=\"http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet91.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup\">http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet91.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup</a> Now expand some items so that vertical scrollbars are appearing. When draggin an item to the bottom, the Tree is not scrolling. It is currently not possible to Drag an Item to a position that is out of view. I would have thought that DND.FEEDBACK_SCROLL enables automatic scrolling, in case the user drags an Item to the bottom but it does'nt. To see how its working, open Bookmark Manager in Firefox, expand items until the Scrollbars are showing and drag a Bookmark to the Bottom. The Tree is scrolling. Ben",
+        "ST": "",
+        "SM": "[DND] Tree is scrolling very slow when dragging an Item to the Bottom"
+    },
+    "88829": {
+        "OT": "- start with five columns, all different widths - do Table.setColumnOrder(new int[] {4,1,2,3,0}); - SWT.Move events are fired for columns 0 and 4 because they swapped positions -&gt; but Move should have been fired for all of the columns since the width of the first displayed column changed, and therefore all of the other columns are auto-shifted accordingly",
+        "ST": "",
+        "SM": "Table.setColumnOrder() may not fire enough Move events"
+    },
+    "89533": {
+        "OT": "",
+        "ST": "",
+        "SM": "[Themes] Colors and Fonts preferences page has funny icons for color entries"
+    },
+    "90018": {
+        "OT": "Hover over the PartStack CTabFolder inside eclipse until some native tooltip is displayed. For example, the maximize button. When the tooltip appears, change perspectives using the keybinding. the CTabFolder gets hidden, but its tooltip is permanently displayed and never goes away. Even if that CTabFolder is disposed (I'm assuming) when the perspective is closed.",
+        "ST": "",
+        "SM": "Native tooltips left around on CTabFolder"
+    },
+    "90258": {
+        "OT": "I20050401 (M6) I am using a Table with SWT.VIRTUAL. Everything works fine, except for the case I set the item count to 1, in which case I do not receive an SWT.SetData notification. Tried to reproduce using a modified version of Snippet151, but everything works as expected there. Do you have any idea what could be going wrong? One funny thing is that in the variable view, the debugger displays the updated contents of table.items[0] after calling clearAll(), but I have verified that the data is never ever set. The display fails to update. My code looks like this: ---------------- Table table... table.setItemCount(1); table.clearAll(); ... private void handleSetData(Event event) { TableItem item= (TableItem) event.item; int index= fProposalTable.indexOf(item); ICompletionProposal current= fFilteredProposals[index]; item.setText(current.getDisplayString()); item.setImage(current.getImage()); item.setData(current); } -----------------",
+        "ST": "",
+        "SM": "Table item not updated when item count == 1"
+    },
+    "91159": {
+        "OT": "On Windows in DragEnter the event.dataType field is set to the first value in the event.dataTypes array. On Carbon, GTK and Motif, the event.dataType field is null.",
+        "ST": "",
+        "SM": "[Consistency] DropTarget event.dataType field not alwys set on DragEnter"
+    },
+    "91317": {
+        "OT": "Version: 3.1.0 Build id: I20050413-0910 Spinner should allow negavtive values.",
+        "ST": "",
+        "SM": "Spinner should support negative values"
+    },
+    "92013": {
+        "OT": "There seems to be no way to tell CoolBar to orient itself vertically i.e. the drag handle is always rendered as a vertical line/vertical dots. I wanted to use CoolBar/CoolItem for the intro launch bar so that I can get the OS-specific handle rendering but I need to be able to position CoolBar vertically when in the LEFT and RIGHT window trim areas. In this orientation, CoolItem handle will be rendered horizontally (as horizontal line/dots).",
+        "ST": "",
+        "SM": "DCR - Need SWT.VERTICAL style for CoolBar"
+    },
+    "92017": {
+        "OT": "Currently an Image on Windows is size-limited - on my system to 16MB. However, a posting in eclipse.platform.swt in response to &quot;Larger image problems&quot; suggested that there is a way to get OS.CreateCompatibleBitmap to transparently return a DIB that is stored in main memory and can be any size. If there is a way to easily support this, it'd be really helpful.",
+        "ST": "",
+        "SM": "Support very large Image on Windows platform"
+    },
+    "92181": {
+        "OT": "Running the code in head, 20050421 In the default Java perspective, drag the problems view to the right of the JavaDoc view. The resulting CTabFolder tab sizes are wrong.",
+        "ST": "",
+        "SM": "Bogus CTabFolder tab sizes"
+    },
+    "92241": {
+        "OT": "3.1 stream See <span class=\"bz_closed\"><a href=\"show_bug.cgi?id=92209\" title=\"RESOLVED FIXED - [implementation] Scrolling performance degrades with size of selection\">bug 92209</a></span>. Filling the clipboard with the current selection upon every selection change *really* hurts one test case: selecting big editor areas and changing the selection with the arrow keys and holding shift (or selecting large areas with the mouse). Note that this happens on Windows as well as GTK. IMO, copying the entire (almost) document content upon every selection change is way too expensive. Is there a way to avoid this?",
+        "ST": "",
+        "SM": "StyledText should not fill the clipboard on every selection change"
+    },
+    "92341": {
+        "OT": "Please add a possibility to lazy-load the first tree level (like SWT.VIRTUAL for the table widget).",
+        "ST": "",
+        "SM": "DCR - Add SWT.VIRTUAL style to Tree widget"
+    },
+    "92612": {
+        "OT": "0420 integration build (showed VI already) - drag several eclipse views into one view slot (eg.- on top of the Navigator) -&gt; assuming that there isn't room to show all of the tabs, there will be a chevron shown with a number representing the number of hidden tabs - slowly make the top view more narrow, and as this makes the CTabFolder more narrow, the number of tabs that it can fit will shrink, and therefore the number below the chevron will grow - but you'll reach a point where this number becomes 0, when it should probably be equal to the number of tabs in the tabfolder",
+        "ST": "",
+        "SM": "CTabFolder hidden tabs count (in chevron) can become 0"
+    },
+    "92757": {
+        "OT": null,
+        "ST": "",
+        "SM": "StyledText: Add caret listener"
+    },
+    "93380": {
+        "OT": "Version: 3.1.0 Build id: I20050419-1200 When i drag and drop a file inside the package explorer or navigator views the CPU says at 100% (or 50% when hyperthreading is enabled). Since the CPU usage doesn't go above 50% my guess is that all of the processing time is spent in the event thread (windows doesn't seem to let the virtual CPU on the event thread, hence the 50% number). I do not see this massive use of CPU when dragging an external file into the navigator or when dragging a file out of the navigator. Dragging views/editor is also ok. I will try to get some thread dumps either tonight or tomorrow.",
+        "ST": "",
+        "SM": "[DnD] 100% CPU usage when dragging files in the navigator or package explorer"
+    },
+    "93724": {
+        "OT": "Here is an example of some code in DragSource.java for GTK+: byte[] buffer = Converter.wcsToMbcs(null, &quot;drag_data_get&quot;, true); OS.g_signal_connect(control.handle, buffer, DragGetData.getAddress(), 0); buffer = Converter.wcsToMbcs(null, &quot;drag_end&quot;, true); OS.g_signal_connect(control.handle, buffer, DragEnd.getAddress(), 0); buffer = Converter.wcsToMbcs(null, &quot;drag_data_delete&quot;, true); OS.g_signal_connect(control.handle, buffer, DragDataDelete.getAddress(), 0); Rather than converting the names for the signals every time, these signal names should be defined in OS.java so that they can be only created once.",
+        "ST": "",
+        "SM": "Drag-and-drop creates signal names every time"
+    },
+    "94467": {
+        "OT": "I20050510-0010 Use ctrl-shift-e to bring up the editor list. The list appears empty because all of the columns are set to zero size.",
+        "ST": "",
+        "SM": "Table layouts which only lay out once are giving bogus sizes"
+    },
+    "94598": {
+        "OT": "OS: &lt;RHEL 4.0&gt; Language: &lt;Traditional Chinese&gt; Build level: &lt;Eclipse SDK 3.1 M6 - I20050506-1600&gt; JDK version: &lt;IBM JDK 1.4.2 SP1a&gt; Test case #: &lt;5.3 Search scope with NLS name(Help)&gt; Summary: DBCS3.1:Eclipse hangs when activate IIMF input in search scope of Help Steps to recreate problem: 1- Install Eclipse SDK and NL pack 2- Click &quot;Help&quot; from menu -&gt; select &quot;Help Content&quot; -&gt; Click &quot;Search Scope&quot;, a Search Scope dialog pop up. 3- Select &quot;Search all topics&quot;, Click &quot;New&quot;, the New Search List dialog pop up. 4- Then try to active IIMF input method by &quot;CTRL+SPACE&quot; key in order to input DBCS characters, but Eclipse hangs. No response from Eclipse. Error: Eclipse hangs and can't switch or change any input method. Expected Result: IIMF input should be working properly for inputing/key in DBCS characters.",
+        "ST": "",
+        "SM": "DBCS3.1:Eclipse hangs when activate IIMF input in search scope of Help"
+    },
+    "94603": {
+        "OT": "SWT Spinner puts buttons outside of the text box inset border. Standard look of Windows UpDown control is different. The buttons are inside the inset border.",
+        "ST": "",
+        "SM": "Spinner does not look like Windows standard one"
+    },
+    "95410": {
+        "OT": "If you have a structure which is rendered to a GC, you need to be able to predict things like how large a String is going to be painted. But, if a previous visitor has triggered GDI+, drawString's behavior is altered. The chars get expanded and compressed in funny ways, and generally look bad.",
+        "ST": "",
+        "SM": "GDI+ drawString is not consistent with GDI"
+    },
+    "96053": {
+        "OT": "SWT-win32, v3135 (3.1M7) The standard behaviour for Windows spinner widgets is to set focus to the text control and select its text when the user clicks on the up or down button. Right now, this does not happen. Note that you get this for free if you implement the suggestion in <span class=\"bz_closed\"><a href=\"show_bug.cgi?id=94603#c3\" title=\"RESOLVED FIXED - Spinner does not look like Windows standard one\">bug 94603 comment #3</a></span>.",
+        "ST": "",
+        "SM": "Spinner: Pressing buttons should focus spinner and select text"
+    },
+    "96916": {
+        "OT": "No tooltip appears on the spinner widget after Spinner.setToolTipText().",
+        "ST": "",
+        "SM": "Spinner.setToolTipText() doesn't work"
+    },
+    "97177": {
+        "OT": "Open chinese IME in eclipse text editor,then switch to another window and switch back to Eclipse, chinese IME are closed, and have to open again.",
+        "ST": "",
+        "SM": "[misc] Chinese IME status lost"
+    },
+    "97651": {
+        "OT": "3.1RC1 - run the snippet below - the insert line is set to be under the &quot;root&quot; item - collapse the root item -&gt; problem 1: this makes most of the insert line go away, except for its pointy ends. This line should not go away because it belongs to the &quot;root&quot; item, not to the &quot;child&quot; item, but if it really wants to go away, then its end tips should not be left - press the button to the right of the Table: this does a Tree.redraw(), and note that the insert line reappears, so I guess it never really meant to go away -&gt; problem 2: now expand the root item again and its insert mark gets copied to below the child item in addition to its initial location. This is cheese, as can be seen by damaging part of this line with another window public static void main(String[] args) { final Display display = new Display(); final Shell shell = new Shell(display); shell.setBounds(10, 10, 300, 300); final Tree tree = new Tree(shell, SWT.NONE); tree.setBounds(10, 10, 200, 200); new TreeItem(tree, SWT.NONE).setText(&quot;pre-root&quot;); TreeItem root1 = new TreeItem(tree, SWT.NONE); root1.setText(&quot;root&quot;); TreeItem child = new TreeItem(root1, SWT.NONE); child.setText(&quot;child&quot;); Button button = new Button(shell, SWT.PUSH); button.setBounds(230,10,30,30); button.addSelectionListener(new SelectionAdapter() { public void widgetSelected(SelectionEvent e) { tree.redraw(); } }); root1.setExpanded(true); tree.setInsertMark(root1, false); shell.open(); while (!shell.isDisposed()) { if (!display.readAndDispatch()) display.sleep(); } display.dispose(); }",
+        "ST": "",
+        "SM": "tree insert mark cheese"
+    },
+    "97678": {
+        "OT": "Eclipse 3.1 RC1 In the CustomControlExample, drag the sash between the items on the far right as far right as it will go. It should stop about 20 pixels from the end. However, it lets you drag the sash right off the end and then you can no longer drag the sash back.",
+        "ST": "",
+        "SM": "SashForm - can lose sash for item on far right"
+    },
+    "97745": {
+        "OT": "3.1 RC1, Windows XP - open the tasks view - click on the &quot;Resource&quot; Column and release to sort the table. Note that the column header is inset while pressing down and then restores to normal look on release. - now press down on the &quot;Location&quot; column but drag the mouse off the view before releasing the mouse button. Problem: The &quot;Location&quot; column keeps its &quot;depressed&quot; look until another column is clicked. This can mislead one into thinking the table is sorted by the wrong column. Not sure if this is SWT or JFace...",
+        "ST": "",
+        "SM": "Table column header stays pressed if mouse button released elsewhere"
+    },
+    "99145": {
+        "OT": "20050609-0010 When disabling a a linked wiget with mixed text/link content (e.g. &quot;Use the &lt;a&gt;XY page&lt;/a&gt; to configure this&quot;), only the link is disabled, not the text. See screenshot",
+        "ST": "",
+        "SM": "Link widget only disables link, not text"
+    },
+    "99266": {
+        "OT": "RC1: To reproduce this issue run the attached code. The table gets displayed with few blank lines at the top.",
+        "ST": "",
+        "SM": "[Viewers] Bogus empty rows at the beginning of a table"
+    },
+    "99376": {
+        "OT": "31RC2 - Window -&gt; Show View -&gt; Other... - select PDE Runtime - Plug-in Registry, OK - in the opened view, the Table that's to the right of the Tree has two problems: -&gt; column 0 has width 0 (its width can be increased by dragging its separator) -&gt; column 1 seems non-existent",
+        "ST": "",
+        "SM": "TableColumn has width=0 and second column missing"
+    },
+    "100040": {
+        "OT": "build N20050602 Several of the UI performance tests got slower between RC1 and N20050602, on Windows. I tried running one of them, the OpenCloseWindowTest on N20050602, and also with N20050602+RC1's SWT. Here are the numbers (on Win2K): N20050602: testOpenCloseWindows:org.eclipse.debug.ui.DebugPerspective Elapsed Process: 844 ms Elapsed Process: 828 ms Elapsed Process: 854 ms average: 842 N20050602 with SWT from RC1 (I20050527-1300): testOpenCloseWindows:org.eclipse.debug.ui.DebugPerspective Elapsed Process: 751 ms Elapsed Process: 757 ms Elapsed Process: 731 ms average: 746ms increase: 96 over 746 = 13% slower I've only included the times for the debug perspective. The other perspectives showed less of a change, and seemed to correlate with the numer of icons (either in the menus or toolbars or both). The debug perspective has the most icons. I'm suspicious of the ImageList change to always specify OS.ILC_MIRROR. I'll see if unwinding that single change makes a difference.",
+        "ST": "",
+        "SM": "Slowdown between 3.1 RC1 and N20050602 due to change to ImageList"
+    },
+    "100095": {
+        "OT": "I already read a comment by Veronika, that URLTransfer is intentionally not public, because it is not yet fully implemented on all platforms. But could'nt you make it public and provide some fake implementation for platforms that are not yet implemented? Just for example, System Tray is active, though not implemented on all OS. Same to the Browser widget. It would be sad to loose URLTransfers existing functionality on Windows. The reason I am asking is because URLTransfer is the only Transfer that allows to easily read the URL out of a DND from the Internet Explorer. Even Firefox is not supporting DND from the IE. Ben",
+        "ST": "",
+        "SM": "[DND] Consider making URLTransfer public"
+    },
+    "100387": {
+        "OT": "CTabFolder.showToolTip() currently does the following: On MouseHover: - create a temporary shell - if there's a tooltip: set it and show it - otherwise: dispose the shell There are no tooltips for the tabs used for views in Eclipse. As you hover over each tab, a new Shell is created and disposed on each MouseHover event.",
+        "ST": "",
+        "SM": "CTabFolder creates and disposes a Shell on every MouseHover"
+    },
+    "101354": {
+        "OT": "See <span class=\"bz_closed\"><a href=\"show_bug.cgi?id=68867\" title=\"RESOLVED FIXED - ImageData - remove ImageLoader dependencies\">bug 68867</a></span> for details.",
+        "ST": "",
+        "SM": "Class ImageDataLoader needs javadoc"
+    },
+    "102756": {
+        "OT": "Attached are 2 screenshots using Fedora Core 3 (GNOME 2.8, GTK 2.4.14). goodcombo.png is GTK's native Open File dialog. badcombo.png is Eclipse's Team preferences page. You can see that Eclipse does not render the read only Combo properly. Rendering combos this way is confusing because it implies you can edit the values when you actually can't. It also doesn't match the combos in other native applications. Please render the Combo widget to match the native GTK platform. Thanks!",
+        "ST": "",
+        "SM": "Use GtkComboBox instead of GtkCombo"
+    },
+    "102794": {
+        "OT": "Running the following problem on 3.0.2 and 3.1 shows a difference in behaviour: public static void main(String[] args) { Display display = new Display(); Shell shell = new Shell(display); shell.setLayout(new FillLayout()); ScrolledComposite sc1 = new ScrolledComposite(shell, SWT.H_SCROLL | SWT.V_SCROLL); Composite editor = new Composite(sc1, SWT.SHADOW_NONE); sc1.setContent(editor); sc1.setLayout(new FillLayout()); GridLayout layout = new GridLayout(); layout.numColumns = 6; layout.makeColumnsEqualWidth = true; editor.setLayout(layout); Label boxLabel = new Label(editor, SWT.NONE); boxLabel.setText(&quot;My label&quot;); Text textBox = new Text(editor, SWT.H_SCROLL | SWT.V_SCROLL | SWT.MULTI | SWT.BORDER); textBox.setText(&quot;Some text for the text box\\nAlso with a new line&quot;); // do layout bits GridData labelData = new GridData(SWT.RIGHT, SWT.TOP, false, false); boxLabel.setLayoutData(labelData); GridData textBoxData = new GridData(SWT.FILL, SWT.CENTER, true, false, 5, 1); textBoxData.widthHint = 400; textBox.setLayoutData(textBoxData); sc1.setExpandHorizontal(true); sc1.setExpandVertical(true); sc1.setMinSize(editor.computeSize(SWT.DEFAULT, SWT.DEFAULT)); shell.pack(); shell.open(); while (!shell.isDisposed()) { if (!display.readAndDispatch()) display.sleep(); } display.dispose(); } Basically on 3.0.2 the window that appears has a label of about 80 pixels wide and a textbox of 400 pixels wide. With 3.1 the label is about 400 pixels wide, with the text box being about 2000 pixels wide. This appears to be a combination of the text box spanning 5 columns and the use of layout.makeColumnsEqualWidth = true; Turning off makeColumnsEqualWidth helps but it means that the real app this if from ends up looking untidy. Using minimumWidth instead of widthHint doesn't help. Commenting out the minimumWidth line helps, but the form ends up being wider than I'd like. The effect I'm trying to achieve is that labels are 1 column wide then text boxes are either 2 or 5 columns wide (so some rows get two labels and text boxes) The scrolled composite is needed because in the real app the forms are actually within a TabItem, so I need the ability to scroll.",
+        "ST": "",
+        "SM": "GridLayout has change behaviour between 3.0.2 and 3.1"
+    },
+    "103863": {
+        "OT": "Currently, SWT layouts work like this: - Some event occurs in the app - Method X updates a set of widgets - Method X notifies the wigdet's layout of the change (by calling changed() and layout()) This prevents writing any black box object that knows how to update a set of wigdets without depending on where those wigdets are used. This is creating a severe maintnance problem within the Eclipse UI. If code modifies a widget, it needs to: 1. Know about every other piece of code that calls that widget's computeSize method. 2. Know which object to trigger a layout on. 3. Know when to trigger a layout. (Or when to defer and undefer layouts) Issue 1 creates very large (and complicated) update methods. Issue 2 means that the spaghetti code is always specific to a particular layout and cannot be reused. Even minor layout changes often require severe refactoring. Issue 3 is impossible to get right. In our world, everything is triggered by listeners. Even though the layout only needs to happen after the last listener has done its thing and control returns to the event loop, there is no way to know that &quot;this will be the last change to this widget before control returns to the event loop&quot;. We work around this by heuristically batching updates together, and making individual update methods responsible for as many widgets as possible. Our current heuristics work well, but the code is extremely complicated and brittle. This PR requests the following: a. Provide a way to flag a widget as &quot;changed&quot;, such that any dependant layout will be notified and triggered when control returns to the event loop. (The client code MUST NOT be responsible for calling layout(...) or setLayoutDeferred) b. Provide a &quot;preferred size changed&quot; listener, so that a widget can have its position managed by something other than its immediate parent (aka proxy controls). c. Provide a way for layouts to indicate whether a change to a particular child will affect their own preferred size. This will be needed for SWT to correctly compute the effects of a &quot;changed&quot; event. Not sure whether to flag as &quot;blocker&quot; or &quot;enhancement&quot;. It is really an enhancement, but it is blocking further work on the Eclipse layouts. Flagging as major as a compromise. :-)",
+        "ST": "",
+        "SM": "Support encapsulation in SWT layout mechanism"
+    },
+    "103976": {
+        "OT": "Especially since Spinner is so picky about the order you set the values when you set them individually, it's a pain to get right. It'd be really nice to have this method: setValues(int selection, int minimum, int maximum, int digits, int increment, int pageIncrement)",
+        "ST": "",
+        "SM": "Spinner widget should provide setValues() method like Slider"
+    },
+    "104150": {
+        "OT": "SWT-win32, v3138 (3.1-final) When using a table cursor, there are two kinds of table regions that have the potential to separate the table cursor from the table selection when clicked on: 1) grid lines (table.getLinesVisible() == true) 2) empty space to the left of the first cell of each row (SWT.FULL_SELECTION) Expected behaviour: No matter which part of the table the user clicks on, the table cursor should follow the table selection as closely as possible if the selection is changed as a result of the click. To reproduce the problem, use snippet 96 with an added table.setLinesVisible(true).",
+        "ST": "",
+        "SM": "[Patch] Table cursor separated from table selection when clicking on grid lines or empty space"
+    },
+    "104545": {
+        "OT": "Could the following two constants in Widget.java be changed to something smaller? /* Default widths for widgets */ static final int DEFAULT_WIDTH = 64; static final int DEFAULT_HEIGHT = 64; Anything less than or equal to 16 would work for us, 0 would be OK too. I have run our tests (JFace, UI, RCP) and they run fine when the constants are 0. Background: When you write an RCP app and enable the cool bar, the cool bar will initially be empty, but 64x64 pixels in size. On Windows, you cannot see the border of the empty coolbar so the user gets a big empty space at the top of their window and might be confused. See also <span class=\"bz_closed\"><a href=\"show_bug.cgi?id=70049\" title=\"RESOLVED INVALID - [PerspectiveBar] Coolbar Default Height is Gigantic\">Bug 70049</a></span>, where the same problem occurs in an RCP application that starts off with no open perspective and thus no cool bar items.",
+        "ST": "",
+        "SM": "Make default size of empty composites smaller"
+    },
+    "104966": {
+        "OT": "VE 1.1 Running with XP manifest 1. Create a new Visual bean (SWT) 2. Drop a link on the composite 3. Set the enabled property on the link to be disabled 4. Note: the link is now disabled in the preview 5. Close the editor 6. Re-open the editor 7. Observe: link now shows as enabled When you run the application the link shows as enabled, but is actually disabled. If you change the order of the initialization such that the enabled status is set after the text is set it displays correctly. This could be an SWT bug.",
+        "ST": "",
+        "SM": "Link displays as enabled when setText called after setEnabled"
+    },
+    "105772": {
+        "OT": "I20050726-1222 SWT has enabled native support for correct background color of tab bocks. However one label inside the search page has a strange background color now.",
+        "ST": "",
+        "SM": "Strange background color of label on text search page"
+    },
+    "106289": {
+        "OT": "When running the sample Tree-with-columns snippet (Snippet170) I'm getting 'blurry' text in columns 2 and 3 after selecting an item. It's like the antialiasing has been applied many times.",
+        "ST": "",
+        "SM": "Blurry Tree text in second column"
+    },
+    "106372": {
+        "OT": "R3.1 In order to add DND text editing support to our editors (see <span class=\"bz_closed\"><a href=\"show_bug.cgi?id=11624\" title=\"RESOLVED FIXED - [DnD] [navigation] text drag and drop\">bug 11624</a></span>) we need basic support in StyledText. Since this is one of Platform Text's 3.2 plan items it would be great to have early feedback whether we can expect something in this area for 3.2 or not.",
+        "ST": "",
+        "SM": "Provide DND support for the StyledText widget"
+    },
+    "107145": {
+        "OT": "In the javadoc for Widget.destroyWidget, we refer to package protected methods. These must be removed. We can just put them in the comments or remove them entirely. The following build errors are caused by this problem: /builds/I200508161235/src/plugins/org.eclipse.platform.doc.isv/../org.eclipse.swt/Eclipse SWT/win32/org/eclipse/swt/widgets/Widget.java:333: warning - Tag &#64;see: can't find releaseChild in org.eclipse.swt.widgets.Widget /builds/I200508161235/src/plugins/org.eclipse.platform.doc.isv/../org.eclipse.swt/Eclipse SWT/win32/org/eclipse/swt/widgets/Widget.java:333: warning - Tag &#64;see: can't find releaseWidget in org.eclipse.swt.widgets.Widget /builds/I200508161235/src/plugins/org.eclipse.platform.doc.isv/../org.eclipse.swt/Eclipse SWT/win32/org/eclipse/swt/widgets/Widget.java:333: warning - Tag &#64;see: can't find releaseHandle in org.eclipse.swt.widgets.Widget",
+        "ST": "",
+        "SM": "Javadoc can not refer to package protected methods"
+    },
+    "108236": {
+        "OT": "R3.1 Build id: I20050627-1435 In the following, the setMaximum has no effect: Spinner spinner = new Spinner(parent, SWT.NONE); spinner.setMinimum(1); spinner.setMaximum(1); The maximum is ignored, keeping the default of 100. In setMaximum there is the following code: if (value &lt;= min [0]) return; Likewise, setMinimum has: if (value &gt;= max [0]) return; It should be possible to restrict the range to a single value. In my scenario, I'm working on an example app that lets you choose the number of people buying a given activity as part of an adventure package, where the max should be the head count for the package. The default is 1.",
+        "ST": "",
+        "SM": "Spinner does not allow min == max"
+    },
+    "108591": {
+        "OT": "On MacOS X, When the user turns on Japanese Input Method and types japanese characters on SWT StyledText, the floating Input Window shows up. Since the inline IM window shows up on SWT Text widget, SWT StyledText widget should also display the inline IM on the widget. This happens also on Chinese and Korean Input method.",
+        "ST": "",
+        "SM": "SWT StyledText does not support inline Input method"
+    },
+    "108769": {
+        "OT": "I was recently working out an issue with some code using the SWT FileDialog class. The soon-to-be-attached patch adds some additional information to the javadoc which explains some details I gleaned from reading the source but wasn't quite clear from the existing javadocs. The patch also adds a new method for setting the filter names and extensions which I believe is more convenient to use. I created the patch against the GTK version of SWT. It will need to be adapted for the other versions. (note: by &quot;adapt&quot; I merely mean that the line numbers need to be adjusted, none of the code is platform-specific)",
+        "ST": "",
+        "SM": "swt.FileDialog: additional clarification in javadoc and convenience method"
+    },
+    "108792": {
+        "OT": "I20050830-0800 - enable Mark Occurences, disable 'sticky' occurences - in the following CU place the caret instead of '|': class |Foo { } - press arrow down - wait for occurences to be updated - press arrow up -&gt; caret position is: c|lass Foo {...",
+        "ST": "",
+        "SM": "Horizontal caret position lost due to StyledText.replaceStyleRanges"
+    },
+    "108813": {
+        "OT": "Well, not literally forever, but way way too long -- users will have to &quot;end process&quot; and start over. <span class=\"bz_closed\"><a href=\"show_bug.cgi?id=108806\" title=\"CLOSED FIXED - Very-long-line XML file appears to hang Eclipse\">Bug 108806</a></span> is the most recent one opened against us in WTP, but have seen before for less extreme examples. I'm opening this bug to determine what improvements can be made at SWT level. I've marked as major since <span class=\"bz_closed\"><a href=\"show_bug.cgi?id=108806\" title=\"CLOSED FIXED - Very-long-line XML file appears to hang Eclipse\">bug 108806</a></span> was marked as major by user-client. For the case described in <span class=\"bz_closed\"><a href=\"show_bug.cgi?id=108806\" title=\"CLOSED FIXED - Very-long-line XML file appears to hang Eclipse\">bug 108806</a></span>, I've noticed that for the 500K character line, we produce about 100K &quot;styles&quot; passed back to StyledText via LineStyleEvent. One thing I noticed, for example, is that a loop in DisplayRenderer goes through each style, eventually calling TextLayout.setStyle. There, is some code in there which is creating a (new) array of TextStyles, and it grows the array one item at a time, ending up using 100K System.arraycopies to grow the array &quot;as they come in one by one&quot;. I did not test, but seems there might be ways to anticipate the size of this array and avoid all those array copies? So, first question ... why is it even requested of us to provide &quot;all StyleRanges&quot; for the line, when they are not all visible, obviously. Could some short cut be made there? Second question, do you think these &quot;DisplayRendering&quot; methods could be made more efficient, to at least allow user to limp along, or would problems just be encountered further along, such as is they try to type. Third question, any advice on how to proceed?",
+        "ST": "",
+        "SM": "LineStyles in Very Long Lines Takes Forever"
+    },
+    "111259": {
+        "OT": "In the logic example, on GTK, if you click-and-drop a part in the outline view, the insertion mark does not go away when you exit the viewer. You see the same problem even if you don't drop the part in the outline.",
+        "ST": "",
+        "SM": "[DND] Insertion mark in TreeViewer does not go away on GTK"
+    },
+    "112358": {
+        "OT": "We need a way to create a new color from an existing color by varying the hue, saturation or brightness.",
+        "ST": "",
+        "SM": "Need a way to create a new Color based on an existing color"
+    },
+    "113971": {
+        "OT": "The &quot;org.eclipse.ui.tests&quot; had test failures on MacOS X last night. The failures were in Tree code. One was a NPE, which I believe has already been fixed. The other is as follows: ",
+        "ST": "java.lang.ArrayIndexOutOfBoundsException at java.lang.System.arraycopy(Native Method) at org.eclipse.swt.widgets.Tree.createItem(Tree.java:714) at org.eclipse.swt.widgets.TreeItem.&lt;init&gt;(TreeItem.java:191) at org.eclipse.swt.widgets.TreeItem.&lt;init&gt;(TreeItem.java:148) at org.eclipse.jface.viewers.TreeViewer.newItem(TreeViewer.java:507) at org.eclipse.jface.viewers.AbstractTreeViewer.updatePlus(AbstractTreeViewer.java:1875) at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1235) at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1201) at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1188) at org.eclipse.jface.viewers.StructuredViewer$7.run(StructuredViewer.java:1264) at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1201) at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1262) at org.eclipse.jface.tests.viewers.TestModelContentProvider.doStructureChange(TestModelContentProvider.java:78) at org.eclipse.jface.tests.viewers.TestModelContentProvider.testModelChanged(TestModelContentProvider.java:130) at org.eclipse.jface.tests.viewers.TestModel.fireModelChanged(TestModel.java:38) at org.eclipse.jface.tests.viewers.TestElement.addChild(TestElement.java:69) at org.eclipse.jface.tests.viewers.TestElement.addChild(TestElement.java:63) at org.eclipse.jface.tests.viewers.AbstractTreeViewerTest.testRefreshWithAddedChildren(AbstractTreeViewerTest.java:161) at org.eclipse.test.EclipseTestRunner.run(EclipseTestRunner.java:330) at org.eclipse.test.EclipseTestRunner.run(EclipseTestRunner.java:204) at org.eclipse.test.CoreTestApplication.runTests(CoreTestApplication.java:35) at org.eclipse.test.CoreTestApplication.run(CoreTestApplication.java:31) at org.eclipse.core.internal.runtime.PlatformActivator$1.run(PlatformActivator.java:226) at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:386) at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:165) at org.eclipse.core.launcher.Main.invokeFramework(Main.java:338) at org.eclipse.core.launcher.Main.basicRun(Main.java:282) at org.eclipse.core.launcher.Main.run(Main.java:977) at org.eclipse.core.launcher.Main.main(Main.java:952)",
+        "SM": "Test failures in Tree on N20051027-0010"
+    },
+    "115947": {
+        "OT": "To be Section 508 compliant, every image should have an Alt+text tooltip associated with it. When using images in a Table, you can't set a tooltip.",
+        "ST": "",
+        "SM": "Accessibility : Cannot set tooltip Text for image in Table Column"
+    },
+    "117574": {
+        "OT": "build I20051122-0800 When SWT.RIGHT_TO_LEFT | SWT.DOUBLE_BUFFERED are used the gc clipping is Rect(0,0,0,0) during paint. Example: public static void main(String[] args) { Display display = new Display(); Shell shell = new Shell(display, SWT.SHELL_TRIM | SWT.RIGHT_TO_LEFT | SWT.DOUBLE_BUFFERED); shell.addListener(SWT.Paint, new Listener() { public void handleEvent(Event event) { System.out.println(event.gc.getClipping()); event.gc.drawString(&quot;This is broken &quot; + event.gc.getClipping(), 10, 10); } }); shell.open(); while (!shell.isDisposed()) { if (!display.readAndDispatch()) display.sleep(); } display.dispose (); } Doesn't draw anything. Note: my machine is a win xp bidi enabled.",
+        "ST": "",
+        "SM": "RIGHT_TO_LEFT | DOUBLE_BUFFERED don't get along"
+    },
+    "119192": {
+        "OT": "The CCombo does not responde to MouseMove or MouseTrack listener. Also, does not respond as Control throught Display (Gets Text and Button).",
+        "ST": "",
+        "SM": "[CCombo] CCombo Mouse problem (listeners not fired)"
+    }
+}

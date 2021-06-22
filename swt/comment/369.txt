@@ -1,0 +1,1 @@
+Note in WinCE The field cxHeader is not defined

@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+int
+ole
+get
+clipboard
+olegetclipboard
+int
+data
+object
+ppdataobject

@@ -1,0 +1,11 @@
+void
+kill
+focus
+killfocus
+destroy
+caret
+destroycaret
+restor
+ime
+font
+restoreimefont

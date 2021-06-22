@@ -1,0 +1,15 @@
+public
+int
+get
+class
+info
+getclassinfo
+int
+ppti
+return
+com
+vtbl
+call
+vtblcall
+address
+ppti

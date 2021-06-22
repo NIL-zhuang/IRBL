@@ -1,0 +1,26 @@
+{
+	"variables":[
+		"dwDrawStage",
+		"hdc",
+		"left",
+		"top",
+		"right",
+		"bottom",
+		"dwItemSpec",
+		"uItemState",
+		"lItemlParam",
+		"sizeof"
+	],
+	"extendORImplementFiles":[
+		"NMHDR"
+	],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"NMCUSTOMDRAW"
+	]
+}

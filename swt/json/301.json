@@ -1,0 +1,20 @@
+{
+	"variables":[
+		"cbSize",
+		"lpszDocName",
+		"lpszOutput",
+		"lpszDatatype",
+		"fwType",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"DOCINFO"
+	]
+}

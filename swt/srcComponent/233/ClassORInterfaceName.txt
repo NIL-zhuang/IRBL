@@ -1,0 +1,5 @@
+tiff
+modifi
+huffman
+codec
+tiffmodifiedhuffmancodec

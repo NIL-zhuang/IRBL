@@ -1,0 +1,8 @@
+boolean
+travers
+page
+traversepag
+boolean
+next
+return
+fals

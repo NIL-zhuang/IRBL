@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+int
+set
+error
+mode
+seterrormod
+int
+mode
+umod

@@ -1,0 +1,35 @@
+Instances of this class allow the user to navigate the file system and select or enter a file name dl dt b Styles b dt dd SAVE OPEN MULTI dd dt b Events b dt dd none dd dl p Note Only one of the styles SAVE and OPEN may be specified p p IMPORTANT This class is intended to be subclassed em only em within the SWT implementation p
+Constructs a new instance of this class given only its parent param parent a shell which will be the parent of the new instance exception IllegalArgumentException ul li ERROR NULL ARGUMENT if the parent is null li ul exception SWTException ul li ERROR THREAD INVALID ACCESS if not called from the thread that created the parent li li ERROR INVALID SUBCLASS if this class is not an allowed subclass li ul
+Constructs a new instance of this class given its parent and a style value describing its behavior and appearance p The style value is either one of the style constants defined in class code SWT code which is applicable to instances of this class or must be built by em bitwise OR em ing together that is using the code int code operator two or more of those code SWT code style constants The class description lists the style constants that are applicable to the class Style bits are also inherited from superclasses p param parent a shell which will be the parent of the new instance param style the style of dialog to construct exception IllegalArgumentException ul li ERROR NULL ARGUMENT if the parent is null li ul exception SWTException ul li ERROR THREAD INVALID ACCESS if not called from the thread that created the parent li li ERROR INVALID SUBCLASS if this class is not an allowed subclass li ul
+Returns the path of the first file that was selected in the dialog relative to the filter path or an empty string if no such file has been selected return the relative path of the file
+Returns a possibly empty array with the paths of all files that were selected in the dialog relative to the filter path return the relative paths of the files
+Returns the file extensions which the dialog will use to filter the files it shows return the file extensions filter
+Returns the names that describe the filter extensions which the dialog will use to filter the files it shows return the list of filter names
+Returns the directory path that the dialog will use or an empty string if this is not set File names in this path will appear in the dialog filtered according to the filter extensions return the directory path string see setFilterExtensions
+Get the owner HWND for the dialog
+Convert the title and copy it into lpstrTitle
+Use the character encoding for the default locale
+Compute filters and copy into lpstrFilter
+Use the character encoding for the default locale
+Convert the fileName and filterName to C strings
+Use the character encoding for the default locale
+Copy the name into lpstrFile and ensure that the last byte is NULL and the buffer does not overrun
+Copy the path into lpstrInitialDir and ensure that the last byte is NULL and the buffer does not overrun
+Use the character encoding for the default locale
+Create the file dialog struct
+Set the default extension to an empty string If the user fails to type an extension and this extension is empty Windows uses the current value of the filter extension at the time that the dialog is closed
+Make the parent shell be temporary modal
+Open the dialog If the open fails due to an invalid file name use an empty file name and open it again
+Clear the temporary dialog modal parent
+Set the new path file name and filter
+Use the character encoding for the default locale
+Bug in WinCE For some reason nFileOffset and nFileExtension are always zero on WinCE HPC nFileOffset is always zero on WinCE PPC when using GetSaveFileName nFileOffset is correctly set on WinCE PPC when using OpenFileName The fix is to parse lpstrFile to calculate nFileOffset Note WinCE does not support multi select file dialogs
+Use the character encoding for the default locale
+Get each file from the buffer Files are delimited by a NULL character with 2 NULL characters at the end
+Free the memory that was allocated
+Answer the full path or null
+Makes the dialog visible and brings it to the front of the display return a string describing the absolute path of the first selected file or null if the dialog was cancelled or an error occurred exception SWTException ul li ERROR WIDGET DISPOSED if the dialog has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the dialog li ul
+Set the initial filename which the dialog will select by default when opened to the argument which may be null The name will be prefixed with the filter path when one is supplied param string the file name
+Set the file extensions which the dialog will use to filter the files it shows to the argument which may be null p The strings are platform specific For example on Windows an extension filter string is typically of the form extension where matches all files p param extensions the file extension filter
+Sets the the names that describe the filter extensions which the dialog will use to filter the files it shows to the argument which may be null param names the list of filter names
+Sets the directory path that the dialog will use to the argument which may be null File names in this path will appear in the dialog filtered according to the filter extensions If the string is null then the operating system s default filter path will be used p Note that the path string is platform dependent For convenience either or can be used as a path separator p param string the directory path see setFilterExtensions

@@ -1,0 +1,13 @@
+boolean
+critic
+iscrit
+return
+charact
+upper
+case
+isuppercas
+char
+get
+type
+byte
+gettypebyt

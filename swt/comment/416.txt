@@ -1,0 +1,4 @@
+method5 GetIDsOfNames not implemented
+disconnect event sink
+Note parameters are passed in reverse order here we will correct the order
+Notify listeners of an event p This method notifies all listeners that an event has occurred param eventType the desired SWT event param event the event data exception IllegalArgumentException ul li ERROR NULL ARGUMENT when handler is null li ul exception SWTException ul li ERROR THREAD INVALID ACCESS when called from the wrong thread li li ERROR WIDGET DISPOSED when the widget has been disposed li ul

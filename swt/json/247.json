@@ -1,0 +1,19 @@
+{
+	"variables":[
+		"Data1",
+		"Data2",
+		"Data3",
+		"Data4",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"GUID"
+	]
+}

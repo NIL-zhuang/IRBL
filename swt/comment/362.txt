@@ -1,0 +1,30 @@
+NON NLS 1
+SWT Windows flags
+Flags for Window API GetVersionEx
+Try the UNICODE version of GetVersionEx first and then the ANSI version The UNICODE version is present on all versions of Windows but is not implemented on Win95 98 ME NOTE The value of OSVERSIONINFO sizeof cannot be static final because it relies on the Windows platform version to be initialized and IsUnicode has not been calculated It must be initialized here after the platform is determined in order for the value to be correct
+Get the DBCS flag
+Bug in Windows On Korean Windows XP when the Text Services Framework support for legacy applications is enabled certain legacy calls segment fault For example when ImmSetCompositionWindow is used to move the composition window outside of the client area Windows crashes The fix is to disable legacy support
+Get the Windows version and the flags
+NON NLS 1
+NON NLS 1
+Get the COMCTL32 DLL version
+NON NLS 1
+NON NLS 1
+Get the Shell32 DLL version
+Flag used on WinCE
+Constants
+public static final int EVENT OBJECT SELECTION 0x8006
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+public static final int WM GETICON 0x7f
+Natives
+returns the instance handle to the swt library

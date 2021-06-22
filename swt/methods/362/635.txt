@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+int
+offset
+rgn
+offsetrgn
+int
+hrgn
+int
+offset
+nxoffset
+int
+offset
+nyoffset

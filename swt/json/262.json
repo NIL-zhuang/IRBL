@@ -1,0 +1,37 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"pIPSite",
+		"pstm",
+		"dwReserved",
+		"ppView",
+		"address",
+		"pIPSite",
+		"pstm",
+		"dwReserved",
+		"ppView"
+	],
+	"extendORImplementFiles":[
+		"IUnknown"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"CreateView",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int CreateView(int pIPSite, int pstm, int dwReserved, int[] ppView)":{
+			"methodBody":"{\n    return COM.VtblCall(3, address, pIPSite, pstm, dwReserved, ppView);\n}",
+			"comments":"",
+			"methodName":"public int CreateView(int pIPSite, int pstm, int dwReserved, int[] ppView)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IOleDocument"
+	]
+}

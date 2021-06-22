@@ -1,0 +1,35 @@
+{
+	"variables":[
+		"start",
+		"length",
+		"replacedText",
+		"serialVersionUID",
+		"e",
+		"start",
+		"e",
+		"length",
+		"e",
+		"e",
+		"replacedText",
+		"e",
+		"start",
+		"end",
+		"start",
+		"text",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"TypedEvent"
+	],
+	"package":[
+		"org.eclipse.swt.custom"
+	],
+	"import":[
+		"org.eclipse.swt.events"
+	],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"ExtendedModifyEvent"
+	]
+}

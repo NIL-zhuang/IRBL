@@ -1,0 +1,7 @@
+the button that was pressed or released 1 for the first button 2 for the second button and 3 for the third button etc
+the state of the keyboard modifier keys at the time the event was generated
+the widget relative x coordinate of the pointer at the time the mouse button was pressed or released
+the widget relative y coordinate of the pointer at the time the mouse button was pressed or released
+Constructs a new instance of this class based on the information in the given untyped event param e the untyped event containing the information
+remove trailing
+Returns a string containing a concise human readable description of the receiver return a string representation of the event

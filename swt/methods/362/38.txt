@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+boolean
+unregist
+class
+unregisterclassw
+char
+class
+name
+lpclassnam
+int
+instanc
+hinstanc

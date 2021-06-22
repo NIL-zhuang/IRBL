@@ -1,0 +1,10 @@
+protect
+int
+get
+type
+gettypeid
+return
+new
+int
+unicodetextid
+textid

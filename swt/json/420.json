@@ -1,0 +1,23 @@
+{
+	"variables":[
+		"event"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"handleEvent"
+	],
+	"methodsBody":{
+		"public void handleEvent(OleEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n*\n*/\n",
+			"methodName":"public void handleEvent(OleEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"OleListener"
+	]
+}

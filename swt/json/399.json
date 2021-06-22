@@ -1,0 +1,26 @@
+{
+	"variables":[
+		"length",
+		"flags",
+		"showCmd",
+		"ptMinPosition_x",
+		"ptMinPosition_y",
+		"ptMaxPosition_x",
+		"ptMaxPosition_y",
+		"left",
+		"top",
+		"right",
+		"bottom",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"WINDOWPLACEMENT"
+	]
+}

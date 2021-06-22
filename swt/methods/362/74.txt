@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+boolean
+set
+foreground
+window
+setforegroundwindow
+int
+wnd
+hwnd

@@ -1,0 +1,8 @@
+tchar
+window
+class
+windowclass
+return
+edit
+class
+editclass

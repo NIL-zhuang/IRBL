@@ -1,0 +1,27 @@
+{
+	"variables":[
+		"e"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.events"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"verifyText"
+	],
+	"methodsBody":{
+		"public void verifyText(VerifyEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when the text is about to be modified.\n* <p>\n* A verify event occurs after the user has done something\n* to modify the text (typically typed a key), but before\n* the text is modified. The doit field in the verify event\n* indicates whether or not to modify the text.\n* </p>\n*\n* @param e an event containing information about the verify\n*/\n",
+			"methodName":"public void verifyText(VerifyEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"VerifyListener"
+	]
+}

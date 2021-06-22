@@ -1,0 +1,28 @@
+{
+	"variables":[
+		"lfCaptionFont",
+		"lfSmCaptionFont",
+		"lfMenuFont",
+		"lfStatusFont",
+		"lfMessageFont",
+		"sizeof"
+	],
+	"extendORImplementFiles":[
+		"NONCLIENTMETRICS"
+	],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[
+		"LOGFONTW",
+		"LOGFONTW",
+		"LOGFONTW",
+		"LOGFONTW",
+		"LOGFONTW"
+	],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"NONCLIENTMETRICSW"
+	]
+}

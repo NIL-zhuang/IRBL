@@ -1,0 +1,7 @@
+get
+class
+info
+getclassinfo
+vtbl
+call
+vtblcall

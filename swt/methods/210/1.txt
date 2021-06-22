@@ -1,0 +1,8 @@
+public
+int
+get
+segment
+marker
+getsegmentmark
+return
+refer

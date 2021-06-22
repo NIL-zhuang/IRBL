@@ -1,0 +1,17 @@
+public
+int
+queri
+get
+data
+querygetdata
+formatetc
+formatetc
+pformatetc
+return
+com
+vtbl
+call
+vtblcall
+address
+formatetc
+pformatetc

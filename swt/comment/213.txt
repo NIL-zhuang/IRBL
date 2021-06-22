@@ -1,0 +1,12 @@
+The byte array containing the bytes to read
+The current position within the byte array code buf code A value equal to buf length indicates no bytes available A value of 0 indicates the buffer is full
+Answer how many bytes were read
+Answers how many bytes are available for reading without blocking
+Answer the next byte of the input stream
+Don t imitate the DK behaviour of reading a random number of bytes when you can actually read them all
+Are there pushback bytes available
+Have we copied enough
+Reads at most code length code bytes from this LEDataInputStream and stores them in byte array code buffer code starting at code offset code p Answer the number of bytes actually read or 1 if no bytes were read and end of stream was encountered This implementation reads bytes from the pushback buffer first then the target stream if more bytes are required to satisfy code count code p param buffer the byte array in which to store the read bytes param offset the offset in code buffer code to store the read bytes param length the maximum number of bytes to store in code buffer code return int the number of bytes actually read or 1 if end of stream exception java io IOException if an IOException occurs
+Answer an integer comprised of the next four bytes of the input stream
+Answer a short comprised of the next two bytes of the input stream
+Push back the entire content of the given buffer code b code p The bytes are pushed so that they would be read back b 0 b 1 etc If the push back buffer cannot handle the bytes copied from code b code an IOException will be thrown and no byte will be pushed back p param b the byte array containing bytes to push back into the stream exception java io IOException if the pushback buffer is too small

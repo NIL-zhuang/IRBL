@@ -1,0 +1,58 @@
+{
+	"variables":[
+		"address",
+		"address",
+		"COM",
+		"address",
+		"address",
+		"COM",
+		"address",
+		"riid",
+		"ppvObject",
+		"COM",
+		"address",
+		"address",
+		"address",
+		"riid",
+		"ppvObject"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"AddRef",
+		"getAddress",
+		"QueryInterface",
+		"Release",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int getAddress()":{
+			"methodBody":"{\n    return address;\n}",
+			"comments":"",
+			"methodName":"public int getAddress()"
+		},
+		"public int Release()":{
+			"methodBody":"{\n    return COM.VtblCall(2, address);\n}",
+			"comments":"",
+			"methodName":"public int Release()"
+		},
+		"public int QueryInterface(GUID riid, int[] ppvObject)":{
+			"methodBody":"{\n    return COM.VtblCall(0, address, riid, ppvObject);\n}",
+			"comments":"",
+			"methodName":"public int QueryInterface(GUID riid, int[] ppvObject)"
+		},
+		"public int AddRef()":{
+			"methodBody":"{\n    return COM.VtblCall(1, address);\n}",
+			"comments":"",
+			"methodName":"public int AddRef()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IUnknown"
+	]
+}

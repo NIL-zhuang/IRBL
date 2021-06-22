@@ -1,0 +1,14 @@
+icon
+ficon
+hotspot
+xhotspot
+hotspot
+yhotspot
+hbm
+mask
+hbmmask
+hbm
+color
+hbmcolor
+sizeof
+iconinfo

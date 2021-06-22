@@ -1,0 +1,10 @@
+public
+static
+final
+nativ
+int
+variant
+clear
+variantclear
+int
+pvarg

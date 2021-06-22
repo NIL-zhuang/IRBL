@@ -1,0 +1,31 @@
+{
+	"variables":[
+		"data",
+		"handle",
+		"data"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.graphics"
+	],
+	"import":[],
+	"methods":[
+		"internal_new_GC",
+		"internal_dispose_GC"
+	],
+	"methodsBody":{
+		"public void internal_dispose_GC(int handle, GCData data)":{
+			"methodBody":"",
+			"comments":"/**\n* Invokes platform specific functionality to dispose a GC handle.\n* <p>\n* <b>IMPORTANT:</b> This method is <em>not</em> part of the public\n* API for <code>Drawable</code>. It is marked public only so that it\n* can be shared within the packages provided by SWT. It is not\n* available on all platforms, and should never be called from\n* application code.\n* </p>\n*\n* @param handle the platform specific GC handle\n* @param data the platform specific GC data\n*/\n/*long*/\n",
+			"methodName":"public void internal_dispose_GC(int handle, GCData data)"
+		},
+		"public int internal_new_GC(GCData data)":{
+			"methodBody":"",
+			"comments":"/*long*/\n",
+			"methodName":"public int internal_new_GC(GCData data)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"Drawable"
+	]
+}

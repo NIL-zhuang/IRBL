@@ -1,0 +1,16 @@
+lresult
+setfocus
+int
+param
+wparam
+int
+param
+lparam
+set
+focus
+setfocus
+hwnd
+text
+hwndtext
+return
+null

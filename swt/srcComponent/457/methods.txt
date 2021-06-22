@@ -1,0 +1,13 @@
+equal
+get
+bound
+getbound
+get
+client
+area
+getclientarea
+hash
+code
+hashcod
+rectangl
+rectangl

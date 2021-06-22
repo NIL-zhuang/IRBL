@@ -1,0 +1,48 @@
+A Variant is a generic OLE mechanism for passing data of different types via a common interface p It is used within the OleAutomation object for getting a property setting a property or invoking a method on an OLE Control or OLE Document
+A variant always takes up 16 bytes no matter what you store in it Objects strings and arrays are not physically stored in the Variant in these cases four bytes of the Variant are used to hold either an object reference or a pointer to the string or array The actual data are stored elsewhere
+OLE VT type
+Create an empty Variant object with type VT EMPTY since 2 0
+Create a Variant object which represents a ava float as a VT R4 param val the ava float value that this Variant represents
+Create a Variant object which represents a ava int as a VT I4 param val the ava int value that this Variant represents
+Create a Variant object which contains a reference to the data being transferred p When creating a VT BYREF Variant you must give the full Variant type including VT BYREF such as pre code short byRefType OLE VT BSTR OLE VT BYREF code pre param ptr a pointer to the data being transferred param byRefType the type of the data being transferred such as OLE VT BSTR OLE VT BYREF
+Create a Variant object which represents an IDispatch interface as a VT Dispatch param automation the OleAutomation object that this Variant represents
+Create a Variant object which represents an IDispatch interface as a VT Dispatch p The caller is expected to have appropriately invoked unknown AddRef before creating this Variant since 2 0 param idispatch the IDispatch object that this Variant represents
+Create a Variant object which represents an IUnknown interface as a VT UNKNOWN p The caller is expected to have appropriately invoked unknown AddRef before creating this Variant param unknown the IUnknown object that this Variant represents
+Create a Variant object which represents a ava String as a VT BSTR param string the ava String value that this Variant represents
+Create a Variant object which represents a ava short as a VT I2 param val the ava short value that this Variant represents
+Create a Variant object which represents a ava boolean as a VT BOOL param val the ava boolean value that this Variant represents
+Calling dispose will release resources associated with this Variant If the resource is an IDispatch or IUnknown interface Release will be called If the resource is a ByRef pointer nothing is released since 2 1
+try to coerce the value to the desired type
+Note This must absolutely be done AFTER the
+Dispatch object
+Returns the OleAutomation object represented by this Variant p If this Variant does not contain an OleAutomation object an attempt is made to coerce the Variant type into an OleAutomation object If this fails an error is thrown Note that OleAutomation objects must be disposed when no longer needed return the OleAutomation object represented by this Variant exception SWTException ul li ERROR CANNOT CHANGE VARIANT TYPE when type of Variant can not be coerced into an OleAutomation object li ul
+try to coerce the value to the desired type
+Note This must absolutely be done AFTER the
+Dispatch object
+Returns the IDispatch object represented by this Variant p If this Variant does not contain an IDispatch object an attempt is made to coerce the Variant type into an IDIspatch object If this fails an error is thrown since 2 0 return the IDispatch object represented by this Variant exception SWTException ul li ERROR CANNOT CHANGE VARIANT TYPE when type of Variant can not be coerced into an IDispatch object li ul
+try to coerce the value to the desired type
+Returns the ava boolean represented by this Variant p If this Variant does not contain a ava boolean an attempt is made to coerce the Variant type into a ava boolean If this fails an error is thrown return the ava boolean represented by this Variant exception SWTException ul li ERROR CANNOT CHANGE VARIANT TYPE when type of Variant can not be coerced into a boolean li ul
+Returns a pointer to the referenced data represented by this Variant p If this Variant does not contain a reference to data zero is returned return a pointer to the referenced data represented by this Variant or 0
+try to coerce the value to the desired type
+Returns the ava float represented by this Variant p If this Variant does not contain a ava float an attempt is made to coerce the Variant type into a ava float If this fails an error is thrown return the ava float represented by this Variant exception SWTException ul li ERROR CANNOT CHANGE VARIANT TYPE when type of Variant can not be coerced into a float li ul
+try to coerce the value to the desired type
+Returns the ava int represented by this Variant p If this Variant does not contain a ava int an attempt is made to coerce the Variant type into a ava int If this fails an error is thrown return the ava int represented by this Variant exception SWTException ul li ERROR CANNOT CHANGE VARIANT TYPE when type of Variant can not be coerced into a int li ul
+try to coerce the value to the desired type
+Returns the ava short represented by this Variant p If this Variant does not contain a ava short an attempt is made to coerce the Variant type into a ava short If this fails an error is thrown return the ava short represented by this Variant exception SWTException ul li ERROR CANNOT CHANGE VARIANT TYPE when type of Variant can not be coerced into a short li ul
+try to coerce the value to the desired type
+Returns the ava String represented by this Variant p If this Variant does not contain a ava String an attempt is made to coerce the Variant type into a ava String If this fails an error is thrown return the ava String represented by this Variant exception SWTException ul li ERROR CANNOT CHANGE VARIANT TYPE when type of Variant can not be coerced into a String li ul
+Returns the type of the variant type This will be an OLE VT value or a bitwise combination of OLE VT values as in the case of OLE VT BSTR OLE VT BYREF return the type of the variant data since 2 0
+try to coerce the value to the desired type
+Note This must absolutely be done AFTER the
+Dispatch object
+Returns the IUnknown object represented by this Variant p If this Variant does not contain an IUnknown object an attempt is made to coerce the Variant type into an IUnknown object If this fails an error is thrown return the IUnknown object represented by this Variant exception SWTException ul li ERROR CANNOT CHANGE VARIANT TYPE when type of Variant can not be coerced into an IUnknown object li ul
+Update the by reference value of this variant with a new boolean value param val the new boolean value exception SWTException ul li ERROR CANNOT CHANGE VARIANT TYPE when type of Variant is not a VT BYREF VT BOOL object li ul since 2 1
+Update the by reference value of this variant with a new float value param val the new float value exception SWTException ul li ERROR CANNOT CHANGE VARIANT TYPE when type of Variant is not a VT BYREF VT R4 object li ul since 2 1
+Update the by reference value of this variant with a new integer value param val the new integer value exception SWTException ul li ERROR CANNOT CHANGE VARIANT TYPE when type of Variant is not a VT BYREF VT I4 object li ul since 2 1
+Update the by reference value of this variant with a new short value param val the new short value exception SWTException ul li ERROR CANNOT CHANGE VARIANT TYPE when type of Variant is not a VT BYREF VT I2 object ul since 2 1
+get the address of the memory in which the string resides
+of bytes each unicode character is 2 bytes
+NON NLS 1
+add one to avoid rounding errors
+try coercing it into one of the known forms
+Returns a string containing a concise human readable description of the receiver return a string representation of the event

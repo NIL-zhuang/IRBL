@@ -1,0 +1,10 @@
+style
+text
+content
+styledtextcont
+intern
+get
+content
+internalgetcont
+return
+content

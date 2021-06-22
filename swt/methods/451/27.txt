@@ -1,0 +1,9 @@
+string
+get
+name
+text
+getnametext
+return
+get
+text
+gettext

@@ -1,0 +1,4 @@
+line
+get
+style
+linegetstyl

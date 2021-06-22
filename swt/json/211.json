@@ -1,0 +1,36 @@
+{
+	"variables":[
+		"reference",
+		"byteStream",
+		"JPEGFileFormat",
+		"SOI",
+		"reference",
+		"byteStream"
+	],
+	"extendORImplementFiles":[
+		"JPEGFixedSizeSegment"
+	],
+	"package":[
+		"org.eclipse.swt.internal.image"
+	],
+	"import":[],
+	"methods":[
+		"signature",
+		"fixedSize"
+	],
+	"methodsBody":{
+		"public int fixedSize()":{
+			"methodBody":"{\n    return 2;\n}",
+			"comments":"",
+			"methodName":"public int fixedSize()"
+		},
+		"public int signature()":{
+			"methodBody":"{\n    return JPEGFileFormat.SOI;\n}",
+			"comments":"",
+			"methodName":"public int signature()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"JPEGStartOfImage"
+	]
+}

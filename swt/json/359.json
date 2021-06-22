@@ -1,0 +1,22 @@
+{
+	"variables":[
+		"szTip",
+		"szInfo",
+		"szInfoTitle",
+		"sizeof",
+		"OS",
+		"NOTIFYICONDATAA_V2_SIZE"
+	],
+	"extendORImplementFiles":[
+		"NOTIFYICONDATA"
+	],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"NOTIFYICONDATAA"
+	]
+}

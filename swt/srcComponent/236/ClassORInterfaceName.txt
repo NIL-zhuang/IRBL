@@ -1,0 +1,5 @@
+win
+ico
+file
+format
+winicofileformat

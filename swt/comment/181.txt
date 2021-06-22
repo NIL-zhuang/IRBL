@@ -1,0 +1,11 @@
+code TextStyle code defines a set of styles that can be applied to a range of text p The hashCode method in this class uses the values of the public fields to compute the hash value When storing instances of the class in hashed collections do not modify these fields after the object has been inserted p p Application code does em not em need to explicitly release the resources managed by each instance when those instances are no longer required and thus no code dispose code method is provided p see TextLayout see Font see Color since 3 0
+the font of the style
+the foreground of the style
+the background of the style
+the underline flag of the style
+the strikeout flag of the style
+Create a new text style with the specified font foreground and background param font the font of the style code null code if none param foreground the foreground color of the style code null code if none param background the background color of the style code null code if none
+Compares the argument to the receiver and returns true if they represent the em same em object using a class specific comparison param object the object to compare with this object return code true code if the object is the same as this object and code false code otherwise see hashCode
+Returns an integer hash code for the receiver Any two objects that return code true code when passed to code equals code must return the same value for this method return the receiver s hash see equals Object
+NON NLS 1 NON NLS 2 NON NLS 3 NON NLS 4 NON NLS 5 NON NLS 6
+Returns a string containing a concise human readable description of the receiver return a string representation of the code RGB code

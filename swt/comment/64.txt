@@ -1,0 +1,5 @@
+This class provides the layout for SashForm see SashForm
+determine control sizes
+get the ratios
+keep just the right number of sashes
+get the ratios

@@ -1,0 +1,14 @@
+int
+get
+ole
+place
+frame
+getioleinplacefram
+return
+ole
+place
+frame
+ioleinplacefram
+get
+address
+getaddress

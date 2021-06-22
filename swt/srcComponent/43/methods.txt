@@ -1,0 +1,7 @@
+close
+minim
+maxim
+restor
+show
+list
+showlist

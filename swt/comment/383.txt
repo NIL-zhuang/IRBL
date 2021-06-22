@@ -1,0 +1,2 @@
+RECT rcVisibleDesktop
+RECT rcSipRect

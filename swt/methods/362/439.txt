@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+boolean
+heap
+free
+heapfre
+int
+heap
+hheap
+int
+flag
+dwflag
+int
+mem
+lpmem

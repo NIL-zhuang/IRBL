@@ -1,0 +1,46 @@
+Answer a palette containing numGrays shades of gray ranging from black to white
+NON NLS 1
+NON NLS 1
+aspect block 6 0xFF
+sorted false
+sorted bitField 0x8 0
+Read the 0 byte terminator at the end of the image
+We read the terminator earlier
+Load the GIF image s stored in the input stream Return an array of ImageData representing the image s
+Read and return the next block or extension identifier from the file
+Read extensions until an image descriptor appears In the future if we care about the extensions they should be properly grouped with the image data before which they appeared Right now the interesting parts of some extensions are kept but the rest is discarded Throw an error if an error occurs
+the block contents
+Read a control extension Return the extension block data
+We have just read the Comment extension identifier from the input stream Read in the rest of the comment and return it GIF comment blocks are variable size
+Read size of block 0x0C
+Read the text information x y width height colors
+Read the text
+We have just read the PlainText extension identifier from the input stream Read in the plain text info and text and return the text GIF plain text blocks are variable size
+Read size of block 0x04
+Read the control block
+Store the disposal method
+Store the delay time
+Work around a customer has a GIF that specifies an invalid color index that is larger than the number of entries in the palette Detect this case and ignore the specified color index
+Store the transparent color
+Read block terminator
+We have just read the GraphicsControl extension identifier from the input stream Read in the control information store it and return it
+Read size of block 0x0B
+Read application identifier
+Read authentication code
+Read application data
+NON NLS 1 NON NLS 2
+Look for the NETSCAPE repeat count field for an animated GIF
+We have just read the Application extension identifier from the input stream Read in the rest of the extension look for and store number of repeats and return the data
+No local palette
+Local palette
+boolean sorted bitField 0x20 0
+Promote depth to next highest supported value
+Return a DeviceIndependentImage representing the image block at the current position in the input stream Throw an error if an error occurs
+Read a palette from the input stream
+Write the specified device independent image to the output stream
+size of block
+block terminator
+Write out a GraphicsControlBlock to describe the specified device independent image
+no interlace no sort no local palette
+Write the specified device independent image to the current position in the output stream
+Write the specified palette to the output stream

@@ -1,0 +1,16 @@
+SWT Major version number must be 0
+SWT Minor version number must be in the range 0 999
+SWT revision number must be 0
+The AVA and SWT versions
+Returns the ava version number as an integer param major param minor param micro return the version
+Returns the SWT version number as an integer param major param minor return the version
+Include platform name to support different windowing systems on same operating system
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+Force 3 digits in minor version number
+NON NLS 1
+NON NLS 1 NON NLS 2
+NON NLS 1
+Loads the shared library that matches the version of the ava code which is currently running SWT shared libraries follow an encoding scheme where the major minor and revision numbers are embedded in the library name and this along with code name code is used to load the library If this fails code name code is used in another attempt to load the library this time ignoring the SWT version encoding scheme param name the name of the library to load

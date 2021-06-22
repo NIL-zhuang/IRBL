@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+boolean
+destroy
+acceler
+tabl
+destroyacceleratort
+int
+accel
+haccel

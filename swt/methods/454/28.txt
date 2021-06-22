@@ -1,0 +1,8 @@
+void
+destroy
+acceler
+destroyacceler
+parent
+destroy
+acceler
+destroyacceler

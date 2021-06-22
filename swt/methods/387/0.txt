@@ -1,0 +1,8 @@
+public
+string
+string
+tostr
+return
+string
+tostr
+length

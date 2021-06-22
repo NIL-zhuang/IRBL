@@ -1,0 +1,9 @@
+Create resources
+Get the foreground pixels
+Merge the alpha channel in place
+Stretch
+Free resources
+If the image has a palette with multiple entries having the same color and one of those entries is the transparentPixel only the first entry becomes transparent To avoid this problem temporarily change the image palette to a palette where the transparentPixel is white and everything else is black
+Put back the original palette
+Note that the image size has to match the image list icon size
+Note that the mask must always be replaced even for TRANSPARENCY NONE

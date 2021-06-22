@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+int
+get
+librari
+handl
+getlibraryhandl
+the
+instanc
+handl
+the
+swt
+librari

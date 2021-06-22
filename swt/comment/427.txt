@@ -1,0 +1,17 @@
+the printer driver On Windows systems this is the name of the driver often winspool On X Window systems this is the name of a display connection to the Xprt server the default is 1
+the name of the printer On Windows systems this is the name of the device On X Window systems this is the printer s name
+the scope of the print job expressed as one of the following values dl dt code ALL PAGES code dt dd Print all pages in the current document dd dt code PAGE RANGE code dt dd Print the range of pages specified by startPage and endPage dd dt code SELECTION code dt dd Print the current selection dd dl
+the start page of a page range used when scope is PAGE RANGE
+the end page of a page range used when scope is PAGE RANGE
+whether or not the print job should go to a file
+the name of the file to print to if printToFile is true Note that this field is ignored if printToFile is false
+the number of copies to print Note that this field may be controlled by the printer driver In other words the printer itself may be capable of printing multiple copies and if so the value of this field will always be 1
+whether or not the printer should collate the printed paper Note that this field may be controlled by the printer driver In other words the printer itself may be capable of doing the collation and if so the value of this field will always be false
+code scope code field value indicating that all pages should be printed
+code scope code field value indicating that the range of pages specified by startPage and endPage should be printed
+code scope code field value indicating that the current selection should be printed
+private platform specific data On Windows this contains a copy of the DEVMODE struct returned from the code PrintDialog code This field is not currently used on the X Window System
+Constructs an instance of this class that can be used to print to the default printer see Printer getDefaultPrinterData
+Constructs an instance of this class with the given printer driver and printer name param driver the printer driver for the printer param name the name of the printer see driver see name
+NON NLS 1 NON NLS 2 NON NLS 3 NON NLS 4
+Returns a string containing a concise human readable description of the receiver return a string representation of the receiver

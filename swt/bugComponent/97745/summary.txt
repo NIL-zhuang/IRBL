@@ -1,0 +1,9 @@
+tabl
+column
+header
+stay
+press
+mous
+button
+releas
+elsewher

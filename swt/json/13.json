@@ -1,0 +1,34 @@
+{
+	"variables":[
+		"e",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.accessibility"
+	],
+	"import":[
+		"org.eclipse.swt.internal"
+	],
+	"methods":[
+		"getCaretOffset",
+		"getSelectionRange"
+	],
+	"methodsBody":{
+		"public void getCaretOffset(AccessibleTextEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when an accessibility client requests the current character offset\n* of the text caret.\n* <p>\n* Return the caret offset in the <code>offset</code>\n* field of the event object.\n* </p>\n*\n* @param e an event object containing the following fields:<ul>\n*    <li>childID [IN] - an identifier specifying a child of the control</li>\n*    <li>offset [OUT] - the current offset of the text caret</li>\n* </ul>\n*/\n",
+			"methodName":"public void getCaretOffset(AccessibleTextEvent e)"
+		},
+		"public void getSelectionRange(AccessibleTextEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when an accessibility client requests the range of the current\n* text selection.\n* <p>\n* Return the selection start offset and non-negative length in the\n* <code>offset</code> and <code>length</code> fields of the event object.\n* </p>\n*\n* @param e an event object containing the following fields:<ul>\n*    <li>childID [IN] - an identifier specifying a child of the control</li>\n*    <li>offset [OUT] - the offset of the current text selection</li>\n*    <li>length [OUT] - the length of the current text selection</li>\n* </ul>\n*/\n",
+			"methodName":"public void getSelectionRange(AccessibleTextEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"AccessibleTextListener"
+	]
+}

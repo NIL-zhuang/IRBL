@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+int
+load
+cursor
+loadcursora
+int
+instanc
+hinstanc
+int
+cursor
+name
+lpcursornam

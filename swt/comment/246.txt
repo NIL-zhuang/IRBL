@@ -1,0 +1,2 @@
+TYPEDESC elemdescFunc tdesc
+PARAMDESC elemdescFunc paramdesc

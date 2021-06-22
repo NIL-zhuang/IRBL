@@ -1,0 +1,9 @@
+size
+cbsize
+flag
+dwflag
+lpsz
+default
+scheme
+lpszdefaultschem
+sizeof

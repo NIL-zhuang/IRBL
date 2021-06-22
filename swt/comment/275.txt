@@ -1,0 +1,44 @@
+we only support snbExclude null
+Number of elements in rgiidExclude
+Array of interface identifiers IIDs
+Points to a block of stream names in the storage object
+Points to destination storage object
+create a null terminated array of char
+Pointer to the name of the new storage object
+Access mode for the new storage object
+Reserved must be zero
+Reserved must be zero
+Pointer to new storage object
+create a null terminated array of char
+Pointer to the name of the new stream
+Access mode for the new stream
+Reserved must be zero
+Reserved must be zero
+Pointer to new stream object
+create a null terminated array of char
+receives the IEnumSTATSTG interface
+Reserved must be zero
+Reserved must be NULL
+Reserved must be zero
+Pointer to output variable that
+create a null terminated array of char
+we only support the case where snbExclude null
+Pointer to the name of the
+Must be NULL
+Access mode for the new storage object
+Must be NULL
+Reserved must be zero
+Pointer to opened storage object
+that receives the IStream interface pointer
+create a null terminated array of char
+Pointer to name of stream to open
+Reserved must be NULL
+Access mode for the new stream
+Reserved must be zero
+Pointer to output variable
+the specified element
+create a null terminated array of char
+create a null terminated array of char
+Pointer to the name of the
+Pointer to the new name for
+CLSID to be assigned to the storage object

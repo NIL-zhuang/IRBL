@@ -1,0 +1,27 @@
+{
+	"variables":[
+		"event"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.browser"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"changed"
+	],
+	"methodsBody":{
+		"public void changed(TitleEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* This method is called when the title of the current document\n* is available or has changed.\n* <p>\n*\n* <p>The following fields in the <code>TitleEvent</code> apply:\n* <ul>\n* <li>(in) title the title of the current document\n* <li>(in) widget the <code>Browser</code> whose current document's\n* title is known or modified\n* </ul>\n*\n* @param event the <code>TitleEvent</code> that contains the title\n* of the document currently displayed in a <code>Browser</code>\n*\n* @since 3.0\n*/\n",
+			"methodName":"public void changed(TitleEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"TitleListener"
+	]
+}

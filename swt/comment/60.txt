@@ -1,0 +1,25 @@
+A PrintRenderer renders the content of a StyledText widget on a printer device Print rendering may occur in a non UI thread Therefore all requests for styles content and any other information normally stored in the StyledText widget are served from cached data Caching also guarantees immutable data for threaded printing
+logical unwrapped content
+wrapped content
+printer client area
+printer GC there can be only one GC for each printer device
+line background colors used during rendering
+line styles colors used during rendering
+bidi segments used during rendering on bidi platforms
+wrapLines requires tab width to be known
+Creates an instance of class PrintRenderer class p param device Device to render on param regularFont Font to use for regular text param gc printer GC to use for rendering There can be only one GC for each printer device at any given time param logicalContent StyledTextContent to print param lineBackgrounds line background colors to use during rendering param lineStyles line styles colors to use during rendering param bidiSegments bidi segments to use during rendering on bidi platforms param leftMargin margin to the left of the text param tabLength length in characters of a tab character param clientArea the printer client area
+Disposes the resource created by the receiver
+Do nothing PrintRenderer does not create GCs see StyledTextRenderer disposeGC
+Do not print the selection see StyledTextRenderer drawLineSelectionBackground
+line bidi segments
+Returns from cache the text segments that should be treated as if they had a different direction than the surrounding text p Use cached data p param lineOffset offset of the first character in the line 0 based from the beginning of the document param line text of the line to specify bidi segments for return text segments that should be treated as if they had a different direction than the surrounding text Only the start index of a segment is specified relative to the start of the line Always starts with 0 and ends with the line length exception IllegalArgumentException ul li ERROR INVALID ARGUMENT if the segment indices returned by the listener do not start with 0 are not in ascending order exceed the line length or have duplicates li ul
+Returns the printer client area p return the visible client area that can be used for rendering see StyledTextRenderer getClientArea
+Returns the class StyledTextContent class to use for line offset calculations This is the wrapped content calculated in the constructor from the logical printing content p return the class StyledTextContent class to use for line offset calculations
+Returns the printer GC to use for rendering and measuring There can be only one GC for each printer device at any given time p return the printer GC to use for rendering and measuring
+Returns 0 Scrolling does not affect printing Text is wrapped for printing p return 0 see StyledTextRenderer getHorizontalPixel
+Returns the start offset of the line at the given offset p param visualLineOffset an offset that may be anywhere within a line return the start offset of the line at the given offset relative to the start of the document
+Return cached line background data see StyledTextRenderer getLineBackgroundData
+Return cached line style background data see StyledTextRenderer getLineStyleData
+Selection is not printed p return Point 0 0 see StyledTextRenderer getSelection
+Printed content is always wrapped p return true see StyledTextRenderer getWordWrap
+Selection is not printed Returns false p return false see StyledTextRenderer isFullLineSelection

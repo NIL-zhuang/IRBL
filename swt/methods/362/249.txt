@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+int
+select
+palett
+selectpalett
+int
+hdc
+int
+hpal
+boolean
+forc
+background
+bforcebackground

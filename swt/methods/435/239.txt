@@ -1,0 +1,17 @@
+lresult
+syskeyup
+int
+param
+wparam
+int
+param
+lparam
+return
+sys
+key
+wmsyskeyup
+handl
+param
+wparam
+param
+lparam

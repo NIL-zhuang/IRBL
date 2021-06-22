@@ -1,0 +1,17 @@
+protect
+void
+dispos
+disposegc
+noth
+print
+render
+printrender
+doe
+not
+creat
+gcs
+style
+text
+render
+styledtextrender
+dispos

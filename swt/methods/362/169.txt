@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+int
+get
+malloc
+shgetmalloc
+int
+malloc
+ppmalloc

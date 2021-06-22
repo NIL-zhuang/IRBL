@@ -1,0 +1,12 @@
+line
+cach
+linecach
+intern
+get
+line
+cach
+internalgetlinecach
+return
+line
+cach
+linecach

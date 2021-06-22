@@ -1,0 +1,8 @@
+regress
+menu
+detect
+menudetect
+longer
+open
+new
+menus

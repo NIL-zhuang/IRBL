@@ -1,0 +1,7 @@
+get
+control
+info
+getcontrolinfo
+vtbl
+call
+vtblcall

@@ -1,0 +1,13 @@
+protect
+abstract
+void
+dispos
+disposegc
+dispos
+the
+specifi
+allow
+subclass
+reus
+gcs
+dispos

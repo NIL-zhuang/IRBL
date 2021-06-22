@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+int
+get
+font
+languag
+info
+getfontlanguageinfo
+int
+hdc

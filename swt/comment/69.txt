@@ -1,0 +1,603 @@
+A StyledText is an editable user interface object that displays lines of text The following style attributes can be defined for the text ul li foreground color li background color li font style bold italic bold italic regular li underline li strikeout ul p In addition to text style attributes the background color of a line may be specified p p There are two ways to use this widget when specifying text style information You may use the API that is defined for StyledText or you may define your own LineStyleListener If you define your own listener you will be responsible for maintaining the text style information for the widget IMPORTANT You may not define your own listener and use the StyledText API The following StyledText API is not supported if you have defined a LineStyleListener ul li getStyleRangeAtOffset int li getStyleRanges li replaceStyleRanges int int StyleRange li setStyleRange StyleRange li setStyleRanges StyleRange ul p p There are two ways to use this widget when specifying line background colors You may use the API that is defined for StyledText or you may define your own LineBackgroundListener If you define your own listener you will be responsible for maintaining the line background color information for the widget IMPORTANT You may not define your own listener and use the StyledText API The following StyledText API is not supported if you have defined a LineBackgroundListener ul li getLineBackground int li setLineBackground int int Color ul p p The content implementation for this widget may also be user defined To do so you must implement the StyledTextContent interface and use the StyledText API setContent StyledTextContent to initialize the widget p p IMPORTANT This class is em not em intended to be subclassed p dl dt b Styles b dd FULL SELECTION MULTI READ ONLY SINGLE WRAP dt b Events b dd ExtendedModify LineGetBackground LineGetSegments LineGetStyle Modify Selection Verify VerifyKey dl
+selection background color
+selection foreground color
+native content default or user specified
+line wrapping content same as logicalContent if word wrap is off
+listener for TextChanging TextChanged and TextSet events from StyledTextContent
+used for setStyles API when no LineStyleListener is registered
+true widget is using a user defined line style listener for line styles false widget is using the default line styler to store line styles
+true widget is using a user defined line background listener for line backgrounds false widget is using the default line styler to store line backgrounds
+pixel based
+pixel based
+top visible line
+offset of first character in top line
+the client area height Needed to calculate content width for new
+the client area width Needed during Resize callback to determine
+line height font height
+number of characters in a tab
+keep track of the horizontal caret position
+when changing lines pages Fixes bug 5935
+x and y are start and end caret offsets of selection
+x and y are start and end caret offsets of previous selection
+position of selection anchor 0 based offset from beginning of text
+selection after last mouse double click
+see getDoubleClickEnabled
+insert overwrite edit mode
+limits the number of characters the user can type in the widget Unlimited by default
+workaround for bug 4791
+
+true a double click ocurred Don t do mouse swipe selection
+the direction of autoscrolling up down right left
+cache data of the
+last text changing
+event for use in the
+text changed handler
+apply the BIDI algorithm on text segments of the same color
+The Printing class implements printing of a range of text An instance of class Printing class is returned in the StyledText print Printer API The run method may be invoked from any thread
+left aligned header footer segment
+centered header footer segment
+right aligned header footer segment
+copy of the widget content
+client area to print on
+printer color cache for line backgrounds and style
+cached line backgrounds
+cached line styles
+cached bidi segments when running on a bidi platform
+printer GC
+width of a printer page in pixels
+first page to print
+last page to print
+number of lines on a page
+first wrapped line to print
+last wrapped line to print
+widget single line mode
+selected text
+indicates the printing gc should be mirrored
+Creates an instance of class Printing class Copies the widget content and rendering data that needs to be requested from listeners p param parent StyledText widget to print param printer printer device to print on param printOptions print options
+Caches the bidi segments of the given line p param lineOffset offset of the line to cache bidi segments for Relative to the start of the document param line line to cache bidi segments for
+Caches the line background color of the given line p param lineOffset offset of the line to cache the background color for Relative to the start of the document param line line to cache the background color for
+Caches all line data that needs to be requested from a listener p param printerContent class StyledTextContent class to request line data for
+Caches all line styles of the given line p param lineOffset offset of the line to cache the styles for Relative to the start of the document param line line to cache the styles for
+Copies the text of the specified class StyledTextContent class p param original the class StyledTextContent class to copy
+Replaces all display colors in the cached line backgrounds and line styles with printer colors
+Disposes of the resources and the class PrintRenderer class
+Finish printing the indicated page param page page that was printed
+one inch margin around text
+make the orientation of the printer gc match the control
+Creates a class PrintRenderer class and calculate the line range to print
+Returns the printer color for the given display color p param color display color return color create on the printer with the same RGB values as the display color
+close full page
+close partial page
+Prints the lines in the specified page range
+Print header or footer decorations param page page number to print if specified in the StyledTextPrintOptions header or footer param header true print the header false print the footer
+Print one segment of a header or footer decoration Headers and footers have three different segments One each for left aligned centered and right aligned text param segment decoration segment to print param alignment alignment of the segment 0 left 1 center 2 right param page page number to print if specified in the decoration segment param header true print the header false print the footer
+Starts a print job and prints the pages specified in the constructor
+Start printing a new page param page page number to be started
+The code RTFWriter code class is used to write widget content as rich text The implementation complies with the RTF specification version 1 5 p toString is guaranteed to return a valid RTF string only after close has been called p p Whole and partial lines and line breaks can be written Lines will be formatted using the styles queried from the LineStyleListener if set or those set directly in the widget All styles are applied to the RTF stream like they are rendered by the widget In addition the widget font name and size is used for the whole text p
+Creates a RTF writer that writes content starting at offset start in the document code start code and code length code can be set to specify partial lines p param start start offset of content to write 0 based from beginning of document param length length of content to write
+Closes the RTF writer Once closed no more content can be written b NOTE b code toString code does not return a valid RTF string until code close code has been called
+Returns the index of the specified color in the RTF color table p param color the color param defaultIndex return value if color is null return the index of the specified color in the RTF color table or defaultIndex if color is null
+Determines if Unicode RTF should be written Don t write Unicode RTF on Windows 95 98 ME or NT
+to the current one Fixes bug 21698
+to the current one Fixes bug 21698
+control word delimiter
+Fixes bug 21698
+Appends the specified segment of string to the RTF data Copy from code start code up to but excluding code end code p param string string to copy a segment from Must not contain line breaks Line breaks should be written using writeLineDelimiter param start start offset of segment 0 based param end end offset of segment
+systems that don t support Unicode RTF
+set the font for the whole document to work around this
+font size is specified in half points
+Writes the RTF header including font table and color table
+Appends the specified line text to the RTF data Lines will be formatted using the styles queried from the LineStyleListener if set or those set directly in the widget p param line line text to write as RTF Must not contain line breaks Line breaks should be written using writeLineDelimiter param lineOffset offset of the line 0 based from the start of the widget document Any text occurring before the start offset or after the end offset specified during object creation is ignored exception SWTException ul li ERROR IO when the writer is closed li ul
+Appends the specified line delmimiter to the RTF data p param lineDelimiter line delimiter to write as RTF exception SWTException ul li ERROR IO when the writer is closed li ul
+line starts before RTF write start
+whole line is outside write range
+skip over partial first line
+style starts beyond line end or RTF write end
+is guarded against above
+write any unstyled text
+write styled text
+copy to end of style or end of write range or end of line
+guard against invalid styles and let style processing continue
+write unstyled text at the end of the line
+Appends the specified line text to the RTF data Use the colors and font styles specified in styles and lineBackground Formatting is written to reflect the text rendering by the text widget Style background colors take precedence over the line background color Background colors are written using the highlight tag vs the cb tag p param line line text to write as RTF Must not contain line breaks Line breaks should be written using writeLineDelimiter param lineOffset offset of the line 0 based from the start of the widget document Any text occurring before the start offset or after the end offset specified during object creation is ignored param styles styles to use for formatting Must not be null param lineBackground line background color to use for formatting May be null
+The code TextWriter code class is used to write widget content to a string Whole and partial lines and line breaks can be written To write partial lines specify the start and length of the desired segment during object creation p b NOTE b code toString code is guaranteed to return a valid string only after close has been called
+offset of first character that will be written
+offset of last character that will be written
+0 based from the beginning of the widget text
+Creates a writer that writes content starting at offset start in the document code start code and code length code can be set to specify partial lines p param start start offset of content to write 0 based from beginning of document param length length of content to write
+Closes the writer Once closed no more content can be written b NOTE b code toString code is not guaranteed to return a valid string unless the writer is closed
+Returns the number of characters to write return the integer number of characters to write
+Returns the offset where writing starts 0 based from the start of the widget text Used to write partial lines return the integer offset where writing starts
+Returns whether the writer is closed return a boolean specifying whether or not the writer is closed
+Returns the string code close code must be called before code toString code is guaranteed to return a valid string return the string
+Appends the given string to the data
+Inserts the given string to the data at the specified offset Do nothing if offset is 0 or getCharCount p param string text to insert param offset offset in the existing data to insert string at
+Appends the given int to the data
+Appends the given character to the data
+line starts before write start
+whole line is outside write range
+Appends the specified line text to the data p param line line text to write Must not contain line breaks Line breaks should be written using writeLineDelimiter param lineOffset offset of the line 0 based from the start of the widget document Any text occurring before the start offset or after the end offset specified during object creation is ignored exception SWTException ul li ERROR IO when the writer is closed li ul
+Appends the specified line delmimiter to the data p param lineDelimiter line delimiter to write exception SWTException ul li ERROR IO when the writer is closed li ul
+LineCache provides an interface to calculate and invalidate line based data Implementors need to return a line width in code getWidth code
+Calculates the lines in the specified range p param startLine first line to calculate param lineCount number of lines to calculate
+Returns a width that will be used by the code StyledText code widget to size a horizontal scroll bar p return the line width
+Resets the lines in the specified range This method is called in code StyledText redraw code and allows implementors to call redraw themselves during reset p param startLine the first line to reset param lineCount the number of lines to reset param calculateMaxWidth true implementors should retain a valid width even if it is affected by the reset operation false the width may be set to 0
+Resets the lines in the specified range p param startLine the first line to reset param lineCount the number of lines to reset param calculateMaxWidth true implementors should retain a valid width even if it is affected by the reset operation false the width may be set to 0
+Called when a text change occurred p param startOffset the start offset of the text change param newLineCount the number of inserted lines param replaceLineCount the number of deleted lines param newCharCount the number of new characters param replaceCharCount the number of deleted characters
+Keeps track of line widths and the longest line in the StyledText document Line widths are calculated when requested by a call to code calculate code and cached until reset by a call to code redrawReset code or code reset code
+parent widget used to create a GC for line measuring
+width in pixel of each line in the document 1 for unknown width
+content to use for line width calculation
+number of lines in lineWidth array
+maximum line width of all measured lines
+index of the widest line
+Creates a new code ContentWidthCache code and allocates space for the given number of lines p param parent the StyledText widget used to create a GC for line measuring param content a StyledTextContent containing the initial number of lines to allocate space for
+Calculates the width of each line in the given range if it has not been calculated yet If any line in the given range is wider than the currently widest line the maximum line width is updated p param startLine first line to calculate the line width of param lineCount number of lines to calculate the line width for
+Calculates the width of the visible lines in the specified range p param startLine the first changed line param newLineCount the number of inserted lines
+Measures the width of the given line p param line the line to measure param lineOffset start offset of the line to measure relative to the start of the document return the width of the given line
+Grows the code lineWidth code array to accomodate new line width information p param numLines the number of elements to increase the array by
+Returns the width of the longest measured line p return the width of the longest measured line
+shift up the lines
+has the longest line been removed
+shift the lines down to make room for new lines
+reset the new lines
+have new lines been inserted above the longest line
+Updates the line width array to reflect inserted or deleted lines p param startLine the starting line of the change that took place param delta the number of lines in the change 0 indicates lines inserted 0 indicates lines deleted
+Resets the line width of the lines in the specified range p param startLine the first line to reset param lineCount the number of lines to reset param calculateMaxWidth true if the widest line is being reset the maximum width of all remaining cached lines is calculated false the maximum width is set to 0 if the widest line is being reset
+width is no longer valid
+Resets the line width of the lines in the specified range p param startLine the first line to reset param lineCount the number of lines to reset param calculateMaxWidth true if the widest line is being reset the maximum width of all remaining cached lines is calculated false the maximum width is set to 0 if the widest line is being reset
+entire text deleted
+lines ever being visible
+need to recalculate maximum content width for all lines
+calculated above
+Updates the line width array to reflect a text change Lines affected by the text change will be reset p param startOffset the start offset of the text change param newLineCount the number of inserted lines param replaceLineCount the number of deleted lines param newCharCount the number of new characters param replaceCharCount the number of deleted characters
+Updates the line wrapping of the content The line wrapping must always be in a consistent state Therefore when code reset code or code redrawReset code is called the line wrapping is recalculated immediately instead of in code calculate code
+Creates a new code WordWrapCache code and calculates an initial line wrapping p param parent the StyledText widget to wrap content in param content the content provider that does the actual line wrapping
+Do nothing Lines are wrapped immediately after reset p param startLine first line to calculate param lineCount number of lines to calculate
+Returns the client area width Lines are wrapped so there is no horizontal scroll bar p return the line width
+do a full rewrap if all lines are reset
+Wraps the lines in the specified range This method is called in code StyledText redraw code A redraw is therefore not necessary p param startLine the first line to reset param lineCount the number of lines to reset param calculateMaxWidth true implementors should retain a valid width even if it is affected by the reset operation false the width may be set to 0
+wrapping of one of the visible lines has changed
+number of visible lines has changed
+check for cases which will require a full redraw
+Rewraps the lines in the specified range and redraws the widget if the line wrapping has changed p param startLine the first line to reset param lineCount the number of lines to reset param calculateMaxWidth true implementors should retain a valid width even if it is affected by the reset operation false the width may be set to 0
+be performed if a visible region is affected fixes bug 42947
+not affect the word wrapping fixes bug 14047
+Passes the text change notification to the line wrap content p param startOffset the start offset of the text change param newLineCount the number of inserted lines param replaceLineCount the number of deleted lines param newCharCount the number of new characters param replaceCharCount the number of deleted characters
+for ensuring that the bg fg the IME box uses is the same as what StyledText uses
+Constructs a new instance of this class given its parent and a style value describing its behavior and appearance p The style value is either one of the style constants defined in class code SWT code which is applicable to instances of this class or must be built by em bitwise OR em ing together that is using the code int code operator two or more of those code SWT code style constants The class description lists the style constants that are applicable to the class Style bits are also inherited from superclasses p param parent a widget which will be the parent of the new instance cannot be null param style the style of widget to construct exception IllegalArgumentException ul li ERROR NULL ARGUMENT if the parent is null li ul exception SWTException ul li ERROR THREAD INVALID ACCESS if not called from the thread that created the parent li ul see SWT FULL SELECTION see SWT MULTI see SWT READ ONLY see SWT SINGLE see SWT WRAP see getStyle
+Adds an extended modify listener An ExtendedModify event is sent by the widget when the widget text has changed p param extendedModifyListener the listener exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+in its upper and lower case form
+Maps a key to an action One action can be associated with N keys However each key can only have one action key action is N 1 relation p param key a key code defined in SWT java or a character Optionally ORd with a state mask Preferred state masks are one or more of SWT MOD1 SWT MOD2 SWT MOD3 since these masks account for modifier platform differences However there may be cases where using the specific state masks i e SWT CTRL SWT SHIFT SWT ALT SWT COMMAND makes sense param action one of the predefined actions defined in ST java Use SWT NULL to remove a key binding exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Adds a bidirectional segment listener A BidiSegmentEvent is sent whenever a line of text is measured or rendered The user can specify text ranges in the line that should be treated as if they had a different direction than the surrounding text This may be used when adjacent segments of right to left text should not be reordered relative to each other E g Multiple ava string literals in a right to left language should generally remain in logical order to each other that is the way they are stored p param listener the listener exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul see BidiSegmentEvent since 2 0
+Adds a line background listener A LineGetBackground event is sent by the widget to determine the background color for a line p param listener the listener exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+Adds a line style listener A LineGetStyle event is sent by the widget to determine the styles for a line p param listener the listener exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+Adds a modify listener A Modify event is sent by the widget when the widget text has changed p param modifyListener the listener exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+Adds a selection listener A Selection event is sent by the widget when the selection has changed p When code widgetSelected code is called the event x amd y fields contain the start and end caret indices of the selection code widgetDefaultSelected code is not called for StyledTexts p param listener the listener exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+Adds a verify key listener A VerifyKey event is sent by the widget when a key is pressed The widget ignores the key press if the listener sets the doit field of the event to false p param listener the listener exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+Adds a verify listener A Verify event is sent by the widget when the widget text is about to change The listener can set the event text and the doit field to change the text that is set in the widget or to force the widget to ignore the text change p param verifyListener the listener exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+Appends a string to the text at the end of the widget p param string the string to be appended see replaceTextRange int int String exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+Calculates the width of the widest visible line
+Calculates the scroll bars
+never happen because we use claimBottomFreeSpace
+Fixes bug 15088
+Calculates the top index based on the current vertical scroll offset The top index is the index of the topmost fully visible line or the topmost partially visible line if no line is fully visible The top index starts at 0
+Hides the scroll bars if widget is created in single line mode
+Fixes 1GEYJM0
+Scrolls down the text to use new space made available by a resize or by deleted lines
+client area window is scrolled right
+Scrolls text to the right to use new space made available by a resize
+clear the margin background
+Clears the widget margin param gc GC to render on param background background color to use for clearing the margin param clientArea widget client area dimensions
+therefore make sure redraw range is valid
+redraw old selection if any
+Removes the widget selection p param sendEvent a Selection event is sent when set to true and when the selection is actually reset
+don t wrap live content Fixes bug 38344
+that does not required wrapping Fixes bug 31195
+time consuming process
+Use default values if no text is defined
+Copies the selected text to the code DND CLIPBOARD code clipboard The text will be put on the clipboard in plain text format and RTF format The code DND CLIPBOARD code clipboard is used for data that is transferred by keyboard accelerator such as Ctrl C Ctrl V or by menu action p exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Rethrow all other errors Fixes bug 17578
+Copies the selected text to the specified clipboard The text will be put in the clipboard in plain text format and RTF format p The clipboardType is one of the clipboard constants defined in class code DND code The code DND CLIPBOARD code clipboard is used for data that is transferred by keyboard accelerator such as Ctrl C Ctrl V or by menu action The code DND SELECTION CLIPBOARD code clipboard is used for data that is transferred by selecting text and pasting with the middle mouse button p param clipboardType indicates the type of clipboard exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul since 3 1
+LF occurs before CR
+CR LF combination
+CR occurs before LF or no LF present
+no more line breaks
+text copied thus far because there only is one line
+Returns a string that uses only the line delimiter specified by the StyledTextContent implementation Returns only the first line if the widget has the SWT SINGLE style p param text the text that may have line delimiters that don t match the model line delimiter Possible line delimiters are CR r LF n CR LF r n return the converted text that only uses the line delimiter specified by the model Returns only the first line if the widget has the SWT SINGLE style
+Navigation
+Selection
+Cut Copy Paste
+Cut Copy Paste Wordstar style
+Miscellaneous
+Creates default key bindings
+Create the bitmaps to use for the caret in bidi mode This method only needs to be called upon widget creation and when the font changes the caret bitmap height needs to match font height
+Rethrow all other errors Fixes bug 17578
+Fixes bug 21030
+Moves the selected text to the clipboard The text will be put in the clipboard in plain text format and RTF format p exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+A mouse move event has occurred See if we should start autoscrolling If the move position is outside of the client area initiate autoscrolling Otherwise we ve moved back into the widget so end autoscrolling
+If we re already autoscrolling in the given direction do nothing
+down a cursor key i e arrowUp arrowDown
+Initiates autoscrolling p param direction SWT UP SWT DOWN SWT COLUMN NEXT SWT COLUMN PREVIOUS
+Deletes the previous character Delete the selected text if any Move the caret in front of the deleted text
+end of the line
+don t recognize CR as a line break
+Replaces the selection with the character or insert the character at the current caret position if no selection exists If a carriage return was typed replace it with the line break character used by the widget on this platform p param key the character typed by the user
+line mode fixes 4820
+Moves the caret after the last character of the widget content
+Moves the caret in front of the first character of the widget content
+Moves the caret to the start of the selection if a selection exists Otherwise if no selection exists move the cursor according to the cursor selection rules p see doSelectionCursorPrevious
+Moves the caret to the end of the selection if a selection exists Otherwise if no selection exists move the cursor according to the cursor selection rules p see doSelectionCursorNext
+Deletes the next character Delete the selected text if any
+only the delete key was pressed
+Deletes the next word
+only the backspace key was pressed
+Deletes the previous word
+fixes 4820
+Moves the caret one line down and to the same character offset relative to the beginning of the line Move the caret to the end of the new line if the new line is shorter than the character offset return index of the new line relative to the first line in the document
+Moves the caret to the end of the line
+Moves the caret to the beginning of the line
+Moves the caret one line up and to the same character offset relative to the beginning of the line Move the caret to the end of the new line if the new line is shorter than the character offset return index of the new line relative to the first line in the document
+not in single line mode fixes 4820
+double click word select the previous next word fixes bug 15610
+could be incorrectly reset Fixes 1GKM3XS
+Moves the caret to the specified location p param x x location of the new caret position param y y location of the new caret position param select the location change is a selection operation include the line delimiter in the selection
+Updates the selection based on the caret position
+e g mouse x 0 mouse y caret line y
+find the previous next word
+mouse word select only on same line mouse cursor is on
+Returns the offset of the word at the specified offset If the current selection extends from high index to low index i e right to left or caret is at left border of selecton on non bidi platforms the start offset of the word preceeding the selection is returned If the current selection extends from low index to high index the end offset of the word following the selection is returned param x mouse x location param newCaretOffset caret offset of the mouse cursor location param line line index of the mouse cursor location
+do nothing if in single line mode fixes 5673
+line is scrolled fixes bug 5602
+scroll one page down or to the bottom
+from content getLineAtOffset caretOffset when in word wrap mode
+restore the original horizontal caret position
+Scrolls one page down so that the last line truncated or whole of the current page becomes the fully visible top line The caret is scrolled the same number of lines so that its location relative to the top line remains the same The exception is the end of the text where a full page scroll is not possible In this case the caret is moved after the last character p param select whether or not to select the page
+go to end of line if in single line mode fixes 5673
+Moves the cursor to the end of the last fully visible line
+from content getLineAtOffset caretOffset when in word wrap mode
+Moves the cursor to the beginning of the first fully visible line
+scroll one page up or to the top
+from content getLineAtOffset caretOffset when in word wrap mode
+restore the original horizontal caret position
+Scrolls one page up so that the first line truncated or whole of the current page becomes the fully visible last line The caret is scrolled the same number of lines so that its location relative to the top line remains the same The exception is the beginning of the text where a full page scroll is not possible In this case the caret is moved in front of the first character
+shrink selection
+test whether selection actually changed Fixes 1G71EO1
+grow selection
+check if selection has reversed direction
+shrink selection
+test whether selection actually changed Fixes 1G71EO1
+grow selection
+check if selection has reversed direction
+Updates the selection to extend to the current caret position
+only go to next line if not in single line mode fixes 5673
+from content getLineAtOffset caretOffset when in word wrap mode
+Moves the caret to the next character or to the beginning of the next line if the cursor is at the end of a line
+Moves the caret to the previous character or to the end of the previous line if the cursor is at the beginning of a line
+reset columnX on selection
+repeat scrolls lots of lines
+from content getLineAtOffset caretOffset when in word wrap mode
+save the original horizontal caret position
+Moves the caret one line down and to the same character offset relative to the beginning of the line Moves the caret to the end of the new line if the new line is shorter than the character offset Moves the caret to the end of the text if the caret already is on the last line Adjusts the selection according to the caret change This can either add to or subtract from the old selection depending on the previous selection direction
+reset columnX on selection
+from content getLineAtOffset caretOffset when in word wrap mode
+save the original horizontal caret position
+Moves the caret one line up and to the same character offset relative to the beginning of the line Moves the caret to the end of the new line if the new line is shorter than the character offset Moves the caret to the beginning of the document if it is already on the first line Adjusts the selection according to the caret change This can either add to or subtract from the old selection depending on the previous selection direction
+reset columnX on selection
+Scrolls one page down so that the last line truncated or whole of the current page becomes the fully visible top line The caret is scrolled the same number of lines so that its location relative to the top line remains the same The exception is the end of the text where a full page scroll is not possible In this case the caret is moved after the last character p Adjusts the selection according to the caret change This can either add to or subtract from the old selection depending on the previous selection direction p
+reset columnX on selection
+Scrolls one page up so that the first line truncated or whole of the current page becomes the fully visible last line The caret is scrolled the same number of lines so that its location relative to the top line remains the same The exception is the beginning of the text where a full page scroll is not possible In this case the caret is moved in front of the first character p Adjusts the selection according to the caret change This can either add to or subtract from the old selection depending on the previous selection direction p
+Force symmetrical movement for word next and previous Fixes 14536
+would be on a different line fixes 5673
+Moves the caret to the end of the next word
+wrapping lines stay on bottom line when on line boundary
+Moves the caret to the start of the previous word
+Moves the caret one character to the left Do not go to the previous line When in a bidi locale and at a R2L character the caret is moved to the beginning of the R2L segment visually right and then one character to the left visually left because it s now in a L2R segment
+Moves the caret one character to the right Do not go to the next line When in a bidi locale and at a R2L character the caret is moved to the end of the R2L segment visually left and then one character to the right visually right because it s now in a L2R segment
+Moves the caret to the end of the next word If a selection exists move the caret to the end of the selection and remove the selection
+Moves the caret to the start of the previous word If a selection exists move the caret to the start of the selection and remove the selection
+adjust y position for pixel based scrolling
+Draws the specified rectangle Draw directly without invalidating the affected area when clearBackground is false p param x the x position param y the y position param width the width param height the height param clearBackground true clear the background by invalidating the requested redraw area false draw the foreground directly without invalidating the redraw area
+Ends the autoscroll process
+Returns the baseline in pixels return baseline the baseline exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul since 3 0
+Gets the BIDI coloring mode When true the BIDI text display algorithm is applied to segments of text that are the same color return the current coloring mode exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul p deprecated use BidiSegmentListener instead p
+calculate the number of lines that are fully visible
+Returns the index of the last fully visible line p return index of the last fully visible line
+Returns the caret position relative to the start of the text p return the caret position relative to the start of the text exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Returns the caret offset at the given x location in the line The caret offset is the offset of the character where the caret will be placed when a mouse click occurs The caret offset will be the offset of the character after the clicked one if the mouse click occurs at the second half of a character Doesn t properly handle ligatures and other context dependent characters unless the current locale is a bidi locale Ligatures are handled properly as long as they don t occur at lineXOffset p param line text of the line to calculate the offset in param lineOffset offset of the first character in the line 0 based from the beginning of the document param lineXOffset x location in the line return caret offset at the x location relative to the start of the line
+Returns the caret width p return the caret width 0 if caret is null
+Returns the content implementation that is used for text storage or null if no user defined content implementation has been set p return content implementation that is used for text storage or null if no user defined content implementation has been set exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Returns whether the widget implements double click mouse behavior p return true if double clicking a word selects the word false if double clicks have the same effect as regular mouse clicks exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Returns whether the widget content can be edited p return true if content can be edited false otherwise exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Return a GC to use for rendering and update the cached font style to represent the current style p return GC
+Returns the horizontal scroll increment p return horizontal scroll increment
+Returns the horizontal scroll offset relative to the start of the line p return horizontal scroll offset relative to the start of the line measured in character increments starting at 0 if 0 the content is scrolled exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Returns the horizontal scroll offset relative to the start of the line p return the horizontal scroll offset relative to the start of the line measured in pixel starting at 0 if 0 the content is scrolled exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Returns the action assigned to the key Returns SWT NULL if there is no action associated with the key p param key a key code defined in SWT java or a character Optionally ORd with a state mask Preferred state masks are one or more of SWT MOD1 SWT MOD2 SWT MOD3 since these masks account for modifier platform differences However there may be cases where using the specific state masks i e SWT CTRL SWT SHIFT SWT ALT SWT COMMAND makes sense return one of the predefined actions defined in ST java or SWT NULL if there is no action associated with the key exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Gets the number of characters p return number of characters in the widget exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Returns the background color of the line at the given index Returns null if a LineBackgroundListener has been set or if no background color has been specified for the line Should not be called if a LineBackgroundListener has been set since the listener maintains the line background colors param index the index of the line return the background color of the line at the given index exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR INVALID ARGUMENT when the index is invalid li ul
+Returns the line background data for the given line or null if there is none p param lineOffset offset of the line start relative to the start of the content param line line to get line background data for return line background data for the given line
+Gets the number of text lines p return the number of lines in the widget exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Returns the number of lines that can be completely displayed in the widget client area p return number of lines that can be completely displayed in the widget client area
+Returns the line at the specified offset in the text where 0 lt offset lt getCharCount so that getLineAtOffset getCharCount returns the line of the insert location param offset offset relative to the start of the content 0 offset getCharCount return line at the specified offset in the text exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR INVALID RANGE when the offset is outside the valid range 0 or getCharCount li ul
+Returns the line delimiter used for entering new lines by key down or paste operation p return line delimiter used for entering new lines by key down or paste operation exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+if word wrap is on the line offset and text may be visual wrapped
+Returns a StyledTextEvent that can be used to request data such as styles and background color for a line The specified line may be a visual wrapped line if in word wrap mode The returned object will always be for a logical unwrapped line p param lineOffset offset of the line This may be the offset of a visual line if the widget is in word wrap mode param line line text This may be the text of a visualline if the widget is in word wrap mode return StyledTextEvent that can be used to request line data for the given line
+Returns the line height p return line height in pixel exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Returns a LineCache implementation Depending on whether or not word wrap is on this may be a line wrapping or line width calculating implementaiton p param content StyledTextContent to create the LineCache on return a LineCache implementation
+Returns the line style data for the given line or null if there is none If there is a LineStyleListener but it does not set any styles the StyledTextEvent styles field will be initialized to an empty array p param lineOffset offset of the line start relative to the start of the content param line line to get line styles for return line style data for the given line Styles may start before line start and end after line end
+Returns the x y location of the upper left corner of the character bounding box at the specified offset in the text The point is relative to the upper left corner of the widget client area p param offset offset relative to the start of the content 0 offset getCharCount return x y location of the upper left corner of the character bounding box at the specified offset in the text exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR INVALID RANGE when the offset is outside the valid range 0 or getCharCount li ul
+Returns the character offset of the first character of the given line p param lineIndex index of the line 0 based relative to the first line in the content 0 lineIndex getLineCount except lineIndex may always be 0 return offset offset of the first character of the line relative to the beginning of the document The first character of the document is at offset 0 When there are not any lines getOffsetAtLine 0 is a valid call that answers 0 exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR INVALID RANGE when the offset is outside the valid range 0 or getCharCount li ul since 2 0
+is y above first line or is x before first column
+does the referenced line exist
+Returns the offset of the character at the given location relative to the first character in the document The return value reflects the character offset that the caret will be placed at if a mouse click occurred at the specified location If the x coordinate of the location is beyond the center of a character the returned offset will be behind the character p param point the origin of character bounding box relative to the origin of the widget client area return offset of the character at the given location relative to the first character in the document exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when point is null li li ERROR INVALID ARGUMENT when there is no character at the specified location li ul
+Returns the offset at the specified x location in the specified line p param x x location of the mouse location param line line the mouse location is in return the offset at the specified x location in the specified line relative to the beginning of the document
+Return the orientation of the receiver return the orientation style exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul since 2 1 2
+Returns the index of the last partially visible line return index of the last partially visible line
+Returns the content in the specified range using the platform line delimiter to separate lines p param writer the TextWriter to write line text into return the content in the specified range using the platform line delimiter to separate lines as written by the specified TextWriter
+Returns the selection p Text selections are specified in terms of caret positions In a text widget that contains N characters there are N 1 caret positions ranging from 0 N p return start and end of the selection x is the offset of the first selected character y is the offset after the last selected character The selection values returned are visual i e x will always always be y To determine if a selection is right to left RtoL vs left to right LtoR compare the caretOffset to the start and end of the selection e g caretOffset start of selection implies that the selection is RtoL see getSelectionRange exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Returns the selection p return start and length of the selection x is the offset of the first selected character relative to the first character of the widget content y is the length of the selection The selection values returned are visual i e length will always always be positive To determine if a selection is right to left RtoL vs left to right LtoR compare the caretOffset to the start and end of the selection e g caretOffset start of selection implies that the selection is RtoL exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Returns the receiver s selection background color return the selection background color exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul since 2 1
+Gets the number of selected characters p return the number of selected characters exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Returns the receiver s selection foreground color return the selection foreground color exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul since 2 1
+Returns the selected text p return selected text or an empty String if there is no selection exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+test segment index consistency
+ensure that last segment index is line end offset
+Returns the text segments that should be treated as if they had a different direction than the surrounding text p param lineOffset offset of the first character in the line 0 based from the beginning of the document param line text of the line to specify bidi segments for return text segments that should be treated as if they had a different direction than the surrounding text Only the start index of a segment is specified relative to the start of the line Always starts with 0 and ends with the line length exception IllegalArgumentException ul li ERROR INVALID ARGUMENT if the segment indices returned by the listener do not start with 0 are not in ascending order exceed the line length or have duplicates li ul
+add offset for last non colored segment in line if any
+see getBidiSegments Supports deprecated setBidiColoring API Remove when API is removed
+Returns the style range at the given offset Returns null if a LineStyleListener has been set or if a style is not set for the offset Should not be called if a LineStyleListener has been set since the listener maintains the styles p param offset the offset to return the style for 0 offset getCharCount must be true return a StyleRange with start offset and length 1 indicating the style at the given offset null if a LineStyleListener has been set or if a style is not set for the given offset exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR INVALID ARGUMENT when the offset is invalid li ul
+Returns the styles Returns an empty array if a LineStyleListener has been set Should not be called if a LineStyleListener has been set since the listener maintains the styles p return the styles or an empty array if a LineStyleListener has been set exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+styles cached by the widget
+Returns the styles for the given text range Returns an empty array if a LineStyleListener has been set Should not be called if a LineStyleListener has been set since the listener maintains the styles param start the start offset of the style ranges to return param length the number of style ranges to return return the styles or an empty array if a LineStyleListener has been set The returned styles will reflect the given range The first returned code StyleRange code will have a starting offset start and the last returned code StyleRange code will have an ending offset start length 1 exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR INVALID RANGE when start and or end are outside the widget content li ul since 3 0
+Returns the tab width measured in characters return tab width measured in characters exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Returns a copy of the widget content p return copy of the widget content exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Returns the widget content between the two offsets p param start offset of the first character in the returned String param end offset of the last character in the returned String return widget content starting at start and ending at end see getTextRange int int exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR INVALID RANGE when start and or end are outside the widget content li ul
+Returns the smallest bounding rectangle that includes the characters between two offsets p param start offset of the first character included in the bounding box param end offset of the last character included in the bounding box return bounding box of the text between start and end exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR INVALID RANGE when start and or end are outside the widget content li ul since 3 1
+Returns the widget content starting at start for length characters p param start offset of the first character in the returned String param length number of characters to return return widget content starting at start and extending length characters exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR INVALID RANGE when start and or length are outside the widget content li ul
+Returns the maximum number of characters that the receiver is capable of holding return the text limit exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Gets the top index The top index is the index of the fully visible line that is currently at the top of the widget or the topmost partially visible line if no line is fully visible The top index changes when the widget is scrolled Indexing is zero based p return the index of the top line exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Gets the top pixel The top pixel is the pixel position of the line that is currently at the top of the widget The text widget can be scrolled by pixels by dragging the scroll thumb so that a partial line may be displayed at the top the widget The top pixel changes when the widget is scrolled The top pixel does not include the widget trimming p return pixel position of the top line exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Returns the vertical scroll increment p return vertical scroll increment
+Returns the index of the line the caret is on When in word wrap mode and at the end of one wrapped line beginning of the continuing wrapped line the caret offset is not sufficient to determine the caret line return the index of the line the caret is on
+Returns the offset of the character after the word at the specified offset p There are two classes of words formed by a sequence of characters ul li from 0 9 and A z ASCII 48 57 and 65 122 li every other character except line breaks ul p p Space characters ASCII 20 are special as they are treated as part of the word leading up to the space character Line breaks are treated as one word p
+Returns the offset of the character after the word at the specified offset p There are two classes of words formed by a sequence of characters ul li from 0 9 and A z ASCII 48 57 and 65 122 li every other character except line breaks ul p p Spaces are ignored and do not represent a word Line breaks are treated as one word p
+Returns the start offset of the word at the specified offset There are two classes of words formed by a sequence of characters p ul li from 0 9 and A z ASCII 48 57 and 65 122 li every other character except line breaks ul p p Space characters ASCII 20 are special as they are treated as part of the word leading up to the space character Line breaks are treated as one word p
+Returns whether the widget wraps lines p return true if widget wraps lines false otherwise since 2 0
+Returns the x location of the character at the give offset in the line b NOTE b Does not return correct values for true italic fonts vs slanted fonts p return x location of the character at the given offset in the line
+Inserts a string The old selection is replaced with the new text p param string the string see replaceTextRange int int String exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when string is null li ul
+Creates content change listeners and set the default content model
+Creates a default line style listener Used to store line background colors and styles Removed when the user sets a LineStyleListener p see addLineStyleListener
+Adds event listeners
+Used by WordWrapCache to bypass StyledText redraw which does an unwanted cache reset
+do nothing if redraw range is completely invisible
+only redraw visible lines
+1 to redraw whole bottom line including line break
+redraw entire center lines if redraw range includes more than two lines
+Redraws the specified text range p param start offset of the first character to redraw param length number of characters to redraw param clearBackground true if the background should be cleared as part of the redraw operation If true the entire redraw range will be cleared before anything is redrawn If the redraw range includes the last character of a line i e the entire line is redrawn the line is cleared all the way to the right border of the widget The redraw operation will be faster and smoother if clearBackground is set to false Whether or not the flag can be set to false depends on the type of change that has taken place If font styles or background colors for the redraw range have changed clearBackground should be set to true If only foreground colors have changed for the redraw range clearBackground can be set to false
+Returns the widget text with style information encoded using RTF format specification version 1 5 return the widget text with style information encoded using RTF format exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Frees resources
+Scrolls the widget horizontally
+character key pressed
+key subtracts 64 from the value of the key that it modifies
+see if we have a control character
+special key pressed e g F1
+key on some keyboards See bug 20953
+produces characters on motif
+produces characters on the mac
+ignore DEL
+If an action has been registered for the key stroke execute the action Otherwise if a character has been entered treat it as new content p param event keyboard event
+If a VerifyKey listener exists verify that the key that was entered should be processed p param event keyboard event
+Rethrow all other errors Fixes bug 17578
+Update the Selection Clipboard p param event keyboard event
+Updates the caret location and selection if mouse button 1 has been pressed
+position cursor
+insert text
+Updates the caret location and selection if mouse button 1 has been pressed
+Updates the caret location and selection if mouse button 1 is pressed during the mouse move
+Rethrow all other errors Fixes bug 17578
+Autoscrolling ends when the mouse button is released
+adjust y position for pixel based scrolling and top margin
+Check if there is work to do
+Renders the invalidated area specified in the paint event p param event paint event
+Redraw the old or new right bottom margin if needed
+Recalculates the scroll bars Rewraps all lines when in word wrap mode p param event resize event
+fixes 1GB93QT
+Fixes 1GEYJM0
+fixes bug 8273
+optimization and fixes bug 13999 see also handleTextChanging
+Updates the caret position and selection and the scroll bars to reflect the content change p
+notify default line styler about text change
+caretOffset
+Updates the screen to reflect a pending content change p param event start the start offset of the change param event newText text that is going to be inserted or empty String if no text will be inserted param event replaceCharCount length of text that is going to be replaced param event newCharCount length of text that is going to be inserted param event replaceLineCount number of lines that are going to be replaced param event newLineCount number of new lines that are going to be inserted
+Called when the widget content is set programatically overwriting the old content Resets the caret position selection and scroll offsets Recalculates the content width and scroll bars Redraws the widget p param event text change event
+Called when a traversal key is pressed Allow tab next traversal to occur when the widget is in single line mode or in multi line and non editable mode When in editable multi line mode we want to prevent the tab traversal and receive the tab key event instead p param event the event
+Scrolls the widget vertically
+Add accessibility support for the widget
+Initializes the fonts used to render font styles Presently only regular and bold fonts are supported
+Navigation
+from content getLineAtOffset caretOffset when in word wrap mode
+restore the original horizontal caret position
+from content getLineAtOffset caretOffset when in word wrap mode
+restore the original horizontal caret position
+Selection
+Modification
+Miscellaneous
+toggle insert overwrite mode
+Executes the action p param action one of the actions defined in ST java
+Temporary until SWT provides this
+in between parts of the line delimiter
+Returns whether the given offset is inside a multi byte line delimiter Example Line1 r n isLineDelimiter 5 false but isLineDelimiter 6 true return true if the given offset is inside a multi byte line delimiter false if the given offset is before or after a line delimiter
+Returns whether the widget is mirrored right oriented right to left writing order return isMirrored true the widget is right oriented false the widget is left oriented
+Returns whether or not the given lines are visible p return true if any of the lines is visible false if none of the lines is visible
+Returns whether the widget can have only one line p return true if widget can have only one line false if widget can have multiple lines
+Fix advancing flag for delete backspace key on direction boundary
+always update the caret location fixes 1G8FODP
+fixes 1GBB8NJ
+Sends the specified verify event replace insert text as defined by the event and send a modify event p param event the text change event ul li event start the replace start offset li li event end the replace end offset li li event text the new text li ul param updateCaret whether or not he caret should be set behind the new text
+Replaces the selection with the text on the code DND CLIPBOARD code clipboard or if there is no selection inserts the text at the current caret offset If the widget has the SWT SINGLE style and the clipboard text contains more than one line only the first line without line delimiters is inserted in the widget p exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+an Image with 0 width or 0 height
+renderHeight will be negative when only top margin needs redrawing
+Render the specified area Broken out as its own method to support direct drawing p param gc GC to render on param startLine first line to render param startY y pixel location to start rendering at param renderHeight renderHeight widget area that needs to be filled with lines
+Prints the widget s text to the default printer exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Returns a runnable that will print the widget s text to the specified printer p The runnable may be run in a non UI thread p param printer the printer to print to exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when printer is null li ul
+Returns a runnable that will print the widget s text to the specified printer p The runnable may be run in a non UI thread p param printer the printer to print to param options print options to use during printing exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when printer or options is null li ul since 2 1
+Causes the entire bounds of the receiver to be marked as needing to be redrawn The next time a paint request is processed the control will be completely painted p Recalculates the content width for all lines in the bounds When a code LineStyleListener code is used a redraw call is the only notification to the widget that styles have changed and that the content width may have changed p exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul see Control update
+reset all lines in the redraw rectangle
+only calculate the visible lines
+Causes the rectangular area of the receiver specified by the arguments to be marked as needing to be redrawn The next time a paint request is processed that area of the receiver will be painted If the code all code flag is code true code any children of the receiver which intersect with the specified area will also paint their intersecting areas If the code all code flag is code false code the children will not be painted p Marks the content width of all lines in the specified rectangle as unknown Recalculates the content width of all visible lines When a code LineStyleListener code is used a redraw call is the only notification to the widget that styles have changed and that the content width may have changed p param x the x coordinate of the area to draw param y the y coordinate of the area to draw param width the width of the area to draw param height the height of the area to draw param all code true code if children should redraw and code false code otherwise exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul see Control update
+Redraw the given line p param line index of the line to redraw param offset offset in line to start redrawing
+clear background to right widget border fixes bug 19595
+clear background to right widget border fixes bug 19595
+no redraw necessary if redraw offset is 0
+redraw last line if more than one line needs redrawing
+Redraws a text range in the specified lines p param firstLine first line to redraw at the specified offset param offsetInFirstLine offset in firstLine to start redrawing param lastLine last line to redraw param endOffset offset in the last where redrawing should stop param clearBackground true clear the background by invalidating the requested redraw range If the redraw range includes the last character of a line i e the entire line is redrawn the line is cleared all the way to the right border of the widget false draw the foreground directly without invalidating the redraw range
+destination x y
+destination x y
+source x y
+source x y
+redraw first changed line in case a line was split joined
+redraw but could cause flash slowness elsewhere
+display new text
+Fixes the widget to display a text change Bit blitting and redrawing is done as necessary p param y y location of the text change param newLineCount number of new lines param replacedLineCount number of replaced lines
+those that are visible
+Redraws the specified text range p param start offset of the first character to redraw param length number of characters to redraw param clearBackground true if the background should be cleared as part of the redraw operation If true the entire redraw range will be cleared before anything is redrawn If the redraw range includes the last character of a line i e the entire line is redrawn the line is cleared all the way to the right border of the widget The redraw operation will be faster and smoother if clearBackground is set to false Whether or not the flag can be set to false depends on the type of change that has taken place If font styles or background colors for the redraw range have changed clearBackground should be set to true If only foreground colors have changed for the redraw range clearBackground can be set to false exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR INVALID RANGE when start and or end are outside the widget content li ul
+Removes the specified bidirectional segment listener p param listener the listener exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul since 2 0
+Removes the specified extended modify listener p param extendedModifyListener the listener exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+use default line styler if last user line styler was removed
+Removes the specified line background listener p param listener the listener exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+use default line styler if last user line styler was removed Fixes 1G7B1X2
+Removes the specified line style listener p param listener the listener exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+Removes the specified modify listener p param modifyListener the listener exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+Removes the specified selection listener p param listener the listener exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+Removes the specified verify listener p param verifyListener the listener exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+Removes the specified key verify listener p param listener the listener exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+if the area is not visible there is no need to redraw
+fixes 1G8FODP
+Replaces the styles in the given range with new styles This method effectively deletes the styles in the given range and then adds the the new styles p Should not be called if a LineStyleListener has been set since the listener maintains the styles p param start offset of first character where styles will be deleted param length length of the range to delete styles in param ranges StyleRange objects containing the new style information The ranges should not overlap and should be within the specified start and length The style rendering is undefined if the ranges do overlap or are ill defined Must not be null exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR INVALID RANGE when either start or end is outside the valid range 0 offset getCharCount li li ERROR NULL ARGUMENT when string is null li ul since 2 0
+Replaces the given text range with new text If the widget has the SWT SINGLE style and text contains more than one line only the first line is rendered but the text is stored unchanged A subsequent call to getText will return the same text that was set Note that only a single line of text should be set when the SWT SINGLE style is used p b NOTE b During the replace operation the current selection is changed as follows ul li selection before replaced text selection unchanged li selection after replaced text adjust the selection so that same text remains selected li selection intersects replaced text selection is cleared and caret is placed after inserted text ul p param start offset of first character to replace param length number of characters to replace Use 0 to insert text param text new text May be empty to delete text exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR INVALID RANGE when either start or end is outside the valid range 0 offset getCharCount li li ERROR INVALID ARGUMENT when either start or end is inside a multi byte line delimiter Splitting a line delimiter for example by inserting text in between the CR and LF and deleting part of a line delimiter is not supported li li ERROR NULL ARGUMENT when string is null li ul
+new default line styler
+Resets the caret position selection and scroll offsets Recalculate the content width and scroll bars Redraw the widget
+Resets the selection
+destination x y
+destination x y
+source x y
+source x y
+destination
+destination x y
+destination x y
+source x y
+source x y
+invalidated area
+restore the original horizontal caret index
+Scrolls the widget horizontally p param pixels number of pixels to scroll 0 scroll left 0 scroll right
+Scrolls the widget horizontally and adjust the horizontal scroll bar to reflect the new horizontal offset p param pixels number of pixels to scroll 0 scroll left 0 scroll right return true the widget was scrolled false the widget was not scrolled the given offset is not valid
+Selects all the text p exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Replaces inserts text as defined by the event p param event the text change event ul li event start the replace start offset li li event end the replace end offset li li event text the new text li ul
+Sends the specified selection event
+Sets whether the widget wraps lines This overrides the creation style bit SWT WRAP p param wrap true widget wraps lines false widget does not wrap lines since 2 0
+Sets the receiver s caret Set the caret s height and location p param caret the new caret for the receiver exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+see org eclipse swt widgets Control setBackground
+Sets the BIDI coloring mode When true the BIDI text display algorithm is applied to segments of text that are the same color param mode the new coloring mode exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul p deprecated use BidiSegmentListener instead p
+Moves the Caret to the current caret offset
+illegal operation and an exception is thrown Fixes 1GDKK3R
+don t notify listeners about the selection change
+always update the caret location fixes 1G8FODP
+Sets the caret offset param offset caret offset relative to the first character in the text exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR INVALID ARGUMENT when either the start or the end of the selection range is inside a multi byte line delimiter and thus neither clearly in front of or after the line delimiter ul
+Copies the specified text range to the clipboard The text will be placed in the clipboard in plain text format and RTF format p param start start index of the text param length length of text to place in clipboard exception SWTError see Clipboard setContents see org eclipse swt dnd Clipboard setContents
+Sets the content implementation to use for text storage p param newContent StyledTextContent implementation to use for text storage exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+Sets the receiver s cursor to the cursor specified by the argument Overridden to handle the null case since the StyledText widget uses an ibeam as its default cursor see org eclipse swt widgets Control setCursor
+Sets whether the widget implements double click mouse behavior p param enable if true double clicking a word selects the word if false double clicks have the same effect as regular mouse clicks exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Sets whether the widget content can be edited p param editable if true content can be edited if false content can not be edited exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+keep the same top line visible fixes 5815
+always set the caret location Fixes 6685
+Sets a new font to render text with p b NOTE b Italic fonts are not supported unless they have no overhang and the same baseline as regular fonts p param font new font exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+see org eclipse swt widgets Control setForeground
+if offset is out of range
+is temporarily invisible
+Sets the horizontal scroll offset relative to the start of the line Do nothing if there is no text set p b NOTE b The horizontal index is reset to 0 when new text is set in the widget p param offset horizontal scroll offset relative to the start of the line measured in character increments starting at 0 if equal to 0 the content is not scrolled if 0 the content is scrolled exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+if offset is out of range
+is temporarily invisible
+Sets the horizontal pixel offset relative to the start of the line Do nothing if there is no text set p b NOTE b The horizontal pixel offset is reset to 0 when new text is set in the widget p param pixel horizontal pixel offset relative to the start of the line exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul since 2 0
+maximum
+thumb size
+page size
+avoids flashing on Motif fixes 1G7RE1J and 1G5SE92
+Adjusts the maximum and the page size of the horizontal scroll bar to reflect content width changes
+this API can not be used if the client is providing the line background
+do nothing if redraw range is completely invisible
+only redraw visible lines
+Sets the background color of the specified lines The background color is drawn for the width of the widget All line background colors are discarded when setText is called The text background color if defined in a StyleRange overlays the line background color Should not be called if a LineBackgroundListener has been set since the listener maintains the line backgrounds p Line background colors are maintained relative to the line text not the line index that is specified in this method call During text changes when entire lines are inserted or removed the line background colors that are associated with the lines after the change will move with their respective text An entire line is defined as extending from the first character on a line to the last and including the line delimiter p p When two lines are joined by deleting a line delimiter the top line background takes precedence and the color of the bottom line is deleted For all other text changes line background colors will remain unchanged p param startLine first line the color is applied to 0 based param lineCount number of lines the color applies to param background line background color exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR INVALID ARGUMENT when the specified line range is invalid li ul
+Flips selection anchor based on word selection direction
+Sets the orientation of the receiver which must be one of the constants code SWT LEFT TO RIGHT code or code SWT RIGHT TO LEFT code p param orientation new orientation style exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul since 2 1 2
+thumb size
+page size
+avoids flashing on Motif fixes 1G7RE1J and 1G5SE92
+Adjusts the maximum and the page size of the scroll bars to reflect content width length changes
+checkWidget test done in setSelectionRange
+Sets the selection to the given position and scrolls it into view Equivalent to setSelection start start p param start new caret position see setSelection int int exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR INVALID ARGUMENT when either the start or the end of the selection range is inside a multi byte line delimiter and thus neither clearly in front of or after the line delimiter ul
+Sets the selection and scrolls it into view p Indexing is zero based Text selections are specified in terms of caret positions In a text widget that contains N characters there are N 1 caret positions ranging from 0 N p param point x selection start offset y selection end offset The caret will be placed at the selection start when x y see setSelection int int exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when point is null li li ERROR INVALID ARGUMENT when either the start or the end of the selection range is inside a multi byte line delimiter and thus neither clearly in front of or after the line delimiter ul
+Sets the receiver s selection background color to the color specified by the argument or to the default system color for the control if the argument is null param color the new color or null exception IllegalArgumentException ul li ERROR INVALID ARGUMENT if the argument has been disposed li ul exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul since 2 1
+Sets the receiver s selection foreground color to the color specified by the argument or to the default system color for the control if the argument is null param color the new color or null exception IllegalArgumentException ul li ERROR INVALID ARGUMENT if the argument has been disposed li ul exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul since 2 1
+checkWidget test done in setSelectionRange
+Sets the selection and scrolls it into view p Indexing is zero based Text selections are specified in terms of caret positions In a text widget that contains N characters there are N 1 caret positions ranging from 0 N p param start selection start offset The caret will be placed at the selection start when start end param end selection end offset see setSelectionRange int int exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR INVALID ARGUMENT when either the start or the end of the selection range is inside a multi byte line delimiter and thus neither clearly in front of or after the line delimiter ul
+is thrown Fixes 1GDKK3R
+always update the caret location fixes 1G8FODP
+Sets the selection The new selection may not be visible Call showSelection to scroll the selection into view A negative length places the caret at the visual start of the selection p param start offset of the first selected character param length number of characters to select exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR INVALID ARGUMENT when either the start or the end of the selection range is inside a multi byte line delimiter and thus neither clearly in front of or after the line delimiter ul
+different
+Sets the selection The new selection may not be visible Call showSelection to scroll the selection into view p param start offset of the first selected character start 0 must be true param length number of characters to select 0 start length getCharCount must be true A negative length places the caret at the selection start param sendEvent a Selection event is sent when set to true and when the selection is reset
+this API can not be used if the client is providing the line styles
+check the range make sure it falls within the range of the text
+clearing all styles
+if the style is not visible there is no need to redraw
+fixes 1G8FODP
+Adds the specified style The new style overwrites existing styles for the specified range Existing style ranges are adjusted if they partially overlap with the new style To clear an individual style call setStyleRange with a StyleRange that has null attributes p Should not be called if a LineStyleListener has been set since the listener maintains the styles p param range StyleRange object containing the style information Overwrites the old style in the given range May be null to delete all styles exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR INVALID RANGE when the style range is outside the valid range getCharCount li ul
+this API can not be used if the client is providing the line styles
+reset all lines
+reset all lines affected by the style change
+current text
+should only redraw affected area to avoid flashing
+fixes 1G8FODP
+Sets styles to be used for rendering the widget content All styles in the widget will be replaced with the given set of styles p Should not be called if a LineStyleListener has been set since the listener maintains the styles p param ranges StyleRange objects containing the style information The ranges should not overlap The style rendering is undefined if the ranges do overlap Must not be null The styles need to be in order exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li li ERROR INVALID RANGE when the last of the style ranges is outside the valid range getCharCount li ul
+reset all line widths when the tab width changes
+Sets the tab width p param tabs tab width measured in characters exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Sets the widget content If the widget has the SWT SINGLE style and text contains more than one line only the first line is rendered but the text is stored unchanged A subsequent call to getText will return the same text that was set p b Note b Only a single line of text should be set when the SWT SINGLE style is used p param text new widget content Replaces existing content Line styles that were set using StyledText API are discarded The current selection is also discarded exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR NULL ARGUMENT when string is null li ul
+Sets the text limit to the specified number of characters p The text limit specifies the amount of text that the user can type into the widget p param limit the new text limit exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul exception IllegalArgumentException ul li ERROR CANNOT BE ZERO when limit is 0 li ul
+Sets the top index Do nothing if there is no text set p The top index is the index of the line that is currently at the top of the widget The top index changes when the widget is scrolled Indexing starts from zero Note The top index is reset to 0 when new text is set in the widget p param topIndex new top index Must be between 0 and getLineCount fully visible lines per page If no lines are fully visible the maximum value is getLineCount 1 An out of range index will be adjusted accordingly exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+Sets the top pixel offset Do nothing if there is no text set p The top pixel offset is the vertical pixel offset of the widget The widget is scrolled so that the given pixel position is at the top The top index is adjusted to the corresponding top line Note The top pixel is reset to 0 when new text is set in the widget p param pixel new top pixel offset Must be between 0 and getLineCount visible lines per page getLineHeight An out of range offset will be adjusted accordingly exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul since 2 0
+destination x y
+destination x y
+source x y
+source x y
+restore the original horizontal caret index
+Scrolls the widget vertically p param pixelOffset the new vertical scroll offset param adjustScrollBar true the scroll thumb will be moved to reflect the new scroll offset false the scroll thumb will not be moved return true the widget was scrolled false the widget was not scrolled the given offset is not valid
+always make 1 4 of a page visible
+always make 1 4 of a page visible
+Scrolls the specified location into view p param x the x coordinate that should be made visible param line the line that should be made visible Relative to the first line in the document return true the widget was scrolled to make the specified location visible false the specified location is already visible the widget was not scrolled
+Sets the caret location and scrolls the caret offset into view
+not return the desired line causing scrolling to not set it correctly
+Sets the caret location and scrolls the caret offset into view
+Scrolls the specified offset into view p param offset offset that should be scolled into view
+is selection from right to left
+calculate the logical start and end values for the selection
+can the selection be fully displayed within the widget s visible width
+will not be visible
+the start of the selection
+endX value could change if showing startX caused a scroll to occur
+Scrolls the selection into view The end of the selection will be scrolled into view Note that if a right to left selection exists the end of the selection is the visual beginning of the selection i e where the caret is located p exception SWTException ul li ERROR WIDGET DISPOSED if the receiver has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver li ul
+selection ends before text change
+clear selection fragment before text change
+change Selection is only affected if it intersects the change 1GDY217
+move selection to keep same text selected
+always update the caret location fixes 1G8FODP
+selection intersects replaced text set caret behind text change
+always update the caret location fixes 1G8FODP
+Updates the selection and caret position depending on the text change If the selection intersects with the replaced text the selection is reset and the caret moved to the end of the new text If the selection is behind the replaced text it is moved so that the same text remains selected If the selection is before the replaced text it is left unchanged p param startOffset offset of the text change param replacedLength length of text being replaced param newLength length of new text
+count equals logical line count
+adjust the top index so that top line remains the same
+the end of the preceeding line
+to be scrolled causes flash otherwise
+happening to fix 8503
+call setCaretLocation after fixing vertical scroll offset
+word wrap may have changed on one of the visible lines
+Rewraps all lines p param oldClientAreaWidth client area width before resize occurred

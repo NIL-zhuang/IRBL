@@ -1,0 +1,11 @@
+lpsz
+text
+lpsztext
+hinst
+flag
+uflag
+param
+lparam
+sizeof
+unicod
+isunicod

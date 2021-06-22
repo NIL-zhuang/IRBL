@@ -1,0 +1,22 @@
+{
+	"variables":[
+		"clrText",
+		"clrTextBk",
+		"iLevel",
+		"sizeof",
+		"OS",
+		"IsWinCE"
+	],
+	"extendORImplementFiles":[
+		"NMCUSTOMDRAW"
+	],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"NMTVCUSTOMDRAW"
+	]
+}

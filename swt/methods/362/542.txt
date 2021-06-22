@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+void
+move
+memori
+movememori
+int
+destin
+ptr
+destinationptr
+short
+sourc
+int
+length

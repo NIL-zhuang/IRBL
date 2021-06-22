@@ -1,0 +1,11 @@
+public
+int
+init
+new
+initnew
+return
+com
+vtbl
+call
+vtblcall
+address

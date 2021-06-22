@@ -1,0 +1,59 @@
+Wraps Win32 API used to bidi enable the StyledText widget
+Keyboard language ids
+bidi flag
+getRenderInfo flag values
+switching
+NON NLS 1
+NON NLS 1
+GetCharacterPlacement constants
+ExtTextOut constants
+Windows primary language identifiers
+NON NLS 1
+NON NLS 1
+ActivateKeyboard constants
+Public character class constants are the same as Windows platform constants Saves conversion of class array in getRenderInfo to arbitrary constants for now
+Adds a language listener The listener will get notified when the language of the keyboard changes via Alt Shift on Win platforms Do this by creating a window proc for the Control so that the window messages for the Control can be monitored p param hwnd the handle of the Control that is listening for keyboard language changes param runnable the code that should be executed when a keyboard language change occurs
+Proc used for OS EnumSystemLanguageGroups call during isBidiPlatform test
+fixes bug 40006
+render transparently to avoid overlapping segments fixes bug 40006
+Wraps the ExtTextOut function p param gc the gc to use for rendering param renderBuffer the glyphs to render as an array of characters param renderDx the width of each glyph in renderBuffer param x x position to start rendering param y y position to start rendering
+set required dwFlags
+on a platform that supports bidi Fixes 20690
+set classification values for the substring
+the actual number returned may be less in case of Arabic ligatures
+segments without overlapping
+Free the memory that was allocated
+Return ordering and rendering information for the given text Wraps the GetFontLanguageInfo and GetCharacterPlacement functions p param gc the GC to use for measuring of this line input parameter param text text that bidi data should be calculated for input parameter param order an array of integers representing the visual position of each character in the text array output parameter param classBuffer an array of integers representing the type e g ARABIC HEBREW LOCALNUMBER of each character in the text array input output parameter param dx an array of integers representing the pixel width of each glyph in the returned glyph buffer output paramteter param flags an integer representing rendering flag information input parameter param offsets text segments that should be measured and reordered separately input parameter See org eclipse swt custom BidiSegmentEvent for details return buffer with the glyphs that should be rendered for the given text
+ordered
+on a platform that supports bidi Fixes 20690
+can be specified on input
+the actual number returned may be less in case of Arabic ligatures
+segments without overlapping
+Free the memory that was allocated
+Return bidi ordering information for the given text Does not return rendering information e g glyphs glyph distances Use this method when you only need ordering information Doing so will improve performance Wraps the GetFontLanguageInfo and GetCharacterPlacement functions p param gc the GC to use for measuring of this line input parameter param text text that bidi data should be calculated for input parameter param order an array of integers representing the visual position of each character in the text array output parameter param classBuffer an array of integers representing the type e g ARABIC HEBREW LOCALNUMBER of each character in the text array input output parameter param flags an integer representing rendering flag information input parameter param offsets text segments that should be measured and reordered separately input parameter See org eclipse swt custom BidiSegmentEvent for details
+Return bidi attribute information for the font in the specified gc p param gc the gc to query return bitwise OR of the REORDER LIGATE and GLYPHSHAPE flags defined by this class
+language identifier
+return non bidi for all other languages
+Return the active keyboard language type p return an integer representing the active keyboard language KEYBOARD BIDI KEYBOARD NON BIDI
+Return the languages that are installed for the keyboard p return integer array with an entry for each installed language
+already set
+languages but only install the Thai keyboard
+NON NLS 1
+not supported for these platforms
+Return whether or not the platform supports a bidi language Determine this by looking at the languages that are installed p return true if bidi is supported false otherwise Always false on Windows CE
+Return whether or not the keyboard supports input of a bidi language Determine this by looking at the languages that are installed for the keyboard p return true if bidi is supported false otherwise
+Removes the specified language listener p param hwnd the handle of the Control that is listening for keyboard language changes
+don t switch the keyboard if it doesn t need to be
+get the list of active languages
+hebrew or arabic
+get the list of active languages
+set to first bidi language
+Switch the keyboard language to the specified language type We do not distinguish between mulitple bidi or multiple non bidi languages so set the keyboard to the first language of the given type p param language integer representing language One of KEYBOARD BIDI KEYBOARD NON BIDI
+Sets the orientation writing order of the specified control Text will be right aligned for right to left writing order p param hwnd the handle of the Control to change the orientation of param orientation one of SWT RIGHT TO LEFT or SWT LEFT TO RIGHT return true if the orientation was changed false if the orientation could not be changed
+Override the window proc param hwnd control to override the window proc of
+Reverse the character array Used for right orientation param charArray character array to reverse
+Reverse the integer array Used for right orientation param intArray integer array to reverse
+Adjust the order array so that it is relative to the start of the line Also reverse the order array if the orientation is to the right param orderArray integer array of order values to translate param glyphCount number of glyphs that have been processed for the current line param isRightOriented flag indicating whether or not current orientation is to the right
+Remove the overridden the window proc param hwnd control to remove the window proc override for
+OS WM INPUTLANGCHANGE
+Window proc to intercept keyboard language switch event WS INPUTLANGCHANGE and widget orientation changes Run the Control s registered runnable when the keyboard language is switched param hwnd handle of the control that is listening for the keyboard language change event param msg window message

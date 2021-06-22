@@ -1,0 +1,3 @@
+store required bytes
+Get cached bytes
+Read required bytes

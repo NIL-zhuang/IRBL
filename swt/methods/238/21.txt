@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+int
+clsid
+from
+string
+clsidfromstr
+char
+lpsz
+guid
+pclsid

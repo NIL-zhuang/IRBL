@@ -1,0 +1,6 @@
+protect
+abstract
+int
+get
+orient
+getorient

@@ -1,0 +1,16 @@
+run
+linux
+gtk
+ctrl
+esc
+bring
+the
+handi
+switch
+editor
+window
+but
+unfortuantley
+the
+list
+empti

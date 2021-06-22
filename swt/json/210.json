@@ -1,0 +1,83 @@
+{
+	"variables":[
+		"reference",
+		"reference",
+		"reference",
+		"reference",
+		"reference",
+		"marker",
+		"reference",
+		"marker",
+		"reference",
+		"reference",
+		"reference",
+		"length",
+		"reference",
+		"length",
+		"byteStream",
+		"reference",
+		"reference",
+		"reference",
+		"marker",
+		"length",
+		"byteStream",
+		"e"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.image"
+	],
+	"import":[],
+	"methods":[
+		"signature",
+		"verify",
+		"getSegmentMarker",
+		"setSegmentMarker",
+		"getSegmentLength",
+		"setSegmentLength",
+		"writeToStream",
+		"getSegmentMarker",
+		"signature",
+		"write"
+	],
+	"methodsBody":{
+		"public void setSegmentLength(int length)":{
+			"methodBody":"{\n    reference[2] = (byte) ((length & 0xFF00) >> 8);\n    reference[3] = (byte) (length & 0xFF);\n}",
+			"comments":"",
+			"methodName":"public void setSegmentLength(int length)"
+		},
+		"public int getSegmentMarker()":{
+			"methodBody":"{\n    return ((reference[0] & 0xFF) << 8 | (reference[1] & 0xFF));\n}",
+			"comments":"",
+			"methodName":"public int getSegmentMarker()"
+		},
+		"public void setSegmentMarker(int marker)":{
+			"methodBody":"{\n    reference[0] = (byte) ((marker & 0xFF00) >> 8);\n    reference[1] = (byte) (marker & 0xFF);\n}",
+			"comments":"",
+			"methodName":"public void setSegmentMarker(int marker)"
+		},
+		"public int getSegmentLength()":{
+			"methodBody":"{\n    return ((reference[2] & 0xFF) << 8 | (reference[3] & 0xFF));\n}",
+			"comments":"",
+			"methodName":"public int getSegmentLength()"
+		},
+		"public int signature()":{
+			"methodBody":"{\n    return 0;\n}",
+			"comments":"",
+			"methodName":"public int signature()"
+		},
+		"public boolean verify()":{
+			"methodBody":"{\n    return getSegmentMarker() == signature();\n}",
+			"comments":"",
+			"methodName":"public boolean verify()"
+		},
+		"public boolean writeToStream(LEDataOutputStream byteStream)":{
+			"methodBody":"{\n    try {\n        byteStream.write(reference);\n        return true;\n    } catch (Exception e) {\n        return false;\n    }\n}",
+			"comments":"",
+			"methodName":"public boolean writeToStream(LEDataOutputStream byteStream)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"JPEGSegment"
+	]
+}

@@ -1,0 +1,25 @@
+{
+	"variables":[
+		"cbSize",
+		"dwMask",
+		"idCommand",
+		"iImage",
+		"fsState",
+		"fsStyle",
+		"cx",
+		"lParam",
+		"pszText",
+		"cchText",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"TBBUTTONINFO"
+	]
+}

@@ -1,0 +1,4 @@
+Pointer to location for pointer to the new stream object
+Specifies how changes are committed
+Specifies how changes are committed
+Specifies how changes are committed

@@ -1,0 +1,30 @@
+{
+	"variables":[
+		"lineOffset",
+		"lineText",
+		"segments",
+		"serialVersionUID",
+		"e",
+		"lineOffset",
+		"e",
+		"lineText",
+		"e",
+		"detail",
+		"text",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"TypedEvent"
+	],
+	"package":[
+		"org.eclipse.swt.custom"
+	],
+	"import":[
+		"org.eclipse.swt.events"
+	],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"BidiSegmentEvent"
+	]
+}

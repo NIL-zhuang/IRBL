@@ -1,0 +1,34 @@
+{
+	"variables":[
+		"event",
+		"event"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.browser"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"changing",
+		"changed"
+	],
+	"methodsBody":{
+		"public void changed(LocationEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* This method is called when the current location is changed.\n* <p>\n*\n* <p>The following fields in the <code>LocationEvent</code> apply:\n* <ul>\n* <li>(in) location the current location\n* <li>(in) top <code>true</code> if the location opens in the top frame or\n* <code>false</code> otherwise\n* <li>(in) widget the <code>Browser</code> whose location has changed\n* </ul>\n*\n* @param event the <code>LocationEvent</code> that specifies  the new\n* location of a <code>Browser</code>\n*\n* @since 3.0\n*/\n",
+			"methodName":"public void changed(LocationEvent event)"
+		},
+		"public void changing(LocationEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* This method is called when the current location is about to be changed.\n* <p>\n*\n* <p>The following fields in the <code>LocationEvent</code> apply:\n* <ul>\n* <li>(in) location the location to be loaded\n* <li>(in) widget the <code>Browser</code> whose location is changing\n* <li>(in/out) doit can be set to <code>false</code> to prevent the location\n* from being loaded\n* </ul>\n*\n* @param event the <code>LocationEvent</code> that specifies the location\n* to be loaded by a <code>Browser</code>\n*\n* @since 3.0\n*/\n",
+			"methodName":"public void changing(LocationEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"LocationListener"
+	]
+}

@@ -1,0 +1,17 @@
+void
+creat
+widget
+createwidget
+visibl
+isvis
+true
+parent
+get
+caret
+getcaret
+null
+parent
+set
+caret
+setcaret
+this

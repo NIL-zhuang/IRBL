@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+int
+iid
+from
+string
+iidfromstr
+char
+lpsz
+guid
+lpiid

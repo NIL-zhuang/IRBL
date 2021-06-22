@@ -1,0 +1,5 @@
+abstract
+tchar
+window
+class
+windowclass

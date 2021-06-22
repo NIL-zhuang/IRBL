@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+int
+set
+mode
+setbkmod
+int
+hdc
+int
+mode

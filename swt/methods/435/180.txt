@@ -1,0 +1,11 @@
+boolean
+travers
+mnemon
+traversemnemon
+char
+key
+return
+mnemon
+hit
+mnemonichit
+key

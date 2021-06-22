@@ -1,0 +1,20 @@
+{
+	"variables":[
+		"cbSize",
+		"hwndClient",
+		"ptDown_x",
+		"ptDown_y",
+		"dwFlags",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"SHRGINFO"
+	]
+}

@@ -1,0 +1,15 @@
+int
+widget
+parent
+widgetpar
+shell
+shell
+get
+shell
+getshel
+return
+shell
+hwnd
+mdi
+client
+hwndmdiclient

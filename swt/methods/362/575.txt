@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+boolean
+updat
+window
+updatewindow
+int
+wnd
+hwnd

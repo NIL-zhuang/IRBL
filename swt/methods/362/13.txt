@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+boolean
+get
+monitor
+info
+getmonitorinfoa
+int
+hmonitor
+monitorinfo
+lpmi

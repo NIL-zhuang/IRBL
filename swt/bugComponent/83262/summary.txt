@@ -1,0 +1,4 @@
+rxvt
+past
+null
+termin

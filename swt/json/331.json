@@ -1,0 +1,33 @@
+{
+	"variables":[
+		"cbSize",
+		"fMask",
+		"fType",
+		"fState",
+		"wID",
+		"hSubMenu",
+		"hbmpChecked",
+		"hbmpUnchecked",
+		"dwItemData",
+		"dwTypeData",
+		"cch",
+		"hbmpItem",
+		"sizeof",
+		"sizeof",
+		"OS",
+		"OS",
+		"WIN32_VERSION"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[
+		"VERSION"
+	],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"MENUITEMINFO"
+	]
+}

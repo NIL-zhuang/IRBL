@@ -1,0 +1,31 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"pPages",
+		"address",
+		"pPages"
+	],
+	"extendORImplementFiles":[
+		"IUnknown"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"GetPages",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int GetPages(CAUUID pPages)":{
+			"methodBody":"{\n    return COM.VtblCall(3, address, pPages);\n}",
+			"comments":"",
+			"methodName":"public int GetPages(CAUUID pPages)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"ISpecifyPropertyPages"
+	]
+}

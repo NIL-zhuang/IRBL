@@ -1,0 +1,25 @@
+{
+	"variables":[
+		"style",
+		"lpfnWndProc",
+		"cbClsExtra",
+		"cbWndExtra",
+		"hInstance",
+		"hIcon",
+		"hCursor",
+		"hbrBackground",
+		"lpszMenuName",
+		"lpszClassName",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"WNDCLASS"
+	]
+}

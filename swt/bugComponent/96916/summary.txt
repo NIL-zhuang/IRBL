@@ -1,0 +1,8 @@
+spinner
+set
+tool
+tip
+text
+settooltiptext
+doesn
+work

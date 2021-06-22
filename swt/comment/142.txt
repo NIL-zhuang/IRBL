@@ -1,0 +1,12 @@
+The item that was selected
+Extra detail information about the selection depending on the widget p b Sash b ul li link org eclipse swt SWT DRAG li ul p p b ScrollBar and Slider b ul li link org eclipse swt SWT DRAG li li link org eclipse swt SWT HOME li li link org eclipse swt SWT END li li link org eclipse swt SWT ARROW DOWN li li link org eclipse swt SWT ARROW UP li li link org eclipse swt SWT PAGE DOWN li li link org eclipse swt SWT PAGE UP li ul p p b Table and Tree b ul li link org eclipse swt SWT CHECK li ul p p b CoolItem and ToolItem b ul li link org eclipse swt SWT ARROW li ul p
+The x location of the selected area
+The y location of selected area
+The width of selected area
+The height of selected area
+The state of the keyboard modifier keys at the time the event was generated
+The text of the hyperlink that was selected This will be either the text of the hyperlink or the value of its HREF if one was specified see Link setText String since 3 1
+A flag indicating whether the operation should be allowed Setting this field to code false code will cancel the operation depending on the widget
+Constructs a new instance of this class based on the information in the given untyped event param e the untyped event containing the information
+remove trailing
+Returns a string containing a concise human readable description of the receiver return a string representation of the event

@@ -1,0 +1,17 @@
+lresult
+mousehov
+int
+param
+wparam
+int
+param
+lparam
+return
+mous
+hover
+wmmousehov
+handl
+param
+wparam
+param
+lparam

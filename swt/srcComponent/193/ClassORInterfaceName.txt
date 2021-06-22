@@ -1,0 +1,4 @@
+gdiplus
+startup
+input
+gdiplusstartupinput

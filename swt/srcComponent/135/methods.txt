@@ -1,0 +1,9 @@
+mous
+doubl
+click
+mousedoubleclick
+mous
+down
+mousedown
+mous
+mouseup

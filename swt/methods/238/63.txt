@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+boolean
+ole
+run
+oleisrun
+int
+object
+pobject

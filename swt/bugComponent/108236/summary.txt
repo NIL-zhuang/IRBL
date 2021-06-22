@@ -1,0 +1,6 @@
+spinner
+doe
+not
+allow
+min
+max

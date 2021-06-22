@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+int
+set
+captur
+setcaptur
+int
+wnd
+hwnd

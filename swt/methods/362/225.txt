@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+boolean
+hide
+caret
+hidecaret
+int
+wnd
+hwnd

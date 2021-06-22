@@ -1,0 +1,36 @@
+{
+	"variables":[
+		"device",
+		"style",
+		"image",
+		"foreground",
+		"background",
+		"hPen",
+		"lineWidth",
+		"dashes",
+		"hBrush",
+		"hFont",
+		"hNullBitmap",
+		"hwnd",
+		"ps",
+		"layout",
+		"alpha",
+		"gdipGraphics",
+		"gdipPen",
+		"gdipBrush",
+		"foregroundPattern",
+		"backgroundPattern"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.graphics"
+	],
+	"import":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"GCData"
+	]
+}

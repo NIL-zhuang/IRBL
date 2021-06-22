@@ -1,0 +1,8 @@
+virt
+fvirt
+key
+cmd
+sizeof
+win
+iswinc
+accel

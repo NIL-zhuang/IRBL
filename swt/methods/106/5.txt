@@ -1,0 +1,9 @@
+boolean
+check
+rtf
+checkrtf
+object
+object
+return
+object
+null

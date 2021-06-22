@@ -1,0 +1,14 @@
+boolean
+get
+must
+have
+palett
+getmusthavepalett
+return
+get
+color
+type
+getcolortyp
+color
+type
+palett

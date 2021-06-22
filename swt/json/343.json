@@ -1,0 +1,24 @@
+{
+	"variables":[
+		"iStart",
+		"flags",
+		"psz",
+		"lParam",
+		"x",
+		"y",
+		"vkDirection",
+		"sizeof"
+	],
+	"extendORImplementFiles":[
+		"NMHDR"
+	],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"NMLVFINDITEM"
+	]
+}

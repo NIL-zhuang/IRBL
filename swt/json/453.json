@@ -1,0 +1,23 @@
+{
+	"variables":[
+		"event"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.widgets"
+	],
+	"import":[],
+	"methods":[
+		"handleEvent"
+	],
+	"methodsBody":{
+		"void handleEvent(Event event)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when an event that the receiver has registered for occurs.\n*\n* @param event the event which occurred\n*/\n",
+			"methodName":"void handleEvent(Event event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"Listener"
+	]
+}

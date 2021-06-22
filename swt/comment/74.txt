@@ -1,0 +1,35 @@
+A StyledTextRenderer renders the content of a StyledText widget Subclasses can provide a different device e g Display Printer to render on and implement abstract methods to return resources created on that device
+device to render on
+width in pixels of a tab character
+width in pixels of the space used to represent line delimiters
+Creates an instance of class StyledTextRenderer class p param device Device to render on param regularFont Font to use for regular text param leftMargin margin to the left of the text
+fixes bug 41773
+clear the font cache
+Calculates the line height and space width
+Disposes the resource created by the receiver
+Dispose the specified GC Allows subclasses to reuse GCs p param gc GC to dispose
+completely selected
+Draws a line of text at the specified location p param line the line to draw param lineIndex index of the line to draw param paintY y location to draw at param gc GC to draw on param widgetBackground the widget background color Used as the default rendering color param widgetForeground the widget foreground color Used as the default rendering color param clearBackground true if the line background should be drawn explicitly
+Draws the background of the line selection Implemented by subclasses for optional selection rendering p param line the line to draw param lineOffset offset of the first character in the line Relative to the start of the document param styles line styles param paintY y location to draw at param gc GC to draw on param bidi the bidi object to use for measuring and rendering text in bidi locales null when not in bidi mode
+Returns the visible client area that can be used for rendering p return the visible client area that can be used for rendering
+Returns the class StyledTextContent class to use for line offset calculations p return the class StyledTextContent class to use for line offset calculations
+Returns the Device that is being rendered on p return the Device that is being rendered on
+Returns the text segments that should be treated as if they had a different direction than the surrounding text p param lineOffset offset of the first character in the line 0 based from the beginning of the document param line text of the line to specify bidi segments for return text segments that should be treated as if they had a different direction than the surrounding text Only the start index of a segment is specified relative to the start of the line Always starts with 0 and ends with the line length exception IllegalArgumentException ul li ERROR INVALID ARGUMENT if the segment indices returned by the listener do not start with 0 are not in ascending order exceed the line length or have duplicates li ul
+Returns the Font according with the given style
+Returns the GC to use for rendering and measuring Allows subclasses to reuse GCs p return the GC to use for rendering and measuring
+Returns the horizontal scroll position p return the horizontal scroll position
+Returns the width in pixels of the space used to represent line delimiters return the width in pixels of the space used to represent line delimiters
+Returns the line background data for the given line or null if there is none p param lineOffset offset of the line start relative to the start of the content param line line to get line background data for return line background data for the given line may return null
+Returns the height in pixels of a line p return the height in pixels of a line
+Returns the line style data for the specified line The lineOffset and line may specify a segment of a logical line stored in the class StyledTextContent class of the widget The returned styles are guaranteed to be at least partially on the segment p param event the styles for the logical line param lineOffset offset of the line start relative to the start of the content param line line to get line styles for return line style data for the given line segment Styles may start before line start and end after line end but are guaranteed to be at least partially on the line
+Returns the line style data for the given line or null if there is none If there is a LineStyleListener but it does not set any styles the StyledTextEvent styles field will be initialized to an empty array p param lineOffset offset of the line start relative to the start of the content param line line to get line styles for return line style data for the given line Styles may start before line start and end after line end
+
+
+
+
+Returns the widget selection Implemented by subclasses for optional selection rendering p return the widget selection
+Returns styles for the specified visual wrapped line p param logicalStyles the styles for a logical unwrapped line param lineOffset offset of the visual line param lineLength length of the visual line return styles in the logicalStyles array that are at least partially on the specified visual line
+Returns the word wrap state p return true word wrap is on false no word wrap lines may extend beyond the right side of the client area
+Returns whether the widget was created with the SWT FULL SELECTION style Implemented by subclasses for optional selection rendering p return true the widget is running in full line selection mode false otherwise
+Calculates the width in pixel of a tab character p param tabLength number of space characters represented by a tab character
+Returns TextLayout given a line index and an array of styles

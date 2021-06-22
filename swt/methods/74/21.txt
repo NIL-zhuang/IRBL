@@ -1,0 +1,17 @@
+text
+layout
+textlayout
+creat
+text
+layout
+createtextlayout
+int
+line
+offset
+lineoffset
+return
+new
+text
+layout
+textlayout
+devic

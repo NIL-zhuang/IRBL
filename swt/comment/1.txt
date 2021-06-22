@@ -1,0 +1,11 @@
+The SWT error code one of SWT ERROR
+The underlying throwable that caused the problem or null if this information is not available
+Constructs a new instance of this class with its stack trace filled in The error code is set to an unspecified value
+Constructs a new instance of this class with its stack trace and message filled in The error code is set to an unspecified value Specifying code null code as the message is equivalent to specifying an empty string param message the detail message for the exception
+Constructs a new instance of this class with its stack trace and error code filled in param code the SWT error code
+Constructs a new instance of this class with its stack trace error code and message filled in Specifying code null code as the message is equivalent to specifying an empty string param code the SWT error code param message the detail message for the exception
+Returns the underlying throwable that caused the problem or null if this information is not available p NOTE This method overrides Throwable getCause that was added to DK1 4 It is necessary to override this method in order for inherited printStackTrace methods to work p return the underlying throwable since 3 1
+NON NLS 1 NON NLS 2
+Returns the string describing this SWTError object p It is combined with the message string of the Throwable which caused this SWTError if this information is available p return the error message string of this SWTError object
+NON NLS 1
+Outputs a printable representation of this error s stack trace on the standard error stream p Note printStackTrace PrintStream and printStackTrace PrintWriter are not provided in order to maintain compatibility with CLDC p

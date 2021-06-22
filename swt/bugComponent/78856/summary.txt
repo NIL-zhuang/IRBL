@@ -1,0 +1,8 @@
+clipboard
+swt
+has
+support
+for
+imag
+copi
+clipboard

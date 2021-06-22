@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+int
+global
+add
+atom
+globaladdatomw
+char
+string
+lpstring

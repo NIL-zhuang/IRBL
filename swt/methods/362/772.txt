@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+int
+activ
+keyboard
+layout
+activatekeyboardlayout
+int
+hkl
+int
+flag

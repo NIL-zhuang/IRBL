@@ -1,0 +1,34 @@
+{
+	"variables":[
+		"e",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.events"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"menuHidden",
+		"menuShown"
+	],
+	"methodsBody":{
+		"public void menuHidden(MenuEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when a menu is hidden.\n*\n* @param e an event containing information about the menu operation\n*/\n",
+			"methodName":"public void menuHidden(MenuEvent e)"
+		},
+		"public void menuShown(MenuEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when a menu is shown.\n*\n* @param e an event containing information about the menu operation\n*/\n",
+			"methodName":"public void menuShown(MenuEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"MenuListener"
+	]
+}

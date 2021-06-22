@@ -1,0 +1,2 @@
+create a null terminated array of char
+create a null terminated array of char

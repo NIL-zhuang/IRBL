@@ -1,0 +1,22 @@
+{
+	"variables":[
+		"dataType",
+		"dataTypes",
+		"operations",
+		"feedback"
+	],
+	"extendORImplementFiles":[
+		"Event"
+	],
+	"package":[
+		"org.eclipse.swt.dnd"
+	],
+	"import":[
+		"org.eclipse.swt.widgets"
+	],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"DNDEvent"
+	]
+}

@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+int
+window
+from
+point
+windowfrompoint
+point
+point
+lppoint

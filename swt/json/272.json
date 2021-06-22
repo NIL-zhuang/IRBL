@@ -1,0 +1,31 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"ppTI",
+		"address",
+		"ppTI"
+	],
+	"extendORImplementFiles":[
+		"IUnknown"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"GetClassInfo",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int GetClassInfo(int[] ppTI)":{
+			"methodBody":"{\n    return COM.VtblCall(3, address, ppTI);\n}",
+			"comments":"",
+			"methodName":"public int GetClassInfo(int[] ppTI)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IProvideClassInfo"
+	]
+}

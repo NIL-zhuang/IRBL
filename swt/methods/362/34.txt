@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+int
+set
+poli
+fill
+mode
+setpolyfillmod
+int
+hdc
+int
+poli
+fill
+mode
+ipolyfillmod

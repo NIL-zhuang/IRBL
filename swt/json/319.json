@@ -1,0 +1,30 @@
+{
+	"variables":[
+		"lfHeight",
+		"lfWidth",
+		"lfEscapement",
+		"lfOrientation",
+		"lfWeight",
+		"lfItalic",
+		"lfUnderline",
+		"lfStrikeOut",
+		"lfCharSet",
+		"lfOutPrecision",
+		"lfClipPrecision",
+		"lfQuality",
+		"lfPitchAndFamily",
+		"sizeof",
+		"OS",
+		"IsUnicode"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"LOGFONT"
+	]
+}

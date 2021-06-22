@@ -1,0 +1,94 @@
+OLE contains all the constants used to create an ActiveX Control or an OLE Document p Definitions for these constants can be found in MSDN
+Used for functions that semantically return a Boolean FALSE result to indicate that the function succeeded
+Function succeeded
+Unspecified failure
+Invalid argument
+QueryInterface did not recognize the requested interface
+Not implemented
+NON NLS 1
+NON NLS 1
+close the OLE object and discard the undo state
+hide the OLE object
+open the OLE for editing in place
+open the OLE object for editing in a separate window
+opens the OLE object for editing
+request the OLE object properties dialog
+show the OLE object
+activate the UI for the OLE object
+Error code for OleError No specific error information available
+Error code for OleError Failed to create file
+Error code for OleError Failed to create Ole Client
+Error code for OleError File does not exist is not accessible to user or does not have the correct format
+Error code for OleError Failed to find requested interface on OLE Object
+Error code for OleError Class ID not found in registry
+Error code for OleError Failed to get the class factory for the specified classID
+Error code for OleError Failed to create Licensed instance
+Error code for OleError Out of Memory
+Error code for OleError Failed to change Variant type
+Error code for OleError Invalid address received for Ole Interface
+Error code for OleError Unable to find Application
+Error code for OleError Action can not be performed
+Ole Property Description flags
+Ole Property Description kind
+Ole Parameter Description flags
+Boolean True 1 False 0
+Binary String
+By reference must be combined with one of the othre VT values
+Currency
+Date
+IDispatch
+Not specified
+Scodes
+2 byte signed int
+4 byte signed int
+Null
+4 byte real
+8 byte real
+Unsigned char
+Unsigned int
+IUnknown FAR
+VARIANT FAR
+Ole Function Description Invoke Kind values
+Ole Function Description function kind
+Ole Function Description function flags
+Ole Function Description calling convention
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+Illegal Arguments non fatal
+SWT Errors non fatal
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+OS Failure Limit fatal may occur only on some platforms
+NON NLS 1
+Unknown Undefined Error
+NON NLS 1
+NON NLS 1
+Use the character encoding for the default locale
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+Finds the OLE program id that is associated with an extension The extension may or may not begin with a On platforms that do not support OLE an empty string is returned param extension the program extension return a string that is the OLE program id or an empty string exception IllegalArgumentException ul li ERROR NULL ARGUMENT when extension is null li ul
+Use the character encoding for the default locale
+Returns true if the specified file has an OLE Storage format Note all empty files regardless of extension will return false param file the file to be checked return true if this file has an OLE Storage format

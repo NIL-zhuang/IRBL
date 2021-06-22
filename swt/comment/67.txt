@@ -1,0 +1,4 @@
+marginWidth specifies the number of pixels of horizontal margin that will be placed along the left and right edges of the layout The default value is 0
+marginHeight specifies the number of pixels of vertical margin that will be placed along the top and bottom edges of the layout The default value is 0
+topControl the Control that is displayed at the top of the stack All other controls that are children of the parent composite will not be visible
+Returns a string containing a concise human readable description of the receiver return a string representation of the event

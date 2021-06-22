@@ -1,0 +1,17 @@
+public
+rectangl
+get
+bound
+getbound
+return
+new
+rectangl
+width
+height
+get
+the
+bound
+rectangl
+that
+the
+bound

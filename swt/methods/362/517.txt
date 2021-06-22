@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+int
+map
+virtual
+key
+mapvirtualkeyw
+int
+code
+ucod
+int
+map
+type
+umaptyp

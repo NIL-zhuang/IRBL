@@ -1,0 +1,11 @@
+detail
+serial
+version
+uid
+serialversionuid
+string
+string
+string
+detail
+detail
+detail

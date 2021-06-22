@@ -1,0 +1,11 @@
+int
+default
+foreground
+defaultforeground
+return
+get
+sys
+color
+getsyscolor
+color
+btntext

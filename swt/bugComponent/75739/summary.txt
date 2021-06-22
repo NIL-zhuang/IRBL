@@ -1,0 +1,4 @@
+variant
+has
+string
+tostr

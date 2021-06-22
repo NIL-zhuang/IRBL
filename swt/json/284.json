@@ -1,0 +1,32 @@
+{
+	"variables":[
+		"pwcsName",
+		"type",
+		"cbSize",
+		"mtime_dwLowDateTime",
+		"mtime_dwHighDateTime",
+		"ctime_dwLowDateTime",
+		"ctime_dwHighDateTime",
+		"atime_dwLowDateTime",
+		"atime_dwHighDateTime",
+		"grfMode",
+		"grfLocksSupported",
+		"clsid_Data1",
+		"clsid_Data2",
+		"clsid_Data3",
+		"clsid_Data4",
+		"grfStateBits",
+		"reserved",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"STATSTG"
+	]
+}

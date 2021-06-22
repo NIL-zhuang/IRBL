@@ -1,0 +1,16 @@
+public
+int
+init
+new
+initnew
+int
+stg
+pstg
+return
+com
+vtbl
+call
+vtblcall
+address
+stg
+pstg

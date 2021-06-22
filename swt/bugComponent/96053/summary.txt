@@ -1,0 +1,9 @@
+spinner
+press
+button
+should
+focus
+spinner
+and
+select
+text

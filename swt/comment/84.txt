@@ -1,0 +1,1 @@
+The following event fields are used ul li event character is the character that was typed input li li event keyCode is the key code that was typed input li li event stateMask is the state of the keyboard input li li event doit is processed or not output li ul param event the verify event see VerifyEvent

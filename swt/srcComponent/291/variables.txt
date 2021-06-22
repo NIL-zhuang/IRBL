@@ -1,0 +1,13 @@
+blend
+blendop
+blend
+flag
+blendflag
+sourc
+constant
+alpha
+sourceconstantalpha
+alpha
+format
+alphaformat
+sizeof

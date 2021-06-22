@@ -1,0 +1,29 @@
+{
+	"variables":[
+		"device"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.graphics"
+	],
+	"import":[],
+	"methods":[
+		"dispose",
+		"isDisposed"
+	],
+	"methodsBody":{
+		"public abstract boolean isDisposed()":{
+			"methodBody":"",
+			"comments":"/**\n* Returns <code>true</code> if the resource has been disposed,\n* and <code>false</code> otherwise.\n* <p>\n* This method gets the dispose state for the resource.\n* When a resource has been disposed, it is an error to\n* invoke any other method using the resource.\n*\n* @return <code>true</code> when the resource is disposed and <code>false</code> otherwise\n*/\n",
+			"methodName":"public abstract boolean isDisposed()"
+		},
+		"public abstract void dispose()":{
+			"methodBody":"",
+			"comments":"/**\n* Disposes of the operating system resources associated with\n* this resource. Applications must dispose of all resources\n* which they allocate.\n*/\n",
+			"methodName":"public abstract void dispose()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"Resource"
+	]
+}

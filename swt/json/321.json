@@ -1,0 +1,20 @@
+{
+	"variables":[
+		"lfFaceName",
+		"sizeof",
+		"OS",
+		"LF_FACESIZE"
+	],
+	"extendORImplementFiles":[
+		"LOGFONT"
+	],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"LOGFONTW"
+	]
+}

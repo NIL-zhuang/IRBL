@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+int
+get
+window
+long
+getwindowlonga
+int
+wnd
+hwnd
+int
+index
+nindex

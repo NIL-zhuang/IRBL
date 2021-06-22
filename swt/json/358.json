@@ -1,0 +1,27 @@
+{
+	"variables":[
+		"cbSize",
+		"hWnd",
+		"uID",
+		"uFlags",
+		"uCallbackMessage",
+		"hIcon",
+		"dwState",
+		"dwStateMask",
+		"uVersion",
+		"dwInfoFlags",
+		"sizeof",
+		"OS",
+		"NOTIFYICONDATA_V2_SIZE"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"NOTIFYICONDATA"
+	]
+}

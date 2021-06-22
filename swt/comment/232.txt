@@ -1,0 +1,2 @@
+Baseline TIFF decoder revision 6 0 Extension T4 encoding CCITT T 4 1D
+A baseline reader is only expected to read the first directory

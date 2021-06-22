@@ -1,0 +1,12 @@
+int
+border
+handl
+borderhandl
+return
+hwnd
+parent
+hwndparent
+hwnd
+parent
+hwndparent
+handl

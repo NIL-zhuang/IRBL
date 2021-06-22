@@ -1,0 +1,66 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"ppenum",
+		"COM",
+		"address",
+		"celt",
+		"rgelt",
+		"pceltFetched",
+		"COM",
+		"address",
+		"COM",
+		"address",
+		"celt",
+		"address",
+		"ppenum",
+		"celt",
+		"rgelt",
+		"pceltFetched",
+		"celt"
+	],
+	"extendORImplementFiles":[
+		"IUnknown"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"Clone",
+		"Next",
+		"Reset",
+		"Skip",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int Skip(int celt)":{
+			"methodBody":"{\n    return COM.VtblCall(4, address, celt);\n}",
+			"comments":"",
+			"methodName":"public int Skip(int celt)"
+		},
+		"public int Clone(int[] ppenum)":{
+			"methodBody":"{\n    return COM.VtblCall(6, address, ppenum);\n}",
+			"comments":"",
+			"methodName":"public int Clone(int[] ppenum)"
+		},
+		"public int Next(int celt, int rgelt, int[] pceltFetched)":{
+			"methodBody":"{\n    return COM.VtblCall(3, address, celt, rgelt, pceltFetched);\n}",
+			"comments":"",
+			"methodName":"public int Next(int celt, int rgelt, int[] pceltFetched)"
+		},
+		"public int Reset()":{
+			"methodBody":"{\n    return COM.VtblCall(5, address);\n}",
+			"comments":"",
+			"methodName":"public int Reset()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IEnum"
+	]
+}

@@ -1,0 +1,16 @@
+size
+cbsize
+mask
+fmask
+min
+nmin
+max
+nmax
+page
+npage
+pos
+npos
+track
+pos
+ntrackpo
+sizeof

@@ -1,0 +1,8 @@
+gdi
+draw
+string
+drawstr
+not
+consist
+with
+gdi

@@ -1,0 +1,33 @@
+{
+	"variables":[
+		"childID",
+		"result",
+		"serialVersionUID",
+		"source",
+		"childID",
+		"result",
+		"source"
+	],
+	"extendORImplementFiles":[
+		"SWTEventObject"
+	],
+	"package":[
+		"org.eclipse.swt.accessibility"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventObject"
+	],
+	"methods":[
+		"toString"
+	],
+	"methodsBody":{
+		"public String toString()":{
+			"methodBody":"{\n    \n    return \"AccessibleEvent {childID=\" + childID + \" result=\" + result + \"}\";\n}",
+			"comments":"/**\n* Returns a string containing a concise, human-readable\n* description of the receiver.\n*\n* @return a string representation of the event\n*/\n//$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$\n",
+			"methodName":"public String toString()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"AccessibleEvent"
+	]
+}

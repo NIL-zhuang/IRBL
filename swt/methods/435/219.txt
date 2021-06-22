@@ -1,0 +1,12 @@
+lresult
+notifi
+child
+wmnotifychild
+int
+param
+wparam
+int
+param
+lparam
+return
+null

@@ -1,0 +1,27 @@
+{
+	"variables":[
+		"event"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.custom"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"lineGetBackground"
+	],
+	"methodsBody":{
+		"public void lineGetBackground(LineBackgroundEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* This method is called when a line is about to be drawn in order to get its\n* background color.\n* <p>\n* The following event fields are used:<ul>\n* <li>event.lineOffset line start offset (input)</li>\n* <li>event.lineText line text (input)</li>\n* <li>event.lineBackground line background color (output)</li>\n* </ul>\n*\n* @param event the given event\n* @see LineBackgroundEvent\n*/\n",
+			"methodName":"public void lineGetBackground(LineBackgroundEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"LineBackgroundListener"
+	]
+}

@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+boolean
+enum
+system
+local
+enumsystemlocalesw
+int
+local
+enum
+proc
+lplocaleenumproc
+int
+flag
+dwflag

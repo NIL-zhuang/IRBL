@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+boolean
+get
+world
+transform
+getworldtransform
+int
+hdc
+float
+xform
+lpxform

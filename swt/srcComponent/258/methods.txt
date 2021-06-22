@@ -1,0 +1,6 @@
+get
+font
+hfont
+vtbl
+call
+vtblcall

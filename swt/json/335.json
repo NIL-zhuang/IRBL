@@ -1,0 +1,22 @@
+{
+	"variables":[
+		"hwnd",
+		"message",
+		"wParam",
+		"lParam",
+		"time",
+		"x",
+		"y",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"MSG"
+	]
+}

@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+boolean
+graphic
+path
+graphicspath
+visibl
+isvis
+int
+path
+float
+float
+int

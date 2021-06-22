@@ -1,0 +1,49 @@
+Directory fields
+Encoder fields
+Different compression schemes
+Noop when n 128
+Copy next byte n 1 times
+Copy next n 1 bytes literally
+Number of bytes copied
+PackBits decoder
+Each row is byte aligned
+Read a strip
+R G B entries are 16 bit wide 2 bytes
+SWT does not support 16 bit depth color formats Convert the 16 bit data to 8 bit data The correct way to do this is to multiply each 16 bit value by the value 2 8 1 2 16 1 The fast way to do this is just to drop the low byte of the 16 bit value
+Calculate the nbr of required strips given the following requirements each strip should if possible not be greater than maxStripByteSize each strip should contain 1 or more entire rows Format the strip fields arrays so that the image data is stored in one contiguous block This block is stored after the IFD and after any tag info described in the IFD
+Each strip contains 1 row
+Nbr of bytes between the end of the IFD directory and the start of the image data Keep space for at least the offsets and counts data each field being TYPE LONG 4 bytes If other tags require space between the IFD and the image block use the extraBytes parameter If there is only one strip the offsets and counts data is stored directly in the IFD and we need not reserve space for it
+Store all strips sequentially to allow us to copy all pixels in one contiguous area
+The last strip may contain fewer rows
+In a TIFF ColorMap all red come first followed by green and blue All values must be converted from 8 bit to 16 bit
+Only the basic 1 and 3 values are supported
+Ignored
+Ignored
+2 dimensional coding is not supported
+Ignored
+Get the offset of the colorMap use TYPE LONG
+Set TIFF default values
+Bilevel or Grayscale image
+RGB image
+SamplesPerPixel 3 is the only value supported
+Palette Color image
+Invalid type
+Offset following the header and the directory
+Extra space used by XResolution and YResolution values
+The number of entries of the Color Map must match the bitsPerSample field
+Extra space used by ColorMap values
+Extra space used by BitsPerSample values
+TIFF recommends storing the data in strips of no more than 8 Ko
+TIFF header
+Image File Directory
+Offset of next IFD 0 for last IFD
+BitsPerSample 8 8 8
+XResolution and YResolution set to 300 dpi
+ColorMap
+Image Data
+little endian
+TIFF identifier
+Offset of the first IFD is chosen to be 8 It is word aligned and immediately after this header
+Scanline pad must be 1
+Palette must be black and white or white and black
+0 means a color index of 0 is imaged as white

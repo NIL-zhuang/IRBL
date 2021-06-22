@@ -1,0 +1,6 @@
+current
+total
+serial
+version
+uid
+serialversionuid

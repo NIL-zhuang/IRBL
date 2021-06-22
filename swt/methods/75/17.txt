@@ -1,0 +1,17 @@
+public
+void
+set
+visibl
+setvis
+boolean
+visibl
+check
+widget
+checkwidget
+visibl
+resiz
+super
+set
+visibl
+setvis
+visibl

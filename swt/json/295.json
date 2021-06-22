@@ -1,0 +1,30 @@
+{
+	"variables":[
+		"lStructSize",
+		"hwndOwner",
+		"hDC",
+		"lpLogFont",
+		"iPointSize",
+		"Flags",
+		"rgbColors",
+		"lCustData",
+		"lpfnHook",
+		"lpTemplateName",
+		"hInstance",
+		"lpszStyle",
+		"nFontType",
+		"nSizeMin",
+		"nSizeMax",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"CHOOSEFONT"
+	]
+}

@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+int
+graphic
+get
+clip
+bound
+getclipbound
+int
+graphic
+rect
+rectf
+rect

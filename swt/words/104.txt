@@ -1,0 +1,7 @@
+control
+effect
+show
+drag
+under
+effect
+nodragundereffect

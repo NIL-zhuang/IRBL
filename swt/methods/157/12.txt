@@ -1,0 +1,16 @@
+void
+dispos
+object
+object
+object
+for
+int
+object
+length
+object
+object
+object
+null
+error
+null
+return

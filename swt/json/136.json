@@ -1,0 +1,27 @@
+{
+	"variables":[
+		"e"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.events"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"mouseMove"
+	],
+	"methodsBody":{
+		"public void mouseMove(MouseEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when the mouse moves.\n*\n* @param e an event containing information about the mouse move\n*/\n",
+			"methodName":"public void mouseMove(MouseEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"MouseMoveListener"
+	]
+}

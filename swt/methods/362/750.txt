@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+boolean
+pat
+blt
+patblt
+int
+hdc
+int
+int
+int
+int
+int
+rop

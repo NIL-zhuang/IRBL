@@ -1,0 +1,10 @@
+spinner
+widget
+should
+provid
+set
+valu
+setvalu
+method
+like
+slider

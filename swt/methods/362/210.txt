@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+int
+heap
+alloc
+heapalloc
+int
+heap
+hheap
+int
+flag
+dwflag
+int
+byte
+dwbyte

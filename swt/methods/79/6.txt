@@ -1,0 +1,9 @@
+boolean
+get
+visibl
+getvis
+return
+tabl
+item
+tableitem
+null

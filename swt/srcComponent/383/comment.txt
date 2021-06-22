@@ -1,0 +1,8 @@
+rect
+visibl
+desktop
+rcvisibledesktop
+rect
+sip
+rect
+rcsiprect

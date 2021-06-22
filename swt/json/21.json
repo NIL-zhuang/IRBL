@@ -1,0 +1,32 @@
+{
+	"variables":[
+		"event",
+		"event"
+	],
+	"extendORImplementFiles":[
+		"ProgressListener"
+	],
+	"package":[
+		"org.eclipse.swt.browser"
+	],
+	"import":[],
+	"methods":[
+		"changed",
+		"completed"
+	],
+	"methodsBody":{
+		"public void changed(ProgressEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"",
+			"methodName":"public void changed(ProgressEvent event)"
+		},
+		"public void completed(ProgressEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"",
+			"methodName":"public void completed(ProgressEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"ProgressAdapter"
+	]
+}

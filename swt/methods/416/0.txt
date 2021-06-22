@@ -1,0 +1,11 @@
+boolean
+has
+listen
+haslisten
+return
+event
+tabl
+eventt
+has
+entri
+hasentri

@@ -1,0 +1,14 @@
+public
+int
+show
+int
+show
+fshow
+return
+com
+vtbl
+call
+vtblcall
+address
+show
+fshow

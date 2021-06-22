@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+boolean
+show
+own
+popup
+showownedpopup
+int
+wnd
+hwnd
+boolean
+show
+fshow

@@ -1,0 +1,74 @@
+{
+	"variables":[
+		"code",
+		"throwable",
+		"serialVersionUID",
+		"SWT",
+		"SWT",
+		"message",
+		"code",
+		"SWT",
+		"code",
+		"message",
+		"code",
+		"throwable",
+		"throwable",
+		"throwable",
+		"Library",
+		"Library",
+		"throwable",
+		"System",
+		"throwable",
+		"ERROR_UNSPECIFIED",
+		"ERROR_UNSPECIFIED",
+		"code",
+		"JAVA_VERSION",
+		"err",
+		"message",
+		"code",
+		"code",
+		"message"
+	],
+	"extendORImplementFiles":[
+		"RuntimeException"
+	],
+	"package":[
+		"org.eclipse.swt"
+	],
+	"import":[
+		"org.eclipse.swt.internal"
+	],
+	"methods":[
+		"getCause",
+		"getMessage",
+		"printStackTrace",
+		"findErrorText",
+		"getMessage",
+		"getMessage",
+		"toString",
+		"printStackTrace",
+		"JAVA_VERSION",
+		"println",
+		"printStackTrace"
+	],
+	"methodsBody":{
+		"public Throwable getCause()":{
+			"methodBody":"{\n    return throwable;\n}",
+			"comments":"/**\n* Returns the underlying throwable that caused the problem,\n* or null if this information is not available.\n* <p>\n* NOTE: This method overrides Throwable.getCause() that was\n* added to JDK1.4. It is necessary to override this method\n* in order for inherited printStackTrace() methods to work.\n* </p>\n* @return the underlying throwable\n*\n* @since 3.1\n*/\n",
+			"methodName":"public Throwable getCause()"
+		},
+		"public void printStackTrace()":{
+			"methodBody":"{\n    super.printStackTrace();\n    if (Library.JAVA_VERSION < Library.JAVA_VERSION(1, 4, 0) && throwable != null) {\n        \n        System.err.println(\"*** Stack trace of contained exception ***\");\n        throwable.printStackTrace();\n    }\n}",
+			"comments":"/**\n* Outputs a printable representation of this exception's\n* stack trace on the standard error stream.\n* <p>\n* Note: printStackTrace(PrintStream) and printStackTrace(PrintWriter)\n* are not provided in order to maintain compatibility with CLDC.\n* </p>\n*/\n//$NON-NLS-1$\n",
+			"methodName":"public void printStackTrace()"
+		},
+		"public String getMessage()":{
+			"methodBody":"{\n    if (throwable == null)\n        return super.getMessage();\n    \n    return super.getMessage() + \" (\" + throwable.toString() + \")\";\n}",
+			"comments":"/**\n*  Returns the string describing this SWTException object.\n*  <p>\n*  It is combined with the message string of the Throwable\n*  which caused this SWTException (if this information is available).\n*  </p>\n*  @return the error message string of this SWTException object\n*/\n//$NON-NLS-1$ //$NON-NLS-2$\n",
+			"methodName":"public String getMessage()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"SWTException"
+	]
+}

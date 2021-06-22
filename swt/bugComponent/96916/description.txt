@@ -1,0 +1,12 @@
+tooltip
+appear
+the
+spinner
+widget
+after
+spinner
+set
+tool
+tip
+text
+settooltiptext

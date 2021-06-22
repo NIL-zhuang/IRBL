@@ -1,0 +1,10 @@
+public
+int
+get
+tabl
+class
+gettableclass
+return
+tabl
+class
+tableclass

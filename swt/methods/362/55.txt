@@ -1,0 +1,10 @@
+public
+static
+final
+nativ
+int
+get
+doubl
+click
+time
+getdoubleclicktim

@@ -1,0 +1,9 @@
+program
+api
+doe
+not
+work
+with
+gnome
+libgnomevf
+warn

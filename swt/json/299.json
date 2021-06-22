@@ -1,0 +1,33 @@
+{
+	"variables":[
+		"biSize",
+		"biWidth",
+		"biHeight",
+		"biPlanes",
+		"biBitCount",
+		"biCompression",
+		"biSizeImage",
+		"biXPelsPerMeter",
+		"biYPelsPerMeter",
+		"biClrUsed",
+		"biClrImportant",
+		"dsBitfields0",
+		"dsBitfields1",
+		"dsBitfields2",
+		"dshSection",
+		"dsOffset",
+		"sizeof"
+	],
+	"extendORImplementFiles":[
+		"BITMAP"
+	],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"DIBSECTION"
+	]
+}

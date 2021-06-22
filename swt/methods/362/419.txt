@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+boolean
+delet
+menu
+deletemenu
+int
+menu
+hmenu
+int
+posit
+uposit
+int
+flag
+uflag

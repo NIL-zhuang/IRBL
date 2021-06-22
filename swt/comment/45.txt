@@ -1,0 +1,10 @@
+
+The tab item for the operation
+A flag indicating whether the operation should be allowed Setting this field to code false code will cancel the operation Applies to the close and showList events
+The widget relative x coordinate of the chevron button at the time of the event Applies to the showList event since 3 0
+The widget relative y coordinate of the chevron button at the time of the event Applies to the showList event since 3 0
+The width of the chevron button at the time of the event Applies to the showList event Applies to the showList event since 3 0
+The height of the chevron button at the time of the event Applies to the showList event since 3 0
+Constructs a new instance of this class param w the widget that fired the event
+remove trailing
+Returns a string containing a concise human readable description of the receiver return a string representation of the event

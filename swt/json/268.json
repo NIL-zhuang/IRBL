@@ -1,0 +1,31 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"phwnd",
+		"address",
+		"phwnd"
+	],
+	"extendORImplementFiles":[
+		"IUnknown"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"GetWindow",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int GetWindow(int[] phwnd)":{
+			"methodBody":"{\n    return COM.VtblCall(3, address, phwnd);\n}",
+			"comments":"",
+			"methodName":"public int GetWindow(int[] phwnd)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IOleWindow"
+	]
+}

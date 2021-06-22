@@ -1,0 +1,14 @@
+bitmap
+ibitmap
+command
+idcommand
+state
+fsstate
+style
+fsstyle
+data
+dwdata
+string
+istr
+sizeof
+tbbutton

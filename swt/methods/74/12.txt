@@ -1,0 +1,16 @@
+protect
+abstract
+int
+get
+horizont
+pixel
+gethorizontalpixel
+return
+the
+horizont
+scroll
+posit
+the
+horizont
+scroll
+posit

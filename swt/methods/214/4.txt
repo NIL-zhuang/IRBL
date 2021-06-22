@@ -1,0 +1,15 @@
+public
+void
+write
+byte
+int
+off
+int
+len
+throw
+except
+ioexcept
+out
+write
+off
+len

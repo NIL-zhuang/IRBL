@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+void
+linear
+gradient
+brush
+lineargradientbrush
+delet
+int
+brush

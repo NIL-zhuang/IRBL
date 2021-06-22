@@ -1,0 +1,16 @@
+int
+call
+window
+proc
+callwindowproc
+int
+hwnd
+int
+msg
+int
+param
+wparam
+int
+param
+lparam
+return

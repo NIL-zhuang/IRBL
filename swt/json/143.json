@@ -1,0 +1,34 @@
+{
+	"variables":[
+		"e",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.events"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"widgetSelected",
+		"widgetDefaultSelected"
+	],
+	"methodsBody":{
+		"public void widgetDefaultSelected(SelectionEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when default selection occurs in the control.\n* <p>\n* For example, on some platforms default selection occurs in a List\n* when the user double-clicks an item or types return in a Text.\n* On some platforms, the event occurs when a mouse button or key is\n* pressed.  On others, it happens when the mouse or key is released.\n* The exact key or mouse gesture that causes this event to is platform\n* specific.\n* </p>\n*\n* @param e an event containing information about the default selection\n*/\n",
+			"methodName":"public void widgetDefaultSelected(SelectionEvent e)"
+		},
+		"public void widgetSelected(SelectionEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when selection occurs in the control.\n* <p>\n* For example, selection occurs in a List when the user selects\n* an item or items with the keyboard or mouse.  On some platforms,\n* the event occurs when a mouse button or key is pressed.  On others,\n* it happens when the mouse or key is released.  The exact key or\n* mouse gesture that causes this event is platform specific.\n* </p>\n*\n* @param e an event containing information about the selection\n*/\n",
+			"methodName":"public void widgetSelected(SelectionEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"SelectionListener"
+	]
+}

@@ -1,0 +1,16 @@
+size
+cbsize
+hwnd
+client
+hwndclient
+down
+ptdown
+down
+ptdown
+flag
+dwflag
+sizeof
+shrginfo
+point
+down
+ptdown

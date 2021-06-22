@@ -1,0 +1,11 @@
+clr
+text
+clrtext
+clr
+text
+clrtextbk
+sub
+item
+isubitem
+sizeof
+nmlvcustomdraw

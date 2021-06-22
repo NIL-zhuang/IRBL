@@ -1,0 +1,10 @@
+ole
+client
+site
+oleclientsit
+get
+current
+document
+getcurrentdocu
+return
+currentdoc

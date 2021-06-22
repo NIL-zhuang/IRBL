@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+int
+regist
+drag
+drop
+registerdragdrop
+int
+hwnd
+int
+drop
+target
+pdroptarget

@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+int
+graphic
+set
+text
+render
+hint
+settextrenderinghint
+int
+graphic
+int
+mode

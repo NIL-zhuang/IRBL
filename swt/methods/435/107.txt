@@ -1,0 +1,14 @@
+boolean
+set
+fix
+focus
+setfixedfocus
+style
+swt
+focus
+return
+fals
+return
+forc
+focus
+forcefocus

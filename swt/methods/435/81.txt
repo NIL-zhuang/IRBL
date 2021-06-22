@@ -1,0 +1,17 @@
+lresult
+paint
+int
+param
+wparam
+int
+param
+lparam
+return
+super
+paint
+wmpaint
+handl
+param
+wparam
+param
+lparam

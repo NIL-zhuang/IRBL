@@ -1,0 +1,5 @@
+The caller then assumes responsibility for releasing the STGMEDIUM structure
+allocate and free the specified storage medium
+Pointer to the FORMATETC structure
+Pointer to STGMEDIUM structure
+Indicates which object owns the storage medium after the call is completed

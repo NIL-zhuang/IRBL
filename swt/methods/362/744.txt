@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+int
+brows
+for
+folder
+shbrowseforfolderw
+browseinfo
+lpbi

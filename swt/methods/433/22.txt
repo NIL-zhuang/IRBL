@@ -1,0 +1,16 @@
+lresult
+ctlcolor
+int
+param
+wparam
+int
+param
+lparam
+return
+color
+child
+wmcolorchild
+param
+wparam
+param
+lparam

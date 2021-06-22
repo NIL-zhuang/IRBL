@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+int
+set
+clipboard
+data
+setclipboarddata
+int
+format
+uformat
+int
+mem
+hmem

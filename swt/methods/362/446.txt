@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+boolean
+set
+app
+key
+wnd
+assoc
+shsetappkeywndassoc
+byte
+bvk
+int
+hwnd

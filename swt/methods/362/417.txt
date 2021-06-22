@@ -1,0 +1,7 @@
+public
+static
+final
+nativ
+boolean
+ppc
+isppc

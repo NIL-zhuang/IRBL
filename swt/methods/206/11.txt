@@ -1,0 +1,10 @@
+public
+int
+get
+val
+ptrs
+getdhvalptr
+return
+val
+ptrs
+dhvalptr

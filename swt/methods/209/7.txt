@@ -1,0 +1,14 @@
+public
+int
+get
+start
+spectral
+select
+getstartofspectralselect
+return
+refer
+get
+number
+imag
+compon
+getnumberofimagecompon

@@ -1,0 +1,59 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"pguidCmdGroup",
+		"nCmdID",
+		"nCmdExecOpt",
+		"pvaIn",
+		"pvaOut",
+		"cCmds",
+		"COM",
+		"COM",
+		"address",
+		"pguidCmdGroup",
+		"cCmds",
+		"prgCmds",
+		"pCmdText",
+		"E_INVALIDARG",
+		"address",
+		"pguidCmdGroup",
+		"nCmdID",
+		"nCmdExecOpt",
+		"pvaIn",
+		"pvaOut",
+		"pguidCmdGroup",
+		"cCmds",
+		"prgCmds",
+		"pCmdText"
+	],
+	"extendORImplementFiles":[
+		"IUnknown"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"Exec",
+		"QueryStatus",
+		"VtblCall",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int QueryStatus(GUID pguidCmdGroup, int cCmds, OLECMD prgCmds, OLECMDTEXT pCmdText)":{
+			"methodBody":"{\n    \n    if (cCmds > 1)\n        return COM.E_INVALIDARG;\n    return COM.VtblCall(3, address, pguidCmdGroup, cCmds, prgCmds, pCmdText);\n}",
+			"comments":"// Pointer to command group\n// Number of commands in prgCmds array\n// Array of commands\n// Pointer to name or status of command\n// we only support querying for one command at a time\n",
+			"methodName":"public int QueryStatus(GUID pguidCmdGroup, int cCmds, OLECMD prgCmds, OLECMDTEXT pCmdText)"
+		},
+		"public int Exec(GUID pguidCmdGroup, int nCmdID, int nCmdExecOpt, int pvaIn, int pvaOut)":{
+			"methodBody":"{\n    return COM.VtblCall(4, address, pguidCmdGroup, nCmdID, nCmdExecOpt, pvaIn, pvaOut);\n}",
+			"comments":"// Pointer to command group\n// Identifier of command to execute\n// Options for executing the command\n// Pointer to input arguments\n// Pointer to command output\n",
+			"methodName":"public int Exec(GUID pguidCmdGroup, int nCmdID, int nCmdExecOpt, int pvaIn, int pvaOut)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IOleCommandTarget"
+	]
+}

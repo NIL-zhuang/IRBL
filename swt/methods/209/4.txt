@@ -1,0 +1,15 @@
+public
+int
+get
+approx
+bit
+posit
+high
+getapproxbitpositionhigh
+return
+refer
+get
+number
+imag
+compon
+getnumberofimagecompon

@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+int
+ole
+current
+clipboard
+oleiscurrentclipboard
+int
+data
+object
+pdataobject

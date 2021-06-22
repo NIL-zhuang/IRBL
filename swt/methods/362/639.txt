@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+int
+set
+parent
+setpar
+int
+wnd
+child
+hwndchild
+int
+wnd
+new
+parent
+hwndnewpar

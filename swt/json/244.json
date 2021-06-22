@@ -1,0 +1,24 @@
+{
+	"variables":[
+		"wCode",
+		"wReserved",
+		"bstrSource",
+		"bstrDescription",
+		"bstrHelpFile",
+		"dwHelpContext",
+		"pvReserved",
+		"pfnDeferredFillIn",
+		"scode",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"EXCEPINFO"
+	]
+}

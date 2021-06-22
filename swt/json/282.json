@@ -1,0 +1,18 @@
+{
+	"variables":[
+		"cmdtextf",
+		"cwActual",
+		"cwBuf",
+		"rgwz"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"OLECMDTEXT"
+	]
+}

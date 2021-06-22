@@ -1,0 +1,1 @@
+Answer whether the chunk is a valid IDAT chunk

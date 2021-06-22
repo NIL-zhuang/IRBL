@@ -1,0 +1,22 @@
+{
+	"variables":[
+		"cbSize",
+		"iContextType",
+		"iCtrlId",
+		"hItemHandle",
+		"dwContextId",
+		"x",
+		"y",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"HELPINFO"
+	]
+}

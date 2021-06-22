@@ -1,0 +1,12 @@
+int
+get
+foreground
+pixel
+getforegroundpixel
+foreground
+return
+default
+foreground
+defaultforeground
+return
+foreground

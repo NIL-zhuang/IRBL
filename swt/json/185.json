@@ -1,0 +1,15 @@
+{
+	"variables":[],
+	"extendORImplementFiles":[
+		"Cloneable"
+	],
+	"package":[
+		"org.eclipse.swt.internal"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"CloneableCompatibility"
+	]
+}

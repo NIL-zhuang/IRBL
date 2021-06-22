@@ -1,0 +1,5 @@
+void
+mous
+onmouseup
+drag
+fals

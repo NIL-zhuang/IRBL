@@ -1,0 +1,17 @@
+boolean
+check
+handl
+checkhandl
+int
+hwnd
+return
+hwnd
+handl
+hwnd
+hwnd
+text
+hwndtext
+hwnd
+hwnd
+down
+hwndupdown

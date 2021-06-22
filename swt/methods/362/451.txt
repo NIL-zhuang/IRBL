@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+int
+select
+object
+selectobject
+int
+hdc
+int
+hgdi
+obj
+hgdiobj

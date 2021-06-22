@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+int
+vtbl
+call
+vtblcall
+int
+number
+fnnumber
+int
+vtbl
+ppvtbl
+formatetc
+stgmedium
+boolean

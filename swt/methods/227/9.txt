@@ -1,0 +1,16 @@
+void
+set
+width
+setwidth
+int
+valu
+set
+width
+data
+offset
+valu
+set
+the
+imag
+width
+pixel

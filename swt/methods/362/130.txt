@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+int
+get
+text
+charset
+gettextcharset
+int
+hdc

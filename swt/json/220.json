@@ -1,0 +1,108 @@
+{
+	"variables":[
+		"inputStream",
+		"readState",
+		"headerChunk",
+		"paletteChunk",
+		"chunk",
+		"chunk",
+		"inputStream",
+		"readState",
+		"headerChunk",
+		"headerChunk",
+		"PngChunk",
+		"inputStream",
+		"headerChunk",
+		"chunk",
+		"headerChunk",
+		"readState",
+		"SWT",
+		"SWT",
+		"headerChunk",
+		"headerChunk",
+		"PngChunk",
+		"inputStream",
+		"chunk",
+		"PngChunk",
+		"chunk",
+		"readState",
+		"headerChunk",
+		"paletteChunk",
+		"PngChunk",
+		"chunk",
+		"readState",
+		"headerChunk",
+		"paletteChunk",
+		"chunk",
+		"chunk",
+		"readState",
+		"headerChunk",
+		"readState",
+		"chunk",
+		"PngChunk",
+		"readState",
+		"chunk",
+		"readState",
+		"readState",
+		"inputStream",
+		"ERROR_INVALID_IMAGE",
+		"CHUNK_tRNS",
+		"CHUNK_PLTE",
+		"readIDAT",
+		"CHUNK_IDAT",
+		"readPixelData",
+		"readPixelData",
+		"readIEND",
+		"inputStream",
+		"e"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.image"
+	],
+	"import":[
+		"org.eclipse.swt"
+	],
+	"methods":[
+		"getIhdrChunk",
+		"readNextChunk",
+		"readPixelData",
+		"hasMoreChunks",
+		"readNextFromStream",
+		"validate",
+		"error",
+		"getIhdrChunk",
+		"readNextFromStream",
+		"getChunkType",
+		"validate",
+		"validate",
+		"validate",
+		"getChunkType",
+		"PngFileReadState"
+	],
+	"methodsBody":{
+		"boolean readPixelData()":{
+			"methodBody":"{\n    return readState.readPixelData;\n}",
+			"comments":"",
+			"methodName":"boolean readPixelData()"
+		},
+		"boolean hasMoreChunks()":{
+			"methodBody":"{\n    return !readState.readIEND;\n}",
+			"comments":"",
+			"methodName":"boolean hasMoreChunks()"
+		},
+		"PngChunk readNextChunk()":{
+			"methodBody":"{\n    if (headerChunk == null)\n        return getIhdrChunk();\n    PngChunk chunk = PngChunk.readNextFromStream(inputStream);\n    switch(chunk.getChunkType()) {\n        case PngChunk.CHUNK_tRNS:\n            ((PngTrnsChunk) chunk).validate(readState, headerChunk, paletteChunk);\n            break;\n        case PngChunk.CHUNK_PLTE:\n            chunk.validate(readState, headerChunk);\n            paletteChunk = (PngPlteChunk) chunk;\n            break;\n        default:\n            chunk.validate(readState, headerChunk);\n    }\n    if (readState.readIDAT && !(chunk.getChunkType() == PngChunk.CHUNK_IDAT)) {\n        readState.readPixelData = true;\n    }\n    return chunk;\n}",
+			"comments":"",
+			"methodName":"PngChunk readNextChunk()"
+		},
+		"PngIhdrChunk getIhdrChunk()":{
+			"methodBody":"{\n    if (headerChunk == null) {\n        try {\n            PngChunk chunk = PngChunk.readNextFromStream(inputStream);\n            headerChunk = (PngIhdrChunk) chunk;\n            headerChunk.validate(readState, null);\n        } catch (ClassCastException e) {\n            SWT.error(SWT.ERROR_INVALID_IMAGE);\n        }\n    }\n    return headerChunk;\n}",
+			"comments":"",
+			"methodName":"PngIhdrChunk getIhdrChunk()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"PngChunkReader"
+	]
+}

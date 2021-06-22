@@ -1,0 +1,4 @@
+provid
+class
+info
+iprovideclassinfo

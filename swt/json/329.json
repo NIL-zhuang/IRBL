@@ -1,0 +1,24 @@
+{
+	"variables":[
+		"cbSize",
+		"left",
+		"top",
+		"right",
+		"bottom",
+		"hMenu",
+		"hwndMenu",
+		"fBarFocused",
+		"fFocused",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"MENUBARINFO"
+	]
+}

@@ -1,0 +1,13 @@
+protect
+void
+check
+subclass
+checksubclass
+valid
+subclass
+isvalidsubclass
+error
+swt
+error
+invalid
+subclass

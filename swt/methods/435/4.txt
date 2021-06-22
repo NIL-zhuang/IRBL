@@ -1,0 +1,10 @@
+lresult
+setredraw
+int
+param
+wparam
+int
+param
+lparam
+return
+null

@@ -1,0 +1,17 @@
+size
+cbsize
+left
+top
+right
+bottom
+menu
+hmenu
+hwnd
+menu
+hwndmenu
+bar
+focus
+fbarfocus
+focus
+ffocus
+sizeof

@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+int
+get
+devic
+cap
+getdevicecap
+int
+hdc
+int
+index
+nindex

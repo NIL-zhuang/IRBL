@@ -1,0 +1,20 @@
+{
+	"variables":[
+		"idOld",
+		"idNew",
+		"dwFlags",
+		"sizeof"
+	],
+	"extendORImplementFiles":[
+		"NMHDR"
+	],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"NMTBHOTITEM"
+	]
+}

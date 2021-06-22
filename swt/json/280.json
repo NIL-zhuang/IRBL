@@ -1,0 +1,18 @@
+{
+	"variables":[
+		"cbLicInfo",
+		"fRuntimeKeyAvail",
+		"fLicVerified",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"LICINFO"
+	]
+}

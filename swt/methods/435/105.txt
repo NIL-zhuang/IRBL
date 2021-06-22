@@ -1,0 +1,17 @@
+lresult
+syschar
+int
+param
+wparam
+int
+param
+lparam
+return
+sys
+char
+wmsyschar
+handl
+param
+wparam
+param
+lparam

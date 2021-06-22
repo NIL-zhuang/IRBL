@@ -1,0 +1,10 @@
+lresult
+getfont
+int
+param
+wparam
+int
+param
+lparam
+return
+null

@@ -1,0 +1,12 @@
+style
+text
+styledtext
+with
+swt
+wrap
+style
+doe
+not
+adjust
+select
+correct

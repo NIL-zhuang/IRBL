@@ -1,0 +1,8 @@
+public
+static
+final
+nativ
+boolean
+destroy
+caret
+destroycaret

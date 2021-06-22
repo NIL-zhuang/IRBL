@@ -1,0 +1,40 @@
+{
+	"variables":[
+		"runnable",
+		"thread",
+		"throwable",
+		"runnable",
+		"runnable",
+		"throwable",
+		"runnable",
+		"runnable",
+		"runnable",
+		"runnable",
+		"runnable"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.widgets"
+	],
+	"import":[],
+	"methods":[
+		"done",
+		"run",
+		"run"
+	],
+	"methodsBody":{
+		"boolean done()":{
+			"methodBody":"{\n    return runnable == null || throwable != null;\n}",
+			"comments":"",
+			"methodName":"boolean done()"
+		},
+		"void run()":{
+			"methodBody":"{\n    if (runnable != null)\n        runnable.run();\n    runnable = null;\n}",
+			"comments":"",
+			"methodName":"void run()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"RunnableLock"
+	]
+}

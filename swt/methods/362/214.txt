@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+int
+begin
+defer
+window
+pos
+begindeferwindowpo
+int
+num
+window
+nnumwindow

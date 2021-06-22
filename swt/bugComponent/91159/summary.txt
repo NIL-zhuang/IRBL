@@ -1,0 +1,15 @@
+consist
+drop
+target
+droptarget
+event
+data
+type
+datatyp
+field
+not
+alwi
+set
+drag
+enter
+dragent

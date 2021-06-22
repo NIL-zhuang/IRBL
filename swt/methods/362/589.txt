@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+int
+global
+lock
+globallock
+int
+mem
+hmem

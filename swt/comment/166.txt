@@ -1,0 +1,159 @@
+The width of the image in pixels
+The height of the image in pixels
+The color depth of the image in bits per pixel p Note that a depth of 8 or less does not necessarily mean that the image is palette indexed or conversely that a depth greater than 8 means that the image is direct color Check the associated PaletteData s isDirect field for such determinations
+The scanline padding p If one scanline of the image is not a multiple of this number it will be padded with zeros until it is p
+The number of bytes per scanline p This is a multiple of the scanline padding p
+The pixel data of the image p Note that for 16 bit depth images the pixel data is stored in least significant byte order however for 24bit and 32bit depth images the pixel data is stored in most significant byte order p
+The color table for the image
+The transparent pixel p Pixels with this value are transparent p p The default is 1 which means no transparent pixel p
+An icon specific field containing the data from the icon mask p This is a 1 bit bitmap stored with the most significant bit first The number of bytes per scanline is width 7 8 maskPad 1 maskPad maskPad p p The default is null which means no transparency mask p
+An icon specific field containing the scanline pad of the mask p If one scanline of the transparency mask is not a multiple of this number it will be padded with zeros until it is p
+The alpha data of the image p Every pixel can have an em alpha blending em value that varies from 0 meaning fully transparent to 255 meaning fully opaque The number of bytes per scanline is width p
+The global alpha value to be used for every pixel p If this value is set the code alphaData code field is ignored and when the image is rendered each pixel will be blended with the background an amount proportional to this value p p The default is 1 which means no global alpha value p
+The type of file from which the image was read It is expressed as one of the following values dl dt code IMAGE BMP code dt dd Windows BMP file format no compression dd dt code IMAGE BMP RLE code dt dd Windows BMP file format RLE compression if appropriate dd dt code IMAGE GIF code dt dd GIF file format dd dt code IMAGE ICO code dt dd Windows ICO file format dd dt code IMAGE PEG code dt dd PEG file format dd dt code IMAGE PNG code dt dd PNG file format dd dl
+The x coordinate of the top left corner of the image within the logical screen this field corresponds to the GIF89a Image Left Position value
+The y coordinate of the top left corner of the image within the logical screen this field corresponds to the GIF89a Image Top Position value
+A description of how to dispose of the current image before displaying the next It is expressed as one of the following values dl dt code DM UNSPECIFIED code dt dd disposal method not specified dd dt code DM FILL NONE code dt dd do nothing leave the image in place dd dt code DM FILL BACKGROUND code dt dd fill with the background color dd dt code DM FILL PREVIOUS code dt dd restore the previous picture dd dl this field corresponds to the GIF89a Disposal Method value
+The time to delay before displaying the next image in an animation this field corresponds to the GIF89a Delay Time value
+Arbitrary channel width data to 8 bit conversion table
+Scaled 8x8 Bayer dither matrix
+Constructs a new empty ImageData with the given width height depth and palette The data will be initialized to an all zero array of the appropriate size param width the width of the image param height the height of the image param depth the depth of the image param palette the palette of the image must not be null exception IllegalArgumentException ul li ERROR INVALID ARGUMENT if the width or height is negative or if the depth is not one of 1 2 4 8 16 24 or 32 li li ERROR NULL ARGUMENT if the palette is null li ul
+Constructs a new empty ImageData with the given width height depth palette scanlinePad and data param width the width of the image param height the height of the image param depth the depth of the image param palette the palette of the image param scanlinePad the padding of each line in bytes param data the data of the image exception IllegalArgumentException ul li ERROR INVALID ARGUMENT if the width or height is negative or if the depth is not one of 1 2 4 8 16 24 or 32 li li ERROR NULL ARGUMENT if the palette or data is null li li ERROR CANNOT BE ZERO if the scanlinePad is zero li ul
+Constructs an code ImageData code loaded from the specified input stream Throws an error if an error occurs while loading the image or if the image has an unsupported type Application code is still responsible for closing the input stream p This constructor is provided for convenience when loading a single image only If the stream contains multiple images only the first one will be loaded To load multiple images use code ImageLoader load code p p This constructor may be used to load a resource as follows p pre static ImageData loadImageData Class clazz String string InputStream stream clazz getResourceAsStream string if stream null return null ImageData imageData null try imageData new ImageData stream catch SWTException ex finally try stream close catch IOException ex return imageData pre param stream the input stream to load the image from must not be null exception IllegalArgumentException ul li ERROR NULL ARGUMENT if the stream is null li ul exception SWTException ul li ERROR INVALID IMAGE if the image file contains invalid data li li ERROR IO if an IO error occurs while reading data li ul see ImageLoader load InputStream
+Constructs an code ImageData code loaded from a file with the specified name Throws an error if an error occurs loading the image or if the image has an unsupported type p This constructor is provided for convenience when loading a single image only If the file contains multiple images only the first one will be loaded To load multiple images use code ImageLoader load code p param filename the name of the file to load the image from must not be null exception IllegalArgumentException ul li ERROR NULL ARGUMENT if the file name is null li ul exception SWTException ul li ERROR INVALID IMAGE if the image file contains invalid data li li ERROR IO if an IO error occurs while reading data li li ERROR UNSUPPORTED FORMAT if the image file contains an unrecognized format li ul
+Prevents uninitialized instances from being created outside the package
+Constructs an image data by giving values for all non computable fields p This method is for internal use and is not described further p
+Initializes all fields in the receiver This method must be called by all public constructors to ensure that all fields are initialized for a new ImageData object If a new field is added to the class then it must be added to this method p This method is for internal use and is not described further p
+Invokes internal SWT functionality to create a new instance of this class p b IMPORTANT b This method is em not em part of the public API for code ImageData code It is marked public only so that it can be shared within the packages provided by SWT It is subject to change without notice and should never be called from application code p p This method is for internal use and is not described further p
+Returns a new instance of the same class as the receiver whose slots have been filled in with em copies em of the values in the slots of the receiver That is the returned object is a em deep copy em of the receiver return a copy of the receiver
+Returns the alpha value at offset code x code in scanline code y code in the receiver s alpha data param x the x coodinate of the pixel to get the alpha value of param y the y coordinate of the pixel to get the alpha value of return the alpha value at the given coordinates exception IllegalArgumentException ul li ERROR INVALID ARGUMENT if either argument is out of range li ul
+may throw an IndexOutOfBoundsException
+Returns code getWidth code alpha values starting at offset code x code in scanline code y code in the receiver s alpha data starting at code startIndex code param x the x position of the pixel to begin getting alpha values param y the y position of the pixel to begin getting alpha values param getWidth the width of the data to get param alphas the buffer in which to put the alpha values param startIndex the offset into the image to begin getting alpha values exception IndexOutOfBoundsException if getWidth is too large exception IllegalArgumentException ul li ERROR NULL ARGUMENT if pixels is null li li ERROR INVALID ARGUMENT if x or y is out of bounds li li ERROR INVALID ARGUMENT if getWidth is negative li ul
+Returns the pixel value at offset code x code in scanline code y code in the receiver s data param x the x position of the pixel to get param y the y position of the pixel to get return the pixel at the given coordinates exception IllegalArgumentException ul li ERROR INVALID ARGUMENT if either argument is out of bounds li ul exception SWTException ul li ERROR UNSUPPORTED DEPTH if the depth is not one of 1 2 4 8 16 24 or 32 li ul
+Returns code getWidth code pixel values starting at offset code x code in scanline code y code in the receiver s data starting at code startIndex code param x the x position of the first pixel to get param y the y position of the first pixel to get param getWidth the width of the data to get param pixels the buffer in which to put the pixels param startIndex the offset into the byte array to begin storing pixels exception IndexOutOfBoundsException if getWidth is too large exception IllegalArgumentException ul li ERROR NULL ARGUMENT if pixels is null li li ERROR INVALID ARGUMENT if x or y is out of bounds li li ERROR INVALID ARGUMENT if getWidth is negative li ul exception SWTException ul li ERROR UNSUPPORTED DEPTH if the depth is not one of 1 2 4 or 8 For higher depths use the int version of this method li ul
+Returns code getWidth code pixel values starting at offset code x code in scanline code y code in the receiver s data starting at code startIndex code param x the x position of the first pixel to get param y the y position of the first pixel to get param getWidth the width of the data to get param pixels the buffer in which to put the pixels param startIndex the offset into the buffer to begin storing pixels exception IndexOutOfBoundsException if getWidth is too large exception IllegalArgumentException ul li ERROR NULL ARGUMENT if pixels is null li li ERROR INVALID ARGUMENT if x or y is out of bounds li li ERROR INVALID ARGUMENT if getWidth is negative li ul exception SWTException ul li ERROR UNSUPPORTED DEPTH if the depth is not one of 1 2 4 8 16 24 or 32 li ul
+Returns an array of code RGB code s which comprise the indexed color table of the receiver or null if the receiver has a direct color model return the RGB values for the image or null if direct color see PaletteData getRGBs
+Returns an code ImageData code which specifies the transparency mask information for the receiver If the receiver has no transparency or is not an icon returns an opaque mask return the transparency mask
+Returns the image transparency type which will be one of code SWT TRANSPARENCY NONE code code SWT TRANSPARENCY MASK code code SWT TRANSPARENCY PIXEL code or code SWT TRANSPARENCY ALPHA code return the receiver s transparency type
+Returns the byte order of the receiver return MSB FIRST or LSB FIRST
+Create a destination image with no data
+Scale the image contents
+Scale the image mask or alpha
+Returns a copy of the receiver which has been stretched or shrunk to the specified size If either the width or height is negative the resulting image will be inverted in the associated axis param width the width of the new ImageData param height the height of the new ImageData return a scaled copy of the image
+Sets the alpha value at offset code x code in scanline code y code in the receiver s alpha data param x the x coordinate of the alpha value to set param y the y coordinate of the alpha value to set param alpha the value to set the alpha to exception IllegalArgumentException ul li ERROR INVALID ARGUMENT if x or y is out of bounds li ul
+may throw an IndexOutOfBoundsException
+Sets the alpha values starting at offset code x code in scanline code y code in the receiver s alpha data to the values from the array code alphas code starting at code startIndex code param x the x coordinate of the pixel to being setting the alpha values param y the y coordinate of the pixel to being setting the alpha values param putWidth the width of the alpha values to set param alphas the alpha values to set param startIndex the index at which to begin setting exception IndexOutOfBoundsException if putWidth is too large exception IllegalArgumentException ul li ERROR NULL ARGUMENT if pixels is null li li ERROR INVALID ARGUMENT if x or y is out of bounds li li ERROR INVALID ARGUMENT if putWidth is negative li ul
+Sets the pixel value at offset code x code in scanline code y code in the receiver s data param x the x coordinate of the pixel to set param y the y coordinate of the pixel to set param pixelValue the value to set the pixel to exception IllegalArgumentException ul li ERROR INVALID ARGUMENT if x or y is out of bounds li ul exception SWTException ul li ERROR UNSUPPORTED DEPTH if the depth is not one of 1 2 4 8 16 24 or 32 li ul
+Sets the pixel values starting at offset code x code in scanline code y code in the receiver s data to the values from the array code pixels code starting at code startIndex code param x the x position of the pixel to set param y the y position of the pixel to set param putWidth the width of the pixels to set param pixels the pixels to set param startIndex the index at which to begin setting exception IndexOutOfBoundsException if putWidth is too large exception IllegalArgumentException ul li ERROR NULL ARGUMENT if pixels is null li li ERROR INVALID ARGUMENT if x or y is out of bounds li li ERROR INVALID ARGUMENT if putWidth is negative li ul exception SWTException ul li ERROR UNSUPPORTED DEPTH if the depth is not one of 1 2 4 8 For higher depths use the int version of this method li ul
+Sets the pixel values starting at offset code x code in scanline code y code in the receiver s data to the values from the array code pixels code starting at code startIndex code param x the x position of the pixel to set param y the y position of the pixel to set param putWidth the width of the pixels to set param pixels the pixels to set param startIndex the index at which to begin setting exception IndexOutOfBoundsException if putWidth is too large exception IllegalArgumentException ul li ERROR NULL ARGUMENT if pixels is null li li ERROR INVALID ARGUMENT if x or y is out of bounds li li ERROR INVALID ARGUMENT if putWidth is negative li ul exception SWTException ul li ERROR UNSUPPORTED DEPTH if the depth is not one of 1 2 4 8 16 24 or 32 li ul
+Returns a palette with 2 colors black white
+Gets the offset of the most significant bit for the given mask
+Finds the closest match
+Find index of black in mask palette
+Blit operation bits to be OR ed together to specify the desired operation
+copy source directly else applies logic operations
+enable alpha blending
+enable dithering in low color modes
+Alpha mode values 0 255 specify global alpha level
+Fully opaque ignores any alpha data
+Fully transparent ignores any alpha data
+Use alpha channel from separate alphaData
+Use alpha channel embedded in sourceData
+Use transparency mask formed by bytes in alphaData non zero is opaque
+Use transparency mask formed by packed bits in alphaData
+Consider source palette indices transparent if in alphaData array
+Consider source RGBs transparent if in RGB888 format alphaData array
+Byte and bit order constants
+Data types internal
+direct true color formats with arbitrary masks shifts
+palette indexed color formats
+these should be supplied as params later
+Prepare scaling data
+Prepare source related data
+throw new IllegalArgumentException Invalid source type
+Prepare destination related data
+throw new IllegalArgumentException Invalid destination type
+Prepare special processing data
+throw new IllegalArgumentException Invalid alpha type
+prescale
+Blit
+Fast blit straight copy
+Comprehensive blit apply transformations
+READ NEXT PIXEL
+DO SPECIAL PROCESSING IF REQUIRED
+Perform alpha blending
+WRITE NEXT PIXEL
+Blits a direct palette image into a direct palette image p Note When the source and destination depth order and masks are pairwise equal and the blitter operation is BLIT SRC the masks are ignored Hence when not changing the image data format 0 may be specified for the masks p param op the blitter operation a combination of BLIT xxx flags see BLIT xxx constants param srcData the source byte array containing image data param srcDepth the source depth one of 8 16 24 32 param srcStride the source number of bytes per line param srcOrder the source byte ordering one of MSB FIRST or LSB FIRST ignored if srcDepth is not 16 or 32 param srcX the top left x coord of the source blit region param srcY the top left y coord of the source blit region param srcWidth the width of the source blit region param srcHeight the height of the source blit region param srcRedMask the source red channel mask param srcGreenMask the source green channel mask param srcBlueMask the source blue channel mask param alphaMode the alpha blending or mask mode may be an integer 0 255 for global alpha ignored if BLIT ALPHA not specified in the blitter operations see ALPHA MODE xxx constants param alphaData the alpha blending or mask data varies depending on the value of alphaMode and sometimes ignored param alphaStride the alpha data number of bytes per line param alphaX the top left x coord of the alpha blit region param alphaY the top left y coord of the alpha blit region param destData the destination byte array containing image data param destDepth the destination depth one of 8 16 24 32 param destStride the destination number of bytes per line param destOrder the destination byte ordering one of MSB FIRST or LSB FIRST ignored if destDepth is not 16 or 32 param destX the top left x coord of the destination blit region param destY the top left y coord of the destination blit region param destWidth the width of the destination blit region param destHeight the height of the destination blit region param destRedMask the destination red channel mask param destGreenMask the destination green channel mask param destBlueMask the destination blue channel mask param flipX if true the resulting image is flipped along the vertical axis param flipY if true the resulting image is flipped along the horizontal axis
+Prepare scaling data
+Prepare source related data
+throw new IllegalArgumentException Invalid source type
+Prepare destination related data
+throw new IllegalArgumentException Invalid source type
+Prepare special processing data
+prescale
+Blit
+If the palettes and formats are equivalent use a one to one mapping
+Generate a palette mapping
+READ NEXT PIXEL
+APPLY MASK
+WRITE NEXT PIXEL
+Convert between indexed modes using mapping and mask
+Fast blit copy w mapping
+Comprehensive blit apply transformations
+READ NEXT PIXEL
+DO SPECIAL PROCESSING IF REQUIRED
+could speed up using binary search if we sorted the indices
+Perform alpha blending
+Floyd Steinberg error diffusion
+MAP COLOR TO THE PALETTE
+moving the variable declarations out seems to make the DK IT happier
+Floyd Steinberg error diffusion cont d
+WRITE NEXT PIXEL
+Blits an index palette image into an index palette image p Note The source and destination red green and blue arrays may be null if no alpha blending or dither is to be performed p param op the blitter operation a combination of BLIT xxx flags see BLIT xxx constants param srcData the source byte array containing image data param srcDepth the source depth one of 1 2 4 8 param srcStride the source number of bytes per line param srcOrder the source byte ordering one of MSB FIRST or LSB FIRST ignored if srcDepth is not 1 param srcX the top left x coord of the source blit region param srcY the top left y coord of the source blit region param srcWidth the width of the source blit region param srcHeight the height of the source blit region param srcReds the source palette red component intensities param srcGreens the source palette green component intensities param srcBlues the source palette blue component intensities param alphaMode the alpha blending or mask mode may be an integer 0 255 for global alpha ignored if BLIT ALPHA not specified in the blitter operations see ALPHA MODE xxx constants param alphaData the alpha blending or mask data varies depending on the value of alphaMode and sometimes ignored param alphaStride the alpha data number of bytes per line param alphaX the top left x coord of the alpha blit region param alphaY the top left y coord of the alpha blit region param destData the destination byte array containing image data param destDepth the destination depth one of 1 2 4 8 param destStride the destination number of bytes per line param destOrder the destination byte ordering one of MSB FIRST or LSB FIRST ignored if destDepth is not 1 param destX the top left x coord of the destination blit region param destY the top left y coord of the destination blit region param destWidth the width of the destination blit region param destHeight the height of the destination blit region param destReds the destination palette red component intensities param destGreens the destination palette green component intensities param destBlues the destination palette blue component intensities param flipX if true the resulting image is flipped along the vertical axis param flipY if true the resulting image is flipped along the horizontal axis
+these should be supplied as params later
+Prepare scaling data
+Prepare source related data
+throw new IllegalArgumentException Invalid source type
+Prepare destination related data
+throw new IllegalArgumentException Invalid destination type
+Prepare special processing data
+prescale
+Comprehensive blit apply transformations
+READ NEXT PIXEL
+DO SPECIAL PROCESSING IF REQUIRED
+could speed up using binary search if we sorted the indices
+Perform alpha blending
+WRITE NEXT PIXEL
+Blits an index palette image into a direct palette image p Note The source and destination masks and palettes must always be fully specified p param op the blitter operation a combination of BLIT xxx flags see BLIT xxx constants param srcData the source byte array containing image data param srcDepth the source depth one of 1 2 4 8 param srcStride the source number of bytes per line param srcOrder the source byte ordering one of MSB FIRST or LSB FIRST ignored if srcDepth is not 1 param srcX the top left x coord of the source blit region param srcY the top left y coord of the source blit region param srcWidth the width of the source blit region param srcHeight the height of the source blit region param srcReds the source palette red component intensities param srcGreens the source palette green component intensities param srcBlues the source palette blue component intensities param alphaMode the alpha blending or mask mode may be an integer 0 255 for global alpha ignored if BLIT ALPHA not specified in the blitter operations see ALPHA MODE xxx constants param alphaData the alpha blending or mask data varies depending on the value of alphaMode and sometimes ignored param alphaStride the alpha data number of bytes per line param alphaX the top left x coord of the alpha blit region param alphaY the top left y coord of the alpha blit region param destData the destination byte array containing image data param destDepth the destination depth one of 8 16 24 32 param destStride the destination number of bytes per line param destOrder the destination byte ordering one of MSB FIRST or LSB FIRST ignored if destDepth is not 16 or 32 param destX the top left x coord of the destination blit region param destY the top left y coord of the destination blit region param destWidth the width of the destination blit region param destHeight the height of the destination blit region param destRedMask the destination red channel mask param destGreenMask the destination green channel mask param destBlueMask the destination blue channel mask param flipX if true the resulting image is flipped along the vertical axis param flipY if true the resulting image is flipped along the horizontal axis
+these should be supplied as params later
+Prepare scaling data
+Prepare source related data
+throw new IllegalArgumentException Invalid source type
+Prepare destination related data
+throw new IllegalArgumentException Invalid source type
+Prepare special processing data
+throw new IllegalArgumentException Invalid alpha type
+prescale
+Comprehensive blit apply transformations
+READ NEXT PIXEL
+DO SPECIAL PROCESSING IF REQUIRED
+Perform alpha blending
+Floyd Steinberg error diffusion
+MAP COLOR TO THE PALETTE
+moving the variable declarations out seems to make the DK IT happier
+Floyd Steinberg error diffusion cont d
+WRITE NEXT PIXEL
+Blits a direct palette image into an index palette image p Note The source and destination masks and palettes must always be fully specified p param op the blitter operation a combination of BLIT xxx flags see BLIT xxx constants param srcData the source byte array containing image data param srcDepth the source depth one of 8 16 24 32 param srcStride the source number of bytes per line param srcOrder the source byte ordering one of MSB FIRST or LSB FIRST ignored if srcDepth is not 16 or 32 param srcX the top left x coord of the source blit region param srcY the top left y coord of the source blit region param srcWidth the width of the source blit region param srcHeight the height of the source blit region param srcRedMask the source red channel mask param srcGreenMask the source green channel mask param srcBlueMask the source blue channel mask param alphaMode the alpha blending or mask mode may be an integer 0 255 for global alpha ignored if BLIT ALPHA not specified in the blitter operations see ALPHA MODE xxx constants param alphaData the alpha blending or mask data varies depending on the value of alphaMode and sometimes ignored param alphaStride the alpha data number of bytes per line param alphaX the top left x coord of the alpha blit region param alphaY the top left y coord of the alpha blit region param destData the destination byte array containing image data param destDepth the destination depth one of 1 2 4 8 param destStride the destination number of bytes per line param destOrder the destination byte ordering one of MSB FIRST or LSB FIRST ignored if destDepth is not 1 param destX the top left x coord of the destination blit region param destY the top left y coord of the destination blit region param destWidth the width of the destination blit region param destHeight the height of the destination blit region param destReds the destination palette red component intensities param destGreens the destination palette green component intensities param destBlues the destination palette blue component intensities param flipX if true the resulting image is flipped along the vertical axis param flipY if true the resulting image is flipped along the horizontal axis
+Computes the required channel shift from a mask
+Computes the required channel width depth from a mask
+Extracts a field from packed RGB data given a mask for that field
+Gradients are drawn as tiled bands
+Dithered two tone
+Dithered color
+Precise color
+Select an algorithm depending on the depth of the screen
+Creates an ImageData containing one band s worth of a gradient filled block If code vertical code is true the band must be tiled horizontally to fill a region otherwise it must be tiled vertically param width the width of the region to be filled param height the height of the region to be filled param vertical if true sweeps from top to bottom else sweeps from left to right param fromRGB the color to start with param toRGB the color to end with param redBits the number of significant red bits 0 for palette modes param greenBits the number of significant green bits 0 for palette modes param blueBits the number of significant blue bits 0 for palette modes return the new ImageData
+Fill in gradated values for a color channel
+Fill in dithered gradated values for a color channel
+Create the bitmap and tile it
+Renders a gradient onto a GC p This is a GC helper p param gc the GC to render the gradient onto param device the device the GC belongs to param x the top left x coordinate of the region to be filled param y the top left y coordinate of the region to be filled param width the width of the region to be filled param height the height of the region to be filled param vertical if true sweeps from top to bottom else sweeps from left to right param fromRGB the color to start with param toRGB the color to end with param redBits the number of significant red bits 0 for palette modes param greenBits the number of significant green bits 0 for palette modes param blueBits the number of significant blue bits 0 for palette modes

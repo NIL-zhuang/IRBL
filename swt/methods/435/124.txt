@@ -1,0 +1,7 @@
+createstruct
+widget
+creat
+struct
+widgetcreatestruct
+return
+null

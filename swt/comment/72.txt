@@ -1,0 +1,2 @@
+
+Process StyledText events by invoking the event s handler

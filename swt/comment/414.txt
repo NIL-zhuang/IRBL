@@ -1,0 +1,45 @@
+OleControlSite provides a site to manage an embedded ActiveX Control within a container p In addition to the behaviour provided by OleClientSite this object provides the following ul li events from the ActiveX control li notification of property changes from the ActiveX control li simplified access to well known properties of the ActiveX Control e g font background color li expose ambient properties of the container to the ActiveX Control ul p This object implements the OLE Interfaces IOleControlSite IDispatch and IPropertyNotifySink p Note that although this class is a subclass of code Composite code it does not make sense to add code Control code children to it or set a layout on it p p dl dt b Styles b dd BORDER dt b Events b dd Dispose Move Resize dl
+interfaces for this container
+supporting Property Change attributes
+supporting Event Sink attributes
+supporting information for the Control COM object
+check for licensing
+Prepare the ClassFactory
+Create Com Object
+Prepare a storage medium
+Open a storage object
+Create ole object with storage object
+Init sinks
+Init site properties
+Create an OleControlSite child widget using style bits to select a particular look or set of properties param parent a composite widget must be an OleFrame param style the bitwise OR ing of widget styles param progId the unique program identifier which has been registered for this ActiveX Control the value of the ProgID key or the value of the VersionIndependentProgID key specified in the registry for this Control for example the VersionIndependentProgID for Internet Explorer is Shell Explorer exception IllegalArgumentException ul li ERROR NULL ARGUMENT when the parent is null ul exception SWTException ul li ERROR THREAD INVALID ACCESS when called from the wrong thread li ERROR INVALID CLASSID when the progId does not map to a registered CLSID li ERROR CANNOT CREATE OBJECT when failed to create OLE Object li ERROR CANNOT ACCESS CLASSFACTORY when Class Factory could not be found li ERROR CANNOT CREATE LICENSED OBJECT when failed to create a licensed OLE Object ul
+Adds the listener to receive events param eventID the id of the event param listener the listener exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+get Event Sink I F from IProvideClassInfo2
+get Event Sink I F from IProvideClassInfo
+Adds the listener to receive events since 2 0 param automation the automation object that provides the event notification param eventID the id of the event param listener the listener exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+have we connected to this kind of event sink before
+Get property change notification from control
+Get access to the Control object
+need to act on it
+Adds the listener to receive events param propertyID the identifier of the property param listener the listener exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+method7 Translate Accelerator not implemented
+register each of the interfaces that this object implements
+method5 GetIDsOfNames not implemented
+We are getting the OLE COLOR should we change this to the COLORREF value
+Variant lfCharSet iDispFont getProperty COM DISPID FONT CHARSET
+We are getting the OLE COLOR should we change this to the COLORREF value
+Get the control site property specified by the dispIdMember since 2 1
+Copy the Window s handle into the memory passed in
+indicate a false result
+not implemented
+need to act on it
+border space or menubars
+Removes the listener param eventID the event identifier param listener the listener exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+Removes the listener since 2 0 deprecated use OleControlSite removeEventListener OleAutomation int OleListener param automation the automation object that provides the event notification param guid the identifier of the events COM interface param eventID the event identifier param listener the listener exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+Removes the listener since 2 0 param automation the automation object that provides the event notification param eventID the event identifier param listener the listener exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+free resources associated with event sink
+Removes the listener param listener the listener exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+set the background of the ActiveX Control
+iDispFont setProperty COM DISPID FONT CHARSET new Variant fdata 0 getCharset
+set the font of the ActiveX Control
+set the foreground of the ActiveX Control
+Sets the control site property specified by the dispIdMember to a new value The value will be disposed by the control site when it is no longer required using Variant dispose Passing a value of null will clear the dispId value param dispId the ID of the property as specified by the IDL of the ActiveX Control param value The new value for the property as expressed in a Variant since 2 1

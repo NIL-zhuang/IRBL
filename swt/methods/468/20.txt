@@ -1,0 +1,9 @@
+tchar
+window
+class
+windowclass
+return
+tab
+folder
+class
+tabfolderclass

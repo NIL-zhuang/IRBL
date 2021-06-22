@@ -1,0 +1,32 @@
+{
+	"variables":[
+		"iItem",
+		"iBitmap",
+		"idCommand",
+		"fsState",
+		"fsStyle",
+		"dwData",
+		"iString",
+		"cchText",
+		"pszText",
+		"left",
+		"top",
+		"right",
+		"bottom",
+		"sizeof",
+		"OS",
+		"IsWinCE"
+	],
+	"extendORImplementFiles":[
+		"NMHDR"
+	],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"NMTOOLBAR"
+	]
+}

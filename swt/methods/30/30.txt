@@ -1,0 +1,16 @@
+int
+get
+drop
+target
+getdroptarget
+int
+drop
+target
+pdroptarget
+int
+drop
+target
+ppdroptarget
+return
+com
+notimpl

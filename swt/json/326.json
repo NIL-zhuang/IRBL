@@ -1,0 +1,25 @@
+{
+	"variables":[
+		"mask",
+		"iItem",
+		"iSubItem",
+		"state",
+		"stateMask",
+		"pszText",
+		"cchTextMax",
+		"iImage",
+		"lParam",
+		"iIndent",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"LVITEM"
+	]
+}

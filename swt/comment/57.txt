@@ -1,0 +1,4 @@
+This event is sent when a line is about to be drawn
+line start offset
+line text
+array of StyleRanges

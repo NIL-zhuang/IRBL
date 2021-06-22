@@ -1,0 +1,6 @@
+size
+dwsize
+icc
+dwicc
+sizeof
+initcommoncontrolsex

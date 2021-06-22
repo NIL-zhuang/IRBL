@@ -1,0 +1,21 @@
+{
+	"variables":[
+		"cbSize",
+		"hwndLastFocus",
+		"fSipUp",
+		"fSipOnDeactivation",
+		"fActive",
+		"fReserved",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"SHACTIVATEINFO"
+	]
+}

@@ -1,0 +1,7 @@
+name
+flag
+type
+ole
+paramet
+descript
+oleparameterdescript

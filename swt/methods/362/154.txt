@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+boolean
+set
+caret
+pos
+setcaretpo
+int
+int

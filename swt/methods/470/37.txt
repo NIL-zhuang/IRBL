@@ -1,0 +1,12 @@
+int
+get
+background
+pixel
+getbackgroundpixel
+return
+send
+messag
+sendmessag
+handl
+lvm
+getbkcolor

@@ -1,0 +1,17 @@
+size
+cbsize
+flag
+uflag
+hwnd
+uid
+left
+top
+right
+bottom
+hinst
+lpsz
+text
+lpsztext
+param
+lparam
+sizeof

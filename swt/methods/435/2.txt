@@ -1,0 +1,8 @@
+boolean
+mnemon
+hit
+mnemonichit
+char
+key
+return
+fals

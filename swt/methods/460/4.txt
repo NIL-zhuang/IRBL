@@ -1,0 +1,13 @@
+lresult
+getdlgcod
+int
+param
+wparam
+int
+param
+lparam
+return
+new
+lresult
+dlgc
+static

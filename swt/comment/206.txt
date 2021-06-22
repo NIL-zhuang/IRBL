@@ -1,0 +1,13 @@
+PEGHuffmanTable class actually represents two types of object 1 A DHT Define Huffman Tables segment which may represent as many as 4 Huffman tables In this case the tables are stored in the allTables array 2 A single Huffman table In this case the allTables array will be null The reference field is stored in both types of object but initialize is only called if the object represents a DHT
+maximum is 4 AC 4 DC
+table class AC 1 or DC 0
+table id 0 1 baseline 0 3 prog ext
+Read the 16 count bytes and add them together to get the table size
+Read the table
+start with 50 and increment as needed
+Truncate huffCodeLengths to the correct size
+start with 50 and increment as needed
+Truncate huffCodes to the correct size
+Calculate the maximum and minimum codes
+Calculate the eHuffman codes and lengths
+Create the new PEGHuffmanTable and add it to the allTables array

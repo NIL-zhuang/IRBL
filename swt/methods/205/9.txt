@@ -1,0 +1,15 @@
+public
+void
+set
+sampl
+per
+line
+setsamplesperlin
+int
+sampl
+refer
+byte
+sampl
+refer
+byte
+sampl

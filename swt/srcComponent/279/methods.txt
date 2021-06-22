@@ -1,0 +1,12 @@
+get
+extent
+getext
+set
+advis
+setadvis
+vtbl
+call
+vtblcall
+vtbl
+call
+vtblcall

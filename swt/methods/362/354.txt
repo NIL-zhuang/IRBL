@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+int
+get
+window
+rgn
+getwindowrgn
+int
+wnd
+hwnd
+int
+rgn
+hrgn

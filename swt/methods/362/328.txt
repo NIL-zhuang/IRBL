@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+int
+get
+nearest
+palett
+index
+getnearestpaletteindex
+int
+pal
+hpal
+int
+color
+crcolor

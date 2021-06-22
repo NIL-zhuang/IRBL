@@ -1,0 +1,6 @@
+get
+window
+getwindow
+vtbl
+call
+vtblcall

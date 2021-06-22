@@ -1,0 +1,4 @@
+A flag indicating whether the operation should be allowed Setting this field to code false code will cancel the operation
+Constructs a new instance of this class based on the information in the given untyped event param e the untyped event containing the information
+remove trailing
+Returns a string containing a concise human readable description of the receiver return a string representation of the event

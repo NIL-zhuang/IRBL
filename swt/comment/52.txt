@@ -1,0 +1,17 @@
+A DisplayRenderer renders the content of a StyledText widget on a display device
+used to get content and styles during rendering
+Creates an instance of class DisplayRenderer class p param device Device to render on param regularFont Font to use for regular text param parent class StyledText class widget to render param tabLength length in characters of a tab character
+Dispose the specified GC p param gc GC to dispose
+offset of this line
+render the line break selection
+Draws the line delimiter selection if the selection extends beyond the given line p param line the line to draw param lineOffset offset of the first character in the line Relative to the start of the document param paintX x location to draw at param paintY y location to draw at param gc GC to draw on
+Returns the text segments that should be treated as if they had a different direction than the surrounding text p param lineOffset offset of the first character in the line 0 based from the beginning of the document param lineText text of the line to specify bidi segments for return text segments that should be treated as if they had a different direction than the surrounding text Only the start index of a segment is specified relative to the start of the line Always starts with 0 and ends with the line length exception IllegalArgumentException ul li ERROR INVALID ARGUMENT if the segment indices returned by the listener do not start with 0 are not in ascending order exceed the line length or have duplicates li ul
+Returns the visible client area that can be used for rendering p return the visible client area that can be used for rendering
+Returns the class StyledTextContent class to use for line offset calculations p return the class StyledTextContent class to use for line offset calculations
+Returns a new GC to use for rendering and measuring When the GC is no longer used it needs to be disposed by calling disposeGC p return the GC to use for rendering and measuring see disposeGC
+Returns the horizontal scroll position p return the horizontal scroll position
+see StyledTextRenderer getLineBackgroundData
+see StyledTextRenderer getLineStyleData
+see StyledTextRenderer getSelection
+see StyledTextRenderer getWordWrap
+see StyledTextRenderer isFullLineSelection

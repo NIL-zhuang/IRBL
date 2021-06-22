@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+int
+graphic
+set
+composit
+qualiti
+setcompositingqu
+int
+graphic
+int
+composit
+qualiti
+compositingqu

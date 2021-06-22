@@ -1,0 +1,10 @@
+public
+int
+get
+min
+code
+getdhmincod
+return
+min
+code
+dhmincod

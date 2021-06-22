@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+int
+imm
+associ
+context
+immassociatecontext
+int
+wnd
+hwnd
+int
+imc
+himc

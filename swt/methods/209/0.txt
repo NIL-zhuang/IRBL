@@ -1,0 +1,12 @@
+public
+boolean
+first
+scan
+isfirstscan
+return
+get
+approx
+bit
+posit
+high
+getapproxbitpositionhigh

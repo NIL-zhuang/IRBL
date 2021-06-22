@@ -1,0 +1,11 @@
+public
+boolean
+visibl
+isvis
+check
+widget
+checkwidget
+return
+get
+visibl
+getvis

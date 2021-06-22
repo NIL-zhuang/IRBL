@@ -1,0 +1,19 @@
+{
+	"variables":[
+		"dwReserved1",
+		"pwszName",
+		"pAuthInfo",
+		"dwReserved2",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"COSERVERINFO"
+	]
+}

@@ -1,0 +1,2 @@
+This class is the cross platform version of the java util EventObject class p It is part of our effort to provide support for both 2SE and 2ME platforms Under this scheme classes need to extend SWTEventObject instead of java util EventObject p p Note java util EventObject is not part of CDC and CLDC p
+Constructs a new instance of this class param source the object which fired the event

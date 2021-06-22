@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+int
+monitor
+from
+window
+monitorfromwindow
+int
+hwnd
+int
+flag
+dwflag

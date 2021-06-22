@@ -1,0 +1,12 @@
+public
+string
+get
+text
+gettext
+check
+widget
+checkwidget
+return
+get
+text
+gettext

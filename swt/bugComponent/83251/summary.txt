@@ -1,0 +1,4 @@
+javadoc
+warn
+latest
+build

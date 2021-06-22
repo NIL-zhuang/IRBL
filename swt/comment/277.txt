@@ -1,0 +1,10 @@
+add one to avoid rounding errors
+add one to avoid rounding errors
+add one to avoid rounding errors
+create an array to hold the addresses
+free the memory
+create a null terminated array of char for each String
+get the address of the start of the array of char
+copy the address to the array of addresses
+keep track of the Global Memory so we can free it
+add one to avoid rounding errors

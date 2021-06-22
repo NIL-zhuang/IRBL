@@ -1,0 +1,11 @@
+mous
+data
+mousedata
+flag
+dwflag
+time
+extra
+info
+dwextrainfo
+sizeof
+mouseinput

@@ -1,0 +1,11 @@
+int
+enabl
+modeless
+enablemodeless
+int
+enabl
+modeless
+enablemodeless
+return
+com
+notimpl

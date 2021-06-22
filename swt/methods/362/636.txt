@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+boolean
+destroy
+window
+destroywindow
+int
+wnd
+hwnd

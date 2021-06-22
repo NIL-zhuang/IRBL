@@ -1,0 +1,13 @@
+void
+show
+widget
+showwidget
+boolean
+visibl
+show
+window
+showwindow
+handl
+visibl
+show
+hide

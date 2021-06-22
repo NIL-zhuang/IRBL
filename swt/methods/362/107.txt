@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+int
+set
+color
+setbkcolor
+int
+hdc
+int
+color
+ref
+colorref

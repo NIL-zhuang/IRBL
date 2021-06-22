@@ -1,0 +1,12 @@
+SWT Imports
+AWT Imports
+This class provides a bridge between SWT and AWT so that it is possible to embedded AWT components in SWT and vice versa since 3 0
+The name of the embedded Frame class The default class name for the platform will be used if code null code
+Note that the jawt library is loaded explicitily because it cannot be found by the library loader All exceptions are caught because the library may have been loaded already
+Initialize the default focus traversal policy
+Some REs have implemented the embedded frame constructor to take an integer and other REs take a long To handle this binary incompatability use reflection to create the embedded frame
+This is necessary to make lightweight components directly added to the frame receive mouse events properly
+Generate the appropriate events to activate and deactivate the embedded frame This is needed in order to make keyboard focus work properly for lightweights
+TEMPORARY CODE For some reason the graphics configuration of the embedded frame is not initialized properly This causes an exception when the depth of the screen is changed
+Creates a new code java awt Frame code This frame is the root for the AWT components that will be embedded within the composite In order for the embedding to succeed the composite must have been created with the SWT EMBEDDED style p IMPORTANT As of DK1 5 the embedded frame does not receive mouse events When a lightweight component is added as a child of the embedded frame the cursor does not change In order to work around both these problems it is strongly recommended that a heavyweight component such as code java awt Panel code be added to the frame as the root of all components p param parent the parent code Composite code of the new code java awt Frame code return a code java awt Frame code to be the parent of the embedded AWT components exception IllegalArgumentException ul li ERROR NULL ARGUMENT if the parent is null li li ERROR INVALID ARGUMENT if the parent Composite does not have the SWT EMBEDDED style li ul since 3 0
+Creates a new code Shell code This Shell is the root for the SWT widgets that will be embedded within the AWT canvas param display the display for the new Shell param parent the parent code java awt Canvas code of the new Shell return a code Shell code to be the parent of the embedded SWT widgets exception IllegalArgumentException ul li ERROR NULL ARGUMENT if the display is null li li ERROR NULL ARGUMENT if the parent is null li li ERROR INVALID ARGUMENT if the parent s peer is not created li ul since 3 0

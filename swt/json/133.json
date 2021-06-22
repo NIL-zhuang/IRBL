@@ -1,0 +1,39 @@
+{
+	"variables":[
+		"e",
+		"e",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"MouseListener"
+	],
+	"package":[
+		"org.eclipse.swt.events"
+	],
+	"import":[],
+	"methods":[
+		"mouseDoubleClick",
+		"mouseDown",
+		"mouseUp"
+	],
+	"methodsBody":{
+		"public void mouseUp(MouseEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when a mouse button is released.\n* The default behavior is to do nothing.\n*\n* @param e an event containing information about the mouse button release\n*/\n",
+			"methodName":"public void mouseUp(MouseEvent e)"
+		},
+		"public void mouseDown(MouseEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when a mouse button is pressed.\n* The default behavior is to do nothing.\n*\n* @param e an event containing information about the mouse button press\n*/\n",
+			"methodName":"public void mouseDown(MouseEvent e)"
+		},
+		"public void mouseDoubleClick(MouseEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when a mouse button is pressed twice within the\n* (operating system specified) double click period.\n* The default behavior is to do nothing.\n*\n* @param e an event containing information about the mouse double click\n*\n* @see org.eclipse.swt.widgets.Display#getDoubleClickTime()\n*/\n",
+			"methodName":"public void mouseDoubleClick(MouseEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"MouseAdapter"
+	]
+}

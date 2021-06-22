@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+int
+script
+get
+font
+properti
+scriptgetfontproperti
+int
+hdc
+int
+psc
+script
+fontproperti
+sfp

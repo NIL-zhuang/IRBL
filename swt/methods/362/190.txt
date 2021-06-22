@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+boolean
+translat
+charset
+info
+translatecharsetinfo
+int
+src
+lpsrc
+int
+lpcs
+int
+flag
+dwflag

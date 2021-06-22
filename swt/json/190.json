@@ -1,0 +1,21 @@
+{
+	"variables":[
+		"serialVersionUID",
+		"source",
+		"source"
+	],
+	"extendORImplementFiles":[
+		"EventObject"
+	],
+	"package":[
+		"org.eclipse.swt.internal"
+	],
+	"import":[
+		"java.util.EventObject"
+	],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"SWTEventObject"
+	]
+}

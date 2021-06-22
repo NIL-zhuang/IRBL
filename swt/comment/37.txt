@@ -1,0 +1,4 @@
+This class provides the layout for CBanner see CBanner
+Calculate component sizes
+Add up sizes
+The paint events must be flushed in order to make the curve draw smoothly while the user drags the divider On Windows it is necessary to flush the paints before the children are resized because otherwise the children particularly toolbars will flash

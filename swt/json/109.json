@@ -1,0 +1,78 @@
+{
+	"variables":[
+		"chFormatName",
+		"formatName",
+		"OS",
+		"chFormatName",
+		"transferData",
+		"object",
+		"transferData",
+		"transferData",
+		"formatName",
+		"object"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.dnd"
+	],
+	"import":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"methods":[
+		"getSupportedTypes",
+		"isSupportedType",
+		"getTypeIds",
+		"getTypeNames",
+		"javaToNative",
+		"nativeToJava",
+		"registerType",
+		"validate",
+		"RegisterClipboardFormat",
+		"TCHAR"
+	],
+	"methodsBody":{
+		"public abstract TransferData[] getSupportedTypes()":{
+			"methodBody":"",
+			"comments":"/**\n* Returns a list of the platform specific data types that can be converted using\n* this transfer agent.\n*\n* <p>Only the data type fields of the <code>TransferData</code> objects are filled\n* in.</p>\n*\n* @return a list of the data types that can be converted using this transfer agent\n*/\n",
+			"methodName":"public abstract TransferData[] getSupportedTypes()"
+		},
+		"protected abstract int[] getTypeIds()":{
+			"methodBody":"",
+			"comments":"/**\n* Returns the platform specfic ids of the  data types that can be converted using\n* this transfer agent.\n*\n* @return the platform specfic ids of the data types that can be converted using\n* this transfer agent\n*/\n",
+			"methodName":"protected abstract int[] getTypeIds()"
+		},
+		"protected abstract void javaToNative(Object object, TransferData transferData)":{
+			"methodBody":"",
+			"comments":"/**\n* Converts a java representation of data to a platform specific representation of\n* the data.\n*\n* <p>On a successful conversion, the transferData.result field will be set as follows:\n* <ul>\n* <li>Windows: COM.S_OK\n* <li>Motif: 1\n* <li>GTK: 1\n* <li>Photon: 1\n* </ul></p>\n*\n* <p>If this transfer agent is unable to perform the conversion, the transferData.result\n* field will be set to a failure value as follows:\n* <ul>\n* <li>Windows: COM.DV_E_TYMED or COM.E_FAIL\n* <li>Motif: 0\n* <li>GTK: 0\n* <li>Photon: 0\n* </ul></p>\n*\n* @param object a java representation of the data to be converted; the type of\n* Object that is passed in is dependant on the <code>Transfer</code> subclass.\n*\n* @param transferData an empty TransferData object; this object will be\n* filled in on return with the platform specific representation of the data\n*\n* @exception org.eclipse.swt.SWTException <ul>\n*    <li>ERROR_INVALID_DATA - if object does not contain data in a valid format or is <code>null</code></li>\n* </ul>\n*/\n",
+			"methodName":"protected abstract void javaToNative(Object object, TransferData transferData)"
+		},
+		"public abstract boolean isSupportedType(TransferData transferData)":{
+			"methodBody":"",
+			"comments":"/**\n* Returns true if the <code>TransferData</code> data type can be converted\n* using this transfer agent, or false otherwise (including if transferData is\n* <code>null</code>).\n*\n* @param transferData a platform specific description of a data type; only the data\n*  type fields of the <code>TransferData</code> object need to be filled in\n*\n* @return true if the transferData data type can be converted using this transfer\n* agent\n*/\n",
+			"methodName":"public abstract boolean isSupportedType(TransferData transferData)"
+		},
+		"protected abstract Object nativeToJava(TransferData transferData)":{
+			"methodBody":"",
+			"comments":"/**\n* Converts a platform specific representation of data to a java representation.\n*\n* @param transferData the platform specific representation of the data to be\n* converted\n*\n* @return a java representation of the converted data if the conversion was\n* successful; otherwise null.  If transferData is <code>null</code> then\n* <code>null</code> is returned.  The type of Object that is returned is\n* dependant on the <code>Transfer</code> subclass.\n*/\n",
+			"methodName":"protected abstract Object nativeToJava(TransferData transferData)"
+		},
+		"protected boolean validate(Object object)":{
+			"methodBody":"{\n    return true;\n}",
+			"comments":"/**\n* Test that the object is of the correct format for this Transfer class.\n*\n* @param object a java representation of the data to be converted\n*\n* @return true if object is of the correct form for this transfer type\n*\n* @since 3.1\n*/\n",
+			"methodName":"protected boolean validate(Object object)"
+		},
+		"public static int registerType(String formatName)":{
+			"methodBody":"{\n    \n    \n    \n    TCHAR chFormatName = new TCHAR(0, formatName, true);\n    return OS.RegisterClipboardFormat(chFormatName);\n}",
+			"comments":"/**\n* Registers a name for a data type and returns the associated unique identifier.\n*\n* <p>You may register the same type more than once, the same unique identifier\n* will be returned if the type has been previously registered.</p>\n*\n* <p>Note: On windows, do <b>not</b> call this method with pre-defined\n* Clipboard Format types such as CF_TEXT or CF_BITMAP because the\n* pre-defined identifier will not be returned</p>\n*\n* @param formatName the name of a data type\n*\n* @return the unique identifier associated with this data type\n*/\n// Look name up in the registry\n// If name is not in registry, add it and return assigned value.\n// If name already exists in registry, return its assigned value\n",
+			"methodName":"public static int registerType(String formatName)"
+		},
+		"protected abstract String[] getTypeNames()":{
+			"methodBody":"",
+			"comments":"/**\n* Returns the platform specfic names of the  data types that can be converted\n* using this transfer agent.\n*\n* @return the platform specfic names of the data types that can be converted\n* using this transfer agent.\n*/\n",
+			"methodName":"protected abstract String[] getTypeNames()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"Transfer"
+	]
+}

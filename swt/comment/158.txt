@@ -1,0 +1,1 @@
+Debug fields may not be honoured on some SWT platforms

@@ -1,0 +1,13 @@
+privat
+int
+data
+chang
+ondatachang
+int
+formatetc
+pformatetc
+int
+stgmed
+pstgmed
+return
+com

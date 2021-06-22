@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+int
+get
+sys
+color
+getsyscolor
+int
+index
+nindex

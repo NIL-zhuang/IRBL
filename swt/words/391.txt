@@ -1,0 +1,14 @@
+first
+char
+tmfirstchar
+last
+char
+tmlastchar
+default
+char
+tmdefaultchar
+break
+char
+tmbreakchar
+sizeof
+textmetricw

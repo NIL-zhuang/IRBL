@@ -1,0 +1,14 @@
+byte
+cbyte
+blank
+wgblank
+default
+wgdefault
+invalid
+wginvalid
+kashida
+wgkashida
+kashida
+width
+ikashidawidth
+sizeof

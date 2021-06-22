@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+int
+script
+cach
+get
+height
+scriptcachegetheight
+int
+hdc
+int
+psc
+int
+height
+tmheight

@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+boolean
+shell
+notifi
+icon
+notifyiconw
+int
+messag
+dwmessag
+notifyicondataw
+data
+lpdata

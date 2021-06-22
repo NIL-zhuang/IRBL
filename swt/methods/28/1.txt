@@ -1,0 +1,7 @@
+public
+void
+hide
+window
+event
+windowev
+event

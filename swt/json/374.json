@@ -1,0 +1,19 @@
+{
+	"variables":[
+		"iCharPos",
+		"a",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[
+		"SCRIPT_ANALYSIS"
+	],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"SCRIPT_ITEM"
+	]
+}

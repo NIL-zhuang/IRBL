@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+int
+ole
+initi
+oleiniti
+int
+reserv
+pvreserv

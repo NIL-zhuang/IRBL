@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+int
+regist
+window
+messag
+registerwindowmessagew
+char
+string
+lpstring

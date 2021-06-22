@@ -1,0 +1,14 @@
+public
+void
+set
+max
+factor
+setmaxvfactor
+int
+integ
+aninteg
+max
+factor
+maxvfactor
+integ
+aninteg

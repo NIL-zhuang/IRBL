@@ -1,0 +1,8 @@
+char
+pos
+icharpo
+sizeof
+script
+analysi
+script
+item

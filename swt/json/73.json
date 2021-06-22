@@ -1,0 +1,23 @@
+{
+	"variables":[
+		"PAGE_TAG",
+		"SEPARATOR",
+		"header",
+		"footer",
+		"jobName",
+		"printTextForeground",
+		"printTextBackground",
+		"printTextFontStyle",
+		"printLineBackground"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.custom"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"StyledTextPrintOptions"
+	]
+}

@@ -1,0 +1,9 @@
+null
+pointer
+except
+nullpointerexcept
+tabl
+call
+window
+proc
+callwindowproc

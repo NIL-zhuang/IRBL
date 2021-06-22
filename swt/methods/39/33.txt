@@ -1,0 +1,16 @@
+public
+string
+get
+text
+gettext
+return
+text
+return
+the
+label
+text
+the
+text
+the
+label
+null

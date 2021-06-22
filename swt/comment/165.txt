@@ -1,0 +1,153 @@
+specifies whether the receiver is a bitmap or an icon one of code SWT BITMAP code code SWT ICON code
+the handle to the OS image resource Warning This field is platform dependent p b IMPORTANT b This field is em not em part of the SWT public API It is marked public only so that it can be shared within the packages provided by SWT It is not available on all platforms and should never be accessed from application code p
+specifies the transparent pixel
+the GC which is drawing on the image
+the alpha data for the image
+the global alpha value to be used for every pixel
+the image data used to create this image if it is a icon Used only in WinCE
+specifies the default scanline padding
+Prevents uninitialized instances from being created outside the package
+Constructs an empty instance of this class with the specified width and height The result may be drawn upon by creating a GC and using any of its drawing operations as shown in the following example pre Image i new Image device width height GC gc new GC i gc drawRectangle 0 0 50 50 gc dispose pre p Note Some platforms may have a limitation on the size of image that can be created size depends on width height and depth For example Windows 95 98 and ME do not allow images larger than 16M p param device the device on which to create the image param width the width of the new image param height the height of the new image exception IllegalArgumentException ul li ERROR NULL ARGUMENT if device is null and there is no current device li li ERROR INVALID ARGUMENT if either the width or height is negative or zero li ul exception SWTError ul li ERROR NO HANDLES if a handle could not be obtained for image creation li ul
+Get the HDC for the device
+Copy the bitmap
+Release the HDC for the device
+biSize
+biWidth
+biHeight
+biPlanes
+biBitCount
+biCompression
+biSizeImage
+biXPelsPerMeter
+biYPelsPerMeter
+biClrUsed
+biClrImportant
+First color black
+Get the HDC for the device
+Source DC
+Monochrome Intermediate DC
+Destination DC
+Monochrome Intermediate DIB section
+Attach the bitmap to the source DC
+Create the destination bitmap
+Attach the DIB section and the new bitmap to the DCs
+BitBlt the bitmap into the monochrome DIB section
+Paint the destination rectangle in gray
+BitBlt the black bits in the monochrome bitmap into COLOR 3DHILIGHT bits in the destination DC The magic ROP comes from Charles Petzold s book
+BitBlt the black bits in the monochrome bitmap into COLOR 3DSHADOW bits in the destination DC
+Free resources
+Release the HDC for the device
+Get icon information
+Create the destination bitmaps
+BitBlt the source mask into the destination mask
+Attach the monochrome DIB section and the destination bitmap to the DCs
+BitBlt the bitmap into the monochrome DIB section
+Paint the destination rectangle in grey
+BitBlt the black bits in the monochrome bitmap into COLOR 3DHILIGHT bits in the destination DC The magic ROP comes from Charles Petzold s book
+Invert mask into hdcBw
+Select black brush into destination
+Copy black bits from monochrome bitmap into black bits in the destination DC
+Free resources
+Release the HDC for the device
+Create the new iconinfo
+Create the new icon
+Free bitmaps
+Create a 8 bit depth image data with a gray palette
+Convert the pixels
+Convert the palette entries to gray
+Constructs a new instance of this class based on the provided image with an appearance that varies depending on the value of the flag The possible flag values are dl dt b IMAGE COPY b dt dd the result is an identical copy of srcImage dd dt b IMAGE DISABLE b dt dd the result is a copy of srcImage which has a em disabled em look dd dt b IMAGE GRAY b dt dd the result is a copy of srcImage which has a em gray scale em look dd dl param device the device on which to create the image param srcImage the image to use as the source param flag the style either code IMAGE COPY code code IMAGE DISABLE code or code IMAGE GRAY code exception IllegalArgumentException ul li ERROR NULL ARGUMENT if device is null and there is no current device li li ERROR NULL ARGUMENT if srcImage is null li li ERROR INVALID ARGUMENT if the flag is not one of code IMAGE COPY code code IMAGE DISABLE code or code IMAGE GRAY code li li ERROR INVALID ARGUMENT if the image has been disposed li ul exception SWTException ul li ERROR INVALID IMAGE if the image is not a bitmap or an icon or is otherwise in an invalid state li li ERROR UNSUPPORTED DEPTH if the depth of the Image is not supported li ul exception SWTError ul li ERROR NO HANDLES if a handle could not be obtained for image creation li ul
+Constructs an empty instance of this class with the width and height of the specified rectangle The result may be drawn upon by creating a GC and using any of its drawing operations as shown in the following example pre Image i new Image device boundsRectangle GC gc new GC i gc drawRectangle 0 0 50 50 gc dispose pre p Note Some platforms may have a limitation on the size of image that can be created size depends on width height and depth For example Windows 95 98 and ME do not allow images larger than 16M p param device the device on which to create the image param bounds a rectangle specifying the image s width and height must not be null exception IllegalArgumentException ul li ERROR NULL ARGUMENT if device is null and there is no current device li li ERROR NULL ARGUMENT if the bounds rectangle is null li li ERROR INVALID ARGUMENT if either the rectangle s width or height is negative li ul exception SWTError ul li ERROR NO HANDLES if a handle could not be obtained for image creation li ul
+Constructs an instance of this class from the given code ImageData code param device the device on which to create the image param data the image data to create the image from must not be null exception IllegalArgumentException ul li ERROR NULL ARGUMENT if device is null and there is no current device li li ERROR NULL ARGUMENT if the image data is null li ul exception SWTException ul li ERROR UNSUPPORTED DEPTH if the depth of the ImageData is not supported li ul exception SWTError ul li ERROR NO HANDLES if a handle could not be obtained for image creation li ul
+Constructs an instance of this class whose type is code SWT ICON code from the two given code ImageData code objects The two images must be the same size Pixel transparency in either image will be ignored p The mask image should contain white wherever the icon is to be visible and black wherever the icon is to be transparent In addition the source image should contain black wherever the icon is to be transparent p param device the device on which to create the icon param source the color data for the icon param mask the mask data for the icon exception IllegalArgumentException ul li ERROR NULL ARGUMENT if device is null and there is no current device li li ERROR NULL ARGUMENT if either the source or mask is null li li ERROR INVALID ARGUMENT if source and mask are different sizes li ul exception SWTError ul li ERROR NO HANDLES if a handle could not be obtained for image creation li ul
+Constructs an instance of this class by loading its representation from the specified input stream Throws an error if an error occurs while loading the image or if the result is an image of an unsupported type Application code is still responsible for closing the input stream p This constructor is provided for convenience when loading a single image only If the stream contains multiple images only the first one will be loaded To load multiple images use code ImageLoader load code p p This constructor may be used to load a resource as follows p pre static Image loadImage Display display Class clazz String string InputStream stream clazz getResourceAsStream string if stream null return null Image image null try image new Image display stream catch SWTException ex finally try stream close catch IOException ex return image pre param device the device on which to create the image param stream the input stream to load the image from exception IllegalArgumentException ul li ERROR NULL ARGUMENT if device is null and there is no current device li li ERROR NULL ARGUMENT if the stream is null li ul exception SWTException ul li ERROR INVALID IMAGE if the image file contains invalid data li li ERROR IO if an IO error occurs while reading data li li ERROR UNSUPPORTED DEPTH if the InputStream describes an image with an unsupported depth li li ERROR UNSUPPORTED FORMAT if the image file contains an unrecognized format li ul exception SWTError ul li ERROR NO HANDLES if a handle could not be obtained for image creation li ul
+Constructs an instance of this class by loading its representation from the file with the specified name Throws an error if an error occurs while loading the image or if the result is an image of an unsupported type p This constructor is provided for convenience when loading a single image only If the specified file contains multiple images only the first one will be used param device the device on which to create the image param filename the name of the file to load the image from exception IllegalArgumentException ul li ERROR NULL ARGUMENT if device is null and there is no current device li li ERROR NULL ARGUMENT if the file name is null li ul exception SWTException ul li ERROR INVALID IMAGE if the image file contains invalid data li li ERROR IO if an IO error occurs while reading data li li ERROR UNSUPPORTED DEPTH if the image file has an unsupported depth li li ERROR UNSUPPORTED FORMAT if the image file contains an unrecognized format li ul exception SWTError ul li ERROR NO HANDLES if a handle could not be obtained for image creation li ul
+Determine the DDB depth
+Determine the DIB palette
+Set the rgb colors into the bitmap info
+little endian
+big endian
+Bitblt DDB into DIB
+Create a DIB from a DDB without using GetDIBits Note that the DDB should not be selected into a HDC
+Bug in GDI Creating a new GDI Bitmap from a HICON segment faults when the icon width is bigger than the icon height The fix is to detect this and create a PixelFormat32bppARGB image instead
+Disposes of the operating system resources associated with the image Applications must dispose of all images which they allocate
+Compares the argument to the receiver and returns true if they represent the em same em object using a class specific comparison param object the object to compare with this object return code true code if the object is the same as this object and code false code otherwise see hashCode
+Get the HDC for the device
+Compute the background color
+Release the HDC for the device
+Returns the color to which to map the transparent pixel or null if the receiver has no transparent pixel p There are certain uses of Images that do not support transparency for example setting an image into a button or label In these cases it may be desired to simulate transparency by using the background color of the widget to paint the transparent pixels of the image Use this method to check which color will be used in these cases in place of transparency This value may be set with setBackground p return the background color of the image or null if there is no transparency in the image exception SWTException ul li ERROR GRAPHIC DISPOSED if the receiver has been disposed li ul
+Returns the bounds of the receiver The rectangle will always have x and y values of 0 and the width and height of the image return a rectangle specifying the image s bounds exception SWTException ul li ERROR GRAPHIC DISPOSED if the receiver has been disposed li li ERROR INVALID IMAGE if the image is not a bitmap or an icon li ul
+Get the basic BITMAP information
+Create the BITMAPINFO
+Get the HDC for the device
+Create the DC and select the bitmap
+Select the palette if necessary
+Find the size of the image and allocate data
+Call with null lpBits to get the image size
+Get the bitmap data
+Calculate the palette
+Do the mask
+Create the BITMAPINFO
+First color black second color white
+Call with null lpBits to get the image size
+Loop to invert the mask
+Make sure mask scanlinePad is 2
+Do the bottom half of the mask
+Clean up
+Release the HDC for the device
+Construct and return the ImageData
+Get the basic BITMAP information
+Find out whether this is a DIB or a DDB
+Get the HDC for the device
+Feature in WinCE GetDIBits is not available in WinCE The workaround is to create a temporary DIB from the DDB and use the bmBits field of DIBSECTION to retrieve the image data
+Calculate number of colors
+Create the BITMAPINFO
+Create the DC and select the bitmap
+Select the palette if necessary
+Find the size of the image and allocate data
+Call with null lpBits to get the image size
+get image data from the temporary DIB
+Get the bitmap data
+Calculate the palette
+Feature on WinCE GetDIBColorTable is not supported The workaround is to set a pixel to the desired palette index and use getPixel to get the corresponding RGB value
+Clean up
+free temporary DIB
+Release the HDC for the device
+Construct and return the ImageData
+Returns an code ImageData code based on the receiver Modifications made to this code ImageData code will not affect the Image return an code ImageData code containing the image s data and attributes exception SWTException ul li ERROR GRAPHIC DISPOSED if the receiver has been disposed li li ERROR INVALID IMAGE if the image is not a bitmap or an icon li ul see ImageData
+Returns an integer hash code for the receiver Any two objects that return code true code when passed to code equals code must return the same value for this method return the receiver s hash see equals
+Feature in Windows CreateCompatibleBitmap may fail for large images The fix is to create a DIB section in that case
+big endian
+Set the rgb colors into the bitmap info
+Feature in WinCE GetIconInfo is not available in WinCE The workaround is to cache the object ImageData for images of type SWT ICON The bitmaps hbmMask and hbmColor can then be reconstructed by using our version of getIconInfo This function takes an ICONINFO object and sets the fields hbmMask and hbmColor with the corresponding bitmaps it has created Note These bitmaps must be freed as they would have to be if the regular GetIconInfo had been used
+Windows does not support 2 bit images Convert to 4 bit image
+Note on WinCE CreateDIBSection requires the biCompression field of the BITMAPINFOHEADER to be set to BI BITFIELDS for 16 and 32 bit direct images see MSDN for CreateDIBSection In this case the color mask can be set to any value For consistency it is set to the same mask used by non WinCE platforms in BI RGB mode
+Construct bitmap info header by hand
+Set the rgb colors into the bitmap info
+The color masks must be written based on the endianness of the ImageData
+In case of a scanline pad other than 4 do the work to convert it
+Get the HDC for the device
+Create the color bitmap
+Release the HDC for the device
+Create the mask Windows requires icon masks to have a scanline pad of 2
+Create the icon
+Create a temporary image and locate the black pixel
+No room to grow the palette
+We can grow the palette and add black
+We didn t find black in the palette and there is no transparent pixel we can use
+The source had transparency so we can use the transparent pixel for black
+Grow the palette with black
+Modify the source image to contain black wherever the mask is 0
+There was no black in the palette so just copy the data over
+Create a new GC that can draw into the image Only supported for bitmaps
+Create a compatible HDC for the device
+Set the GCData fields
+Invokes platform specific functionality to allocate a new GC handle p b IMPORTANT b This method is em not em part of the public API for code Image code It is marked public only so that it can be shared within the packages provided by SWT It is not available on all platforms and should never be called from application code p param data the platform specific GC data return the platform specific GC handle
+Invokes platform specific functionality to dispose a GC handle p b IMPORTANT b This method is em not em part of the public API for code Image code It is marked public only so that it can be shared within the packages provided by SWT It is not available on all platforms and should never be called from application code p param hDC the platform specific GC handle param data the platform specific GC data
+Returns code true code if the image has been disposed and code false code otherwise p This method gets the dispose state for the image When an image has been disposed it is an error to invoke any other method using the image return code true code when the image is disposed and code false code otherwise
+Note Not implemented on WinCE
+Get the HDC for the device
+Change the background color in the image
+Release the HDC for the device
+Sets the color to which to map the transparent pixel p There are certain uses of code Images code that do not support transparency for example setting an image into a button or label In these cases it may be desired to simulate transparency by using the background color of the widget to paint the transparent pixels of the image This method specifies the color that will be used in these cases For example pre Button b new Button image setBackground b getBackground b setImage image pre p p The image may be modified by this operation in effect the transparent regions may be filled with the supplied color Hence this operation is not reversible and it is not legal to call this function twice or with a null argument p p This method has no effect if the receiver does not have a transparent pixel value p param color the color to use when a transparent pixel is specified exception IllegalArgumentException ul li ERROR NULL ARGUMENT if the color is null li li ERROR INVALID ARGUMENT if the color has been disposed li ul exception SWTException ul li ERROR GRAPHIC DISPOSED if the receiver has been disposed li ul
+Returns a string containing a concise human readable description of the receiver return a string representation of the receiver
+Invokes platform specific functionality to allocate a new image p b IMPORTANT b This method is em not em part of the public API for code Image code It is marked public only so that it can be shared within the packages provided by SWT It is not available on all platforms and should never be called from application code p param device the device on which to allocate the color param type the type of the image code SWT BITMAP code or code SWT ICON code param handle the OS handle for the image return a new image object containing the specified device type and handle

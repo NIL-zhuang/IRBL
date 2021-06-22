@@ -1,0 +1,40 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"COM",
+		"address",
+		"ppmk",
+		"address",
+		"ppmk"
+	],
+	"extendORImplementFiles":[
+		"IUnknown"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"BindIfRunning",
+		"GetSourceMoniker",
+		"VtblCall",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int GetSourceMoniker(int[] ppmk)":{
+			"methodBody":"{\n    return COM.VtblCall(6, address, ppmk);\n}",
+			"comments":"",
+			"methodName":"public int GetSourceMoniker(int[] ppmk)"
+		},
+		"public int BindIfRunning()":{
+			"methodBody":"{\n    return COM.VtblCall(10, address);\n}",
+			"comments":"",
+			"methodName":"public int BindIfRunning()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IOleLink"
+	]
+}

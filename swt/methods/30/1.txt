@@ -1,0 +1,14 @@
+int
+get
+option
+key
+path
+getoptionkeypath
+int
+pch
+key
+pchkey
+int
+return
+com
+notimpl

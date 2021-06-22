@@ -1,0 +1,10 @@
+Instances of this class are used to define the attachments of a control in a code FormLayout code p To set a code FormData code object into a control you use the code setLayoutData code method To define attachments for the code FormData code set the fields directly like this pre FormData data new FormData data left new FormAttachment 0 5 data right new FormAttachment 100 5 button setLayoutData formData pre p p code FormData code contains the code FormAttachments code for each edge of the control that the code FormLayout code uses to determine the size and position of the control code FormData code objects also allow you to set the width and height of controls within a code FormLayout code p see FormLayout see FormAttachment since 2 0
+width specifies the preferred width in pixels This value is the wHint passed into Control computeSize int int boolean to determine the preferred size of the control The default value is SWT DEFAULT see Control computeSize int int boolean
+height specifies the preferred height in pixels This value is the hHint passed into Control computeSize int int boolean to determine the preferred size of the control The default value is SWT DEFAULT see Control computeSize int int boolean
+left specifies the attachment of the left side of the control
+right specifies the attachment of the right side of the control
+top specifies the attachment of the top of the control
+bottom specifies the attachment of the bottom of the control
+Constructs a new instance of FormData using default values
+Constructs a new instance of FormData according to the parameters A value of SWT DEFAULT indicates that no minimum width or no minumum height is specified param width a minimum width for the control param height a minimum height for the control
+Returns a string containing a concise human readable description of the receiver return a string representation of the event

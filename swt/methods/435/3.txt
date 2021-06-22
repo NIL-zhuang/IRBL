@@ -1,0 +1,17 @@
+lresult
+setfocus
+int
+param
+wparam
+int
+param
+lparam
+return
+set
+focus
+wmsetfocus
+handl
+param
+wparam
+param
+lparam

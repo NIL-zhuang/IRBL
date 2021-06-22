@@ -1,0 +1,8 @@
+tchar
+window
+class
+windowclass
+return
+label
+class
+labelclass

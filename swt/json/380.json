@@ -1,0 +1,30 @@
+{
+	"variables":[
+		"cbSize",
+		"fMask",
+		"hwnd",
+		"lpVerb",
+		"lpFile",
+		"lpParameters",
+		"lpDirectory",
+		"nShow",
+		"hInstApp",
+		"lpIDList",
+		"lpClass",
+		"hkeyClass",
+		"dwHotKey",
+		"hIcon",
+		"hProcess",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"SHELLEXECUTEINFO"
+	]
+}

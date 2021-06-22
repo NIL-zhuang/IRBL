@@ -1,0 +1,2 @@
+Non critical chunks
+Set to true after IDATs have been read

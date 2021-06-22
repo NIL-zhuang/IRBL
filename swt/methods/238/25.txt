@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+int
+stg
+storag
+file
+stgisstoragefil
+char
+pwcs
+name
+pwcsname

@@ -1,0 +1,84 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"COM",
+		"address",
+		"pStg",
+		"COM",
+		"address",
+		"pStg",
+		"COM",
+		"address",
+		"pStgSave",
+		"fSameAsLoad",
+		"COM",
+		"address",
+		"pStgNew",
+		"COM",
+		"address",
+		"address",
+		"pStg",
+		"pStg",
+		"pStgSave",
+		"fSameAsLoad",
+		"pStgNew"
+	],
+	"extendORImplementFiles":[
+		"IPersist"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"IsDirty",
+		"InitNew",
+		"Load",
+		"Save",
+		"SaveCompleted",
+		"HandsOffStorage",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int IsDirty()":{
+			"methodBody":"{\n    return COM.VtblCall(4, address);\n}",
+			"comments":"",
+			"methodName":"public int IsDirty()"
+		},
+		"public int Load(int pStg)":{
+			"methodBody":"{\n    return COM.VtblCall(6, address, pStg);\n}",
+			"comments":"",
+			"methodName":"public int Load(int pStg)"
+		},
+		"public int Save(int pStgSave, boolean fSameAsLoad)":{
+			"methodBody":"{\n    return COM.VtblCall(7, address, pStgSave, fSameAsLoad);\n}",
+			"comments":"",
+			"methodName":"public int Save(int pStgSave, boolean fSameAsLoad)"
+		},
+		"public int InitNew(int pStg)":{
+			"methodBody":"{\n    return COM.VtblCall(5, address, pStg);\n}",
+			"comments":"",
+			"methodName":"public int InitNew(int pStg)"
+		},
+		"public int SaveCompleted(int pStgNew)":{
+			"methodBody":"{\n    return COM.VtblCall(8, address, pStgNew);\n}",
+			"comments":"",
+			"methodName":"public int SaveCompleted(int pStgNew)"
+		},
+		"public int HandsOffStorage()":{
+			"methodBody":"{\n    return COM.VtblCall(9, address);\n}",
+			"comments":"",
+			"methodName":"public int HandsOffStorage()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IPersistStorage"
+	]
+}

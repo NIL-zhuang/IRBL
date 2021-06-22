@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+boolean
+imm
+get
+open
+status
+immgetopenstatus
+int
+imc
+himc

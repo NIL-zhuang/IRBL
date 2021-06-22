@@ -1,0 +1,62 @@
+{
+	"variables":[
+		"x",
+		"y",
+		"serialVersionUID",
+		"p",
+		"x",
+		"y",
+		"object",
+		"object",
+		"object",
+		"p",
+		"p",
+		"x",
+		"y",
+		"x",
+		"y",
+		"x",
+		"y",
+		"x",
+		"x",
+		"y",
+		"y",
+		"x",
+		"y",
+		"object"
+	],
+	"extendORImplementFiles":[
+		"SerializableCompatibility"
+	],
+	"package":[
+		"org.eclipse.swt.graphics"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SerializableCompatibility"
+	],
+	"methods":[
+		"equals",
+		"hashCode",
+		"toString"
+	],
+	"methodsBody":{
+		"public String toString()":{
+			"methodBody":"{\n    \n    return \"Point {\" + x + \", \" + y + \"}\";\n}",
+			"comments":"/**\n* Returns a string containing a concise, human-readable\n* description of the receiver.\n*\n* @return a string representation of the point\n*/\n//$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$\n",
+			"methodName":"public String toString()"
+		},
+		"public int hashCode()":{
+			"methodBody":"{\n    return x ^ y;\n}",
+			"comments":"/**\n* Returns an integer hash code for the receiver. Any two\n* objects that return <code>true</code> when passed to\n* <code>equals</code> must return the same value for this\n* method.\n*\n* @return the receiver's hash\n*\n* @see #equals(Object)\n*/\n",
+			"methodName":"public int hashCode()"
+		},
+		"public boolean equals(Object object)":{
+			"methodBody":"{\n    if (object == this)\n        return true;\n    if (!(object instanceof Point))\n        return false;\n    Point p = (Point) object;\n    return (p.x == this.x) && (p.y == this.y);\n}",
+			"comments":"/**\n* Compares the argument to the receiver, and returns true\n* if they represent the <em>same</em> object using a class\n* specific comparison.\n*\n* @param object the object to compare with this object\n* @return <code>true</code> if the object is the same as this object and <code>false</code> otherwise\n*\n* @see #hashCode()\n*/\n",
+			"methodName":"public boolean equals(Object object)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"Point"
+	]
+}

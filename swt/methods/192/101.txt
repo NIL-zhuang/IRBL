@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+int
+bitmap
+new
+int
+width
+int
+height
+int
+stride
+int
+format
+int

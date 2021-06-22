@@ -1,0 +1,25 @@
+Critical chunks
+Non critical chunks
+Construct a PngChunk using the reference bytes given
+Get the PngChunk s reference byteArray
+Set the PngChunk s reference byteArray
+Get the 32 bit integer from the reference byte array at the given offset
+Set the 32 bit integer in the reference byte array at the given offset
+Get the length of the data component of this chunk This is not the length of the entire chunk
+Set the length of the data component of this chunk This is not the length of the entire chunk
+Get the chunk type This is a four byte value Each byte should be an ASCII character The first byte is upper case if the chunk is critical The second byte is upper case if the chunk is publicly defined The third byte must be upper case The fourth byte is upper case if the chunk is unsafe to copy Public chunk types are defined by the PNG Development Group
+Set the chunk type This is a four byte value Each byte should be an ASCII character The first byte is upper case if the chunk is critical The second byte is upper case if the chunk is publicly defined The third byte must be upper case The fourth byte is upper case if the chunk is unsafe to copy Public chunk types are defined by the PNG Development Group
+Get the chunk s data
+Set the chunk s data This method has two side effects 1 It will set the length field to be the length of the data array given 2 It will set the CRC field to the computed CRC value of the data array given
+Get the CRC value for the chunk s data Ensure that the length field has a good value before making this call
+Set the CRC value for the chunk s data Ensure that the length field has a good value before making this call
+Get the chunk s total size including the length type and crc fields
+Compute the CRC value for the chunk s data Answer whether this value matches the value stored in the chunk
+Answer the CRC value of chunk s data
+Read the next PNG chunk from the input stream given If unable to read a chunk return null
+The third character MUST be upper case
+All characters must be letters
+The stored CRC must match the data s computed CRC
+Answer whether the chunk is a valid PNG chunk
+Provided so that subclasses can override and add data to the toString call
+Returns a string containing a concise human readable description of the receiver return a string representation of the event

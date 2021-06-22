@@ -1,0 +1,48 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"lpmsg",
+		"COM",
+		"address",
+		"prcBorder",
+		"pUIWindow",
+		"fFrameWindow",
+		"address",
+		"lpmsg",
+		"prcBorder",
+		"pUIWindow",
+		"fFrameWindow"
+	],
+	"extendORImplementFiles":[
+		"IOleWindow"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"methods":[
+		"TranslateAccelerator",
+		"ResizeBorder",
+		"VtblCall",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int TranslateAccelerator(MSG lpmsg)":{
+			"methodBody":"{\n    \n    return COM.VtblCall(5, address, lpmsg);\n}",
+			"comments":"//lpmsg - Pointer to message that may need translating\n",
+			"methodName":"public int TranslateAccelerator(MSG lpmsg)"
+		},
+		"public int ResizeBorder(RECT prcBorder, int pUIWindow, boolean fFrameWindow)":{
+			"methodBody":"{\n    return COM.VtblCall(8, address, prcBorder, pUIWindow, fFrameWindow);\n}",
+			"comments":"",
+			"methodName":"public int ResizeBorder(RECT prcBorder, int pUIWindow, boolean fFrameWindow)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IOleInPlaceActiveObject"
+	]
+}

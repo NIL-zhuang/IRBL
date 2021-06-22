@@ -1,0 +1,13 @@
+public
+int
+get
+style
+getstyl
+check
+widget
+checkwidget
+return
+tabl
+get
+style
+getstyl

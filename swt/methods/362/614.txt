@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+void
+move
+memori
+movememori
+int
+destin
+nmlvdispinfo
+sourc
+int
+length

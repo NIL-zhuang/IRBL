@@ -1,0 +1,9 @@
+use
+gtk
+combo
+box
+gtkcombobox
+instead
+gtk
+combo
+gtkcombo

@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+boolean
+free
+librari
+freelibrari
+int
+lib
+modul
+hlibmodul

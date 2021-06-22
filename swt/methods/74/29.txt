@@ -1,0 +1,7 @@
+protect
+int
+get
+right
+margin
+getrightmargin
+return

@@ -1,0 +1,17 @@
+drag
+enter
+dragent
+drag
+leav
+dragleav
+drag
+oper
+chang
+dragoperationchang
+drag
+over
+dragov
+drop
+drop
+accept
+dropaccept

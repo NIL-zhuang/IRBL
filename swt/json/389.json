@@ -1,0 +1,33 @@
+{
+	"variables":[
+		"tmHeight",
+		"tmAscent",
+		"tmDescent",
+		"tmInternalLeading",
+		"tmExternalLeading",
+		"tmAveCharWidth",
+		"tmMaxCharWidth",
+		"tmWeight",
+		"tmOverhang",
+		"tmDigitizedAspectX",
+		"tmDigitizedAspectY",
+		"tmItalic",
+		"tmUnderlined",
+		"tmStruckOut",
+		"tmPitchAndFamily",
+		"tmCharSet",
+		"sizeof",
+		"OS",
+		"IsUnicode"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"TEXTMETRIC"
+	]
+}

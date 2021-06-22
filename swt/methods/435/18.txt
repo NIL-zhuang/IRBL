@@ -1,0 +1,10 @@
+void
+draw
+theme
+background
+drawthemebackground
+int
+hdc
+rect
+rect
+noth

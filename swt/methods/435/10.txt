@@ -1,0 +1,8 @@
+new
+data
+gcdata
+data
+return
+new
+this
+data

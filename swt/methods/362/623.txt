@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+int
+get
+proc
+address
+getprocaddress
+int
+modul
+hmodul
+byte
+proc
+name
+lpprocnam

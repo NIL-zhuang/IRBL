@@ -1,0 +1,4 @@
+char
+pos
+icharpo
+sizeof

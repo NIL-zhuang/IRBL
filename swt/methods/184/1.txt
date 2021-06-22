@@ -1,0 +1,6 @@
+static
+final
+nativ
+int
+ptr
+sizeof

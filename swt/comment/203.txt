@@ -1,0 +1,69 @@
+PEGConstants
+PEGFixedPointConstants
+PEGMarkerCodes
+PEGFrameComponentParameterConstants
+PEGScanComponentParameterConstants
+FIF Component Constants
+Unsupported CMYK format Answer an empty byte array
+Convert existing image components into an RGB format YCbCr is defined per CCIR 601 1 except that Cb and Cr are normalized to the range 0 MAXJSAMPLE rather than 0 5 0 5 The conversion equations to be implemented are therefore R Y 1 40200 Cr G Y 0 34414 Cb 0 71414 Cr B Y 1 77200 Cb where Cb and Cr represent the incoming values less MAXJSAMPLE 2 These numbers are derived from TIFF 6 0 section 21 dated 3 une 92 To avoid floating point arithmetic we represent the fractional constants as integers scaled up by 2 16 about 4 digits precision we have to divide the products by 2 16 with appropriate rounding to get the correct answer Notice that Y being an integral input does not contribute any fraction so it need not participate in the rounding For even more speed we avoid doing any multiplications in the inner loop by precalculating the constants times Cb and Cr for all possible values For 8 bit SAMPLEs this is very reasonable only 256 entries per table for 12 bit samples it is still acceptable It s not very reasonable for 16 bit samples but if you want lossless storage you shouldn t be changing colorspace anyway The Cr R and Cb B values can be rounded to integers in advance the values for the G calculation are left scaled up since we must add them together before rounding
+Unsupported CMYK format Answer an empty byte array
+Sequential Clear and reuse the data unit buffer
+Subsequent scans refine the existing data unit
+display the image incrementally
+Non interleaved
+Even part per LL M figure 1 note that published figure is faulty rotator sqrt 2 c1 should be sqrt 2 c6
+Odd part per figure 8 note paper omits factor of sqrt 2 cK represents cos K pi 16 i0 i3 in the paper are tmp4 tmp7 here
+sqrt 2 c3
+sqrt 2 c1 c3 c5 c7
+sqrt 2 c1 c3 c5 c7
+sqrt 2 c1 c3 c5 c7
+sqrt 2 c1 c3 c5 c7
+sqrt 2 c7 c3
+sqrt 2 c1 c3
+sqrt 2 c3 c5
+sqrt 2 c5 c3
+Even part per LL M figure 1 note that published figure is faulty rotator sqrt 2 c1 should be sqrt 2 c6
+Odd part per figure 8 note paper omits factor of sqrt 2 cK represents cos K pi 16 i0 i3 in the paper are tmp4 tmp7 here
+sqrt 2 c3
+sqrt 2 c1 c3 c5 c7
+sqrt 2 c1 c3 c5 c7
+sqrt 2 c1 c3 c5 c7
+sqrt 2 c1 c3 c5 c7
+sqrt 2 c7 c3
+sqrt 2 c1 c3
+sqrt 2 c3 c5
+sqrt 2 c5 c3
+Pass 2 process columns Note that we must descale the results by a factor of 8 2 3 and also undo the PASS1 BITS scaling
+Even part reverse the even part of the forward DCT The rotator is sqrt 2 c 6
+Odd part per figure 8 the matrix is unitary and hence its transpose is its inverse i0 i3 are y7 y5 y3 y1 respectively
+sqrt 2 c1 c3 c5 c7
+sqrt 2 c1 c3 c5 c7
+sqrt 2 c1 c3 c5 c7
+sqrt 2 c1 c3 c5 c7
+sqrt 2 c7 c3
+sqrt 2 c1 c3
+sqrt 2 c3 c5
+Due to quantization we will usually find that many of the input coefficients are zero especially the AC terms We can exploit this by short circuiting the IDCT calculation for any row in which all the AC terms are zero In that case each output is equal to the DC coefficient with scale factor as needed With typical images and quantization tables half or more of the row DCT calculations can be simplified this way
+Even part reverse the even part of the forward DCT The rotator is sqrt 2 c 6
+Odd part per figure 8 the matrix is unitary and hence its transpose is its inverse i0 i3 are y7 y5 y3 y1 respectively
+sqrt 2 c1 c3 c5 c7
+sqrt 2 c1 c3 c5 c7
+sqrt 2 c1 c3 c5 c7
+sqrt 2 c1 c3 c5 c7
+sqrt 2 c7 c3
+sqrt 2 c1 c3
+sqrt 2 c3 c5
+Final output stage inputs are tmp10 tmp13 tmp0 tmp3
+Pass 2 process columns Note that we must descale the results by a factor of 8 2 3 and also undo the PASS1 BITS scaling
+we no longer check for appN
+Process the tables preceding the frame header
+Start of Frame
+Sequential jpeg only need one data unit
+Progressive jpeg need to keep all of the data units
+Process the tables preceding the scan header
+Start of Scan
+Process scan s and further tables until EOI
+Unread any buffered data before looking for tables again
+Process the tables preceding the next scan header
+there should only be one SOI per file
+Process all markers until a frame header scan header or EOI is found

@@ -1,0 +1,10 @@
+boolean
+valid
+thread
+isvalidthread
+return
+thread
+thread
+current
+thread
+currentthread

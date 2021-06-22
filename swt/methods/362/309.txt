@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+int
+get
+last
+activ
+popup
+getlastactivepopup
+int
+wnd
+hwnd

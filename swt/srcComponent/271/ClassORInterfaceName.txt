@@ -1,0 +1,4 @@
+persist
+stream
+init
+ipersiststreaminit

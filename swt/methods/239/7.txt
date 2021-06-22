@@ -1,0 +1,8 @@
+public
+int
+get
+address
+getaddress
+return
+vtabl
+ppvtabl

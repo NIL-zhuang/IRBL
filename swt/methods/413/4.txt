@@ -1,0 +1,10 @@
+privat
+int
+show
+window
+onshowwindow
+int
+show
+fshow
+return
+com

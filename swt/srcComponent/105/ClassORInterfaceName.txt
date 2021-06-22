@@ -1,0 +1,4 @@
+ole
+enum
+formatetc
+oleenumformatetc

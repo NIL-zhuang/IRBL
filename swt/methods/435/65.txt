@@ -1,0 +1,16 @@
+lresult
+keyup
+int
+param
+wparam
+int
+param
+lparam
+return
+key
+wmkeyup
+handl
+param
+wparam
+param
+lparam

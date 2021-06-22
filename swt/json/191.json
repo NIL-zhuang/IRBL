@@ -1,0 +1,17 @@
+{
+	"variables":[],
+	"extendORImplementFiles":[
+		"Serializable"
+	],
+	"package":[
+		"org.eclipse.swt.internal"
+	],
+	"import":[
+		"java.io.Serializable"
+	],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"SerializableCompatibility"
+	]
+}

@@ -1,0 +1,58 @@
+BMP RLE8 COMPRESSION
+BMP RLE4 COMPRESSION
+Compress numBytes bytes of image data from src storing in dest starting at 0 using the technique specified by comp If last is true this indicates the last line of the image Answer the size of the compressed data
+find two consecutive bytes that are the same in the next 128
+if there is only one more byte in the scan line include it
+store the intervening data
+handled separately because 0 2 is a command
+1 byte 2 pixels
+n bytes n 2 pixels
+pad to word
+find the length of the next run up to 127 and store it
+n bytes n 2 pixels
+store the end of line or end of bitmap codes
+find two consecutive bytes that are the same in the next 256
+if there is only one more byte in the scan line include it
+store the intervening data
+handled separately because 0 2 is a command
+don t break fall through
+handled separately because 0 1 is a command
+pad to word
+find the length of the next run up to 255 and store it
+store the end of line or end of bitmap codes
+BMP RLE8 COMPRESSION
+BMP RLE4 COMPRESSION
+end of line
+end of bitmap
+delta
+odd run lengths not currently supported
+absolute mode run
+word align sp
+end of line
+end of bitmap
+delta
+absolute mode run
+word align sp
+Round up to 4 byte multiple
+BMP NO COMPRESSION
+Seek to the specified offset
+Answer a byte array containing the BMP representation of the given device independent palette
+BMP pads scanlines to multiples of 4 bytes
+Compression can actually take twice as much space in worst case
+Start at last line
+Unload the given image s data into the given byte stream using the given compression strategy Answer the number of bytes written
+BMP pads scanlines to multiples of 4 bytes
+Start at last line
+Prepare the given image s data for unloading into a byte stream using no compression strategy Answer the number of bytes written
+Fill in file header except for bfsize which is done later
+Signature
+File size filled in later
+Reserved 1
+Reserved 2
+Offset to data
+the stream and fill in the details later
+Calculate file size
+Write the headers
+Unload palette
+Unload the data
+Unload a DeviceIndependentImage using Windows BMP format into the given byte stream

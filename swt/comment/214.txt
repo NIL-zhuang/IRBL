@@ -1,0 +1,4 @@
+Write the given byte to the output stream
+Write the given byte to the output stream
+Write the four bytes of the given integer to the output stream
+Write the two bytes of the given short to the output stream

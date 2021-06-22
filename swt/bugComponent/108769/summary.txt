@@ -1,0 +1,10 @@
+swt
+file
+dialog
+filedialog
+addit
+clarif
+javadoc
+and
+conveni
+method

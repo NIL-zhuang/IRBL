@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+boolean
+get
+path
+from
+list
+shgetpathfromidlista
+int
+pidl
+byte
+psz
+path
+pszpath

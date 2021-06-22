@@ -1,0 +1,16 @@
+{
+	"variables":[
+		"types",
+		"points"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.graphics"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"PathData"
+	]
+}

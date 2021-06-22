@@ -1,0 +1,98 @@
+{
+	"variables":[
+		"out",
+		"output",
+		"out",
+		"out",
+		"b",
+		"off",
+		"len",
+		"out",
+		"b",
+		"out",
+		"b",
+		"out",
+		"theInt",
+		"out",
+		"theInt",
+		"out",
+		"theInt",
+		"out",
+		"theInt",
+		"out",
+		"theShort",
+		"out",
+		"theShort",
+		"out",
+		"output",
+		"b",
+		"off",
+		"len",
+		"b",
+		"b",
+		"theInt",
+		"theShort"
+	],
+	"extendORImplementFiles":[
+		"OutputStream"
+	],
+	"package":[
+		"org.eclipse.swt.internal.image"
+	],
+	"import":[
+		"java.io"
+	],
+	"methods":[
+		"close",
+		"write",
+		"write",
+		"writeByte",
+		"writeInt",
+		"writeShort",
+		"close",
+		"write",
+		"write",
+		"write",
+		"write",
+		"write",
+		"write",
+		"write",
+		"write",
+		"write"
+	],
+	"methodsBody":{
+		"public void close() throws IOException":{
+			"methodBody":"{\n    out.close();\n}",
+			"comments":"",
+			"methodName":"public void close() throws IOException"
+		},
+		"public void write(int b) throws IOException":{
+			"methodBody":"{\n    out.write(b);\n}",
+			"comments":"/**\n* Write the given byte to the output stream.\n*/\n",
+			"methodName":"public void write(int b) throws IOException"
+		},
+		"public void writeShort(int theShort) throws IOException":{
+			"methodBody":"{\n    out.write(theShort & 0xFF);\n    out.write((theShort >> 8) & 0xFF);\n}",
+			"comments":"/**\n* Write the two bytes of the given short\n* to the output stream.\n*/\n",
+			"methodName":"public void writeShort(int theShort) throws IOException"
+		},
+		"public void writeByte(byte b) throws IOException":{
+			"methodBody":"{\n    out.write(b & 0xFF);\n}",
+			"comments":"/**\n* Write the given byte to the output stream.\n*/\n",
+			"methodName":"public void writeByte(byte b) throws IOException"
+		},
+		"public void write(byte[] b, int off, int len) throws IOException":{
+			"methodBody":"{\n    out.write(b, off, len);\n}",
+			"comments":"",
+			"methodName":"public void write(byte[] b, int off, int len) throws IOException"
+		},
+		"public void writeInt(int theInt) throws IOException":{
+			"methodBody":"{\n    out.write(theInt & 0xFF);\n    out.write((theInt >> 8) & 0xFF);\n    out.write((theInt >> 16) & 0xFF);\n    out.write((theInt >> 24) & 0xFF);\n}",
+			"comments":"/**\n* Write the four bytes of the given integer\n* to the output stream.\n*/\n",
+			"methodName":"public void writeInt(int theInt) throws IOException"
+		}
+	},
+	"ClassORInterfaceName":[
+		"LEDataOutputStream"
+	]
+}

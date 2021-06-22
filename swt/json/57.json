@@ -1,0 +1,33 @@
+{
+	"variables":[
+		"lineOffset",
+		"lineText",
+		"styles",
+		"serialVersionUID",
+		"e",
+		"lineOffset",
+		"e",
+		"lineText",
+		"e",
+		"styles",
+		"e",
+		"detail",
+		"text",
+		"styles",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"TypedEvent"
+	],
+	"package":[
+		"org.eclipse.swt.custom"
+	],
+	"import":[
+		"org.eclipse.swt.events"
+	],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"LineStyleEvent"
+	]
+}

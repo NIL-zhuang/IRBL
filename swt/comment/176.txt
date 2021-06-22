@@ -1,0 +1,8 @@
+the red component of the RGB
+the green component of the RGB
+the blue component of the RGB
+Constructs an instance of this class with the given red green and blue values param red the red component of the new instance param green the green component of the new instance param blue the blue component of the new instance exception IllegalArgumentException ul li ERROR INVALID ARGUMENT if the red green or blue argument is not between 0 and 255 li ul
+Compares the argument to the receiver and returns true if they represent the em same em object using a class specific comparison param object the object to compare with this object return code true code if the object is the same as this object and code false code otherwise see hashCode
+Returns an integer hash code for the receiver Any two objects that return code true code when passed to code equals code must return the same value for this method return the receiver s hash see equals Object
+NON NLS 1 NON NLS 2 NON NLS 3 NON NLS 4
+Returns a string containing a concise human readable description of the receiver return a string representation of the code RGB code

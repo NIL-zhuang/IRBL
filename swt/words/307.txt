@@ -1,0 +1,9 @@
+upper
+left
+upperleft
+lower
+right
+lowerright
+sizeof
+gradient
+rect

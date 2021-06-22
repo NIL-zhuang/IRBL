@@ -1,0 +1,12 @@
+translat
+acceler
+translateacceler
+resiz
+border
+resizebord
+vtbl
+call
+vtblcall
+vtbl
+call
+vtblcall

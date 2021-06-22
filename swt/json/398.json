@@ -1,0 +1,17 @@
+{
+	"variables":[
+		"nSec",
+		"nInc",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"UDACCEL"
+	]
+}

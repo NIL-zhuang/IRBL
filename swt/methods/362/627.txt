@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+boolean
+open
+clipboard
+openclipboard
+int
+wnd
+new
+owner
+hwndnewown

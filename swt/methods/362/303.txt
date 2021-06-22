@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+int
+send
+input
+sendinput
+int
+input
+ninput
+int
+input
+pinput
+int
+size
+cbsize

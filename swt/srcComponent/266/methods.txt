@@ -1,0 +1,13 @@
+bind
+run
+bindifrun
+get
+sourc
+monik
+getsourcemonik
+vtbl
+call
+vtblcall
+vtbl
+call
+vtblcall

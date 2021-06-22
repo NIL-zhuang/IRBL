@@ -1,0 +1,39 @@
+{
+	"variables":[
+		"event",
+		"event",
+		"event"
+	],
+	"extendORImplementFiles":[
+		"DragSourceListener"
+	],
+	"package":[
+		"org.eclipse.swt.dnd"
+	],
+	"import":[],
+	"methods":[
+		"dragStart",
+		"dragFinished",
+		"dragSetData"
+	],
+	"methodsBody":{
+		"public void dragStart(DragSourceEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* This implementation of <code>dragStart</code> permits the drag operation to start.\n* For additional information see <code>DragSourceListener.dragStart</code>.\n*/\n",
+			"methodName":"public void dragStart(DragSourceEvent event)"
+		},
+		"public void dragFinished(DragSourceEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* This implementation of <code>dragFinished</code> does nothing.\n* For additional information see <code>DragSourceListener.dragFinished</code>.\n*/\n",
+			"methodName":"public void dragFinished(DragSourceEvent event)"
+		},
+		"public void dragSetData(DragSourceEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* This implementation of <code>dragSetData</code> does nothing.\n* For additional information see <code>DragSourceListener.dragSetData</code>.\n*/\n",
+			"methodName":"public void dragSetData(DragSourceEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"DragSourceAdapter"
+	]
+}

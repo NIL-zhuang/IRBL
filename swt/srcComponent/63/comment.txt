@@ -1,0 +1,16 @@
+non
+nls
+return
+string
+contain
+concis
+human
+readabl
+descript
+the
+receiv
+return
+string
+represent
+the
+event

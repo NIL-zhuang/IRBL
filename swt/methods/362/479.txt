@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+int
+get
+object
+getobjecta
+int
+hgdiobj
+int
+buffer
+cbbuffer
+logpen
+lpv
+object
+lpvobject

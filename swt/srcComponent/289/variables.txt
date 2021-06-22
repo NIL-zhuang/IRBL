@@ -1,0 +1,17 @@
+type
+bmtype
+width
+bmwidth
+height
+bmheight
+width
+byte
+bmwidthbyt
+plane
+bmplane
+bit
+pixel
+bmbitspixel
+bit
+bmbit
+sizeof

@@ -1,0 +1,16 @@
+public
+string
+get
+tool
+tip
+text
+gettooltiptext
+check
+widget
+checkwidget
+return
+app
+tool
+tip
+text
+apptooltiptext

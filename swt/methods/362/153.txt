@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+int
+set
+graphic
+mode
+setgraphicsmod
+int
+hdc
+int
+mode
+imod

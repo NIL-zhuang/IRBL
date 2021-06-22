@@ -1,0 +1,13 @@
+valid
+get
+data
+byte
+offset
+getdatabyteatoffset
+get
+must
+have
+palett
+getmusthavepalett
+error
+valid

@@ -1,0 +1,12 @@
+privat
+int
+view
+chang
+onviewchang
+int
+aspect
+dwaspect
+int
+lindex
+return
+com

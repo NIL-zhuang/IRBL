@@ -1,0 +1,10 @@
+Use StyledTextPrintOptions to specify printing options for the StyledText print Printer StyledTextPrintOptions API p The following example prints a right aligned page number in the footer sets the job name to Example and prints line background colors but no other formatting p pre StyledTextPrintOptions options new StyledTextPrintOptions options footer t t lt page gt options jobName Example options printLineBackground true Runnable runnable styledText print new Printer options runnable run pre since 2 1
+Page number placeholder constant for use in code header code and code footer code Value is code lt page gt code
+Separator constant for use in code header code and code footer code Value is code t code
+Formatted text to print in the header of each page p left t center t right p p left center right lt page gt CDATA p p Header and footer are defined as three separate regions for arbitrary text or the page number placeholder lt page gt code StyledTextPrintOptions PAGE TAG code The three regions are left aligned centered and right aligned They are separated by a tab character code StyledTextPrintOptions SEPARATOR code
+Formatted text to print in the footer of each page p left t center t right p p left center right lt page gt CDATA p p Header and footer are defined as three separate regions for arbitrary text or the page number placeholder lt page gt code StyledTextPrintOptions PAGE TAG code The three regions are left aligned centered and right aligned They are separated by a tab character code StyledTextPrintOptions SEPARATOR code
+Name of the print job
+Print the text foreground color Default value is code false code
+Print the text background color Default value is code false code
+Print the font styles Default value is code false code
+Print the line background color Default value is code false code

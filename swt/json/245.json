@@ -1,0 +1,20 @@
+{
+	"variables":[
+		"cfFormat",
+		"ptd",
+		"dwAspect",
+		"lindex",
+		"tymed",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"FORMATETC"
+	]
+}

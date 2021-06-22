@@ -1,0 +1,24 @@
+{
+	"variables":[
+		"memid",
+		"lpstrSchema",
+		"oInst",
+		"elemdescVar_tdesc_union",
+		"elemdescVar_tdesc_vt",
+		"elemdescVar_paramdesc_pparamdescex",
+		"elemdescVar_paramdesc_wParamFlags",
+		"wVarFlags",
+		"varkind",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"VARDESC"
+	]
+}

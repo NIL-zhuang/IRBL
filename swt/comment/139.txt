@@ -1,0 +1,9 @@
+the graphics context to use when painting that is configured to use the colors font and damaged region of the control It is valid only during the paint and must not be disposed
+the x offset of the bounding rectangle of the region that requires painting
+the y offset of the bounding rectangle of the region that requires painting
+the width of the bounding rectangle of the region that requires painting
+the height of the bounding rectangle of the region that requires painting
+the number of following paint events which are pending which may always be zero on some platforms
+Constructs a new instance of this class based on the information in the given untyped event param e the untyped event containing the information
+remove trailing
+Returns a string containing a concise human readable description of the receiver return a string representation of the event

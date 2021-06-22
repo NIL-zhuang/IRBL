@@ -1,0 +1,14 @@
+void
+deregist
+super
+deregist
+hwnd
+parent
+hwndparent
+display
+remov
+control
+removecontrol
+hwnd
+parent
+hwndparent

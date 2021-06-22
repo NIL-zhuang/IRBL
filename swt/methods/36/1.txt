@@ -1,0 +1,9 @@
+void
+mous
+exit
+onmouseexit
+drag
+set
+cursor
+setcursor
+null

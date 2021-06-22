@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+boolean
+translat
+mdi
+sys
+accel
+translatemdisysaccel
+int
+wnd
+client
+hwndclient
+msg
+msg
+lpmsg

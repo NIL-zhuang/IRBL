@@ -1,0 +1,12 @@
+mdi
+app
+fmdiapp
+hwnd
+frame
+hwndframe
+haccel
+accel
+entri
+caccelentri
+sizeof
+oleinplaceframeinfo

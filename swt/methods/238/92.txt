@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+int
+clsid
+from
+prog
+clsidfromprogid
+char
+lpsz
+prog
+lpszprogid
+guid
+pclsid

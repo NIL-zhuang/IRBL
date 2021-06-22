@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+void
+graphic
+releas
+hdc
+releasehdc
+int
+graphic
+int
+hdc

@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+int
+start
+doc
+startdoca
+int
+hdc
+docinfo
+lpdi

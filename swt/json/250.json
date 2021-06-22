@@ -1,0 +1,44 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"pUnk",
+		"pdwCookie",
+		"COM",
+		"address",
+		"dwCookie",
+		"address",
+		"pUnk",
+		"pdwCookie",
+		"dwCookie"
+	],
+	"extendORImplementFiles":[
+		"IUnknown"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"Advise",
+		"Unadvise",
+		"VtblCall",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int Unadvise(int dwCookie)":{
+			"methodBody":"{\n    return COM.VtblCall(6, address, dwCookie);\n}",
+			"comments":"",
+			"methodName":"public int Unadvise(int dwCookie)"
+		},
+		"public int Advise(int pUnk, int[] pdwCookie)":{
+			"methodBody":"{\n    return COM.VtblCall(5, address, pUnk, pdwCookie);\n}",
+			"comments":"",
+			"methodName":"public int Advise(int pUnk, int[] pdwCookie)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IConnectionPoint"
+	]
+}

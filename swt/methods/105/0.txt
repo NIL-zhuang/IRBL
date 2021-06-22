@@ -1,0 +1,13 @@
+void
+set
+format
+setformat
+formatetc
+new
+format
+newformat
+format
+new
+format
+newformat
+index

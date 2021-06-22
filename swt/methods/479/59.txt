@@ -1,0 +1,12 @@
+int
+top
+handl
+tophandl
+return
+hwnd
+parent
+hwndparent
+hwnd
+parent
+hwndparent
+handl

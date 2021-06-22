@@ -1,0 +1,59 @@
+{
+	"variables":[
+		"type",
+		"formatetc",
+		"stgmedium",
+		"result",
+		"pIDataObject",
+		"COM",
+		"data1",
+		"data2",
+		"data1",
+		"data2",
+		"data1",
+		"data2",
+		"data1",
+		"data2",
+		"data1",
+		"data2",
+		"data1",
+		"data2",
+		"E_FAIL",
+		"type",
+		"type",
+		"cfFormat",
+		"formatetc",
+		"cfFormat",
+		"formatetc",
+		"dwAspect",
+		"formatetc",
+		"dwAspect",
+		"formatetc",
+		"tymed",
+		"formatetc",
+		"tymed",
+		"formatetc",
+		"data1",
+		"data2"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.dnd"
+	],
+	"import":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"methods":[
+		"sameType"
+	],
+	"methodsBody":{
+		"static boolean sameType(TransferData data1, TransferData data2)":{
+			"methodBody":"{\n    if (data1 == data2)\n        return true;\n    if (data1 == null || data2 == null)\n        return false;\n    return (data1.type == data2.type && data1.formatetc.cfFormat == data2.formatetc.cfFormat && data1.formatetc.dwAspect == data2.formatetc.dwAspect && data1.formatetc.tymed == data2.formatetc.tymed);\n}",
+			"comments":"",
+			"methodName":"static boolean sameType(TransferData data1, TransferData data2)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"TransferData"
+	]
+}

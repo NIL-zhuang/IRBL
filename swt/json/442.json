@@ -1,0 +1,81 @@
+{
+	"variables":[
+		"display",
+		"widget",
+		"type",
+		"detail",
+		"item",
+		"gc",
+		"x",
+		"y",
+		"width",
+		"height",
+		"count",
+		"time",
+		"button",
+		"character",
+		"keyCode",
+		"stateMask",
+		"start",
+		"end",
+		"text",
+		"doit",
+		"data",
+		"x",
+		"y",
+		"width",
+		"height",
+		"rect",
+		"rect",
+		"rect",
+		"rect",
+		"type",
+		"widget",
+		"x",
+		"y",
+		"width",
+		"height",
+		"x",
+		"x",
+		"y",
+		"y",
+		"width",
+		"width",
+		"height",
+		"height",
+		"rect"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.widgets"
+	],
+	"import":[
+		"org.eclipse.swt.graphics"
+	],
+	"methods":[
+		"getBounds",
+		"setBounds",
+		"toString",
+		"Rectangle"
+	],
+	"methodsBody":{
+		"public String toString()":{
+			"methodBody":"{\n    \n    return \"Event {type=\" + type + \",widget=\" + widget + \",x=\" + x + \",y=\" + y + \",width=\" + width + \",height=\" + height + \"}\";\n}",
+			"comments":"/**\n* Returns a string containing a concise, human-readable\n* description of the receiver.\n*\n* @return a string representation of the event\n*/\n//$NON-NLS-1$//$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$ //$NON-NLS-6$ //$NON-NLS-7$\n",
+			"methodName":"public String toString()"
+		},
+		"public Rectangle getBounds()":{
+			"methodBody":"{\n    return new Rectangle(x, y, width, height);\n}",
+			"comments":"/**\n* Gets the bounds.\n*\n* @return a rectangle that is the bounds.\n*/\n",
+			"methodName":"public Rectangle getBounds()"
+		},
+		"public void setBounds(Rectangle rect)":{
+			"methodBody":"{\n    this.x = rect.x;\n    this.y = rect.y;\n    this.width = rect.width;\n    this.height = rect.height;\n}",
+			"comments":"/**\n* Sets the bounds.\n*\n* @param rect the new rectangle\n*/\n",
+			"methodName":"public void setBounds(Rectangle rect)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"Event"
+	]
+}

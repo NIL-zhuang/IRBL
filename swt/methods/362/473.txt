@@ -1,0 +1,10 @@
+public
+static
+final
+nativ
+boolean
+equal
+rect
+equalrect
+rect
+rect

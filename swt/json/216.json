@@ -1,0 +1,20 @@
+{
+	"variables":[
+		"left",
+		"right",
+		"children",
+		"code",
+		"prefix",
+		"suffix"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.image"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"LZWNode"
+	]
+}

@@ -1,0 +1,35 @@
+Skip over signature data This has already been verified in isPNGFile
+Read and process chunks until the IEND chunk is encountered
+Load the PNG image from the byte stream
+go through all the image s IDAT chunks
+then this is an invalid image
+All critical chunks must be supported
+Read and handle the next chunk of data from the PNG file
+137
+P
+N
+G
+RETURN
+LINEFEED
+CTRL Z
+LINEFEED
+SWT does not support 16 bit depths If this image uses 16 bit depths convert the data to an 8 bit depth
+If the image uses 16 bit depth it is converted to an 8 bit depth image
+If the image uses 16 bit depth it is converted to an 8 bit depth image
+SWT does not support greyscale as a color type For plain grayscale we create a palette For Grayscale with Alpha however we need to convert the pixels to use RGB values Note This method assumes that the bit depth of the data has already been restricted to 8 or less
+PNG supports some color types and bit depths that are unsupported by SWT If the image uses an unsupported color type either of the gray scale types or bit depth 16 convert the data to an SWT supported format Then assign the data into the ImageData given
+Read the image data from the data stream This must handle decoding the data filtering and interlacing
+Answer the number of bytes in a word aligned row of pixel data
+Answer the number of bytes in each row of the image data Each PNG row is byte aligned so images with bit depths less than a byte may have unused bits at the end of each row The value of these bits is undefined
+Answer the number of bytes needed to represent a pixel This value depends on the image s color type and bit depth Note that this method rounds up if an image s pixel size isn t byte aligned
+Answer the number of bytes in a row of the given pixel width Each row is byte aligned so images with bit depths less than a byte may have unused bits at the end of each row The value of these bits is undefined
+1 Read one of the seven frames of interlaced data 2 Update the imageData 3 Notify the image loader s listeners of the frame load
+Read the pixel data for an interlaced image from the data stream
+Fire an event to let listeners know that an interlaced frame has been loaded finalFrame should be true if the image has finished loading false if there are more frames to come
+Read the pixel data for a non interlaced image from the data stream Update the imageData to reflect the new data
+byte compressedValue byte value multiplier
+double multiplier Compatibility pow2 8 1 Compatibility pow2 16 1
+SWT does not support 16 bit depth color formats Convert the 16 bit data to 8 bit data The correct way to do this is to multiply each 16 bit value by the value 2 8 1 2 16 1 The fast way to do this is just to drop the low byte of the 16 bit value
+byte compressedValue byte value multiplier
+SWT does not support 16 bit depth color formats Convert the 16 bit data to 8 bit data The correct way to do this is to multiply each 16 bit value by the value 2 8 1 2 16 1 The fast way to do this is just to drop the low byte of the 16 bit value
+PNG supports four filtering types These types are applied per row of image data This method unfilters the given row based on the filterType

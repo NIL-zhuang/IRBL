@@ -1,0 +1,9 @@
+public
+int
+get
+number
+imag
+compon
+getnumberofimagecompon
+return
+refer

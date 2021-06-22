@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+int
+reg
+close
+key
+regclosekey
+int
+key
+hkey

@@ -1,0 +1,29 @@
+{
+	"variables":[
+		"styles",
+		"lineBackground",
+		"segments",
+		"replaceCharCount",
+		"newCharCount",
+		"replaceLineCount",
+		"newLineCount",
+		"data",
+		"content",
+		"content"
+	],
+	"extendORImplementFiles":[
+		"Event"
+	],
+	"package":[
+		"org.eclipse.swt.custom"
+	],
+	"import":[
+		"org.eclipse.swt.graphics",
+		"org.eclipse.swt.widgets"
+	],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"StyledTextEvent"
+	]
+}

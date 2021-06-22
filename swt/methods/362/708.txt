@@ -1,0 +1,8 @@
+public
+static
+final
+nativ
+short
+primarylangid
+short
+lgid

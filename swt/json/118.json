@@ -1,0 +1,21 @@
+{
+	"variables":[
+		"serialVersionUID",
+		"e",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"TypedEvent"
+	],
+	"package":[
+		"org.eclipse.swt.events"
+	],
+	"import":[
+		"org.eclipse.swt.widgets.Event"
+	],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"DisposeEvent"
+	]
+}

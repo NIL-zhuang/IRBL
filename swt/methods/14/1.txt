@@ -1,0 +1,10 @@
+static
+final
+nativ
+int
+get
+awt
+handl
+getawthandl
+canva
+canva

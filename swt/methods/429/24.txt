@@ -1,0 +1,17 @@
+boolean
+set
+radio
+focus
+setradiofocus
+style
+swt
+radio
+get
+select
+getselect
+return
+fals
+return
+set
+focus
+setfocus

@@ -1,0 +1,10 @@
+public
+int
+get
+segment
+length
+getsegmentlength
+return
+fix
+size
+fixeds

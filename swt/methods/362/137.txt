@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+boolean
+set
+menu
+setmenu
+int
+wnd
+hwnd
+int
+menu
+hmenu

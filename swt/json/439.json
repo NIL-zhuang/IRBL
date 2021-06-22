@@ -1,0 +1,103 @@
+{
+	"variables":[
+		"style",
+		"parent",
+		"title",
+		"parent",
+		"SWT",
+		"parent",
+		"parent",
+		"style",
+		"title",
+		"Display",
+		"SWT",
+		"parent",
+		"SWT",
+		"parent",
+		"SWT",
+		"code",
+		"parent",
+		"style",
+		"title",
+		"string",
+		"SWT",
+		"title",
+		"string",
+		"PRIMARY_MODAL",
+		"parent",
+		"style",
+		"ERROR_INVALID_SUBCLASS",
+		"ERROR_NULL_ARGUMENT",
+		"ERROR_NULL_ARGUMENT",
+		"parent",
+		"parent",
+		"style",
+		"parent",
+		"code",
+		"string"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.widgets"
+	],
+	"import":[
+		"org.eclipse.swt"
+	],
+	"methods":[
+		"checkSubclass",
+		"checkParent",
+		"error",
+		"getParent",
+		"getStyle",
+		"getText",
+		"setText",
+		"checkParent",
+		"isValidClass",
+		"getClass",
+		"error",
+		"error",
+		"checkWidget",
+		"error",
+		"error"
+	],
+	"methodsBody":{
+		"public void setText(String string)":{
+			"methodBody":"{\n    if (string == null)\n        error(SWT.ERROR_NULL_ARGUMENT);\n    title = string;\n}",
+			"comments":"/**\n* Sets the receiver's text, which is the string that the\n* window manager will typically display as the receiver's\n* <em>title</em>, to the argument, which must not be null.\n*\n* @param string the new text\n*\n* @exception IllegalArgumentException <ul>\n*    <li>ERROR_NULL_ARGUMENT - if the text is null</li>\n* </ul>\n* @exception SWTException <ul>\n*    <li>ERROR_WIDGET_DISPOSED - if the receiver has been disposed</li>\n*    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>\n* </ul>\n*/\n",
+			"methodName":"public void setText(String string)"
+		},
+		"public Shell getParent()":{
+			"methodBody":"{\n    return parent;\n}",
+			"comments":"/**\n* Returns the receiver's parent, which must be a <code>Shell</code>\n* or null.\n*\n* @return the receiver's parent\n*\n* @exception SWTException <ul>\n*    <li>ERROR_WIDGET_DISPOSED - if the receiver has been disposed</li>\n*    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>\n* </ul>\n*/\n",
+			"methodName":"public Shell getParent()"
+		},
+		"public String getText()":{
+			"methodBody":"{\n    return title;\n}",
+			"comments":"/**\n* Returns the receiver's text, which is the string that the\n* window manager will typically display as the receiver's\n* <em>title</em>. If the text has not previously been set,\n* returns an empty string.\n*\n* @return the text\n*\n* @exception SWTException <ul>\n*    <li>ERROR_WIDGET_DISPOSED - if the receiver has been disposed</li>\n*    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>\n* </ul>\n*/\n",
+			"methodName":"public String getText()"
+		},
+		"void checkParent(Shell parent)":{
+			"methodBody":"{\n    if (parent == null)\n        error(SWT.ERROR_NULL_ARGUMENT);\n    parent.checkWidget();\n}",
+			"comments":"/**\n* Throws an exception if the specified widget can not be\n* used as a parent for the receiver.\n*\n* @exception IllegalArgumentException <ul>\n*    <li>ERROR_NULL_ARGUMENT - if the parent is null</li>\n*    <li>ERROR_INVALID_ARGUMENT - if the parent is disposed</li>\n* </ul>\n* @exception SWTException <ul>\n*    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the parent</li>\n* </ul>\n*/\n",
+			"methodName":"void checkParent(Shell parent)"
+		},
+		"void error(int code)":{
+			"methodBody":"{\n    SWT.error(code);\n}",
+			"comments":"/**\n* Does whatever dialog specific cleanup is required, and then\n* uses the code in <code>SWTError.error</code> to handle the error.\n*\n* @param code the descriptive error code\n*\n* @see SWT#error(int)\n*/\n",
+			"methodName":"void error(int code)"
+		},
+		"protected void checkSubclass()":{
+			"methodBody":"{\n    if (!Display.isValidClass(getClass())) {\n        error(SWT.ERROR_INVALID_SUBCLASS);\n    }\n}",
+			"comments":"/**\n* Checks that this class can be subclassed.\n* <p>\n* IMPORTANT: See the comment in <code>Widget.checkSubclass()</code>.\n* </p>\n*\n* @exception SWTException <ul>\n*    <li>ERROR_INVALID_SUBCLASS - if this class is not an allowed subclass</li>\n* </ul>\n*\n* @see Widget#checkSubclass\n*/\n",
+			"methodName":"protected void checkSubclass()"
+		},
+		"public int getStyle()":{
+			"methodBody":"{\n    return style;\n}",
+			"comments":"/**\n* Returns the receiver's style information.\n* <p>\n* Note that, the value which is returned by this method <em>may\n* not match</em> the value which was provided to the constructor\n* when the receiver was created.\n* </p>\n*\n* @return the style bits\n*\n* @exception SWTException <ul>\n*    <li>ERROR_WIDGET_DISPOSED - if the receiver has been disposed</li>\n*    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>\n* </ul>\n*/\n",
+			"methodName":"public int getStyle()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"Dialog"
+	]
+}

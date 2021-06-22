@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+int
+graphic
+path
+graphicspath
+set
+fill
+mode
+setfillmod
+int
+path
+int
+fillmod

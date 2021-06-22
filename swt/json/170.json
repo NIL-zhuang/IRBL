@@ -1,0 +1,27 @@
+{
+	"variables":[
+		"e"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.graphics"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"imageDataLoaded"
+	],
+	"methodsBody":{
+		"public void imageDataLoaded(ImageLoaderEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when image data is either partially or completely loaded.\n* <p>\n* The timing of when this method is called varies depending on\n* the format of the image being loaded.\n* </p>\n*\n* @param e an event containing information about the image loading operation\n*/\n",
+			"methodName":"public void imageDataLoaded(ImageLoaderEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"ImageLoaderListener"
+	]
+}

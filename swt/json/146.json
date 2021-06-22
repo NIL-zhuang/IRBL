@@ -1,0 +1,55 @@
+{
+	"variables":[
+		"e",
+		"e",
+		"e",
+		"e",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.events"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"shellActivated",
+		"shellClosed",
+		"shellDeactivated",
+		"shellDeiconified",
+		"shellIconified"
+	],
+	"methodsBody":{
+		"public void shellActivated(ShellEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when a shell becomes the active window.\n*\n* @param e an event containing information about the activation\n*/\n",
+			"methodName":"public void shellActivated(ShellEvent e)"
+		},
+		"public void shellDeactivated(ShellEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when a shell stops being the active window.\n*\n* @param e an event containing information about the deactivation\n*/\n",
+			"methodName":"public void shellDeactivated(ShellEvent e)"
+		},
+		"public void shellIconified(ShellEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when a shell is minimized.\n*\n* @param e an event containing information about the minimization\n*/\n",
+			"methodName":"public void shellIconified(ShellEvent e)"
+		},
+		"public void shellClosed(ShellEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when a shell is closed.\n*\n* @param e an event containing information about the close\n*/\n",
+			"methodName":"public void shellClosed(ShellEvent e)"
+		},
+		"public void shellDeiconified(ShellEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when a shell is un-minimized.\n*\n* @param e an event containing information about the un-minimization\n*/\n",
+			"methodName":"public void shellDeiconified(ShellEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"ShellListener"
+	]
+}

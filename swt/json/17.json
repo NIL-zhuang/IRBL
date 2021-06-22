@@ -1,0 +1,32 @@
+{
+	"variables":[
+		"event",
+		"event"
+	],
+	"extendORImplementFiles":[
+		"LocationListener"
+	],
+	"package":[
+		"org.eclipse.swt.browser"
+	],
+	"import":[],
+	"methods":[
+		"changing",
+		"changed"
+	],
+	"methodsBody":{
+		"public void changed(LocationEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"",
+			"methodName":"public void changed(LocationEvent event)"
+		},
+		"public void changing(LocationEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"",
+			"methodName":"public void changing(LocationEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"LocationAdapter"
+	]
+}

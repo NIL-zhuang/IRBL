@@ -1,0 +1,28 @@
+{
+	"variables":[
+		"byteStream",
+		"JPEGFileFormat",
+		"DAC",
+		"byteStream"
+	],
+	"extendORImplementFiles":[
+		"JPEGVariableSizeSegment"
+	],
+	"package":[
+		"org.eclipse.swt.internal.image"
+	],
+	"import":[],
+	"methods":[
+		"signature"
+	],
+	"methodsBody":{
+		"public int signature()":{
+			"methodBody":"{\n    return JPEGFileFormat.DAC;\n}",
+			"comments":"",
+			"methodName":"public int signature()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"JPEGArithmeticConditioningTable"
+	]
+}

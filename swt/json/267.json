@@ -1,0 +1,148 @@
+{
+	"variables":[
+		"buffer1",
+		"count1",
+		"buffer2",
+		"count2",
+		"address",
+		"COM",
+		"address",
+		"pAdvSink",
+		"pdwConnection",
+		"COM",
+		"address",
+		"dwSaveOption",
+		"COM",
+		"address",
+		"iVerb",
+		"lpmsg",
+		"pActiveSite",
+		"lindex",
+		"hwndParent",
+		"lprcPosRect",
+		"COM",
+		"address",
+		"dwDrawAspect",
+		"pSizel",
+		"COM",
+		"address",
+		"pClientSite",
+		"COM",
+		"address",
+		"dwDrawAspect",
+		"pSizel",
+		"szContainerApp",
+		"szContainerApp",
+		"buffer1",
+		"count1",
+		"szContainerApp",
+		"count1",
+		"buffer1",
+		"szContainerObj",
+		"szContainerObj",
+		"buffer2",
+		"count2",
+		"szContainerObj",
+		"count2",
+		"buffer2",
+		"COM",
+		"address",
+		"buffer1",
+		"buffer2",
+		"COM",
+		"address",
+		"address",
+		"pAdvSink",
+		"pdwConnection",
+		"dwSaveOption",
+		"iVerb",
+		"lpmsg",
+		"pActiveSite",
+		"lindex",
+		"hwndParent",
+		"lprcPosRect",
+		"dwDrawAspect",
+		"pSizel",
+		"pClientSite",
+		"dwDrawAspect",
+		"pSizel",
+		"szContainerApp",
+		"szContainerObj"
+	],
+	"extendORImplementFiles":[
+		"IUnknown"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"methods":[
+		"Advise",
+		"Close",
+		"DoVerb",
+		"GetExtent",
+		"SetClientSite",
+		"SetExtent",
+		"SetHostNames",
+		"Update",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall",
+		"length",
+		"getChars",
+		"length",
+		"getChars",
+		"VtblCall",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int Update()":{
+			"methodBody":"{\n    return COM.VtblCall(13, address);\n}",
+			"comments":"",
+			"methodName":"public int Update()"
+		},
+		"public int SetExtent(int dwDrawAspect, SIZE pSizel)":{
+			"methodBody":"{\n    return COM.VtblCall(17, address, dwDrawAspect, pSizel);\n}",
+			"comments":"",
+			"methodName":"public int SetExtent(int dwDrawAspect, SIZE pSizel)"
+		},
+		"public int DoVerb(int iVerb, MSG lpmsg, int pActiveSite, int lindex, int hwndParent, RECT lprcPosRect)":{
+			"methodBody":"{\n    return COM.VtblCall(11, address, iVerb, lpmsg, pActiveSite, lindex, hwndParent, lprcPosRect);\n}",
+			"comments":"",
+			"methodName":"public int DoVerb(int iVerb, MSG lpmsg, int pActiveSite, int lindex, int hwndParent, RECT lprcPosRect)"
+		},
+		"public int GetExtent(int dwDrawAspect, SIZE pSizel)":{
+			"methodBody":"{\n    return COM.VtblCall(18, address, dwDrawAspect, pSizel);\n}",
+			"comments":"",
+			"methodName":"public int GetExtent(int dwDrawAspect, SIZE pSizel)"
+		},
+		"public int Close(int dwSaveOption)":{
+			"methodBody":"{\n    return COM.VtblCall(6, address, dwSaveOption);\n}",
+			"comments":"",
+			"methodName":"public int Close(int dwSaveOption)"
+		},
+		"public int SetClientSite(int pClientSite)":{
+			"methodBody":"{\n    return COM.VtblCall(3, address, pClientSite);\n}",
+			"comments":"",
+			"methodName":"public int SetClientSite(int pClientSite)"
+		},
+		"public int Advise(int pAdvSink, int[] pdwConnection)":{
+			"methodBody":"{\n    return COM.VtblCall(19, address, pAdvSink, pdwConnection);\n}",
+			"comments":"",
+			"methodName":"public int Advise(int pAdvSink, int[] pdwConnection)"
+		},
+		"public int SetHostNames(String szContainerApp, String szContainerObj)":{
+			"methodBody":"{\n    \n    char[] buffer1 = null;\n    if (szContainerApp != null) {\n        int count1 = szContainerApp.length();\n        buffer1 = new char[count1 + 1];\n        szContainerApp.getChars(0, count1, buffer1, 0);\n    }\n    \n    char[] buffer2 = null;\n    if (szContainerObj != null) {\n        int count2 = szContainerObj.length();\n        buffer2 = new char[count2 + 1];\n        szContainerObj.getChars(0, count2, buffer2, 0);\n    }\n    return COM.VtblCall(5, address, buffer1, buffer2);\n}",
+			"comments":"// create a null terminated array of char\n// create a null terminated array of char\n",
+			"methodName":"public int SetHostNames(String szContainerApp, String szContainerObj)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IOleObject"
+	]
+}

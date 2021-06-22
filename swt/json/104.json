@@ -1,0 +1,30 @@
+{
+	"variables":[
+		"control",
+		"effect",
+		"x",
+		"y"
+	],
+	"extendORImplementFiles":[
+		"DragUnderEffect"
+	],
+	"package":[
+		"org.eclipse.swt.dnd"
+	],
+	"import":[
+		"org.eclipse.swt.widgets"
+	],
+	"methods":[
+		"show"
+	],
+	"methodsBody":{
+		"void show(int effect, int x, int y)":{
+			"methodBody":"{\n}",
+			"comments":"",
+			"methodName":"void show(int effect, int x, int y)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"NoDragUnderEffect"
+	]
+}

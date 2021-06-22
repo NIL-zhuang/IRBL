@@ -1,0 +1,6 @@
+get
+page
+getpag
+vtbl
+call
+vtblcall

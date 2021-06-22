@@ -1,0 +1,8 @@
+name
+type
+flag
+kind
+descript
+help
+file
+helpfil

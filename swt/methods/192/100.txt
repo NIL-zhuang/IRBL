@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+int
+graphic
+draw
+line
+drawlin
+int
+graphic
+int
+pen
+int
+point
+int
+count

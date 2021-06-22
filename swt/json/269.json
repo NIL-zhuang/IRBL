@@ -1,0 +1,31 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"pClassID",
+		"address",
+		"pClassID"
+	],
+	"extendORImplementFiles":[
+		"IUnknown"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"GetClassID",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int GetClassID(GUID pClassID)":{
+			"methodBody":"{\n    return COM.VtblCall(3, address, pClassID);\n}",
+			"comments":"",
+			"methodName":"public int GetClassID(GUID pClassID)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IPersist"
+	]
+}

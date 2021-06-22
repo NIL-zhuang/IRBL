@@ -1,0 +1,63 @@
+{
+	"variables":[
+		"detail",
+		"doit",
+		"dataType",
+		"serialVersionUID",
+		"e",
+		"e",
+		"e",
+		"e",
+		"e",
+		"e",
+		"e",
+		"e",
+		"e",
+		"e",
+		"e",
+		"data",
+		"data",
+		"detail",
+		"detail",
+		"doit",
+		"doit",
+		"dataType",
+		"dataType",
+		"widget",
+		"widget",
+		"time",
+		"time",
+		"data",
+		"data",
+		"detail",
+		"detail",
+		"doit",
+		"doit",
+		"dataType",
+		"dataType",
+		"e",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"TypedEvent"
+	],
+	"package":[
+		"org.eclipse.swt.dnd"
+	],
+	"import":[
+		"org.eclipse.swt.events.TypedEvent"
+	],
+	"methods":[
+		"updateEvent"
+	],
+	"methodsBody":{
+		"void updateEvent(DNDEvent e)":{
+			"methodBody":"{\n    e.widget = this.widget;\n    e.time = this.time;\n    e.data = this.data;\n    e.detail = this.detail;\n    e.doit = this.doit;\n    e.dataType = this.dataType;\n}",
+			"comments":"",
+			"methodName":"void updateEvent(DNDEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"DragSourceEvent"
+	]
+}

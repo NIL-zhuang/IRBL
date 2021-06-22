@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+int
+regist
+class
+registerclassa
+wndclass
+wnd
+class
+lpwndclass

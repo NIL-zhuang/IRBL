@@ -1,0 +1,15 @@
+int
+get
+palett
+size
+getpalettes
+return
+get
+length
+getlength
+get
+the
+number
+color
+this
+palett

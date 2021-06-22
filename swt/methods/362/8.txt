@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+int
+creat
+palett
+createpalett
+byte
+log
+palett
+logpalett

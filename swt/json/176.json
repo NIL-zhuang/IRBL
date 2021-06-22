@@ -1,0 +1,82 @@
+{
+	"variables":[
+		"red",
+		"green",
+		"blue",
+		"serialVersionUID",
+		"rgb",
+		"red",
+		"red",
+		"green",
+		"green",
+		"blue",
+		"blue",
+		"SWT",
+		"SWT",
+		"red",
+		"green",
+		"blue",
+		"object",
+		"object",
+		"object",
+		"rgb",
+		"rgb",
+		"rgb",
+		"blue",
+		"green",
+		"red",
+		"red",
+		"green",
+		"blue",
+		"ERROR_INVALID_ARGUMENT",
+		"red",
+		"green",
+		"blue",
+		"red",
+		"red",
+		"green",
+		"green",
+		"blue",
+		"blue",
+		"red",
+		"green",
+		"blue",
+		"object"
+	],
+	"extendORImplementFiles":[
+		"SerializableCompatibility"
+	],
+	"package":[
+		"org.eclipse.swt.graphics"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SerializableCompatibility",
+		"org.eclipse.swt"
+	],
+	"methods":[
+		"equals",
+		"hashCode",
+		"toString",
+		"error"
+	],
+	"methodsBody":{
+		"public String toString()":{
+			"methodBody":"{\n    \n    return \"RGB {\" + red + \", \" + green + \", \" + blue + \"}\";\n}",
+			"comments":"/**\n* Returns a string containing a concise, human-readable\n* description of the receiver.\n*\n* @return a string representation of the <code>RGB</code>\n*/\n//$NON-NLS-1$//$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$\n",
+			"methodName":"public String toString()"
+		},
+		"public int hashCode()":{
+			"methodBody":"{\n    return (blue << 16) | (green << 8) | red;\n}",
+			"comments":"/**\n* Returns an integer hash code for the receiver. Any two\n* objects that return <code>true</code> when passed to\n* <code>equals</code> must return the same value for this\n* method.\n*\n* @return the receiver's hash\n*\n* @see #equals(Object)\n*/\n",
+			"methodName":"public int hashCode()"
+		},
+		"public boolean equals(Object object)":{
+			"methodBody":"{\n    if (object == this)\n        return true;\n    if (!(object instanceof RGB))\n        return false;\n    RGB rgb = (RGB) object;\n    return (rgb.red == this.red) && (rgb.green == this.green) && (rgb.blue == this.blue);\n}",
+			"comments":"/**\n* Compares the argument to the receiver, and returns true\n* if they represent the <em>same</em> object using a class\n* specific comparison.\n*\n* @param object the object to compare with this object\n* @return <code>true</code> if the object is the same as this object and <code>false</code> otherwise\n*\n* @see #hashCode()\n*/\n",
+			"methodName":"public boolean equals(Object object)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"RGB"
+	]
+}

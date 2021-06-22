@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+void
+sys
+free
+string
+sysfreestr
+int
+bstr

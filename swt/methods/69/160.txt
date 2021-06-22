@@ -1,0 +1,17 @@
+int
+get
+vertic
+increment
+getverticalincr
+return
+line
+height
+lineheight
+return
+the
+vertic
+scroll
+increment
+vertic
+scroll
+increment

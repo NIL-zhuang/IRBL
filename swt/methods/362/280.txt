@@ -1,0 +1,7 @@
+public
+static
+final
+nativ
+int
+strlen
+int

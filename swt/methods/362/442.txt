@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+int
+set
+focus
+setfocus
+int
+wnd
+hwnd

@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+int
+graphic
+path
+graphicspath
+add
+rectangl
+addrectangl
+int
+path
+rect
+rectf
+rect

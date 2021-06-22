@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+boolean
+imm
+releas
+context
+immreleasecontext
+int
+wnd
+hwnd
+int
+imc
+himc

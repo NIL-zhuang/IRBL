@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+boolean
+destroy
+icon
+destroyicon
+int
+icon
+hicon

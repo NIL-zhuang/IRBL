@@ -1,0 +1,12 @@
+size
+cbsize
+hwnd
+client
+hwndclient
+down
+ptdown
+down
+ptdown
+flag
+dwflag
+sizeof

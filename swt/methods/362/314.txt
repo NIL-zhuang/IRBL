@@ -1,0 +1,10 @@
+public
+static
+final
+nativ
+int
+creat
+compat
+createcompatibledc
+int
+hdc

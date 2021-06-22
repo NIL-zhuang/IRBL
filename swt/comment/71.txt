@@ -1,0 +1,5 @@
+
+used by LineStyleEvent
+used by LineBackgroundEvent
+used by BidiSegmentEvent
+used by TextChangedEvent

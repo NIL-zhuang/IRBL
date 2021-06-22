@@ -1,0 +1,15 @@
+size
+cbsize
+major
+version
+dwmajorvers
+minor
+version
+dwminorvers
+build
+number
+dwbuildnumb
+platform
+dwplatformid
+sizeof
+dllversioninfo

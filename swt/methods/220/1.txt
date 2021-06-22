@@ -1,0 +1,12 @@
+boolean
+has
+more
+chunk
+hasmorechunk
+return
+read
+state
+readstat
+read
+iend
+readiend

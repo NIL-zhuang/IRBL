@@ -1,0 +1,4 @@
+visibl
+window
+adapt
+visibilitywindowadapt

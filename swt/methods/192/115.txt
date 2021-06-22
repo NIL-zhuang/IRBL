@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+void
+graphic
+flush
+int
+graphic
+int
+intent

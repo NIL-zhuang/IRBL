@@ -1,0 +1,8 @@
+boolean
+travers
+item
+traverseitem
+boolean
+next
+return
+fals

@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+boolean
+drag
+detect
+dragdetect
+int
+hwnd
+point

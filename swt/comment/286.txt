@@ -1,0 +1,3 @@
+GUID guid
+TYPEDESC tdescAlias
+IDLDESC idldesctype

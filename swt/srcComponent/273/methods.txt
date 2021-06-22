@@ -1,0 +1,6 @@
+get
+guid
+getguid
+vtbl
+call
+vtblcall

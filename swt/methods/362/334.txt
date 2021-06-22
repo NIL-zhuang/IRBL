@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+boolean
+get
+text
+metric
+gettextmetricsw
+int
+hdc
+textmetricw
+lptm

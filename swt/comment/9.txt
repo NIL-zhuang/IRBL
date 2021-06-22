@@ -1,0 +1,6 @@
+Instances of this class are sent as a result of accessibility clients sending messages to controls asking for information about the control instance p Note The meaning of the result field depends on the message that was sent p see AccessibleListener see AccessibleAdapter since 2 0
+The value of this field is set by an accessibility client before the accessible listener method is called ChildID can be CHILDID SELF representing the control itself or a 0 based integer representing a specific child of the control
+The value of this field must be set in the accessible listener method before returning What to set it to depends on the listener method called and the childID specified by the client
+Constructs a new instance of this class param source the object that fired the event
+NON NLS 1 NON NLS 2 NON NLS 3
+Returns a string containing a concise human readable description of the receiver return a string representation of the event

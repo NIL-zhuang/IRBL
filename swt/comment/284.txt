@@ -1,0 +1,4 @@
+FILETIME mtime
+FILETIME ctime
+FILETIME atime
+GUID clsid

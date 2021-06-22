@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+boolean
+get
+window
+placement
+getwindowplac
+int
+wnd
+hwnd
+windowplac
+lpwndpl

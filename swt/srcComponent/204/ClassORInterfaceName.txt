@@ -1,0 +1,5 @@
+jpeg
+fix
+size
+segment
+jpegfixedsizeseg

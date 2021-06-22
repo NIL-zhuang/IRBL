@@ -1,0 +1,21 @@
+{
+	"variables":[
+		"cBytes",
+		"wgBlank",
+		"wgDefault",
+		"wgInvalid",
+		"wgKashida",
+		"iKashidaWidth",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"SCRIPT_FONTPROPERTIES"
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"variables":[
+		"bmType",
+		"bmWidth",
+		"bmHeight",
+		"bmWidthBytes",
+		"bmPlanes",
+		"bmBitsPixel",
+		"bmBits",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"BITMAP"
+	]
+}

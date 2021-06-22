@@ -1,0 +1,3 @@
+register each of the interfaces that this object implements
+Resets the enumeration sequence to the beginning
+Skips over the next specified number of elements in the enumeration sequence

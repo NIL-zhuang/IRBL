@@ -1,0 +1,66 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"pIPSite",
+		"COM",
+		"address",
+		"prcView",
+		"COM",
+		"address",
+		"fShow",
+		"COM",
+		"address",
+		"fUIActivate",
+		"address",
+		"pIPSite",
+		"prcView",
+		"fShow",
+		"fUIActivate"
+	],
+	"extendORImplementFiles":[
+		"IUnknown"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[
+		"org.eclipse.swt.internal.win32.RECT"
+	],
+	"methods":[
+		"SetInPlaceSite",
+		"SetRect",
+		"Show",
+		"UIActivate",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int UIActivate(int fUIActivate)":{
+			"methodBody":"{\n    return COM.VtblCall(10, address, fUIActivate);\n}",
+			"comments":"",
+			"methodName":"public int UIActivate(int fUIActivate)"
+		},
+		"public int Show(int fShow)":{
+			"methodBody":"{\n    return COM.VtblCall(9, address, fShow);\n}",
+			"comments":"",
+			"methodName":"public int Show(int fShow)"
+		},
+		"public int SetRect(RECT prcView)":{
+			"methodBody":"{\n    return COM.VtblCall(6, address, prcView);\n}",
+			"comments":"",
+			"methodName":"public int SetRect(RECT prcView)"
+		},
+		"public int SetInPlaceSite(int pIPSite)":{
+			"methodBody":"{\n    return COM.VtblCall(3, address, pIPSite);\n}",
+			"comments":"",
+			"methodName":"public int SetInPlaceSite(int pIPSite)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IOleDocumentView"
+	]
+}

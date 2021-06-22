@@ -1,0 +1,9 @@
+void
+set
+parent
+setpar
+noth
+not
+necessari
+for
+shell

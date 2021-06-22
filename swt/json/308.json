@@ -1,0 +1,27 @@
+{
+	"variables":[
+		"cbSize",
+		"flags",
+		"hwndActive",
+		"hwndFocus",
+		"hwndCapture",
+		"hwndMenuOwner",
+		"hwndMoveSize",
+		"hwndCaret",
+		"left",
+		"top",
+		"right",
+		"bottom",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"GUITHREADINFO"
+	]
+}

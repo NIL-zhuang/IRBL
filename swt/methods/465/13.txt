@@ -1,0 +1,10 @@
+public
+boolean
+get
+enabl
+geten
+check
+widget
+checkwidget
+return
+state

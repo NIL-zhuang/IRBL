@@ -1,0 +1,17 @@
+{
+	"variables":[
+		"X",
+		"Y",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.gdip"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"PointF"
+	]
+}

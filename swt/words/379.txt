@@ -1,0 +1,17 @@
+size
+cbsize
+hwnd
+last
+focus
+hwndlastfocus
+sip
+fsipup
+sip
+deactiv
+fsipondeactiv
+activ
+factiv
+reserv
+freserv
+sizeof
+shactivateinfo

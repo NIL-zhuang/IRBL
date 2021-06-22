@@ -1,0 +1,11 @@
+int
+intern
+get
+horizont
+pixel
+internalgethorizontalpixel
+return
+horizont
+scroll
+offset
+horizontalscrolloffset

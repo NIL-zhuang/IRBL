@@ -1,0 +1,3 @@
+palett
+data
+palettedata

@@ -1,0 +1,8 @@
+boolean
+drop
+isdrop
+return
+popup
+get
+visibl
+getvis

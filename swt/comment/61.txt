@@ -1,0 +1,38 @@
+This class provides access to the public constants provided by code StyledText code
+binding SWT ARROW UP
+binding SWT ARROW DOWN
+binding SWT HOME
+binding SWT END
+binding SWT ARROW LEFT
+binding SWT ARROW RIGHT
+binding SWT PAGE UP
+binding SWT PAGE DOWN
+binding SWT MOD1 SWT ARROW LEFT
+binding SWT MOD1 SWT ARROW RIGHT
+binding SWT MOD1 SWT HOME
+binding SWT MOD1 SWT END
+binding SWT MOD1 SWT PAGE UP
+binding SWT MOD1 SWT PAGE DOWN
+binding SWT MOD1 A
+binding SWT MOD2 SWT ARROW UP
+binding SWT MOD2 SWT ARROW DOWN
+binding SWT MOD2 SWT HOME
+binding SWT MOD2 SWT END
+binding SWT MOD2 SWT ARROW LEFT
+binding SWT MOD2 SWT ARROW RIGHT
+binding SWT MOD2 SWT PAGE UP
+binding SWT MOD2 SWT PAGE DOWN
+binding SWT MOD1 SWT MOD2 SWT ARROW LEFT
+binding SWT MOD1 SWT MOD2 SWT ARROW RIGHT
+binding SWT MOD1 SWT MOD2 SWT HOME
+binding SWT MOD1 SWT MOD2 SWT END
+binding SWT MOD1 SWT MOD2 SWT PAGE UP
+binding SWT MOD1 SWT MOD2 SWT PAGE DOWN
+binding SWT MOD2 SWT DEL
+binding SWT MOD1 SWT INSERT
+binding SWT MOD2 SWT INSERT
+binding SWT BS
+binding SWT DEL
+binding SWT BS SWT MOD1
+binding SWT DEL SWT MOD1
+binding SWT INSERT

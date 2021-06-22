@@ -1,0 +1,27 @@
+{
+	"variables":[
+		"e"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.events"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"widgetDisposed"
+	],
+	"methodsBody":{
+		"public void widgetDisposed(DisposeEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when the widget is disposed.\n*\n* @param e an event containing information about the dispose\n*/\n",
+			"methodName":"public void widgetDisposed(DisposeEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"DisposeListener"
+	]
+}

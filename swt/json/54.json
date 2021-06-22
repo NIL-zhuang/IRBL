@@ -1,0 +1,27 @@
+{
+	"variables":[
+		"event"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.custom"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"modifyText"
+	],
+	"methodsBody":{
+		"public void modifyText(ExtendedModifyEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* This method is called after a text change occurs.\n* <p>\n* The following event fields are used:<ul>\n* <li>event.start the start offset of the new text (input)</li>\n* <li>event.length the length of the new text (input)</li>\n* <li>event.replacedText the replaced text (input)</li>\n* </ul>\n*\n* @param event the given event\n* @see ExtendedModifyEvent\n*/\n",
+			"methodName":"public void modifyText(ExtendedModifyEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"ExtendedModifyListener"
+	]
+}

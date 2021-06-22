@@ -1,0 +1,17 @@
+boolean
+travers
+escap
+traverseescap
+parent
+null
+return
+fals
+visibl
+isvis
+enabl
+isen
+return
+fals
+close
+return
+true

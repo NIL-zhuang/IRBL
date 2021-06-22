@@ -1,0 +1,13 @@
+size
+cbsize
+context
+type
+icontexttyp
+ctrl
+ictrlid
+item
+handl
+hitemhandl
+context
+dwcontextid
+sizeof

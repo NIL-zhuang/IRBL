@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+int
+get
+poli
+fill
+mode
+getpolyfillmod
+int
+hdc

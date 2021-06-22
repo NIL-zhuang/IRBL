@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+int
+creat
+icon
+indirect
+createiconindirect
+iconinfo
+lplf

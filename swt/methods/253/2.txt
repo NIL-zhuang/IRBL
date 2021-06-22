@@ -1,0 +1,16 @@
+public
+int
+get
+type
+info
+count
+gettypeinfocount
+int
+pctinfo
+return
+com
+vtbl
+call
+vtblcall
+address
+pctinfo

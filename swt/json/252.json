@@ -1,0 +1,85 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"dwDirection",
+		"ppenumFormatetc",
+		"COM",
+		"address",
+		"pFormatetc",
+		"pmedium",
+		"COM",
+		"address",
+		"pFormatetc",
+		"pmedium",
+		"COM",
+		"address",
+		"pFormatetc",
+		"COM",
+		"address",
+		"pFormatetc",
+		"pmedium",
+		"fRelease",
+		"address",
+		"dwDirection",
+		"ppenumFormatetc",
+		"pFormatetc",
+		"pmedium",
+		"pFormatetc",
+		"pmedium",
+		"pFormatetc",
+		"pFormatetc",
+		"pmedium",
+		"fRelease"
+	],
+	"extendORImplementFiles":[
+		"IUnknown"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"EnumFormatEtc",
+		"GetData",
+		"GetDataHere",
+		"QueryGetData",
+		"SetData",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int QueryGetData(FORMATETC pFormatetc)":{
+			"methodBody":"{\n    return COM.VtblCall(5, address, pFormatetc);\n}",
+			"comments":"",
+			"methodName":"public int QueryGetData(FORMATETC pFormatetc)"
+		},
+		"public int SetData(FORMATETC pFormatetc, STGMEDIUM pmedium, boolean fRelease)":{
+			"methodBody":"{\n    return COM.VtblCall(7, address, pFormatetc, pmedium, fRelease);\n}",
+			"comments":"// Pointer to the FORMATETC structure\n// Pointer to STGMEDIUM structure\n// Indicates which object owns the storage medium after the call is completed\n",
+			"methodName":"public int SetData(FORMATETC pFormatetc, STGMEDIUM pmedium, boolean fRelease)"
+		},
+		"public int EnumFormatEtc(int dwDirection, int[] ppenumFormatetc)":{
+			"methodBody":"{\n    return COM.VtblCall(8, address, dwDirection, ppenumFormatetc);\n}",
+			"comments":"",
+			"methodName":"public int EnumFormatEtc(int dwDirection, int[] ppenumFormatetc)"
+		},
+		"public int GetData(FORMATETC pFormatetc, STGMEDIUM pmedium)":{
+			"methodBody":"{\n    \n    return COM.VtblCall(3, address, pFormatetc, pmedium);\n}",
+			"comments":"//Called by a data consumer to obtain data from a source data object.\n//The GetData method renders the data described in the specified FORMATETC\n//structure and transfers it through the specified STGMEDIUM structure.\n//The caller then assumes responsibility for releasing the STGMEDIUM structure.\n",
+			"methodName":"public int GetData(FORMATETC pFormatetc, STGMEDIUM pmedium)"
+		},
+		"public int GetDataHere(FORMATETC pFormatetc, STGMEDIUM pmedium)":{
+			"methodBody":"{\n    \n    return COM.VtblCall(4, address, pFormatetc, pmedium);\n}",
+			"comments":"//Called by a data consumer to obtain data from a source data object.\n//This method differs from the GetData method in that the caller must\n//allocate and free the specified storage medium.\n",
+			"methodName":"public int GetDataHere(FORMATETC pFormatetc, STGMEDIUM pmedium)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IDataObject"
+	]
+}

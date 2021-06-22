@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+int
+brush
+get
+type
+gettyp
+int
+brush

@@ -1,0 +1,1 @@
+the iLevel field does not appear on WinCE

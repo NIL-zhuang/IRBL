@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+boolean
+get
+combo
+box
+info
+getcomboboxinfo
+int
+hwnd
+combo
+hwndcombo
+comboboxinfo
+pcbi

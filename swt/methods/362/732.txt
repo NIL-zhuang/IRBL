@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+int
+imm
+get
+context
+immgetcontext
+int
+wnd
+hwnd

@@ -1,0 +1,8 @@
+public
+static
+final
+nativ
+int
+get
+cursor
+getcursor

@@ -1,0 +1,27 @@
+{
+	"variables":[
+		"cbSize",
+		"iBorderWidth",
+		"iScrollWidth",
+		"iScrollHeight",
+		"iCaptionWidth",
+		"iCaptionHeight",
+		"iSmCaptionWidth",
+		"iSmCaptionHeight",
+		"iMenuWidth",
+		"iMenuHeight",
+		"sizeof",
+		"OS",
+		"IsUnicode"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"NONCLIENTMETRICS"
+	]
+}

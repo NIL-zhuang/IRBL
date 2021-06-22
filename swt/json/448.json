@@ -1,0 +1,101 @@
+{
+	"variables":[
+		"text",
+		"image",
+		"parent",
+		"style",
+		"text",
+		"parent",
+		"style",
+		"image",
+		"text",
+		"text",
+		"image",
+		"image",
+		"image",
+		"SWT",
+		"image",
+		"string",
+		"SWT",
+		"text",
+		"string",
+		"ERROR_INVALID_ARGUMENT",
+		"image",
+		"ERROR_NULL_ARGUMENT",
+		"parent",
+		"style",
+		"parent",
+		"style",
+		"index",
+		"image",
+		"string"
+	],
+	"extendORImplementFiles":[
+		"Widget"
+	],
+	"package":[
+		"org.eclipse.swt.widgets"
+	],
+	"import":[
+		"org.eclipse.swt",
+		"org.eclipse.swt.graphics"
+	],
+	"methods":[
+		"checkSubclass",
+		"getImage",
+		"getNameText",
+		"getText",
+		"releaseWidget",
+		"setImage",
+		"setText",
+		"checkWidget",
+		"getText",
+		"checkWidget",
+		"releaseWidget",
+		"checkWidget",
+		"isDisposed",
+		"error",
+		"checkWidget",
+		"error"
+	],
+	"methodsBody":{
+		"public void setText(String string)":{
+			"methodBody":"{\n    checkWidget();\n    if (string == null)\n        error(SWT.ERROR_NULL_ARGUMENT);\n    text = string;\n}",
+			"comments":"/**\n* Sets the receiver's text.\n*\n* @param string the new text\n*\n* @exception IllegalArgumentException <ul>\n*    <li>ERROR_NULL_ARGUMENT - if the text is null</li>\n* </ul>\n* @exception SWTException <ul>\n*    <li>ERROR_WIDGET_DISPOSED - if the receiver has been disposed</li>\n*    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>\n* </ul>\n*/\n",
+			"methodName":"public void setText(String string)"
+		},
+		"public Image getImage()":{
+			"methodBody":"{\n    checkWidget();\n    return image;\n}",
+			"comments":"/**\n* Returns the receiver's image if it has one, or null\n* if it does not.\n*\n* @return the receiver's image\n*\n* @exception SWTException <ul>\n*    <li>ERROR_WIDGET_DISPOSED - if the receiver has been disposed</li>\n*    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>\n* </ul>\n*/\n",
+			"methodName":"public Image getImage()"
+		},
+		"void releaseWidget()":{
+			"methodBody":"{\n    super.releaseWidget();\n    text = null;\n    image = null;\n}",
+			"comments":"",
+			"methodName":"void releaseWidget()"
+		},
+		"public String getText()":{
+			"methodBody":"{\n    checkWidget();\n    return text;\n}",
+			"comments":"/**\n* Returns the receiver's text, which will be an empty\n* string if it has never been set.\n*\n* @return the receiver's text\n*\n* @exception SWTException <ul>\n*    <li>ERROR_WIDGET_DISPOSED - if the receiver has been disposed</li>\n*    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>\n* </ul>\n*/\n",
+			"methodName":"public String getText()"
+		},
+		"public void setImage(Image image)":{
+			"methodBody":"{\n    checkWidget();\n    if (image != null && image.isDisposed())\n        error(SWT.ERROR_INVALID_ARGUMENT);\n    this.image = image;\n}",
+			"comments":"/**\n* Sets the receiver's image to the argument, which may be\n* null indicating that no image should be displayed.\n*\n* @param image the image to display on the receiver (may be null)\n*\n* @exception IllegalArgumentException <ul>\n*    <li>ERROR_INVALID_ARGUMENT - if the image has been disposed</li>\n* </ul>\n* @exception SWTException <ul>\n*    <li>ERROR_WIDGET_DISPOSED - if the receiver has been disposed</li>\n*    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>\n* </ul>\n*/\n",
+			"methodName":"public void setImage(Image image)"
+		},
+		"protected void checkSubclass()":{
+			"methodBody":"{\n\n}",
+			"comments":"/* Do Nothing - Subclassing is allowed */\n",
+			"methodName":"protected void checkSubclass()"
+		},
+		"String getNameText()":{
+			"methodBody":"{\n    return getText();\n}",
+			"comments":"",
+			"methodName":"String getNameText()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"Item"
+	]
+}

@@ -1,0 +1,16 @@
+lresult
+xbuttonup
+int
+param
+wparam
+int
+param
+lparam
+return
+button
+wmxbuttonup
+handl
+param
+wparam
+param
+lparam

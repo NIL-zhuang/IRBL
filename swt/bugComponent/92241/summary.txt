@@ -1,0 +1,11 @@
+style
+text
+styledtext
+should
+not
+fill
+the
+clipboard
+everi
+select
+chang

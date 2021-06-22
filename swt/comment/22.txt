@@ -1,0 +1,3 @@
+A code ProgressEvent code is sent by a link Browser to link ProgressListener s when a progress is made during the loading of the current URL or when the loading of the current URL has been completed since 3 0
+current value
+total value

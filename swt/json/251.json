@@ -1,0 +1,33 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"riid",
+		"ppCP",
+		"address",
+		"riid",
+		"ppCP"
+	],
+	"extendORImplementFiles":[
+		"IUnknown"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"FindConnectionPoint",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int FindConnectionPoint(GUID riid, int[] ppCP)":{
+			"methodBody":"{\n    return COM.VtblCall(4, address, riid, ppCP);\n}",
+			"comments":"",
+			"methodName":"public int FindConnectionPoint(GUID riid, int[] ppCP)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IConnectionPointContainer"
+	]
+}

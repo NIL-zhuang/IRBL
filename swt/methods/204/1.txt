@@ -1,0 +1,6 @@
+public
+abstract
+int
+fix
+size
+fixeds

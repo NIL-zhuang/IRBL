@@ -1,0 +1,22 @@
+{
+	"variables":[
+		"readIHDR",
+		"readPLTE",
+		"readIDAT",
+		"readIEND",
+		"readTRNS",
+		"readPixelData"
+	],
+	"extendORImplementFiles":[
+		"Object"
+	],
+	"package":[
+		"org.eclipse.swt.internal.image"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"PngFileReadState"
+	]
+}

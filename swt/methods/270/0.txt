@@ -1,0 +1,10 @@
+public
+int
+dirti
+isdirti
+return
+com
+vtbl
+call
+vtblcall
+address

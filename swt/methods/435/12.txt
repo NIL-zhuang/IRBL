@@ -1,0 +1,17 @@
+void
+destroy
+widget
+destroywidget
+int
+hwnd
+top
+handl
+tophandl
+releas
+handl
+releasehandl
+hwnd
+destroy
+window
+destroywindow
+hwnd

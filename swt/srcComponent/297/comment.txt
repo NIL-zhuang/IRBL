@@ -1,0 +1,7 @@
+point
+current
+pos
+ptcurrentpo
+rect
+area
+rcarea

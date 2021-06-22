@@ -1,0 +1,21 @@
+{
+	"variables":[
+		"type",
+		"widget",
+		"detail",
+		"doit",
+		"arguments"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.ole.win32"
+	],
+	"import":[
+		"org.eclipse.swt.widgets.Widget"
+	],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"OleEvent"
+	]
+}

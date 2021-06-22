@@ -1,0 +1,9 @@
+public
+static
+final
+nativ
+short
+key
+scan
+vkkeyscana
+short

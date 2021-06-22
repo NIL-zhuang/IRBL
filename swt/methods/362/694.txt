@@ -1,0 +1,10 @@
+public
+static
+final
+nativ
+int
+get
+layout
+getlayout
+int
+hdc

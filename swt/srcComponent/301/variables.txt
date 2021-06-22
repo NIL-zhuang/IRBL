@@ -1,0 +1,15 @@
+size
+cbsize
+lpsz
+doc
+name
+lpszdocnam
+lpsz
+output
+lpszoutput
+lpsz
+datatyp
+lpszdatatyp
+type
+fwtype
+sizeof

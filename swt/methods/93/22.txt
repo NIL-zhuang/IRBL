@@ -1,0 +1,12 @@
+privat
+int
+give
+feedback
+givefeedback
+int
+effect
+dweffect
+return
+com
+dragdrop
+usedefaultcursor

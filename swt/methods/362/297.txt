@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+int
+get
+window
+thread
+process
+getwindowthreadprocessid
+int
+wnd
+hwnd
+int
+lpdw
+process
+lpdwprocessid

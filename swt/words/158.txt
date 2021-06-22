@@ -1,0 +1,15 @@
+debug
+track
+error
+object
+devic
+data
+devicedata
+debug
+field
+may
+not
+honour
+some
+swt
+platform

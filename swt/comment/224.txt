@@ -1,0 +1,5 @@
+Tricky tricky tricky The length codes are stored in a very odd order For the order see the definition of the static field lengthCodeOrder Also the data may not contain values for all the codes It may just contain values for the first X number of codes The table should be of size LengthCodeTableSize regardless of the number of values actually given in the table
+Repeat 0 11 138 times
+Repeat 0 3 10 times
+Repeat the previous code 3 6 times
+Literal value

@@ -1,0 +1,2 @@
+Used when decoding
+Used when encoding

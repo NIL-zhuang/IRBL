@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+int
+regist
+clipboard
+format
+registerclipboardformatw
+char
+lpsz
+format
+lpszformat

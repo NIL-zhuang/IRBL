@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+boolean
+offset
+rect
+offsetrect
+rect
+lprc
+int
+int

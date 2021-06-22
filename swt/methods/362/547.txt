@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+int
+get
+random
+rgn
+getrandomrgn
+int
+hdc
+int
+hrgn
+int
+num
+inum

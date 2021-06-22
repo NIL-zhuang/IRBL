@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+int
+creat
+solid
+brush
+createsolidbrush
+int
+color
+ref
+colorref

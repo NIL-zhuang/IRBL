@@ -1,0 +1,12 @@
+lresult
+draw
+child
+wmdrawchild
+int
+param
+wparam
+int
+param
+lparam
+return
+null

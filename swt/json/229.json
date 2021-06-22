@@ -1,0 +1,128 @@
+{
+	"variables":[
+		"rgbs",
+		"i",
+		"offset",
+		"red",
+		"green",
+		"blue",
+		"reference",
+		"i",
+		"rgbs",
+		"i",
+		"DATA_OFFSET",
+		"i",
+		"reference",
+		"offset",
+		"reference",
+		"offset",
+		"reference",
+		"offset",
+		"rgbs",
+		"i",
+		"red",
+		"green",
+		"blue",
+		"rgbs",
+		"readState",
+		"readState",
+		"readState",
+		"readState",
+		"readState",
+		"SWT",
+		"SWT",
+		"readState",
+		"readState",
+		"headerChunk",
+		"headerChunk",
+		"SWT",
+		"SWT",
+		"SWT",
+		"SWT",
+		"Compatibility",
+		"headerChunk",
+		"SWT",
+		"SWT",
+		"SWT",
+		"SWT",
+		"buffer",
+		"buffer",
+		"length",
+		"readIHDR",
+		"readPLTE",
+		"readTRNS",
+		"readIDAT",
+		"readIEND",
+		"ERROR_INVALID_IMAGE",
+		"readPLTE",
+		"ERROR_INVALID_IMAGE",
+		"ERROR_INVALID_IMAGE",
+		"ERROR_INVALID_IMAGE",
+		"ERROR_INVALID_IMAGE",
+		"reference",
+		"readState",
+		"headerChunk",
+		"buffer"
+	],
+	"extendORImplementFiles":[
+		"PngChunk"
+	],
+	"package":[
+		"org.eclipse.swt.internal.image"
+	],
+	"import":[
+		"org.eclipse.swt",
+		"org.eclipse.swt.graphics",
+		"org.eclipse.swt.internal.Compatibility"
+	],
+	"methods":[
+		"getPaletteSize",
+		"getPaletteData",
+		"validate",
+		"contributeToString",
+		"getLength",
+		"getPaletteSize",
+		"error",
+		"validate",
+		"getCanHavePalette",
+		"error",
+		"getLength",
+		"error",
+		"pow2",
+		"getBitDepth",
+		"getPaletteSize",
+		"error",
+		"getPaletteSize",
+		"error",
+		"append",
+		"append",
+		"getPaletteSize",
+		"RGB",
+		"PaletteData"
+	],
+	"methodsBody":{
+		"PaletteData getPaletteData()":{
+			"methodBody":"{\n    RGB[] rgbs = new RGB[getPaletteSize()];\n    \n    for (int i = 0; i < rgbs.length; i++) {\n        int offset = DATA_OFFSET + (i * 3);\n        int red = reference[offset] & 0xFF;\n        int green = reference[offset + 1] & 0xFF;\n        int blue = reference[offset + 2] & 0xFF;\n        rgbs[i] = new RGB(red, green, blue);\n    }\n    return new PaletteData(rgbs);\n}",
+			"comments":"/**\n* Get a PaletteData object representing the colors\n* stored in this PLTE chunk.\n* The result should be cached as the PLTE chunk\n* does not store the palette data created.\n*/\n//\tint start = DATA_OFFSET;\n//\tint end = DATA_OFFSET + getLength();\n",
+			"methodName":"PaletteData getPaletteData()"
+		},
+		"void contributeToString(StringBuffer buffer)":{
+			"methodBody":"{\n    buffer.append(\"\\n\\tPalette size:\");\n    buffer.append(getPaletteSize());\n}",
+			"comments":"",
+			"methodName":"void contributeToString(StringBuffer buffer)"
+		},
+		"void validate(PngFileReadState readState, PngIhdrChunk headerChunk)":{
+			"methodBody":"{\n    \n    if (!readState.readIHDR || readState.readPLTE || readState.readTRNS || readState.readIDAT || readState.readIEND) {\n        SWT.error(SWT.ERROR_INVALID_IMAGE);\n    } else {\n        readState.readPLTE = true;\n    }\n    super.validate(readState, headerChunk);\n    \n    if (!headerChunk.getCanHavePalette())\n        SWT.error(SWT.ERROR_INVALID_IMAGE);\n    \n    if (getLength() % 3 != 0)\n        SWT.error(SWT.ERROR_INVALID_IMAGE);\n    \n    if (Compatibility.pow2(headerChunk.getBitDepth()) < getPaletteSize()) {\n        SWT.error(SWT.ERROR_INVALID_IMAGE);\n    }\n    \n    if (256 < getPaletteSize())\n        SWT.error(SWT.ERROR_INVALID_IMAGE);\n}",
+			"comments":"/**\n* Answer whether the chunk is a valid PLTE chunk.\n*/\n// A PLTE chunk is invalid if no IHDR has been read or if any PLTE,\n// IDAT, or IEND chunk has been read.\n// Palettes cannot be included in grayscale images.\n// Palette chunks' data fields must be event multiples\n// of 3. Each 3-byte group represents an RGB value.\n// Palettes cannot have more entries than 2^bitDepth\n// where bitDepth is the bit depth of the image given\n// in the IHDR chunk.\n// Palettes cannot have more than 256 entries.\n",
+			"methodName":"void validate(PngFileReadState readState, PngIhdrChunk headerChunk)"
+		},
+		"int getPaletteSize()":{
+			"methodBody":"{\n    return getLength() / 3;\n}",
+			"comments":"/**\n* Get the number of colors in this palette.\n*/\n",
+			"methodName":"int getPaletteSize()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"PngPlteChunk"
+	]
+}

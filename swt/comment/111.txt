@@ -1,0 +1,4 @@
+milli seconds
+milli seconds
+Some effects are mutually exclusive Make sure that only one of the mutually exclusive effects has been specified
+Bug in Windows When TVM SETINSERTMARK is used to set an insert mark for a tree and an item is expanded or collapsed near the insert mark the tree does not redraw the insert mark properly The fix is to hide and show the insert mark whenever an item is expanded or collapsed Since the insert mark can not be queried from the tree use the Tree API rather than calling the OS directly

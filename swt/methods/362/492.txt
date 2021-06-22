@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+int
+script
+get
+properti
+scriptgetproperti
+int
+ppsp
+int
+num
+script
+pinumscript

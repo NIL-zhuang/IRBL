@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+int
+get
+prop
+getpropa
+int
+wnd
+hwnd
+int
+string
+lpstring

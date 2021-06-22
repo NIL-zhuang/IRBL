@@ -1,0 +1,16 @@
+address
+com
+address
+class
+pclassid
+address
+class
+pclassid
+get
+class
+getclassid
+vtbl
+call
+vtblcall
+persist
+ipersist

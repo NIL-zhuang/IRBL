@@ -1,0 +1,9 @@
+public
+static
+final
+nativ
+void
+point
+delet
+int
+point

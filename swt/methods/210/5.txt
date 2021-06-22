@@ -1,0 +1,9 @@
+public
+boolean
+verifi
+return
+get
+segment
+marker
+getsegmentmark
+signatur

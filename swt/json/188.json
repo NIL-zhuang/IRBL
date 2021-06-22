@@ -1,0 +1,15 @@
+{
+	"variables":[
+		"PLATFORM"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"Platform"
+	]
+}

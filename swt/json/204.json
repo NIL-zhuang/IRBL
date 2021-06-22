@@ -1,0 +1,58 @@
+{
+	"variables":[
+		"reference",
+		"reference",
+		"reference",
+		"byteStream",
+		"reference",
+		"SWT",
+		"SWT",
+		"e",
+		"ERROR_IO",
+		"reference",
+		"byteStream",
+		"e",
+		"length"
+	],
+	"extendORImplementFiles":[
+		"JPEGSegment"
+	],
+	"package":[
+		"org.eclipse.swt.internal.image"
+	],
+	"import":[
+		"org.eclipse.swt"
+	],
+	"methods":[
+		"fixedSize",
+		"getSegmentLength",
+		"setSegmentLength",
+		"fixedSize",
+		"setSegmentMarker",
+		"signature",
+		"fixedSize",
+		"read",
+		"error",
+		"fixedSize"
+	],
+	"methodsBody":{
+		"public void setSegmentLength(int length)":{
+			"methodBody":"{\n}",
+			"comments":"",
+			"methodName":"public void setSegmentLength(int length)"
+		},
+		"public abstract int fixedSize()":{
+			"methodBody":"",
+			"comments":"",
+			"methodName":"public abstract int fixedSize()"
+		},
+		"public int getSegmentLength()":{
+			"methodBody":"{\n    return fixedSize() - 2;\n}",
+			"comments":"",
+			"methodName":"public int getSegmentLength()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"JPEGFixedSizeSegment"
+	]
+}

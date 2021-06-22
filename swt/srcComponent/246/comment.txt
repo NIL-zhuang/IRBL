@@ -1,0 +1,10 @@
+typedesc
+elemdesc
+func
+elemdescfunc
+tdesc
+paramdesc
+elemdesc
+func
+elemdescfunc
+paramdesc

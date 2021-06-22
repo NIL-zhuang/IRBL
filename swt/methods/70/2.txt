@@ -1,0 +1,17 @@
+public
+int
+get
+char
+count
+getcharcount
+return
+the
+number
+charact
+the
+content
+the
+number
+charact
+the
+content

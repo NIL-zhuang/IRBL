@@ -1,0 +1,11 @@
+public
+boolean
+progress
+scan
+isdcprogressivescan
+return
+get
+start
+spectral
+select
+getstartofspectralselect

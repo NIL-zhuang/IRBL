@@ -1,0 +1,55 @@
+{
+	"variables":[
+		"event",
+		"event",
+		"event",
+		"event",
+		"event"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.custom"
+	],
+	"import":[
+		"org.eclipse.swt.internal"
+	],
+	"methods":[
+		"close",
+		"minimize",
+		"maximize",
+		"restore",
+		"showList"
+	],
+	"methodsBody":{
+		"public void close(CTabFolderEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when the user clicks on the close button of an item in the CTabFolder.\n* The item being closed is specified in the event.item field.\n* Setting the event.doit field to false will stop the CTabItem from closing.\n* When the CTabItem is closed, it is disposed.  The contents of the\n* CTabItem (see CTabItem.setControl) will be made not visible when\n* the CTabItem is closed.\n*\n* @param event an event indicating the item being closed\n*/\n",
+			"methodName":"public void close(CTabFolderEvent event)"
+		},
+		"public void restore(CTabFolderEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when the user clicks on the restore button of a CTabFolder.\n* This event is sent either to restore the CTabFolder from the\n* minimized state or from the maximized state.  To determine\n* which restore is requested, use CTabFolder.getMinimized() or\n* CTabFolder.getMaximized() to determine the current state.\n* The state of the CTabFolder does not change automatically - it\n* is up to the application to change the state of the CTabFolder\n* in response to this event using CTabFolder.setMaximized(false)\n* or CTabFolder.setMinimized(false).\n*\n* @param event an event containing information about the restore\n*\n* @see CTabFolder#getMinimized()\n* @see CTabFolder#getMaximized()\n* @see CTabFolder#setMinimized(boolean)\n* @see CTabFolder#setMinimizeVisible(boolean)\n* @see CTabFolder#setMaximized(boolean)\n* @see CTabFolder#setMaximizeVisible(boolean)\n*/\n",
+			"methodName":"public void restore(CTabFolderEvent event)"
+		},
+		"public void minimize(CTabFolderEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when the user clicks on the minimize button of a CTabFolder.\n* The state of the CTabFolder does not change automatically - it\n* is up to the application to change the state of the CTabFolder\n* in response to this event using CTabFolder.setMinimized(true).\n*\n* @param event an event containing information about the minimize\n*\n* @see CTabFolder#getMinimized()\n* @see CTabFolder#setMinimized(boolean)\n* @see CTabFolder#setMinimizeVisible(boolean)\n*/\n",
+			"methodName":"public void minimize(CTabFolderEvent event)"
+		},
+		"public void maximize(CTabFolderEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when the user clicks on the maximize button of a CTabFolder.\n* The state of the CTabFolder does not change automatically - it\n* is up to the application to change the state of the CTabFolder\n* in response to this event using CTabFolder.setMaximized(true).\n*\n* @param event an event containing information about the maximize\n*\n* @see CTabFolder#getMaximized()\n* @see CTabFolder#setMaximized(boolean)\n* @see CTabFolder#setMaximizeVisible(boolean)\n*/\n",
+			"methodName":"public void maximize(CTabFolderEvent event)"
+		},
+		"public void showList(CTabFolderEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when the user clicks on the chevron button of the CTabFolder.\n* A chevron appears in the CTabFolder when there are more tabs\n* than can be displayed at the current widget size.  To select a\n* tab that is not currently visible, the user clicks on the\n* chevron and selects a tab item from a list.  By default, the\n* CTabFolder provides a list of all the items that are not currently\n* visible, however, the application can provide its own list by setting\n* the event.doit field to <code>false</code> and displaying a selection list.\n*\n* @param event an event containing information about the show list\n*\n* @see CTabFolder#setSelection(CTabItem)\n*/\n",
+			"methodName":"public void showList(CTabFolderEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"CTabFolder2Listener"
+	]
+}

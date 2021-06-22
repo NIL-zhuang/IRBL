@@ -1,0 +1,8 @@
+protect
+void
+check
+subclass
+checksubclass
+noth
+subclass
+allow

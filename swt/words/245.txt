@@ -1,0 +1,9 @@
+format
+cfformat
+ptd
+aspect
+dwaspect
+lindex
+tyme
+sizeof
+formatetc

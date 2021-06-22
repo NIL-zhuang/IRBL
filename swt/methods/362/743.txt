@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+boolean
+messag
+beep
+messagebeep
+int
+type
+utyp

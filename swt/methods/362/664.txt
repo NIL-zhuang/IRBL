@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+boolean
+invalid
+rgn
+invalidatergn
+int
+wnd
+hwnd
+int
+rgn
+hrgn
+boolean
+eras
+beras

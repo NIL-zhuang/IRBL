@@ -1,0 +1,32 @@
+{
+	"variables":[
+		"e",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"KeyListener"
+	],
+	"package":[
+		"org.eclipse.swt.events"
+	],
+	"import":[],
+	"methods":[
+		"keyPressed",
+		"keyReleased"
+	],
+	"methodsBody":{
+		"public void keyPressed(KeyEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when a key is pressed on the system keyboard.\n* The default behavior is to do nothing.\n*\n* @param e an event containing information about the key press\n*/\n",
+			"methodName":"public void keyPressed(KeyEvent e)"
+		},
+		"public void keyReleased(KeyEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when a key is released on the system keyboard.\n* The default behavior is to do nothing.\n*\n* @param e an event containing information about the key release\n*/\n",
+			"methodName":"public void keyReleased(KeyEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"KeyAdapter"
+	]
+}

@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+int
+graphic
+set
+interpol
+mode
+setinterpolationmod
+int
+graphic
+int
+mode

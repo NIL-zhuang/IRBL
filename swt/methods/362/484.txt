@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+int
+command
+bar
+commandbar
+height
+int
+hdnw
+hdnwcb

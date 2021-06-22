@@ -1,0 +1,17 @@
+lresult
+capturechang
+int
+param
+wparam
+int
+param
+lparam
+return
+captur
+chang
+wmcapturechang
+handl
+param
+wparam
+param
+lparam

@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+int
+set
+meta
+rgn
+setmetargn
+int
+hdc

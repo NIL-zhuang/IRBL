@@ -1,0 +1,28 @@
+{
+	"variables":[
+		"event"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.custom"
+	],
+	"import":[
+		"org.eclipse.swt.events",
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"verifyKey"
+	],
+	"methodsBody":{
+		"public void verifyKey(VerifyEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* The following event fields are used:<ul>\n* <li>event.character is the character that was typed (input)</li>\n* <li>event.keyCode is the key code that was typed (input)</li>\n* <li>event.stateMask is the state of the keyboard (input)</li>\n* <li>event.doit is processed or not (output)</li>\n* </ul>\n* @param event the verify event\n* @see VerifyEvent\n*/\n",
+			"methodName":"public void verifyKey(VerifyEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"VerifyKeyListener"
+	]
+}

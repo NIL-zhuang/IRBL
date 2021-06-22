@@ -1,0 +1,15 @@
+public
+int
+activ
+uiactiv
+int
+activ
+fuiactiv
+return
+com
+vtbl
+call
+vtblcall
+address
+activ
+fuiactiv

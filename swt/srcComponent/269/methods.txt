@@ -1,0 +1,6 @@
+get
+class
+getclassid
+vtbl
+call
+vtblcall

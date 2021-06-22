@@ -1,0 +1,62 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"COM",
+		"address",
+		"COM",
+		"address",
+		"lprcPosRect",
+		"lprcClipRect",
+		"COM",
+		"address",
+		"address",
+		"lprcPosRect",
+		"lprcClipRect"
+	],
+	"extendORImplementFiles":[
+		"IOleWindow"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"methods":[
+		"InPlaceDeactivate",
+		"UIDeactivate",
+		"SetObjectRects",
+		"ReactivateAndUndo",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int SetObjectRects(RECT lprcPosRect, RECT lprcClipRect)":{
+			"methodBody":"{\n    return COM.VtblCall(7, address, lprcPosRect, lprcClipRect);\n}",
+			"comments":"",
+			"methodName":"public int SetObjectRects(RECT lprcPosRect, RECT lprcClipRect)"
+		},
+		"public int ReactivateAndUndo()":{
+			"methodBody":"{\n    return COM.VtblCall(8, address);\n}",
+			"comments":"",
+			"methodName":"public int ReactivateAndUndo()"
+		},
+		"public int InPlaceDeactivate()":{
+			"methodBody":"{\n    return COM.VtblCall(5, address);\n}",
+			"comments":"",
+			"methodName":"public int InPlaceDeactivate()"
+		},
+		"public int UIDeactivate()":{
+			"methodBody":"{\n    return COM.VtblCall(6, address);\n}",
+			"comments":"",
+			"methodName":"public int UIDeactivate()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IOleInPlaceObject"
+	]
+}

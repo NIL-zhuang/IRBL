@@ -1,0 +1,7 @@
+strang
+background
+color
+label
+text
+search
+page

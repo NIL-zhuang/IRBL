@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+int
+find
+window
+findwindoww
+char
+class
+name
+lpclassnam
+char
+window
+name
+lpwindownam

@@ -1,0 +1,7 @@
+abstract
+void
+show
+int
+effect
+int
+int

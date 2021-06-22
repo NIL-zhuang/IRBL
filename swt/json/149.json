@@ -1,0 +1,32 @@
+{
+	"variables":[
+		"e",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"TreeListener"
+	],
+	"package":[
+		"org.eclipse.swt.events"
+	],
+	"import":[],
+	"methods":[
+		"treeCollapsed",
+		"treeExpanded"
+	],
+	"methodsBody":{
+		"public void treeCollapsed(TreeEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when a tree branch is collapsed.\n* The default behavior is to do nothing.\n*\n* @param e an event containing information about the tree operation\n*/\n",
+			"methodName":"public void treeCollapsed(TreeEvent e)"
+		},
+		"public void treeExpanded(TreeEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when a tree branch is expanded.\n* The default behavior is to do nothing.\n*\n* @param e an event containing information about the tree operation\n*/\n",
+			"methodName":"public void treeExpanded(TreeEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"TreeAdapter"
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"variables":[
+		"driver",
+		"name",
+		"scope",
+		"startPage",
+		"endPage",
+		"printToFile",
+		"fileName",
+		"copyCount",
+		"collate",
+		"ALL_PAGES",
+		"PAGE_RANGE",
+		"SELECTION",
+		"otherData",
+		"ALL_PAGES",
+		"driver",
+		"name",
+		"driver",
+		"name",
+		"driver",
+		"name",
+		"driver",
+		"name"
+	],
+	"extendORImplementFiles":[
+		"DeviceData"
+	],
+	"package":[
+		"org.eclipse.swt.printing"
+	],
+	"import":[
+		"org.eclipse.swt.graphics"
+	],
+	"methods":[
+		"toString"
+	],
+	"methodsBody":{
+		"public String toString()":{
+			"methodBody":"{\n    \n    return \"PrinterData {\" + \"driver = \" + driver + \", name = \" + name + \"}\";\n}",
+			"comments":"/**\n* Returns a string containing a concise, human-readable\n* description of the receiver.\n*\n* @return a string representation of the receiver\n*/\n//$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$\n",
+			"methodName":"public String toString()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"PrinterData"
+	]
+}

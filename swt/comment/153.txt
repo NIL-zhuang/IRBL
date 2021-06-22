@@ -1,0 +1,5 @@
+the range of text being modified Setting these fields has no effect
+the new text that will be inserted Setting this field will change the text that is about to be inserted or deleted
+Constructs a new instance of this class based on the information in the given untyped event param e the untyped event containing the information
+remove trailing
+Returns a string containing a concise human readable description of the receiver return a string representation of the event

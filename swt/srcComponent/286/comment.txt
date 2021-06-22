@@ -1,0 +1,8 @@
+guid
+guid
+typedesc
+tdesc
+alia
+tdescalia
+idldesc
+idldesctyp

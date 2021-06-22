@@ -1,0 +1,31 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"pCI",
+		"address",
+		"pCI"
+	],
+	"extendORImplementFiles":[
+		"IUnknown"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"GetControlInfo",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int GetControlInfo(CONTROLINFO pCI)":{
+			"methodBody":"{\n    return COM.VtblCall(3, address, pCI);\n}",
+			"comments":"",
+			"methodName":"public int GetControlInfo(CONTROLINFO pCI)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IOleControl"
+	]
+}

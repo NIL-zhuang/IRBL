@@ -1,0 +1,15 @@
+style
+dwstyle
+left
+top
+right
+bottom
+sizeof
+compositionform
+point
+current
+pos
+ptcurrentpo
+rect
+area
+rcarea

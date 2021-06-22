@@ -1,0 +1,10 @@
+privat
+int
+save
+object
+saveobject
+updat
+storag
+updatestorag
+return
+com

@@ -1,0 +1,6 @@
+type
+singl
+line
+select
+tripl
+click

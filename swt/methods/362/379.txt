@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+boolean
+delet
+object
+deleteobject
+int
+gdi
+obj
+hgdiobj

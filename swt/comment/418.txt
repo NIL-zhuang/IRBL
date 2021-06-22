@@ -1,0 +1,52 @@
+OleFrame is an OLE Container s top level frame p This object implements the OLE Interfaces IUnknown and IOleInPlaceFrame p OleFrame allows the container to do the following ul li position and size the ActiveX Control or OLE Document within the application li insert menu items from the application into the OLE Document s menu li activate and deactivate the OLE Document s menus li position the OLE Document s menu in the application li translate accelerator keystrokes intended for the container s frame ul dl dt b Styles b dd BORDER dt b Events b dd Dispose Move Resize dl
+Interfaces for this Ole Client Container
+Access to the embedded linked Ole Object
+NON NLS 1
+NON NLS 1
+NON NLS 1
+set up widget attributes
+setup cleanup proc
+inform inplaceactiveobject whenever frame resizes
+inform inplaceactiveobject whenever frame moves
+with them
+Check for focus change
+Create an OleFrame child widget using style bits to select a particular look or set of properties param parent a composite widget cannot be null param style the bitwise OR ing of widget styles exception IllegalArgumentException ul li ERROR NULL ARGUMENT when the parent is null ul exception SWTException ul li ERROR THREAD INVALID ACCESS when called from the wrong thread ul
+ignore popup menus and dialogs
+NON NLS 1
+Allow activeX control to translate accelerators except when a menu is active
+Allow OleClientSite to process key events before activeX control
+by the application zero out message wParam and lParam
+Increment the count of references to this instance return the current reference count
+Create each of the interfaces that this object implements
+method13 EnableModeless not implemented
+The IOleInPlaceUIWindow GetBorder function when called on a document or frame window object returns the outer rectangle relative to the window where the object can put toolbars or similar controls
+Coordinates must be relative to the window
+Returns the application menu items that will appear in the Container location when an OLE Document is in place activated p When an OLE Document is in place active the Document provides its own menus but the application is given the opportunity to merge some of its menus into the menubar The application is allowed to insert its menus in three locations File far left Container middle and Window far right just before Help The OLE Document retains control of the Edit Object and Help menu locations Note that an application can insert more than one menu into a single location return the application menu items that will appear in the Container location when an OLE Document is in place activated
+Returns the application menu items that will appear in the File location when an OLE Document is in place activated p When an OLE Document is in place active the Document provides its own menus but the application is given the opportunity to merge some of its menus into the menubar The application is allowed to insert its menus in three locations File far left Container middle and Window far right just before Help The OLE Document retains control of the Edit Object and Help menu locations Note that an application can insert more than one menu into a single location return the application menu items that will appear in the File location when an OLE Document is in place activated
+Returns the application menu items that will appear in the Window location when an OLE Document is in place activated p When an OLE Document is in place active the Document provides its own menus but the application is given the opportunity to merge some of its menus into the menubar The application is allowed to insert its menus in three locations File far left Container middle and Window far right just before Help The OLE Document retains control of the Edit Object and Help menu locations Note that an application can insert more than one menu into a single location return the application menu items that will appear in the Window location when an OLE Document is in place activated
+locate menu bar
+the OS and the OS will fill in the requested information for each menu
+item from the OS
+lpmii cch gets updated by GetMenuItemInfo to indicate the
+keep track of the number of items
+before each call
+copy the menu item count information to the pointer
+item from the OS
+lpmii cch gets updated by GetMenuItemInfo to indicate the
+keep track of the number of items
+before each call
+copy the menu item count information to the pointer
+item from the OS
+lpmii cch gets updated by GetMenuItemInfo to indicate the
+keep track of the number of items
+before each call
+copy the menu item count information to the pointer
+free resources used in querying the OS
+implements IUnknown IOleInPlaceFrame IOleContainer IOleInPlaceUIWindow
+Decrement the count of references to this instance return the current reference count
+get Id from original menubar
+passing NULL as the pborderwidths parameter
+Specify the menu items that should appear in the Container location when an OLE Document is in place activated p When an OLE Document is in place active the Document provides its own menus but the application is given the opportunity to merge some of its menus into the menubar The application is allowed to insert its menus in three locations File far left Container middle and Window far right just before Help The OLE Document retains control of the Edit Object and Help menu locations Note that an application can insert more than one menu into a single location p This method must be called before in place activation of the OLE Document After the Document is activated the menu bar will not be modified until a subsequent activation param containerMenus an array of top level MenuItems to be inserted into the Container location of the menubar
+Specify the menu items that should appear in the File location when an OLE Document is in place activated p When an OLE Document is in place active the Document provides its own menus but the application is given the opportunity to merge some of its menus into the menubar The application is allowed to insert its menus in three locations File far left Container middle and Window far right just before Help The OLE Document retains control of the Edit Object and Help menu locations Note that an application can insert more than one menu into a single location p This method must be called before in place activation of the OLE Document After the Document is activated the menu bar will not be modified until a subsequent activation param fileMenus an array of top level MenuItems to be inserted into the Flie location of the menubar
+re instate the original menu this occurs on deactivation
+Set the menu items that should appear in the Window location when an OLE Document is in place activated p When an OLE Document is in place active the Document provides its own menus but the application is given the opportunity to merge some of its menus into the menubar The application is allowed to insert its menus in three locations File far left Container middle and Window far right just before Help The OLE Document retains control of the Edit Object and Help menu locations Note that an application can insert more than one menu into a single location p This method must be called before in place activation of the OLE Document After the Document is activated the menu bar will not be modified until a subsequent activation param windowMenus an array of top level MenuItems to be inserted into the Window location of the menubar

@@ -1,0 +1,18 @@
+{
+	"variables":[
+		"tymed",
+		"unionField",
+		"pUnkForRelease",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"STGMEDIUM"
+	]
+}

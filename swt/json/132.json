@@ -1,0 +1,27 @@
+{
+	"variables":[
+		"e"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.events"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"modifyText"
+	],
+	"methodsBody":{
+		"public void modifyText(ModifyEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when the text is modified.\n*\n* @param e an event containing information about the modify\n*/\n",
+			"methodName":"public void modifyText(ModifyEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"ModifyListener"
+	]
+}

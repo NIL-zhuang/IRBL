@@ -1,0 +1,9 @@
+public
+rectangl
+get
+client
+area
+getclientarea
+return
+new
+rectangl

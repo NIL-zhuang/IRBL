@@ -1,0 +1,12 @@
+void
+move
+move
+fals
+set
+caret
+pos
+setcaretpo
+return
+resiz
+ime
+resizeim

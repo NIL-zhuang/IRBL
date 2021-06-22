@@ -1,0 +1,30 @@
+{
+	"variables":[
+		"memid",
+		"lprgscode",
+		"lprgelemdescParam",
+		"funckind",
+		"invkind",
+		"callconv",
+		"cParams",
+		"cParamsOpt",
+		"oVft",
+		"cScodes",
+		"elemdescFunc_tdesc_union",
+		"elemdescFunc_tdesc_vt",
+		"elemdescFunc_paramdesc_pparamdescex",
+		"elemdescFunc_paramdesc_wParamFlags",
+		"wFuncFlags",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"FUNCDESC"
+	]
+}

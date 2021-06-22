@@ -1,0 +1,15 @@
+byte
+get
+refer
+getrefer
+return
+refer
+get
+the
+png
+chunk
+pngchunk
+refer
+byte
+array
+bytearray

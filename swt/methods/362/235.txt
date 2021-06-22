@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+int
+load
+librari
+loadlibraryw
+char
+lib
+file
+name
+lplibfilenam

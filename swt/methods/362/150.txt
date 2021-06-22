@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+boolean
+polylin
+int
+hdc
+int
+point
+int
+point
+npoint

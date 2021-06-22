@@ -1,0 +1,9 @@
+tchar
+window
+class
+windowclass
+return
+tool
+bar
+class
+toolbarclass

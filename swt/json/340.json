@@ -1,0 +1,25 @@
+{
+	"variables":[
+		"iItem",
+		"iSubItem",
+		"uNewState",
+		"uOldState",
+		"uChanged",
+		"x",
+		"y",
+		"lParam",
+		"sizeof"
+	],
+	"extendORImplementFiles":[
+		"NMHDR"
+	],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"NMLISTVIEW"
+	]
+}

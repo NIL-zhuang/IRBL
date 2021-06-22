@@ -1,0 +1,7 @@
+protect
+abstract
+color
+get
+select
+background
+getselectionbackground

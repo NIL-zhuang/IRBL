@@ -1,0 +1,14 @@
+public
+void
+set
+number
+imag
+compon
+setnumberofimagecompon
+int
+integ
+aninteg
+refer
+byte
+integ
+aninteg

@@ -1,0 +1,14 @@
+int
+get
+width
+getwidth
+return
+get
+width
+data
+offset
+get
+the
+imag
+width
+pixel

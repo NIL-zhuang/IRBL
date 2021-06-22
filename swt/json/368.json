@@ -1,0 +1,34 @@
+{
+	"variables":[
+		"lStructSize",
+		"hwndOwner",
+		"hDevMode",
+		"hDevNames",
+		"hDC",
+		"Flags",
+		"nFromPage",
+		"nToPage",
+		"nMinPage",
+		"nMaxPage",
+		"nCopies",
+		"hInstance",
+		"lCustData",
+		"lpfnPrintHook",
+		"lpfnSetupHook",
+		"lpPrintTemplateName",
+		"lpSetupTemplateName",
+		"hPrintTemplate",
+		"hSetupTemplate",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"PRINTDLG"
+	]
+}

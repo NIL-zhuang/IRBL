@@ -1,0 +1,11 @@
+public
+int
+place
+deactiv
+inplacedeactiv
+return
+com
+vtbl
+call
+vtblcall
+address

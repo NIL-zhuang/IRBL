@@ -1,0 +1,11 @@
+public
+int
+add
+ref
+addref
+return
+com
+vtbl
+call
+vtblcall
+address

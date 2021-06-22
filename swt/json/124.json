@@ -1,0 +1,27 @@
+{
+	"variables":[
+		"e"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.events"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"helpRequested"
+	],
+	"methodsBody":{
+		"public void helpRequested(HelpEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when help is requested for a control, typically\n* when the user presses F1.\n*\n* @param e an event containing information about the help\n*/\n",
+			"methodName":"public void helpRequested(HelpEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"HelpListener"
+	]
+}

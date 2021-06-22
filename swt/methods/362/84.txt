@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+boolean
+shell
+execut
+shellexecuteexw
+shellexecuteinfo
+exec
+info
+lpexecinfo

@@ -1,0 +1,10 @@
+boolean
+has
+focus
+hasfocus
+return
+parent
+handl
+get
+focus
+getfocus

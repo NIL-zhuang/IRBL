@@ -1,0 +1,60 @@
+{
+	"variables":[
+		"event",
+		"event",
+		"event",
+		"event",
+		"event",
+		"event"
+	],
+	"extendORImplementFiles":[
+		"DropTargetListener"
+	],
+	"package":[
+		"org.eclipse.swt.dnd"
+	],
+	"import":[],
+	"methods":[
+		"dragEnter",
+		"dragLeave",
+		"dragOperationChanged",
+		"dragOver",
+		"drop",
+		"dropAccept"
+	],
+	"methodsBody":{
+		"public void dragEnter(DropTargetEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* This implementation of <code>dragEnter</code> permits the default\n* operation defined in <code>event.detail</code>to be performed on the current data type\n* defined in <code>event.currentDataType</code>.\n* For additional information see <code>DropTargetListener.dragEnter</code>.\n*/\n",
+			"methodName":"public void dragEnter(DropTargetEvent event)"
+		},
+		"public void dragOver(DropTargetEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* This implementation of <code>dragOver</code> permits the default\n* operation defined in <code>event.detail</code>to be performed on the current data type\n* defined in <code>event.currentDataType</code>.\n* For additional information see <code>DropTargetListener.dragOver</code>.\n*/\n",
+			"methodName":"public void dragOver(DropTargetEvent event)"
+		},
+		"public void drop(DropTargetEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* This implementation of <code>drop</code> does nothing.\n* For additional information see <code>DropTargetListener.drop</code>.\n*/\n",
+			"methodName":"public void drop(DropTargetEvent event)"
+		},
+		"public void dragLeave(DropTargetEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* This implementation of <code>dragLeave</code> does nothing.\n* For additional information see <code>DropTargetListener.dragOperationChanged</code>.\n*/\n",
+			"methodName":"public void dragLeave(DropTargetEvent event)"
+		},
+		"public void dropAccept(DropTargetEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* This implementation of <code>dropAccept</code> permits the default\n* operation defined in <code>event.detail</code>to be performed on the current data type\n* defined in <code>event.currentDataType</code>.\n* For additional information see <code>DropTargetListener.dropAccept</code>.\n*/\n",
+			"methodName":"public void dropAccept(DropTargetEvent event)"
+		},
+		"public void dragOperationChanged(DropTargetEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* This implementation of <code>dragOperationChanged</code> permits the default\n* operation defined in <code>event.detail</code>to be performed on the current data type\n* defined in <code>event.currentDataType</code>.\n* For additional information see <code>DropTargetListener.dragOperationChanged</code>.\n*/\n",
+			"methodName":"public void dragOperationChanged(DropTargetEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"DropTargetAdapter"
+	]
+}

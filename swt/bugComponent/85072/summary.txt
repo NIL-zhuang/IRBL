@@ -1,0 +1,6 @@
+eclips
+work
+set
+aggress
+trim
+window

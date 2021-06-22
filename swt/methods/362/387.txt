@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+int
+get
+clipboard
+data
+getclipboarddata
+int
+format
+uformat

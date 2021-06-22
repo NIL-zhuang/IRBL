@@ -1,0 +1,14 @@
+public
+void
+set
+text
+settext
+string
+string
+check
+widget
+checkwidget
+set
+text
+settext
+string

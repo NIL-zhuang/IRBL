@@ -1,0 +1,7 @@
+hwnd
+hwnd
+insert
+after
+hwndinsertaft
+flag
+sizeof

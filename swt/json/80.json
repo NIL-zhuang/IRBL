@@ -1,0 +1,41 @@
+{
+	"variables":[
+		"event",
+		"event",
+		"event"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.custom"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"textChanging",
+		"textChanged",
+		"textSet"
+	],
+	"methodsBody":{
+		"public void textChanged(TextChangedEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* This method is called when the content has changed.\n* Callers need to have called the textChanging method prior to\n* applying the content change and calling this method. The widget\n* only updates the screen properly when it receives both events.\n*\n* @param event the text changed event\n*/\n",
+			"methodName":"public void textChanged(TextChangedEvent event)"
+		},
+		"public void textSet(TextChangedEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* This method is called instead of the textChanging/textChanged\n* combination when the entire old content has been replaced\n* (e.g., by a call to StyledTextContent.setText()).\n*\n* @param event the text changed event\n*/\n",
+			"methodName":"public void textSet(TextChangedEvent event)"
+		},
+		"public void textChanging(TextChangingEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* This method is called when the content is about to be changed.\n* Callers also need to call the textChanged method after the\n* content change has been applied. The widget only updates the\n* screen properly when it receives both events.\n*\n* @param event the text changing event. All event fields need\n* \tto be set by the sender.\n* @see TextChangingEvent\n*/\n",
+			"methodName":"public void textChanging(TextChangingEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"TextChangeListener"
+	]
+}

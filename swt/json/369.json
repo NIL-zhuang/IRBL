@@ -1,0 +1,37 @@
+{
+	"variables":[
+		"cbSize",
+		"fMask",
+		"fStyle",
+		"clrFore",
+		"clrBack",
+		"lpText",
+		"cch",
+		"iImage",
+		"hwndChild",
+		"cxMinChild",
+		"cyMinChild",
+		"cx",
+		"hbmBack",
+		"wID",
+		"cyChild",
+		"cyMaxChild",
+		"cyIntegral",
+		"cxIdeal",
+		"lParam",
+		"cxHeader",
+		"sizeof",
+		"OS",
+		"IsWinCE"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"REBARBANDINFO"
+	]
+}

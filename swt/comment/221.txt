@@ -1,0 +1,1 @@
+This method should be called when the image decoder thinks that all of the compressed image data has been read This method will ensure that the next data value is an end of block marker If there are more blocks after this one the method will read them and ensure that they are empty

@@ -1,0 +1,15 @@
+refer
+jpeg
+file
+format
+jpegfileformat
+eoi
+refer
+signatur
+fix
+size
+fixeds
+jpeg
+end
+imag
+jpegendofimag

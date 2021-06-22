@@ -1,0 +1,17 @@
+protect
+point
+get
+select
+getselect
+return
+parent
+intern
+get
+select
+internalgetselect
+style
+text
+render
+styledtextrender
+get
+select

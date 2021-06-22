@@ -1,0 +1,13 @@
+public
+void
+set
+foreground
+setforeground
+color
+color
+super
+set
+foreground
+setforeground
+color
+redraw

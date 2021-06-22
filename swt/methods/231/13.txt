@@ -1,0 +1,17 @@
+int
+get
+entri
+valu
+getentryvalu
+int
+type
+byte
+buffer
+int
+index
+return
+int
+toint
+buffer
+index
+type

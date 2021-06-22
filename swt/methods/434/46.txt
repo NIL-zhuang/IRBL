@@ -1,0 +1,16 @@
+lresult
+setfont
+int
+param
+wparam
+int
+param
+lparam
+return
+super
+setfont
+font
+param
+wparam
+param
+lparam

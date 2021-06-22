@@ -1,0 +1,19 @@
+Instances of this class are sent as a result of accessibility clients sending messages to controls asking for detailed information about the implementation of the control instance Typically only implementors of custom controls need to listen for this event p Note The meaning of each field depends on the message that was sent p see AccessibleControlListener see AccessibleControlAdapter since 2 0
+IN OUT
+OUT
+IN OUT
+OUT
+IN OUT
+OUT
+OUT
+Constructs a new instance of this class param source the object that fired the event
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+Returns a string containing a concise human readable description of the receiver return a string representation of the event

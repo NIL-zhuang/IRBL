@@ -1,0 +1,15 @@
+shell
+activ
+shellactiv
+shell
+close
+shellclos
+shell
+deactiv
+shelldeactiv
+shell
+deiconifi
+shelldeiconifi
+shell
+iconifi
+shelliconifi

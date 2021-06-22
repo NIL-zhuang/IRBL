@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+boolean
+valid
+rect
+validaterect
+int
+wnd
+hwnd
+rect
+rect
+lprect

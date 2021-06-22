@@ -1,0 +1,12 @@
+boolean
+check
+handl
+checkhandl
+int
+hwnd
+return
+hwnd
+handl
+hwnd
+parent
+hwndparent

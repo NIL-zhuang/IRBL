@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+int
+get
+class
+file
+getclassfil
+char
+file
+name
+szfilenam
+guid
+clsid

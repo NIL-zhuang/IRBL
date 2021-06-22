@@ -1,0 +1,53 @@
+{
+	"variables":[
+		"event",
+		"event",
+		"event",
+		"event",
+		"event"
+	],
+	"extendORImplementFiles":[
+		"CTabFolder2Listener"
+	],
+	"package":[
+		"org.eclipse.swt.custom"
+	],
+	"import":[],
+	"methods":[
+		"close",
+		"minimize",
+		"maximize",
+		"restore",
+		"showList"
+	],
+	"methodsBody":{
+		"public void close(CTabFolderEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when the user clicks on the close button of an item in the CTabFolder.  The item being closed is specified\n* in the event.item field. Setting the event.doit field to false will stop  the CTabItem from closing.\n* When the CTabItem is closed, it is disposed.  The contents of the CTabItem (see CTabItem#setControl) will be\n* made not visible when the CTabItem is closed.\n* <p>\n* The default behaviour is to close the CTabItem.\n* </p>\n*\n* @param event an event indicating the item being closed\n*/\n",
+			"methodName":"public void close(CTabFolderEvent event)"
+		},
+		"public void restore(CTabFolderEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when the user clicks on the restore button of a CTabFolder.\n* <p>\n* The default behaviour is to do nothing.\n* </p>\n*\n* @param event an event containing information about the restore\n*/\n",
+			"methodName":"public void restore(CTabFolderEvent event)"
+		},
+		"public void minimize(CTabFolderEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when the user clicks on the minimize button of a CTabFolder.\n* <p>\n* The default behaviour is to do nothing.\n* </p>\n*\n* @param event an event containing information about the minimize\n*/\n",
+			"methodName":"public void minimize(CTabFolderEvent event)"
+		},
+		"public void maximize(CTabFolderEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when the user clicks on the maximize button of a CTabFolder.\n* <p>\n* The default behaviour is to do nothing.\n* </p>\n*\n* @param event an event containing information about the maximize\n*/\n",
+			"methodName":"public void maximize(CTabFolderEvent event)"
+		},
+		"public void showList(CTabFolderEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when the user clicks on the chevron button of a CTabFolder.\n* <p>\n* The default behaviour is to show a list of items that are not currently\n* visible and to change the selection based on the item selected from the list.\n* </p>\n*\n* @param event an event containing information about the show list\n*/\n",
+			"methodName":"public void showList(CTabFolderEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"CTabFolder2Adapter"
+	]
+}

@@ -1,0 +1,4 @@
+text
+sztext
+sizeof
+nmttdispinfow

@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+int
+set
+stretch
+blt
+mode
+setstretchbltmod
+int
+hdc
+int
+stretch
+mode
+istretchmod

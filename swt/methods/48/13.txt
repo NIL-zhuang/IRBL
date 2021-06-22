@@ -1,0 +1,10 @@
+static
+int
+check
+style
+checkstyl
+int
+style
+return
+swt
+none

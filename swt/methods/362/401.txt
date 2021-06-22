@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+int
+set
+int
+hdc
+int
+draw
+mode
+fndrawmod

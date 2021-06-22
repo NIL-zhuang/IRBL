@@ -1,0 +1,93 @@
+{
+	"variables":[
+		"listener",
+		"lineIndex",
+		"offset",
+		"lineIndex",
+		"start",
+		"length",
+		"listener",
+		"start",
+		"replaceLength",
+		"text",
+		"text"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.custom"
+	],
+	"import":[],
+	"methods":[
+		"addTextChangeListener",
+		"getCharCount",
+		"getLine",
+		"getLineAtOffset",
+		"getLineCount",
+		"getLineDelimiter",
+		"getOffsetAtLine",
+		"getTextRange",
+		"removeTextChangeListener",
+		"replaceTextRange",
+		"setText"
+	],
+	"methodsBody":{
+		"public int getOffsetAtLine(int lineIndex)":{
+			"methodBody":"",
+			"comments":"/**\n* Return the character offset of the first character of the given line.\n* <p>\n* <b>NOTE:</b> When there is no text (i.e., no lines), getOffsetAtLine(0)\n* is a valid call that should return 0.\n* </p>\n*\n* @param lineIndex index of the line. The first line is at index 0.\n* @return offset offset of the first character of the line. The first\n* \tcharacter of the document is at offset 0.  The return value should\n* \tinclude line delimiters.\n* \tFor example, if text = \"\\r\\ntest\\r\\n\" and delimiter = \"\\r\\n\", then:\n* <ul>\n* <li>getOffsetAtLine(0) == 0\n* <li>getOffsetAtLine(1) == 2\n* <li>getOffsetAtLine(2) == 8\n* </ul>\n*/\n",
+			"methodName":"public int getOffsetAtLine(int lineIndex)"
+		},
+		"public String getLineDelimiter()":{
+			"methodBody":"",
+			"comments":"/**\n* Return the line delimiter that should be used by the StyledText\n* widget when inserting new lines. New lines entered using key strokes\n* and paste operations use this line delimiter.\n* Implementors may use System.getProperty(\"line.separator\") to return\n* the platform line delimiter.\n* <p>\n*\n* @return the line delimiter that should be used by the StyledText widget\n*\twhen inserting new lines.\n*/\n",
+			"methodName":"public String getLineDelimiter()"
+		},
+		"public int getCharCount()":{
+			"methodBody":"",
+			"comments":"/**\n* Return the number of characters in the content.\n* <p>\n*\n* @return the number of characters in the content.\n*/\n",
+			"methodName":"public int getCharCount()"
+		},
+		"public void addTextChangeListener(TextChangeListener listener)":{
+			"methodBody":"",
+			"comments":"/**\n* Called by StyledText to add itself as an Observer to content changes.\n* See TextChangeListener for a description of the listener methods that\n* are called when text changes occur.\n* <p>\n*\n* @param listener the listener\n* @exception IllegalArgumentException <ul>\n*    <li>ERROR_NULL_ARGUMENT when listener is null</li>\n* </ul>\n*/\n",
+			"methodName":"public void addTextChangeListener(TextChangeListener listener)"
+		},
+		"public String getTextRange(int start, int length)":{
+			"methodBody":"",
+			"comments":"/**\n* Returns a string representing the content at the given range.\n* <p>\n*\n* @param start the start offset of the text to return. Offset 0 is the\n* \tfirst character of the document.\n* @param length the length of the text to return\n* @return the text at the given range\n*/\n",
+			"methodName":"public String getTextRange(int start, int length)"
+		},
+		"public void replaceTextRange(int start, int replaceLength, String text)":{
+			"methodBody":"",
+			"comments":"/**\n* Replace the text with \"newText\" starting at position \"start\"\n* for a length of \"replaceLength\".\n* <p>\n* Implementors have to notify the TextChangeListeners that were added\n* using <code>addTextChangeListener</code> before and after the content\n* is changed. A <code>TextChangingEvent</code> has to be sent to the\n* textChanging method before the content is changed and a\n* <code>TextChangedEvent</code> has to be sent to the textChanged method\n* after the content has changed.\n* The text change that occurs after the <code>TextChangingEvent</code>\n* has been sent has to be consistent with the data provided in the\n* <code>TextChangingEvent</code>.\n* This data will be cached by the widget and will be used when the\n* <code>TextChangedEvent</code> is received.\n* <p>\n* The <code>TextChangingEvent</code> should be set as follows:\n* <ul>\n* <li>event.start = start of the replaced text\n* <li>event.newText = text that is going to be inserted or empty String\n*\tif no text will be inserted\n* <li>event.replaceCharCount = length of text that is going to be replaced\n* <li>event.newCharCount = length of text that is going to be inserted\n* <li>event.replaceLineCount = number of lines that are going to be replaced\n* <li>event.newLineCount = number of new lines that are going to be inserted\n* </ul>\n* <b>NOTE:</b> newLineCount is the number of inserted lines and replaceLineCount\n* is the number of deleted lines based on the change that occurs visually.\n* For example:\n* <ul>\n* <li>(replaceText, newText) ==> (replaceLineCount, newLineCount)\n* <li>(\"\", \"\\n\") ==> (0, 1)\n* <li>(\"\\n\\n\", \"a\") ==> (2, 0)\n* <li>(\"a\", \"\\n\\n\") ==> (0, 2)\n* <li>(\"\\n\", \"\") ==> (1, 0)\n* </ul>\n* </p>\n*\n* @param start start offset of text to replace, none of the offsets include\n*\tdelimiters of preceeding lines, offset 0 is the first character of the\n* \tdocument\n* @param replaceLength length of text to replace\n* @param text text to replace\n* @see TextChangeListener\n*/\n",
+			"methodName":"public void replaceTextRange(int start, int replaceLength, String text)"
+		},
+		"public int getLineCount()":{
+			"methodBody":"",
+			"comments":"/**\n* Return the number of lines.  Should answer 1 when no text is specified.\n* The  StyledText widget relies on this behavior for drawing the cursor.\n* <p>\n*\n* @return the number of lines.  For example:\n* <ul>\n* <li>\ttext value ==> getLineCount\n* <li>\tnull ==> 1\n* <li>\t\"\" ==> 1\n* <li>\t\"a\\n\" ==> 2\n* <li>\t\"\\n\\n\" ==> 3\n* </ul>\n*/\n",
+			"methodName":"public int getLineCount()"
+		},
+		"public void setText(String text)":{
+			"methodBody":"",
+			"comments":"/**\n* Set text to \"text\".\n* Implementors have to send a <code>TextChangedEvent</code> to the\n* textSet method of the TextChangeListeners that were added using\n* <code>addTextChangeListener</code>.\n* <p>\n*\n* @param text the new text\n* @see TextChangeListener\n*/\n",
+			"methodName":"public void setText(String text)"
+		},
+		"public int getLineAtOffset(int offset)":{
+			"methodBody":"",
+			"comments":"/**\n* Return the line index at the given character offset.\n* <p>\n*\n* @param offset offset of the line to return. The first character of the\n* \tdocument is at offset 0.  An offset of getLength() is valid and should\n*\tanswer the number of lines.\n* @return the line index. The first line is at index 0.  If the character\n* \tat offset is a delimiter character, answer the line index of the line\n* \tthat is delimited.\n* \tFor example, if text = \"\\r\\n\\r\\n\", and delimiter = \"\\r\\n\", then:\n* <ul>\n* <li>getLineAtOffset(0) == 0\n* <li>getLineAtOffset(1) == 0\n* <li>getLineAtOffset(2) == 1\n* <li>getLineAtOffset(3) == 1\n* <li>getLineAtOffset(4) == 2\n* </ul>\n*/\n",
+			"methodName":"public int getLineAtOffset(int offset)"
+		},
+		"public String getLine(int lineIndex)":{
+			"methodBody":"",
+			"comments":"/**\n* Return the line at the given line index without delimiters.\n* <p>\n*\n* @param lineIndex index of the line to return. Does not include\n*\tdelimiters of preceeding lines. Index 0 is the first line of the\n* \tcontent.\n* @return the line text without delimiters\n*/\n",
+			"methodName":"public String getLine(int lineIndex)"
+		},
+		"public void removeTextChangeListener(TextChangeListener listener)":{
+			"methodBody":"",
+			"comments":"/**\n* Remove the specified text changed listener.\n* <p>\n*\n* @param listener the listener\n* @exception IllegalArgumentException <ul>\n*    <li>ERROR_NULL_ARGUMENT when listener is null</li>\n* </ul>\n*/\n",
+			"methodName":"public void removeTextChangeListener(TextChangeListener listener)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"StyledTextContent"
+	]
+}

@@ -1,0 +1,12 @@
+spinner
+should
+support
+negat
+valu
+version
+build
+spinner
+should
+allow
+negavt
+valu

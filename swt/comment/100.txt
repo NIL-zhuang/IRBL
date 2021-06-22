@@ -1,0 +1,10 @@
+The DropTargetEvent contains the event information passed in the methods of the DropTargetListener
+The x cordinate of the cursor relative to the code Display code
+The y cordinate of the cursor relative to the code Display code
+The operation being performed see DND DROP NONE see DND DROP MOVE see DND DROP COPY see DND DROP LINK
+A bitwise OR ing of the operations that the DragSource can support e g DND DROP MOVE DND DROP COPY DND DROP LINK The detail value must be a member of this list or DND DROP NONE see DND DROP NONE see DND DROP MOVE see DND DROP COPY see DND DROP LINK
+A bitwise OR ing of the drag under effect feedback to be displayed to the user e g DND FEEDBACK SELECT DND FEEDBACK SCROLL DND FEEDBACK EXPAND p A value of DND FEEDBACK NONE indicates that no drag under effect will be displayed p p Feedback effects will only be applied if they are applicable p p The default value is DND FEEDBACK SELECT p see DND FEEDBACK SELECT see DND FEEDBACK INSERT BEFORE see DND FEEDBACK INSERT AFTER see DND FEEDBACK SCROLL see DND FEEDBACK EXPAND
+If the associated control is a table or tree this field contains the item located at the cursor coordinates
+The type of data that will be dropped
+A list of the types of data that the DragSource is capable of providing The currentDataType must be a member of this list
+Constructs a new instance of this class based on the information in the given untyped event param e the untyped event containing the information

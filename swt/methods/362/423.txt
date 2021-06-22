@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+boolean
+rect
+region
+rectinregion
+int
+hrgn
+rect
+lprc

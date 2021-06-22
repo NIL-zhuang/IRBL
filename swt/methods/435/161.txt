@@ -1,0 +1,10 @@
+lresult
+cut
+int
+param
+wparam
+int
+param
+lparam
+return
+null

@@ -1,0 +1,4 @@
+theme
+coolbar
+gradient
+background

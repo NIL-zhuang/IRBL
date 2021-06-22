@@ -1,0 +1,32 @@
+{
+	"variables":[
+		"e",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"ControlListener"
+	],
+	"package":[
+		"org.eclipse.swt.events"
+	],
+	"import":[],
+	"methods":[
+		"controlMoved",
+		"controlResized"
+	],
+	"methodsBody":{
+		"public void controlMoved(ControlEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when the location (x, y) of a control changes relative\n* to its parent (or relative to the display, for <code>Shell</code>s).\n* The default behavior is to do nothing.\n*\n* @param e an event containing information about the move\n*/\n",
+			"methodName":"public void controlMoved(ControlEvent e)"
+		},
+		"public void controlResized(ControlEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when the size (width, height) of a control changes.\n* The default behavior is to do nothing.\n*\n* @param e an event containing information about the resize\n*/\n",
+			"methodName":"public void controlResized(ControlEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"ControlAdapter"
+	]
+}

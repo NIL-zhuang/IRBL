@@ -1,0 +1,12 @@
+public
+int
+reactiv
+and
+undo
+reactivateandundo
+return
+com
+vtbl
+call
+vtblcall
+address

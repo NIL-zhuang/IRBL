@@ -1,0 +1,24 @@
+{
+	"variables":[
+		"lStructSize",
+		"hwndOwner",
+		"hInstance",
+		"rgbResult",
+		"lpCustColors",
+		"Flags",
+		"lCustData",
+		"lpfnHook",
+		"lpTemplateName",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"CHOOSECOLOR"
+	]
+}

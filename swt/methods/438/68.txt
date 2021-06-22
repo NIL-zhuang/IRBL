@@ -1,0 +1,8 @@
+createstruct
+widget
+creat
+struct
+widgetcreatestruct
+return
+new
+createstruct

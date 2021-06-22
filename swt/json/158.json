@@ -1,0 +1,18 @@
+{
+	"variables":[
+		"debug",
+		"tracking",
+		"errors",
+		"objects"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.graphics"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"DeviceData"
+	]
+}

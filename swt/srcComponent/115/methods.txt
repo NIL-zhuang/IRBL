@@ -1,0 +1,6 @@
+control
+move
+controlmov
+control
+resiz
+controlres

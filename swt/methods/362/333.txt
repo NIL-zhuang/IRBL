@@ -1,0 +1,16 @@
+public
+static
+final
+nativ
+boolean
+set
+window
+org
+setwindoworgex
+int
+hdc
+int
+int
+point
+point
+lppoint

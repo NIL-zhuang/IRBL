@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+int
+get
+system
+menu
+getsystemmenu
+int
+wnd
+hwnd
+boolean
+revert
+brevert

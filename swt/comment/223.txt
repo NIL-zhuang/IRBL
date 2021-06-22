@@ -1,0 +1,6 @@
+indexesByLength n Index into the values array First value with a code of length n 1
+Sort the values Primary key is code size Secondary key is value
+and the length of the code is lengths N
+a prefix to the longer codeValues
+This code is the offset 1 th code of codelength 1
+so now we can look up the value for the Huffman code in the table

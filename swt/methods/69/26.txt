@@ -1,0 +1,10 @@
+boolean
+intern
+get
+word
+wrap
+internalgetwordwrap
+return
+word
+wrap
+wordwrap

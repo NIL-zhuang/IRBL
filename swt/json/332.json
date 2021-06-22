@@ -1,0 +1,25 @@
+{
+	"variables":[
+		"ptReserved_x",
+		"ptReserved_y",
+		"ptMaxSize_x",
+		"ptMaxSize_y",
+		"ptMaxPosition_x",
+		"ptMaxPosition_y",
+		"ptMinTrackSize_x",
+		"ptMinTrackSize_y",
+		"ptMaxTrackSize_x",
+		"ptMaxTrackSize_y",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"MINMAXINFO"
+	]
+}

@@ -1,0 +1,15 @@
+privat
+void
+dispos
+com
+interfac
+disposecominterfac
+dispatch
+idispatch
+null
+dispatch
+idispatch
+dispos
+dispatch
+idispatch
+null

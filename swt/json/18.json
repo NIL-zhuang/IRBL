@@ -1,0 +1,25 @@
+{
+	"variables":[
+		"location",
+		"top",
+		"doit",
+		"serialVersionUID",
+		"w",
+		"w"
+	],
+	"extendORImplementFiles":[
+		"TypedEvent"
+	],
+	"package":[
+		"org.eclipse.swt.browser"
+	],
+	"import":[
+		"org.eclipse.swt.widgets",
+		"org.eclipse.swt.events"
+	],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"LocationEvent"
+	]
+}

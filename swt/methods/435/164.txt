@@ -1,0 +1,17 @@
+lresult
+mouseleav
+int
+param
+wparam
+int
+param
+lparam
+return
+mous
+leav
+wmmouseleav
+handl
+param
+wparam
+param
+lparam

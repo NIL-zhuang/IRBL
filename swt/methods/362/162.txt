@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+int
+get
+modul
+handl
+getmodulehandlea
+byte
+modul
+name
+lpmodulenam

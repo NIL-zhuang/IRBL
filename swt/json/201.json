@@ -1,0 +1,30 @@
+{
+	"variables":[
+		"reference",
+		"byteStream",
+		"JPEGFileFormat",
+		"COM",
+		"reference",
+		"byteStream"
+	],
+	"extendORImplementFiles":[
+		"JPEGVariableSizeSegment"
+	],
+	"package":[
+		"org.eclipse.swt.internal.image"
+	],
+	"import":[],
+	"methods":[
+		"signature"
+	],
+	"methodsBody":{
+		"public int signature()":{
+			"methodBody":"{\n    return JPEGFileFormat.COM;\n}",
+			"comments":"",
+			"methodName":"public int signature()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"JPEGComment"
+	]
+}

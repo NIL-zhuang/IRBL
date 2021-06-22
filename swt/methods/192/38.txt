@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+int
+imag
+get
+width
+getwidth
+int
+imag

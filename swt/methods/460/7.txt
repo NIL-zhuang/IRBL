@@ -1,0 +1,9 @@
+int
+window
+proc
+windowproc
+return
+display
+window
+proc
+windowproc

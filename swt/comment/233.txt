@@ -1,0 +1,27 @@
+Decoder for CCITT Group 3 1 Dimensional Modified Huffman run length encoding TIFF compression type 2 CCITT T 4 bi level encoding 1D TIFF compression type 3 option 1D
+2 bits
+3 bits
+4 bits
+5 bits
+6 bits
+7 bits
+8 bits
+9 bits
+10 bits
+11 bits
+EOL
+12 bits
+13 bits
+4 bits
+5 bits
+6 bits
+7 bits
+8 bits
+9 bits
+10 bits
+11 bits
+12 bits
+EOL
+nbr of bytes per row
+byte aligned
+Stop when reaching final EOL on last byte

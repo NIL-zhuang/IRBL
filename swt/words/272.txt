@@ -1,0 +1,17 @@
+address
+com
+address
+ppti
+address
+ppti
+get
+class
+info
+getclassinfo
+vtbl
+call
+vtblcall
+provid
+class
+info
+iprovideclassinfo

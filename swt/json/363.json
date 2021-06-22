@@ -1,0 +1,22 @@
+{
+	"variables":[
+		"dwOSVersionInfoSize",
+		"dwMajorVersion",
+		"dwMinorVersion",
+		"dwBuildNumber",
+		"dwPlatformId",
+		"sizeof",
+		"OS",
+		"IsUnicode"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"OSVERSIONINFO"
+	]
+}

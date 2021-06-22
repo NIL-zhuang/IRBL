@@ -1,0 +1,25 @@
+{
+	"variables":[
+		"cbSize",
+		"rcMonitor_left",
+		"rcMonitor_top",
+		"rcMonitor_right",
+		"rcMonitor_bottom",
+		"rcWork_left",
+		"rcWork_top",
+		"rcWork_right",
+		"rcWork_bottom",
+		"dwFlags",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"MONITORINFO"
+	]
+}

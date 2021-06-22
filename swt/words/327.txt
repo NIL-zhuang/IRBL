@@ -1,0 +1,14 @@
+left
+width
+cxleftwidth
+right
+width
+cxrightwidth
+top
+height
+cytopheight
+bottom
+height
+cybottomheight
+sizeof
+margin

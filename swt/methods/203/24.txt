@@ -1,0 +1,16 @@
+static
+void
+initi
+initi
+rgbi
+tabl
+initializergbycbcrt
+initi
+rgb
+tabl
+initializeycbcrrgbt
+initi
+bit
+count
+tabl
+initializebitcountt

@@ -1,0 +1,8 @@
+pwsz
+name
+pwszname
+auth
+info
+pauthinfo
+sizeof
+coserverinfo

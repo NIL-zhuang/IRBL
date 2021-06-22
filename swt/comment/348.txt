@@ -1,0 +1,3 @@
+TBBUTTON tbButton
+RECT rcButton
+Note in WinCE The field rcButton is not defined

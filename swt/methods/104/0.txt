@@ -1,0 +1,6 @@
+void
+show
+int
+effect
+int
+int

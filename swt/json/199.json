@@ -1,0 +1,36 @@
+{
+	"variables":[
+		"marker",
+		"reference",
+		"byteStream",
+		"marker",
+		"JPEGFileFormat",
+		"marker",
+		"JPEGFileFormat",
+		"APP0",
+		"APP15",
+		"reference",
+		"byteStream"
+	],
+	"extendORImplementFiles":[
+		"JPEGVariableSizeSegment"
+	],
+	"package":[
+		"org.eclipse.swt.internal.image"
+	],
+	"import":[],
+	"methods":[
+		"verify",
+		"getSegmentMarker"
+	],
+	"methodsBody":{
+		"public boolean verify()":{
+			"methodBody":"{\n    int marker = getSegmentMarker();\n    return marker >= JPEGFileFormat.APP0 && marker <= JPEGFileFormat.APP15;\n}",
+			"comments":"",
+			"methodName":"public boolean verify()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"JPEGAppn"
+	]
+}

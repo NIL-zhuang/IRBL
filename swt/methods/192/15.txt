@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+int
+graphic
+path
+graphicspath
+get
+point
+count
+getpointcount
+int
+path

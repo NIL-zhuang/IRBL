@@ -1,0 +1,6 @@
+red
+green
+blue
+alpha
+sizeof
+trivertex

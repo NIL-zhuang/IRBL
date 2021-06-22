@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+boolean
+draw
+focus
+rect
+drawfocusrect
+int
+hdc
+rect
+rect
+lprect

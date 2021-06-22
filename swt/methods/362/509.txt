@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+int
+select
+clip
+rgn
+selectcliprgn
+int
+hdc
+int
+hrgn

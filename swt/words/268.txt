@@ -1,0 +1,15 @@
+address
+com
+address
+phwnd
+address
+phwnd
+get
+window
+getwindow
+vtbl
+call
+vtblcall
+ole
+window
+iolewindow

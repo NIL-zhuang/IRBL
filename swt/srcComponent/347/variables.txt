@@ -1,0 +1,7 @@
+old
+idold
+new
+idnew
+flag
+dwflag
+sizeof

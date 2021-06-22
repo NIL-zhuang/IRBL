@@ -1,0 +1,9 @@
+void
+check
+border
+checkbord
+get
+border
+width
+getborderwidth
+style

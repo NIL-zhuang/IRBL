@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+int
+creat
+compat
+bitmap
+createcompatiblebitmap
+int
+hdc
+int
+width
+nwidth
+int
+height
+nheight

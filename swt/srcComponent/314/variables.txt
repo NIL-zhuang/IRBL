@@ -1,0 +1,5 @@
+size
+dwsize
+icc
+dwicc
+sizeof

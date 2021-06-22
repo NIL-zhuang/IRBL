@@ -1,0 +1,10 @@
+drag
+start
+dragstart
+drag
+finish
+dragfinish
+drag
+set
+data
+dragsetdata

@@ -1,0 +1,16 @@
+public
+void
+write
+int
+throw
+except
+ioexcept
+out
+write
+write
+the
+given
+byte
+the
+output
+stream

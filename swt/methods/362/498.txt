@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+int
+end
+paint
+endpaint
+int
+wnd
+hwnd
+paintstruct
+paint
+lppaint

@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+boolean
+dbcs
+lead
+byte
+isdbcsleadbyt
+byte
+test
+char
+testchar

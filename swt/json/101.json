@@ -1,0 +1,62 @@
+{
+	"variables":[
+		"event",
+		"event",
+		"event",
+		"event",
+		"event",
+		"event"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.dnd"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"dragEnter",
+		"dragLeave",
+		"dragOperationChanged",
+		"dragOver",
+		"drop",
+		"dropAccept"
+	],
+	"methodsBody":{
+		"public void dragEnter(DropTargetEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* The cursor has entered the drop target boundaries.\n*\n* <p>The following fields in the DropTargetEvent apply:\n* <ul>\n* <li>(in)widget\n* <li>(in)time\n* <li>(in)x\n* <li>(in)y\n* <li>(in)dataTypes\n* <li>(in,out)currentDataType\n* <li>(in)operations\n* <li>(in,out)detail\n* <li>(in,out)feedback\n* </ul></p>\n*\n* <p>The <code>operation</code> value is determined by the modifier keys pressed by the user.\n* If no keys are pressed the <code>event.detail</code> field is set to DND.DROP_DEFAULT.\n* If the application does not set the <code>event.detail</code> to something other\n* than <code>DND.DROP_DEFAULT</code> the operation will be set to the platform defined standard\n* default.</p>\n*\n* <p>The <code>currentDataType</code> is determined by the first transfer agent specified in\n* setTransfer() that matches a data type provided by the drag source.</p>\n*\n* <p>It is possible to get a DragEnter event when the drag source does not provide any matching data.\n* In this case, the default operation is DND.DROP_NONE and the currentDataType is null.</p>\n*\n* <p>The application can change the operation that will be performed by modifying the\n* <code>detail</code> field but the choice must be one of the values in the <code>operations</code>\n* field or DND.DROP_NONE.</p>\n*\n* <p>The application can also change the type of data being requested by\n* modifying the <code>currentDataTypes</code> field  but the value must be one of the values\n* in the <code>dataTypes</code> list.</p>\n*\n* @param event  the information associated with the drag enter event\n*\n* @see DropTargetEvent\n*/\n",
+			"methodName":"public void dragEnter(DropTargetEvent event)"
+		},
+		"public void dragOver(DropTargetEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* The cursor is moving over the drop target.\n*\n* <p>The following fields in the DropTargetEvent apply:\n* <ul>\n* <li>(in)widget\n* <li>(in)time\n* <li>(in)x\n* <li>(in)y\n* <li>(in)dataTypes\n* <li>(in,out)currentDataType\n* <li>(in)operations\n* <li>(in,out)detail\n* <li>(in,out)feedback\n* </ul></p>\n*\n* <p>The <code>operation</code> value is determined by the value assigned to\n* <code>currentDataType</code> in previous dragEnter and dragOver calls.</p>\n*\n* <p>The <code>currentDataType</code> value is determined by the value assigned to\n* <code>currentDataType</code> in previous dragEnter and dragOver calls.</p>\n*\n* <p>The application can change the operation that will be performed by modifying the\n* <code>detail</code> field but the choice must be one of the values in the <code>operations</code>\n* field.</p>\n*\n* <p>The application can also change the type of data being requested by modifying the\n* <code>currentDataTypes</code> field  but the value must be one of the values in the\n* <code>dataTypes</code> list.</p>\n*\n* <p>NOTE: At this point the <code>data</code> field is null.  On some platforms, it is possible\n* to obtain the data being transferred before the transfer occurs but in most platforms this is\n* not possible.  On those platforms where the data is available, the application can access the\n* data as follows:</p>\n*\n* <pre><code>\n* public void dragOver(DropTargetEvent event) {\n*       TextTransfer textTransfer = TextTransfer.getInstance();\n*       String data = (String)textTransfer.nativeToJava(event.currentDataType);\n*       if (data != null) {\n*           System.out.println(\"Data to be dropped is (Text)\"+data);\n*       }\n* };\n* </code></pre>\n*\n* @param event  the information associated with the drag over event\n*\n* @see DropTargetEvent\n*/\n",
+			"methodName":"public void dragOver(DropTargetEvent event)"
+		},
+		"public void drop(DropTargetEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* The data is being dropped.  The data field contains java format of the data being dropped.\n* To determine the type of the data object, refer to the documentation for the Transfer subclass\n* specified in event.currentDataType.\n*\n* <p>The following fields in DropTargetEvent apply:\n* <ul>\n* <li>(in)widget\n* <li>(in)time\n* <li>(in)x\n* <li>(in)y\n* <li>(in,out)detail\n* <li>(in)currentDataType\n* <li>(in)data\n* </ul></p>\n*\n* <p>The application can refuse to perform the drop operation by setting the detail\n* field to DND.DROP_NONE.</p>\n*\n* @param event the information associated with the drop event\n*\n* @see DropTargetEvent\n*/\n",
+			"methodName":"public void drop(DropTargetEvent event)"
+		},
+		"public void dragLeave(DropTargetEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* The cursor has left the drop target boundaries OR the drop has been cancelled OR the data\n* is about to be dropped.\n*\n* <p>The following fields in the DropTargetEvent apply:\n* <ul>\n* <li>(in)widget\n* <li>(in)time\n* <li>(in)x\n* <li>(in)y\n* <li>(in)dataTypes\n* <li>(in)currentDataType\n* <li>(in)operations\n* <li>(in)detail\n* </ul></p>\n*\n* @param event  the information associated with the drag leave event\n*\n* @see DropTargetEvent\n*/\n",
+			"methodName":"public void dragLeave(DropTargetEvent event)"
+		},
+		"public void dropAccept(DropTargetEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* The drop is about to be performed.\n* The drop target is given a last chance to change the nature of the drop.\n*\n* <p>The following fields in the DropTargetEvent apply:\n* <ul>\n* <li>(in)widget\n* <li>(in)time\n* <li>(in)x\n* <li>(in)y\n* <li>(in)dataTypes\n* <li>(in,out)currentDataType\n* <li>(in)operations\n* <li>(in,out)detail\n* </ul></p>\n*\n* <p>The application can veto the drop by setting the <code>event.detail</code> field to\n* <code>DND.DROP_NONE</code>.</p>\n*\n* <p>The application can change the operation that will be performed by modifying the\n* <code>detail</code> field but the choice must be one of the values in the\n* <code>operations</code> field.</p>\n*\n* <p>The application can also change the type of data being requested by modifying the\n* <code>currentDataTypes</code> field  but the value must be one of the values in the <\n* code>dataTypes</code> list.</p>\n*\n* @param event  the information associated with the drop accept event\n*\n* @see DropTargetEvent\n*/\n",
+			"methodName":"public void dropAccept(DropTargetEvent event)"
+		},
+		"public void dragOperationChanged(DropTargetEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* The operation being performed has changed (usually due to the user changing the selected modifier key(s)\n* while dragging).\n*\n* <p>The following fields in the DropTargetEvent apply:\n* <ul>\n* <li>(in)widget\n* <li>(in)time\n* <li>(in)x\n* <li>(in)y\n* <li>(in)dataTypes\n* <li>(in,out)currentDataType\n* <li>(in)operations\n* <li>(in,out)detail\n* <li>(in,out)feedback\n* </ul></p>\n*\n* <p>The <code>operation</code> value is determined by the modifier keys pressed by the user.\n* If no keys are pressed the <code>event.detail</code> field is set to DND.DROP_DEFAULT.\n* If the application does not set the <code>event.detail</code> to something other than\n* <code>DND.DROP_DEFAULT</code> the operation will be set to the platform defined standard default.</p>\n*\n* <p>The <code>currentDataType</code> value is determined by the value assigned to\n* <code>currentDataType</code> in previous dragEnter and dragOver calls.</p>\n*\n* <p>The application can change the operation that will be performed by modifying the\n* <code>detail</code> field but the choice must be one of the values in the <code>operations</code>\n* field.</p>\n*\n* <p>The application can also change the type of data being requested by modifying\n* the <code>currentDataTypes</code> field  but the value must be one of the values in the\n* <code>dataTypes</code> list.</p>\n*\n* @param event  the information associated with the drag operation changed event\n*\n* @see DropTargetEvent\n*/\n",
+			"methodName":"public void dragOperationChanged(DropTargetEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"DropTargetListener"
+	]
+}

@@ -1,0 +1,3 @@
+Support for showing a Busy Cursor during a long running process
+NON NLS 1
+NON NLS 1

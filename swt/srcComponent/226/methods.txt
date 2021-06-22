@@ -1,0 +1,12 @@
+valid
+get
+must
+have
+palett
+getmusthavepalett
+error
+valid
+get
+length
+getlength
+error

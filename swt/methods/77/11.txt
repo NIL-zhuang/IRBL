@@ -1,0 +1,12 @@
+public
+rectangl
+get
+client
+area
+getclientarea
+return
+tabl
+get
+client
+area
+getclientarea

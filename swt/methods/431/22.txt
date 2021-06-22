@@ -1,0 +1,8 @@
+boolean
+focus
+caret
+isfocuscaret
+return
+parent
+caret
+this

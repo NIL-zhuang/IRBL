@@ -1,0 +1,12 @@
+control
+get
+focus
+control
+getfocuscontrol
+return
+find
+control
+findcontrol
+get
+focus
+getfocus

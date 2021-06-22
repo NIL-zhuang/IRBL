@@ -1,0 +1,87 @@
+stores text listeners for event sending
+stores the actual text
+the character position start of the gap
+the character position after the end of the gap
+the line on which the gap exists the gap will always be associated
+with one line
+array of character positions and lengths representing
+the number of lines of text
+the expansion exponent used to increase the lines array exponentially
+the expansion exponent used to increase the lines array exponentially
+Creates a new DefaultContent and initializes it A code StyledTextContent will always have at least one empty line
+expand the lines by powers of 2
+Adds a line to the end of the line indexes array Increases the size of the array if necessary code lineCount code is updated to reflect the new entry p param start the start of the line param length the length of the line
+Adds a line index to the end of code linesArray code Increases the size of the array if necessary and returns a new array p param start the start of the line param length the length of the line param linesArray the array to which to add the line index param count the position at which to add the line return a new array of line indexes
+Adds a code TextChangeListener code listening for code TextChangingEvent code and code TextChangedEvent code A code TextChangingEvent code is sent before changes to the text occur A code TextChangedEvent code is sent after changes to the text occured p param listener the listener exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+text is being deleted at the gap position
+text is being inserted at the gap position
+Adjusts the gap to accomodate a text change that is occurring p param position the position at which a change is occurring param sizeHint the size of the change param line the line where the gap will go
+see if the next character is a LF
+Calculates the indexes of each line in the text store Assumes no gap exists Optimized to do less checking
+Returns whether or not the given character is a line delimiter Both CR and LF are valid line delimiters p param ch the character to test return true if ch is a delimiter false otherwise
+deleting text see if part of a r n line delimiter is being deleted
+see if char before delete position is r
+see if char after delete position is n
+inserting text see if the r n line delimiter is being split
+Determine whether or not the replace operation is valid DefaultContent will not allow the r n line delimiter to be split or partially deleted p param start start offset of text to replace param replaceLength start offset of text to replace param newText start offset of text to replace return a boolean specifying whether or not the replace operation is valid
+see if the next character is a LF
+Calculates the indexes of each line of text in the given range p param offset the logical start offset of the text lineate param length the length of the text to lineate includes gap param numLines the number of lines to initially allocate for the line index array passed in for efficiency the exact number of lines may be known return a line indexes array where each line is identified by a start offset and a length
+inserted text will be placed in the gap
+and all of the newly inserted text
+shrink gap
+figure out the number of new lines that have been inserted
+only insert an empty line if it is the last line in the text
+line
+last inserted line is a new line
+make room for the new lines
+shift down the lines after the replace line
+insert the new lines
+update the last inserted line
+Inserts text p param position the position at which to insert the text param text the text to insert
+adjust the line length
+adjust the offsets of the lines after the gapLine
+remove the old gap from the lines information
+removing the gap
+adjust the line length
+adjust the offsets of the lines after the gapLine
+add the new gap to the lines information
+Moves the gap and adjusts its size in anticipation of a text change The gap is resized to actual size the specified size and moved to the given position p param position the position at which a change is occurring param size the size of the change param newGapLine the line where the gap should be put
+see if the next character is a LF
+Returns the number of lines that are in the specified text p param startOffset the start of the text to lineate param length the length of the text to lineate return number of lines
+Returns the number of lines that are in the specified text p param text the text to lineate return number of lines in the text
+return the logical length of the text store
+gap is in the specified range strip out the gap
+line is before or after the gap
+Returns the line at code index code without delimiters p param index the index of the line to return return the logical line text i e without the gap exception IllegalArgumentException ul li ERROR INVALID ARGUMENT when index is out of range li ul
+Returns the line delimiter that should be used by the StyledText widget when inserting new lines This delimiter may be different than the delimiter that is used by the code StyledTextContent code interface p return the platform line delimiter as specified in the line separator system property
+gap is in the specified range strip out the gap
+line is before or after the gap
+Returns the line at the given index with delimiters p param index the index of the line to return return the logical line text i e without the gap with delimiters
+Returns the physical line at the given index i e with delimiters and the gap p param index the line index return the physical line
+return the number of lines in the text store
+position includes the gap
+position is before the gap
+last character for inserting
+Returns the line at the given offset p param charPosition logical character offset i e does not include gap return the line index exception IllegalArgumentException ul li ERROR INVALID ARGUMENT when charPosition is out of range li ul
+Returns the line index at the given physical offset p param position physical character offset i e includes gap return the line index
+Returns the logical offset of the given line p param lineIndex index of line return the logical starting offset of the line When there are not any lines getOffsetAtLine 0 is a valid call that should answer 0 exception IllegalArgumentException ul li ERROR INVALID ARGUMENT when lineIndex is out of range li ul
+Increases the line indexes array to accomodate more lines p param numLines the number to increase the array by
+Reports an SWT error p param code the error code
+Returns whether or not a gap exists in the text store p return true if gap exists false otherwise
+Returns a string representing the continous content of the text store p param start the physical start offset of the text to return param length the physical length of the text to return return the text
+Returns a string representing the logical content of the text store i e gap stripped out p param start the logical start offset of the text to return param length the logical length of the text to return return the text
+Removes the specified code TextChangeListener code p param listener the listener exception IllegalArgumentException ul li ERROR NULL ARGUMENT when listener is null li ul
+check for invalid replace operations
+inform listeners
+first delete the text to be replaced
+then insert the new text
+inform listeners
+Replaces the text with code newText code starting at position code start code for a length of code replaceLength code Notifies the appropriate listeners p When sending the TextChangingEvent code newLineCount code is the number of lines that are going to be inserted and code replaceLineCount code is the number of lines that are going to be deleted based on the change that occurs visually For example ul li replaceText newText replaceLineCount newLineCount li n 0 1 li n n a 2 0 ul p param start start offset of text to replace param replaceLength start offset of text to replace param newText start offset of text to replace exception SWTException ul li ERROR INVALID ARGUMENT when the text change results in a multi byte line delimiter being split or partially deleted Splitting a line delimiter by inserting text between the CR and LF characters of the r n delimiter or deleting part of this line delimiter is not supported li ul
+Sends the text listeners the TextChanged event
+Sets the content to text and removes the gap since there are no sensible predictions about where the next change will occur p param text the text
+right or left
+finding the first line delmiter after position
+update the line where the deletion started
+figure out the number of lines that have been deleted
+the offset or length of the lines
+Deletes text p param position the position at which the text to delete starts param length the length of the text to delete param numLines the number of lines that are being deleted

@@ -1,0 +1,5 @@
+jpeg
+variabl
+size
+segment
+jpegvariablesizeseg

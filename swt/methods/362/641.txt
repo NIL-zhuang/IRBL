@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+void
+move
+memori
+movememori
+script
+properti
+destin
+int
+sourc
+ptr
+sourceptr
+int
+length

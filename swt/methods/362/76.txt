@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+boolean
+window
+enabl
+iswindowen
+int
+wnd
+hwnd

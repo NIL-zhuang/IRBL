@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+int
+graphic
+get
+interpol
+mode
+getinterpolationmod
+int
+graphic

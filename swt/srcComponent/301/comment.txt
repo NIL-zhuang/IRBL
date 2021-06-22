@@ -1,0 +1,4 @@
+lpctstr
+lpctstr
+lpctstr
+dword

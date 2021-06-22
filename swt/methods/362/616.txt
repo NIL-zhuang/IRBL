@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+boolean
+set
+window
+text
+setwindowtexta
+int
+wnd
+hwnd
+byte
+string
+lpstring

@@ -1,0 +1,12 @@
+public
+int
+hand
+off
+storag
+handsoffstorag
+return
+com
+vtbl
+call
+vtblcall
+address

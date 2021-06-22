@@ -1,0 +1,15 @@
+void
+reset
+select
+resetselect
+select
+select
+caret
+offset
+caretoffset
+select
+anchor
+selectionanchor
+reset
+the
+select

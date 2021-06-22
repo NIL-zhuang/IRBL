@@ -1,0 +1,13 @@
+byte
+get
+data
+byte
+offset
+getdatabyteatoffset
+int
+offset
+return
+refer
+data
+offset
+offset

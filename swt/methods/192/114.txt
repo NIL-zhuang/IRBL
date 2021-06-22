@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+int
+graphic
+set
+clip
+setclip
+int
+graphic
+rect
+rectf
+rect

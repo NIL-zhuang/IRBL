@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+boolean
+imm
+set
+composit
+window
+immsetcompositionwindow
+int
+imc
+himc
+compositionform
+comp
+form
+lpcompform

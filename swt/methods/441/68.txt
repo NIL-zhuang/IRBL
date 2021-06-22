@@ -1,0 +1,17 @@
+int
+get
+last
+event
+time
+getlasteventtim
+return
+win
+iswinc
+get
+tick
+count
+gettickcount
+get
+messag
+time
+getmessagetim

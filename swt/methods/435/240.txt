@@ -1,0 +1,17 @@
+lresult
+killfocus
+int
+param
+wparam
+int
+param
+lparam
+return
+kill
+focus
+wmkillfocus
+handl
+param
+wparam
+param
+lparam

@@ -1,0 +1,10 @@
+lresult
+inputlangchang
+int
+param
+wparam
+int
+param
+lparam
+return
+null

@@ -1,0 +1,12 @@
+lresult
+command
+child
+wmcommandchild
+int
+param
+wparam
+int
+param
+lparam
+return
+null

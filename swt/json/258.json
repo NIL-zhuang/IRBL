@@ -1,0 +1,31 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"phfont",
+		"address",
+		"phfont"
+	],
+	"extendORImplementFiles":[
+		"IUnknown"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"get_hFont",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int get_hFont(int[] phfont)":{
+			"methodBody":"{\n    return COM.VtblCall(3, address, phfont);\n}",
+			"comments":"",
+			"methodName":"public int get_hFont(int[] phfont)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IFont"
+	]
+}

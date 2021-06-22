@@ -1,0 +1,15 @@
+void
+regist
+super
+regist
+hwnd
+parent
+hwndparent
+display
+add
+control
+addcontrol
+hwnd
+parent
+hwndparent
+this

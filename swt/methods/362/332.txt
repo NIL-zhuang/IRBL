@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+boolean
+get
+scroll
+info
+getscrollinfo
+int
+hwnd
+int
+flag
+scrollinfo
+info

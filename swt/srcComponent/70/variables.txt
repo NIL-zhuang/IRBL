@@ -1,0 +1,17 @@
+listen
+line
+index
+lineindex
+offset
+line
+index
+lineindex
+start
+length
+listen
+start
+replac
+length
+replacelength
+text
+text

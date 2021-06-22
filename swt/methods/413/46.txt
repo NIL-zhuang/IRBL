@@ -1,0 +1,6 @@
+privat
+int
+close
+onclos
+return
+com

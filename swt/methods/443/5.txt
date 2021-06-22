@@ -1,0 +1,16 @@
+public
+int
+size
+type
+null
+return
+int
+count
+for
+int
+type
+length
+type
+count
+return
+count

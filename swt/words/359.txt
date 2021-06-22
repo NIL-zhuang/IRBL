@@ -1,0 +1,11 @@
+tip
+sztip
+info
+szinfo
+info
+titl
+szinfotitl
+sizeof
+notifyicondataa
+size
+notifyicondataa

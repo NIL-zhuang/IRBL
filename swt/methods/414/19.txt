@@ -1,0 +1,10 @@
+privat
+int
+focus
+onfocus
+int
+got
+focus
+fgotfocus
+return
+com

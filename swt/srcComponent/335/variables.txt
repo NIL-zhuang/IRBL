@@ -1,0 +1,8 @@
+hwnd
+messag
+param
+wparam
+param
+lparam
+time
+sizeof

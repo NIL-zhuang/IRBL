@@ -1,0 +1,10 @@
+int
+get
+extern
+getextern
+int
+dispatch
+ppdispatch
+return
+com
+notimpl

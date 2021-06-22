@@ -1,0 +1,8 @@
+item
+spec
+dwitemspec
+sizeof
+nmrginfo
+point
+action
+ptaction

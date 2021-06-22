@@ -1,0 +1,25 @@
+{
+	"variables":[
+		"event"
+	],
+	"extendORImplementFiles":[
+		"CTabFolderListener"
+	],
+	"package":[
+		"org.eclipse.swt.custom"
+	],
+	"import":[],
+	"methods":[
+		"itemClosed"
+	],
+	"methodsBody":{
+		"public void itemClosed(CTabFolderEvent event)":{
+			"methodBody":"{\n}",
+			"comments":"",
+			"methodName":"public void itemClosed(CTabFolderEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"CTabFolderAdapter"
+	]
+}

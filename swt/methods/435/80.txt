@@ -1,0 +1,16 @@
+lresult
+char
+int
+param
+wparam
+int
+param
+lparam
+return
+char
+wmchar
+handl
+param
+wparam
+param
+lparam

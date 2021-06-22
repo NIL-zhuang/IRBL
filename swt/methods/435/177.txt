@@ -1,0 +1,17 @@
+lresult
+mbuttondown
+int
+param
+wparam
+int
+param
+lparam
+return
+button
+down
+wmmbuttondown
+handl
+param
+wparam
+param
+lparam

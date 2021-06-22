@@ -1,0 +1,21 @@
+{
+	"variables":[
+		"tdSize",
+		"tdDriverNameOffset",
+		"tdDeviceNameOffset",
+		"tdPortNameOffset",
+		"tdExtDevmodeOffset",
+		"tdData",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"DVTARGETDEVICE"
+	]
+}

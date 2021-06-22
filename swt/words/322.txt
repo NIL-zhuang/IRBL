@@ -1,0 +1,12 @@
+lopn
+style
+lopnstyl
+lopn
+color
+lopncolor
+sizeof
+logpen
+point
+lopn
+width
+lopnwidth

@@ -1,0 +1,10 @@
+protect
+string
+get
+type
+name
+gettypenam
+return
+new
+string
+hdrop

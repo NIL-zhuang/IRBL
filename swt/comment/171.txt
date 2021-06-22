@@ -1,0 +1,15 @@
+true if the receiver is a direct palette and false otherwise
+the RGB values for an indexed palette where the indices of the array correspond to pixel values
+the red mask for a direct palette
+the green mask for a direct palette
+the blue mask for a direct palette
+the red shift for a direct palette
+the green shift for a direct palette
+the blue shift for a direct palette
+Constructs a new indexed palette given an array of RGB values param colors the array of code RGB code s for the palette exception IllegalArgumentException ul li ERROR NULL ARGUMENT if the argument is null li ul
+Constructs a new direct palette given the red green and blue masks param redMask the red mask param greenMask the green mask param blueMask the blue mask
+The RGB did not exist in the palette
+Returns the pixel value corresponding to the given code RGB code param rgb the RGB to get the pixel value for return the pixel value for the given RGB exception IllegalArgumentException ul li ERROR NULL ARGUMENT if the argument is null li li ERROR INVALID ARGUMENT if the RGB is not found in the palette li ul
+Returns an code RGB code corresponding to the given pixel value param pixel the pixel to get the RGB value for return the RGB value for the given pixel exception IllegalArgumentException ul li ERROR NULL ARGUMENT if the argument is null li li ERROR INVALID ARGUMENT if the pixel does not exist in the palette li ul
+Returns all the RGB values in the receiver if it is an indexed palette or null if it is a direct palette return the code RGB code s for the receiver or null
+Computes the shift value for a given mask param mask the mask to compute the shift for return the shift amount see PaletteData

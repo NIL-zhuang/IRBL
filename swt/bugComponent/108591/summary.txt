@@ -1,0 +1,10 @@
+swt
+style
+text
+styledtext
+doe
+not
+support
+inlin
+input
+method

@@ -1,0 +1,11 @@
+int
+doc
+window
+activ
+ondocwindowactiv
+int
+activ
+factiv
+return
+com
+notimpl

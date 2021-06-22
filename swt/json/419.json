@@ -1,0 +1,25 @@
+{
+	"variables":[
+		"id",
+		"name",
+		"args",
+		"optionalArgCount",
+		"returnType",
+		"invokeKind",
+		"funcKind",
+		"flags",
+		"callingConvention",
+		"documentation",
+		"helpFile"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.ole.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"OleFunctionDescription"
+	]
+}

@@ -1,0 +1,71 @@
+Instances of this class provide a bridge between application code and assistive technology clients Many platforms provide default accessible behavior for most widgets and this class allows that default behavior to be overridden Applications can get the default Accessible object for a control by sending it code getAccessible code and then add an accessible listener to override simple items like the name and help string or they can add an accessible control listener to override complex items As a rule of thumb an application would only want to use the accessible control listener to implement accessibility for a custom control see Control getAccessible see AccessibleListener see AccessibleEvent see AccessibleControlListener see AccessibleControlEvent since 2 0
+method6 Invoke not implemented
+Invokes platform specific functionality to allocate a new accessible object p b IMPORTANT b This method is em not em part of the public API for code Accessible code It is marked public only so that it can be shared within the packages provided by SWT It is not available on all platforms and should never be called from application code p param control the control to get the accessible object for return the platform specific accessible object
+Adds the listener to the collection of listeners who will be notified when an accessible client asks for certain strings such as name description help or keyboard shortcut The listener is notified by sending it one of the messages defined in the code AccessibleListener code interface param listener the listener that should be notified when the receiver is asked for a name description help or keyboard shortcut string exception IllegalArgumentException ul li ERROR NULL ARGUMENT if the listener is null li ul exception SWTException ul li ERROR WIDGET DISPOSED if the receiver s control has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver s control li ul see AccessibleListener see removeAccessibleListener
+Adds the listener to the collection of listeners who will be notified when an accessible client asks for custom control specific information The listener is notified by sending it one of the messages defined in the code AccessibleControlListener code interface param listener the listener that should be notified when the receiver is asked for custom control specific information exception IllegalArgumentException ul li ERROR NULL ARGUMENT if the listener is null li ul exception SWTException ul li ERROR WIDGET DISPOSED if the receiver s control has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver s control li ul see AccessibleControlListener see removeAccessibleControlListener
+Adds the listener to the collection of listeners who will be notified when an accessible client asks for custom text control specific information The listener is notified by sending it one of the messages defined in the code AccessibleTextListener code interface param listener the listener that should be notified when the receiver is asked for custom text control specific information exception IllegalArgumentException ul li ERROR NULL ARGUMENT if the listener is null li ul exception SWTException ul li ERROR WIDGET DISPOSED if the receiver s control has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver s control li ul see AccessibleTextListener see removeAccessibleTextListener since 3 0
+Returns the control for this Accessible object return the receiver s control since 3 0
+Invokes platform specific functionality to dispose an accessible object p b IMPORTANT b This method is em not em part of the public API for code Accessible code It is marked public only so that it can be shared within the packages provided by SWT It is not available on all platforms and should never be called from application code p
+Invokes platform specific functionality to handle a window message p b IMPORTANT b This method is em not em part of the public API for code Accessible code It is marked public only so that it can be shared within the packages provided by SWT It is not available on all platforms and should never be called from application code p
+Removes the listener from the collection of listeners who will be notified when an accessible client asks for certain strings such as name description help or keyboard shortcut param listener the listener that should no longer be notified when the receiver is asked for a name description help or keyboard shortcut string exception IllegalArgumentException ul li ERROR NULL ARGUMENT if the listener is null li ul exception SWTException ul li ERROR WIDGET DISPOSED if the receiver s control has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver s control li ul see AccessibleListener see addAccessibleListener
+Removes the listener from the collection of listeners who will be notified when an accessible client asks for custom control specific information param listener the listener that should no longer be notified when the receiver is asked for custom control specific information exception IllegalArgumentException ul li ERROR NULL ARGUMENT if the listener is null li ul exception SWTException ul li ERROR WIDGET DISPOSED if the receiver s control has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver s control li ul see AccessibleControlListener see addAccessibleControlListener
+Removes the listener from the collection of listeners who will be notified when an accessible client asks for custom text control specific information param listener the listener that should no longer be notified when the receiver is asked for custom text control specific information exception IllegalArgumentException ul li ERROR NULL ARGUMENT if the listener is null li ul exception SWTException ul li ERROR WIDGET DISPOSED if the receiver s control has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver s control li ul see AccessibleTextListener see addAccessibleTextListener since 3 0
+Sends a message to accessible clients that the child selection within a custom container control has changed exception SWTException ul li ERROR WIDGET DISPOSED if the receiver s control has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver s control li ul since 3 0
+Sends a message to accessible clients indicating that the focus has changed within a custom control param childID an identifier specifying a child of the control exception SWTException ul li ERROR WIDGET DISPOSED if the receiver s control has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver s control li ul
+Sends a message to accessible clients that the text caret has moved within a custom control param index the new caret index within the control exception SWTException ul li ERROR WIDGET DISPOSED if the receiver s control has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver s control li ul since 3 0
+Sends a message to accessible clients that the text within a custom control has changed param type the type of change one of code ACC NOTIFY TEXT INSERT code or code ACC NOTIFY TEXT DELETE code param startIndex the text index within the control where the insertion or deletion begins param length the non negative length in characters of the insertion or deletion exception SWTException ul li ERROR WIDGET DISPOSED if the receiver s control has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver s control li ul see ACC TEXT INSERT see ACC TEXT DELETE since 3 0
+Sends a message to accessible clients that the text selection has changed within a custom control exception SWTException ul li ERROR WIDGET DISPOSED if the receiver s control has been disposed li li ERROR THREAD INVALID ACCESS if not called from the thread that created the receiver s control li ul since 3 0
+Currently we don t let the application override this Forward to the proxy
+proxy doesn t know about app childID
+Get the default location from the OS
+proxy doesn t know about app childID
+Currently we don t let the application override this Forward to the proxy
+proxy doesn t know about app childID
+Currently we don t let the application override this Forward to the proxy
+proxy doesn t know about app childID
+proxy doesn t know about app childID
+Get the default child count from the OS
+Get the default defaultAction from the OS
+proxy doesn t know about app childID
+Get the default description from the OS
+proxy doesn t know about app childID
+TEMPORARY CODE process tree even if there are no apps listening
+Currently our tree columns are emulated using custom draw so we need to create the description using the tree column header text and tree item text
+Get the default focus child from the OS
+Get the default help string from the OS
+proxy doesn t know about app childID
+Currently we don t let the application override this Forward to the proxy
+proxy doesn t know about app childID
+Get the default keyboard shortcut from the OS
+proxy doesn t know about app childID
+Get the default name from the OS
+proxy doesn t know about app childID
+Currently we don t let the application override this Forward to the proxy
+Get the default role from the OS
+proxy doesn t know about app childID
+TEMPORARY CODE process tree and table even if there are no apps listening
+Currently our checkbox table and tree are emulated using state mask images so we need to specify checkbox role for the items
+Get the default selection from the OS
+Should return an IEnumVARIANT for this so the next line is wrong need better API here
+Get the default state from the OS
+proxy doesn t know about app childID
+TEMPORARY CODE process tree and table even if there are no apps listening
+Currently our checkbox table and tree are emulated using state mask images so we need to determine if the item state is checked
+Get the default value string from the OS
+proxy doesn t know about app childID
+MSAA this method is no longer supported
+We don t implement this Forward to the proxy
+proxy doesn t know about app childID
+MSAA this method is typically only used for edit controls
+We don t implement this Forward to the proxy
+proxy doesn t know about app childID
+If there are no listeners query the proxy for its IEnumVariant and get the Next items from it
+Retrieve the next celt items in the enumeration sequence If there are fewer than the requested number of elements left in the sequence retrieve the remaining elements The number of elements actually retrieved is returned in pceltFetched unless the caller passed in NULL for that parameter
+If there are no listeners query the proxy for its IEnumVariant and tell it to Skip
+Skip over the specified number of elements in the enumeration sequence
+If there are no listeners query the proxy for its IEnumVariant and tell it to Reset
+Reset the enumeration sequence to the beginning
+Feature of Windows In Windows XP tree item ids are 1 based indices Previous versions of Windows use the tree item handle for the accessible child ID For backward compatibility we still take a handle childID for tree items on XP All other childIDs are 1 based indices
+Feature of Windows In Windows XP tree item ids are 1 based indices Previous versions of Windows use the tree item handle for the accessible child ID For backward compatibility we still take a handle childID for tree items on XP All other childIDs are 1 based indices
+checkWidget was copied from Widget and rewritten to work in this package
+isValidThread was copied from Widget and rewritten to work in this package

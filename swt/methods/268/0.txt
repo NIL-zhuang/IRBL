@@ -1,0 +1,14 @@
+public
+int
+get
+window
+getwindow
+int
+phwnd
+return
+com
+vtbl
+call
+vtblcall
+address
+phwnd

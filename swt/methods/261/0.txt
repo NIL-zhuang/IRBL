@@ -1,0 +1,15 @@
+public
+int
+get
+control
+info
+getcontrolinfo
+controlinfo
+pci
+return
+com
+vtbl
+call
+vtblcall
+address
+pci

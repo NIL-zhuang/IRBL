@@ -1,0 +1,108 @@
+OleClientSite provides a site to manage an embedded OLE Document within a container p The OleClientSite provides the following capabilities ul li creates the in place editor for a blank document or opening an existing OLE Document li lays the editor out li provides a mechanism for activating and deactivating the Document li provides a mechanism for saving changes made to the document ul p This object implements the OLE Interfaces IUnknown IOleClientSite IAdviseSink IOleInPlaceSite p Note that although this class is a subclass of code Composite code it does not make sense to add code Control code children to it or set a layout on it p p dl dt b Styles b dd BORDER dt b Events b dd Dispose Move Resize dl
+Interfaces for this Ole Client Container
+References to the associated Frame
+Access to the embedded linked Ole Object
+IStorage interface of the receiver
+the display aspect of the embedded object e g DvaspectContent or DvaspectIcon
+Indicates the type of client that can be supported inside this container
+Indicates item s display is static i e a bitmap metafile etc
+NON NLS 1
+NOTE this constructor should never be used by itself because it does not create an Ole Object
+install the Ole Frame for this Client Site
+required for traversal
+Is there an associated CLSID
+associated CLSID may not be installed on this machine
+Open a temporary storage object
+Create ole object with storage object
+Init sinks
+Create an OleClientSite child widget using the OLE Document type associated with the specified file The OLE Document type is determined either through header information in the file or through a Registry entry for the file extension Use style bits to select a particular look or set of properties param parent a composite widget must be an OleFrame param style the bitwise OR ing of widget styles param file the file that is to be opened in this OLE Document exception IllegalArgumentException ul li ERROR NULL ARGUMENT when the parent is null li ERROR INVALID ARGUMENT when the parent is not an OleFrame ul exception SWTException ul li ERROR THREAD INVALID ACCESS when called from the wrong thread li ERROR CANNOT CREATE OBJECT when failed to create OLE Object li ERROR CANNOT OPEN FILE when failed to open file li ERROR INTERFACE NOT FOUND when unable to create callbacks for OLE Interfaces li ERROR INVALID CLASSID ul
+Open a temporary storage object
+Create ole object with storage object
+Init sinks
+Create an OleClientSite child widget to edit a blank document using the specified OLE Document application Use style bits to select a particular look or set of properties param parent a composite widget must be an OleFrame param style the bitwise OR ing of widget styles param progId the unique program identifier of am OLE Document application the value of the ProgID key or the value of the VersionIndependentProgID key specified in the registry for the desired OLE Document for example the VersionIndependentProgID for Word is Word Document exception IllegalArgumentException ul li ERROR NULL ARGUMENT when the parent is null li ERROR INVALID ARGUMENT when the parent is not an OleFrame ul exception SWTException ul li ERROR THREAD INVALID ACCESS when called from the wrong thread li ERROR INVALID CLASSID when the progId does not map to a registered CLSID li ERROR CANNOT CREATE OBJECT when failed to create OLE Object ul
+Are we opening this file with the preferred OLE object
+Not using the same application that created file therefore copy from original file to a new storage file
+Original file is not a Storage file so copy contents to a stream in a new storage file
+Increments ref count if successful
+NON NLS 1
+NON NLS 1
+Increments ref count if successful
+Copy over data in file to named stream
+Does an AddRef if successful
+Open a temporary storage object
+Copy over contents of file
+create ole client
+get the persistant storage of the ole client
+load the contents of the file into the ole client site
+Using the same application that created file therefore use default mechanism
+Create ole object with storage object
+Init sinks
+Create an OleClientSite child widget to edit the specified file using the specified OLE Document application Use style bits to select a particular look or set of properties p b IMPORTANT b This method is em not em part of the public API for code OleClientSite code It is marked public only so that it can be shared within the packages provided by SWT It is not available on all platforms and should never be called from application code p param parent a composite widget must be an OleFrame param style the bitwise OR ing of widget styles param progId the unique program identifier of am OLE Document application the value of the ProgID key or the value of the VersionIndependentProgID key specified in the registry for the desired OLE Document for example the VersionIndependentProgID for Word is Word Document param file the file that is to be opened in this OLE Document exception IllegalArgumentException ul li ERROR NULL ARGUMENT when the parent is null li ERROR INVALID ARGUMENT when the parent is not an OleFrame ul exception SWTException ul li ERROR THREAD INVALID ACCESS when called from the wrong thread li ERROR INVALID CLASSID when the progId does not map to a registered CLSID li ERROR CANNOT CREATE OBJECT when failed to create OLE Object li ERROR CANNOT OPEN FILE when failed to open file ul
+
+
+
+NON NLS 1 NON NLS 2
+Notify the control object that it is embedded in an OLE container
+Is OLE object linked or embedded
+method4 GetMoniker not implemented
+method5 OnRename not implemented
+method13 DeactivateAndUndoChange not implemented
+Deactivates an active in place object and discards the object s undo state
+Destroy this item s contents in the temp root IStorage
+The fix is to ensure that the client is in the running state before invoking any verb on it
+See PR 1FV9RZW
+Requests that the OLE Document or ActiveX Control perform an action actions are almost always changes to the activation state param verb the operation that is requested This is one of the OLE OLEIVERB values return an HRESULT value indicating the success of the operation request OLE S OK indicates success
+Asks the OLE Document or ActiveX Control to execute a command from a standard list of commands The OLE Document or ActiveX Control must support the IOleCommandTarget interface The OLE Document or ActiveX Control does not have to support all the commands in the standard list To check if a command is supported you can call queryStatus with the cmdID param cmdID the ID of a command these are the OLE OLECMDID values a small set of common commands param options the optional flags these are the OLE OLECMDEXECOPT values param in the argument for the command param out the return value of the command return an HRESULT value OLE S OK is returned if successful
+create a GUID struct to hold the result
+create a null terminated array of char
+Simple containers that do not support links to their embedded objects probably do not need to implement this method Instead they can return E NOINTERFACE and set ppContainer to NULL
+get the current size of the embedded OLENatives object
+remove null terminator
+Returns the program ID of the OLE Document or ActiveX Control return the program ID of the OLE Document or ActiveX Control
+TRUE
+TRUE
+Copy the Window s handle into the memory passed in
+fill in frame handle
+null out document handle
+fill in position and clipping info
+get frame info
+Get access to the persistant storage mechanism
+Are the contents of the permanent storage different from the file
+Note must release object interfaces before releasing frame
+remove listeners
+NON NLS 1
+currently we are ignoring the fUndoable flag
+
+Returns the status of the specified command The status is any bitwise OR d combination of SWTOLE OLECMDF SUPPORTED SWTOLE OLECMDF ENABLED SWTOLE OLECMDF LATCHED SWTOLE OLECMDF NINCHED You can query the status of a command before invoking it with OleClientSite exec The OLE Document or ActiveX Control must support the IOleCommandTarget to make use of this method param cmd the ID of a command these are the OLE OLECMDID values a small set of common commands return the status of the specified command or 0 if unable to query the OLE Object these are the OLE OLECMDF values
+Note if file does not exist this will create the file the
+first time it is called
+of the native data that follows
+Read the data
+Note if file does not exist this will create the file
+open the file and write data into it
+save fails
+get access to the persistant storage mechanism
+Does an AddRef if successful
+Saves the document to the specified file and includes OLE spcific inforrmation This method must b only b be used for files that have an OLE Storage format For example a word file edited with Word Document should be saved using this method because there is formating information that should be stored in the OLE specific Storage format param file the file to which the changes are to be saved return true if the save was successful
+save fails
+NON NLS 1
+Look for a CONTENTS stream
+NON NLS 1
+Look for Ole 1 0 object stream
+Saves the document to the specified file This method must be used for files that do not have an OLE Storage format For example a bitmap file edited with MSPaint should be saved using this method because bitmap is a standard format that does not include any OLE specific data param file the file to which the changes are to be saved return true if the save was successful
+readjust size and location of client site
+Get the server running first then do a SetExtent then show it
+Close server if it wasn t already running upon entering this method
+leave a border
+Tells the container to position the object so it is visible to the user This method ensures that the container itself is visible and not minimized
+Get the Property Page information from the OLE Object
+create a frame in which to display the pages
+free the property page information
+Displays a dialog with the property information for this OLE Object The OLE Document or ActiveX Control must support the ISpecifyPropertyPages interface param title the name that will appear in the titlebar of the dialog
+OleSave will fail for static objects so do what OleSave does
+logical pixels inch in x
+logical pixels inch in y
+2540 HIMETRIC units per inch
+logical pixels inch in x
+logical pixels inch in y
+2540 HIMETRIC units per inch

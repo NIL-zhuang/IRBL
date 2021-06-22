@@ -1,0 +1,10 @@
+public
+color
+get
+foreground
+getforeground
+return
+tabl
+get
+foreground
+getforeground

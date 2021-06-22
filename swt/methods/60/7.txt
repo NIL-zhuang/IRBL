@@ -1,0 +1,8 @@
+protect
+color
+get
+select
+foreground
+getselectionforeground
+return
+null

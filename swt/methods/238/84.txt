@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+int
+write
+class
+stg
+writeclassstg
+int
+stg
+pstg
+guid
+rclsid

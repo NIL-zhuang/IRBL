@@ -1,0 +1,7 @@
+boolean
+set
+radio
+focus
+setradiofocus
+return
+fals

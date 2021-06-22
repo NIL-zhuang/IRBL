@@ -1,0 +1,10 @@
+lresult
+hotkey
+int
+param
+wparam
+int
+param
+lparam
+return
+null

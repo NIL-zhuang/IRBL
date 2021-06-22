@@ -1,0 +1,7 @@
+read
+get
+segment
+length
+getsegmentlength
+read
+error

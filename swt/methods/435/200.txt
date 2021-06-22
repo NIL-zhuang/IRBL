@@ -1,0 +1,12 @@
+lresult
+measur
+child
+wmmeasurechild
+int
+param
+wparam
+int
+param
+lparam
+return
+null

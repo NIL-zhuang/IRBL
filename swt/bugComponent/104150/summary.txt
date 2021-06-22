@@ -1,0 +1,13 @@
+patch
+tabl
+cursor
+separ
+from
+tabl
+select
+when
+click
+grid
+line
+empti
+space

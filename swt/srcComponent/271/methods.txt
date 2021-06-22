@@ -1,0 +1,10 @@
+load
+init
+new
+initnew
+vtbl
+call
+vtblcall
+vtbl
+call
+vtblcall

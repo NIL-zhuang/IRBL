@@ -1,0 +1,6 @@
+NON NLS 1
+NON NLS 1
+NON NLS 1 NON NLS 2 NON NLS 3 NON NLS 4 NON NLS 5 NON NLS 6 NON NLS 7 NON NLS 8
+Destructively bit invert data in the given byte array
+Return whether or not the specified input stream represents a supported file format
+We do not currently support writing multi image files so we use the first image data in the loader s array

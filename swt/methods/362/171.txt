@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+boolean
+region
+ptinregion
+int
+hrgn
+int
+int

@@ -1,0 +1,9 @@
+public
+static
+final
+nativ
+void
+free
+unus
+librari
+cofreeunusedlibrari

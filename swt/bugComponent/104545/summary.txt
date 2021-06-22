@@ -1,0 +1,6 @@
+make
+default
+size
+empti
+composit
+smaller

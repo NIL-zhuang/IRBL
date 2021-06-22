@@ -1,0 +1,11 @@
+lresult
+ime
+composit
+int
+param
+wparam
+int
+param
+lparam
+return
+null

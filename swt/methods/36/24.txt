@@ -1,0 +1,9 @@
+void
+resiz
+onres
+updat
+curv
+updatecurv
+get
+size
+getsiz

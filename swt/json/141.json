@@ -1,0 +1,32 @@
+{
+	"variables":[
+		"e",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"SelectionListener"
+	],
+	"package":[
+		"org.eclipse.swt.events"
+	],
+	"import":[],
+	"methods":[
+		"widgetSelected",
+		"widgetDefaultSelected"
+	],
+	"methodsBody":{
+		"public void widgetDefaultSelected(SelectionEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when default selection occurs in the control.\n* The default behavior is to do nothing.\n*\n* @param e an event containing information about the default selection\n*/\n",
+			"methodName":"public void widgetDefaultSelected(SelectionEvent e)"
+		},
+		"public void widgetSelected(SelectionEvent e)":{
+			"methodBody":"{\n}",
+			"comments":"/**\n* Sent when selection occurs in the control.\n* The default behavior is to do nothing.\n*\n* @param e an event containing information about the selection\n*/\n",
+			"methodName":"public void widgetSelected(SelectionEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"SelectionAdapter"
+	]
+}

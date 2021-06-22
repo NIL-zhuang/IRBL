@@ -1,0 +1,16 @@
+address
+com
+address
+pci
+address
+pci
+get
+control
+info
+getcontrolinfo
+vtbl
+call
+vtblcall
+ole
+control
+iolecontrol

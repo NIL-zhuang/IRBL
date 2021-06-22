@@ -1,0 +1,8 @@
+type
+widget
+detail
+doit
+argument
+ole
+event
+oleev

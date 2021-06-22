@@ -1,0 +1,16 @@
+public
+int
+get
+line
+count
+getlinecount
+return
+line
+count
+linecount
+the
+number
+line
+the
+text
+store

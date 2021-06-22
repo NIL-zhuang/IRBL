@@ -1,0 +1,6 @@
+int
+hide
+hideui
+return
+com
+notimpl

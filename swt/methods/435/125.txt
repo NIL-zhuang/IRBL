@@ -1,0 +1,10 @@
+lresult
+querynewpalett
+int
+param
+wparam
+int
+param
+lparam
+return
+null

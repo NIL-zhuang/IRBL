@@ -1,0 +1,11 @@
+void
+write
+char
+buffer
+append
+append
+the
+given
+charact
+the
+data

@@ -1,0 +1,3 @@
+POINT ptMinPosition
+POINT ptMaxPosition
+RECT rcNormalPosition

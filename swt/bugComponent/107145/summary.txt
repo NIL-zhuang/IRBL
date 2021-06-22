@@ -1,0 +1,7 @@
+javadoc
+can
+not
+refer
+packag
+protect
+method

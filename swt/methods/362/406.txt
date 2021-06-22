@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+int
+set
+text
+align
+settextalign
+int
+hdc
+int
+mode
+fmode

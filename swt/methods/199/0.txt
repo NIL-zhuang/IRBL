@@ -1,0 +1,15 @@
+public
+boolean
+verifi
+int
+marker
+get
+segment
+marker
+getsegmentmark
+return
+marker
+jpeg
+file
+format
+jpegfileformat

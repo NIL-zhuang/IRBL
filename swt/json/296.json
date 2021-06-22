@@ -1,0 +1,28 @@
+{
+	"variables":[
+		"cbSize",
+		"itemLeft",
+		"itemTop",
+		"itemRight",
+		"itemBottom",
+		"buttonLeft",
+		"buttonTop",
+		"buttonRight",
+		"buttonBottom",
+		"stateButton",
+		"hwndCombo",
+		"hwndItem",
+		"hwndList",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"COMBOBOXINFO"
+	]
+}

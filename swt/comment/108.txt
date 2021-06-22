@@ -1,0 +1,7 @@
+The class code TextTransfer code provides a platform specific mechanism for converting plain text represented as a java code String code to a platform specific representation of the data and vice versa p An example of a java code String code containing plain text is shown below p code pre String textData Hello World code pre see Transfer
+NON NLS 1
+NON NLS 1
+Returns the singleton instance of the TextTransfer class return the singleton instance of the TextTransfer class
+This implementation of code javaToNative code converts plain text represented by a java code String code to a platform specific representation param object a java code String code containing text param transferData an empty code TransferData code object this object will be filled in on return with the platform specific format of the data see Transfer javaToNative
+Ensure byteCount is a multiple of 2 bytes
+This implementation of code nativeToJava code converts a platform specific representation of plain text to a java code String code param transferData the platform specific representation of the data to be converted return a java code String code containing text if the conversion was successful otherwise null see Transfer nativeToJava

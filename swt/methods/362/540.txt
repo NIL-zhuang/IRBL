@@ -1,0 +1,12 @@
+public
+static
+final
+nativ
+boolean
+equal
+rgn
+equalrgn
+int
+src
+int
+src

@@ -1,0 +1,15 @@
+boolean
+translat
+menu
+acceler
+translatemenuacceler
+msg
+msg
+accel
+haccel
+creat
+acceler
+createacceler
+return
+accel
+haccel

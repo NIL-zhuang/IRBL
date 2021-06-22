@@ -1,0 +1,19 @@
+{
+	"variables":[
+		"X",
+		"Y",
+		"Width",
+		"Height",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.gdip"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"RectF"
+	]
+}

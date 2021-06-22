@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+int
+graphic
+get
+text
+render
+hint
+gettextrenderinghint
+int
+graphic

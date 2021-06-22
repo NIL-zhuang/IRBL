@@ -1,0 +1,57 @@
+{
+	"variables":[
+		"reference",
+		"readState",
+		"headerChunk",
+		"readState",
+		"readState",
+		"SWT",
+		"SWT",
+		"readState",
+		"readState",
+		"headerChunk",
+		"reference",
+		"DATA_OFFSET",
+		"offset",
+		"readIHDR",
+		"readPLTE",
+		"readIEND",
+		"ERROR_INVALID_IMAGE",
+		"readIDAT",
+		"reference",
+		"readState",
+		"headerChunk",
+		"offset"
+	],
+	"extendORImplementFiles":[
+		"PngChunk"
+	],
+	"package":[
+		"org.eclipse.swt.internal.image"
+	],
+	"import":[
+		"org.eclipse.swt"
+	],
+	"methods":[
+		"validate",
+		"getDataByteAtOffset",
+		"getMustHavePalette",
+		"error",
+		"validate"
+	],
+	"methodsBody":{
+		"byte getDataByteAtOffset(int offset)":{
+			"methodBody":"{\n    return reference[DATA_OFFSET + offset];\n}",
+			"comments":"",
+			"methodName":"byte getDataByteAtOffset(int offset)"
+		},
+		"void validate(PngFileReadState readState, PngIhdrChunk headerChunk)":{
+			"methodBody":"{\n    if (!readState.readIHDR || (headerChunk.getMustHavePalette() && !readState.readPLTE) || readState.readIEND) {\n        SWT.error(SWT.ERROR_INVALID_IMAGE);\n    } else {\n        readState.readIDAT = true;\n    }\n    super.validate(readState, headerChunk);\n}",
+			"comments":"/**\n* Answer whether the chunk is a valid IDAT chunk.\n*/\n",
+			"methodName":"void validate(PngFileReadState readState, PngIhdrChunk headerChunk)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"PngIdatChunk"
+	]
+}

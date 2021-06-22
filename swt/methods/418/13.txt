@@ -1,0 +1,10 @@
+privat
+int
+request
+border
+space
+requestborderspac
+int
+pborderwidth
+return
+com

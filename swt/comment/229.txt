@@ -1,0 +1,9 @@
+Get the number of colors in this palette
+int end DATA OFFSET getLength
+Get a PaletteData object representing the colors stored in this PLTE chunk The result should be cached as the PLTE chunk does not store the palette data created
+IDAT or IEND chunk has been read
+Palettes cannot be included in grayscale images
+of 3 Each 3 byte group represents an RGB value
+in the IHDR chunk
+Palettes cannot have more than 256 entries
+Answer whether the chunk is a valid PLTE chunk

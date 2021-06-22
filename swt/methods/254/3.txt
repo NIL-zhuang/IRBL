@@ -1,0 +1,9 @@
+public
+int
+reset
+return
+com
+vtbl
+call
+vtblcall
+address

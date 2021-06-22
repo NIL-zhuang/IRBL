@@ -1,0 +1,41 @@
+{
+	"variables":[
+		"e",
+		"e",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.events"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"mouseEnter",
+		"mouseExit",
+		"mouseHover"
+	],
+	"methodsBody":{
+		"public void mouseExit(MouseEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when the mouse pointer passes out of the area of\n* the screen covered by a control.\n*\n* @param e an event containing information about the mouse exit\n*/\n",
+			"methodName":"public void mouseExit(MouseEvent e)"
+		},
+		"public void mouseHover(MouseEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when the mouse pointer hovers (that is, stops moving\n* for an (operating system specified) period of time) over\n* a control.\n*\n* @param e an event containing information about the hover\n*/\n",
+			"methodName":"public void mouseHover(MouseEvent e)"
+		},
+		"public void mouseEnter(MouseEvent e)":{
+			"methodBody":"",
+			"comments":"/**\n* Sent when the mouse pointer passes into the area of\n* the screen covered by a control.\n*\n* @param e an event containing information about the mouse enter\n*/\n",
+			"methodName":"public void mouseEnter(MouseEvent e)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"MouseTrackListener"
+	]
+}

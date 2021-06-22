@@ -1,0 +1,11 @@
+int
+frame
+window
+activ
+onframewindowactiv
+int
+activ
+factiv
+return
+com
+notimpl

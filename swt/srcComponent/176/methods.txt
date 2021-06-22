@@ -1,0 +1,7 @@
+equal
+hash
+code
+hashcod
+string
+tostr
+error

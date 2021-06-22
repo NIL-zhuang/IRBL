@@ -1,0 +1,11 @@
+public
+int
+bind
+run
+bindifrun
+return
+com
+vtbl
+call
+vtblcall
+address

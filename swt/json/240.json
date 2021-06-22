@@ -1,0 +1,19 @@
+{
+	"variables":[
+		"cb",
+		"hAccel",
+		"cAccel",
+		"dwFlags",
+		"sizeof"
+	],
+	"extendORImplementFiles":[],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"CONTROLINFO"
+	]
+}

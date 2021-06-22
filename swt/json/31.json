@@ -1,0 +1,31 @@
+{
+	"variables":[
+		"required",
+		"browser",
+		"location",
+		"size",
+		"addressBar",
+		"menuBar",
+		"statusBar",
+		"toolBar",
+		"serialVersionUID",
+		"w",
+		"w"
+	],
+	"extendORImplementFiles":[
+		"TypedEvent"
+	],
+	"package":[
+		"org.eclipse.swt.browser"
+	],
+	"import":[
+		"org.eclipse.swt.widgets",
+		"org.eclipse.swt.events",
+		"org.eclipse.swt.graphics"
+	],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"WindowEvent"
+	]
+}

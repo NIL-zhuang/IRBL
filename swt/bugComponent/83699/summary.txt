@@ -1,0 +1,6 @@
+font
+reset
+default
+after
+screen
+saver

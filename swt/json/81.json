@@ -1,0 +1,21 @@
+{
+	"variables":[
+		"serialVersionUID",
+		"source",
+		"source"
+	],
+	"extendORImplementFiles":[
+		"TypedEvent"
+	],
+	"package":[
+		"org.eclipse.swt.custom"
+	],
+	"import":[
+		"org.eclipse.swt.events"
+	],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"TextChangedEvent"
+	]
+}

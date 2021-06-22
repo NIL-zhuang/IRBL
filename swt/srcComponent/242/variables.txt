@@ -1,0 +1,11 @@
+rgvarg
+rgdispid
+name
+arg
+rgdispidnamedarg
+arg
+carg
+name
+arg
+cnamedarg
+sizeof

@@ -1,0 +1,10 @@
+public
+int
+deactiv
+uideactiv
+return
+com
+vtbl
+call
+vtblcall
+address

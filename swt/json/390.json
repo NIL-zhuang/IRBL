@@ -1,0 +1,21 @@
+{
+	"variables":[
+		"tmFirstChar",
+		"tmLastChar",
+		"tmDefaultChar",
+		"tmBreakChar",
+		"sizeof"
+	],
+	"extendORImplementFiles":[
+		"TEXTMETRIC"
+	],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"TEXTMETRICA"
+	]
+}

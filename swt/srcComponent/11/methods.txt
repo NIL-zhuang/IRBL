@@ -1,0 +1,8 @@
+get
+caret
+offset
+getcaretoffset
+get
+select
+rang
+getselectionrang

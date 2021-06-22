@@ -1,0 +1,14 @@
+int
+gcd
+int
+int
+int
+temp
+math
+math
+temp
+temp
+while
+temp
+temp
+return

@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+int
+bitmap
+new
+int
+hbm
+int
+hpal

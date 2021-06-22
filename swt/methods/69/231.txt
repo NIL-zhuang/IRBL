@@ -1,0 +1,17 @@
+public
+void
+get
+valu
+getvalu
+access
+control
+event
+accessiblecontrolev
+result
+style
+text
+styledtext
+this
+get
+text
+gettext

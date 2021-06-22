@@ -1,0 +1,17 @@
+void
+focus
+onfocus
+event
+event
+check
+widget
+checkwidget
+select
+index
+selectedindex
+redraw
+els
+set
+select
+setselect
+true

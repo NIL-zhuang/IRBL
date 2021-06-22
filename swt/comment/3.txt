@@ -1,0 +1,2 @@
+Class ACC contains all the constants used in defining an Accessible object since 2 0
+deprecated use ROLE TABLECOLUMNHEADER

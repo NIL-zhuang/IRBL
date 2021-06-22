@@ -1,0 +1,13 @@
+public
+static
+final
+nativ
+boolean
+get
+menu
+info
+getmenuinfo
+int
+hmenu
+menuinfo
+lpcmi

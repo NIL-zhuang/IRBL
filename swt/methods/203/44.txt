@@ -1,0 +1,14 @@
+byte
+convert
+yiq
+rgb
+convertyiqtorgb
+return
+new
+byte
+cmyk
+format
+answer
+empti
+byte
+array

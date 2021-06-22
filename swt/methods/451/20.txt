@@ -1,0 +1,13 @@
+tchar
+window
+class
+windowclass
+return
+major
+link
+class
+linkclass
+display
+window
+class
+windowclass

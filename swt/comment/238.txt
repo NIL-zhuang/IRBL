@@ -1,0 +1,101 @@
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+NON NLS 1
+public static final int ADVFCACHE ONSAVE 32
+public static final int COINIT SPEED OVER MEMORY 8
+public static final int DISPID AMBIENT AUTOCLIP 715
+public static final int DISPID AMBIENT DISPLAYNAME 702
+public static final int DISPID AMBIENT SCALEUNITS 707
+public static final int DISPID AMBIENT TRANSFERPRIORITY 728
+public static final int DISPID READYSTATECHANGE 609
+public static final int DVASPECT THUMBNAIL 2
+public static final int E POINTER 2147467261
+public static final int GMEM NODISCARD 32
+public static final int IMPLTYPEFLAG FDEFAULTVTABLE 2048
+public static final int OLECHANGED 0
+public static final int OLECLOSE PROMPTSAVE 2
+public static final int OLEEITHER 2
+public static final int OLEFROZEN 1
+public static final int OLEIVERB HIDE 3
+public static final int OLEIVERB OPEN 2
+public static final int OLEIVERB UIACTIVATE 4
+public static final int OLERENDER ASIS 3
+public static final int OLEWHICHMK OBJREL 2
+public static final int STGC DANGEROUSLYCOMMITMERELYTODISKCACHE 4
+public static final int STGC OVERWRITE 1
+public static final int TYMED GDI 16
+public static final int TYMED NULL 0
+public static final short DISPID NEWENUM 4
+public static final short DISPID VALUE 0
+Natives
+Accessibility constants
+public static final int ROLE SYSTEM TITLEBAR 0x1
+public static final int ROLE SYSTEM ALERT 0x8
+public static final int ROLE SYSTEM CHART 0x11
+public static final int ROLE SYSTEM GROUPING 0x14
+public static final int ROLE SYSTEM STATUSBAR 0x17
+public static final int ROLE SYSTEM ROW 0x1c
+public static final int ROLE SYSTEM CHARACTER 0x20
+public static final int ROLE SYSTEM GRAPHIC 0x28
+public static final int ROLE SYSTEM DROPLIST 0x2f
+public static final int ROLE SYSTEM HOTKEYFIELD 0x32
+public static final int ROLE SYSTEM WHITESPACE 0x3b
+public static final int ROLE SYSTEM CLOCK 0x3d
+public static final int STATE SYSTEM UNAVAILABLE 0x1
+public static final int STATE SYSTEM INDETERMINATE STATE SYSTEM MIXED
+public static final int STATE SYSTEM DEFAULT 0x100
+public static final int STATE SYSTEM ANIMATED 0x4000
+public static final int STATE SYSTEM SELFVOICING 0x80000
+public static final int STATE SYSTEM TRAVERSED 0x800000
+Accessibility natives

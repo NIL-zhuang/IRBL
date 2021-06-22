@@ -1,0 +1,66 @@
+{
+	"variables":[
+		"gc",
+		"x",
+		"y",
+		"width",
+		"height",
+		"count",
+		"serialVersionUID",
+		"string",
+		"e",
+		"e",
+		"e",
+		"e",
+		"e",
+		"e",
+		"e",
+		"string",
+		"string",
+		"gc",
+		"x",
+		"y",
+		"width",
+		"height",
+		"count",
+		"gc",
+		"gc",
+		"x",
+		"x",
+		"y",
+		"y",
+		"width",
+		"width",
+		"height",
+		"height",
+		"count",
+		"count",
+		"e"
+	],
+	"extendORImplementFiles":[
+		"TypedEvent"
+	],
+	"package":[
+		"org.eclipse.swt.events"
+	],
+	"import":[
+		"org.eclipse.swt.widgets.Event",
+		"org.eclipse.swt.graphics.GC"
+	],
+	"methods":[
+		"toString",
+		"toString",
+		"substring",
+		"length"
+	],
+	"methodsBody":{
+		"public String toString()":{
+			"methodBody":"{\n    String string = super.toString();\n    return \n    string.substring(0, string.length() - 1) + \" gc=\" + gc + \" x=\" + x + \" y=\" + y + \" width=\" + width + \" height=\" + height + \" count=\" + count + \"}\";\n}",
+			"comments":"/**\n* Returns a string containing a concise, human-readable\n* description of the receiver.\n*\n* @return a string representation of the event\n*/\n// remove trailing '}'\n",
+			"methodName":"public String toString()"
+		}
+	},
+	"ClassORInterfaceName":[
+		"PaintEvent"
+	]
+}

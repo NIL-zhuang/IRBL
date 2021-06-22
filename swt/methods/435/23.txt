@@ -1,0 +1,12 @@
+int
+find
+brush
+findbrush
+int
+pixel
+return
+parent
+find
+brush
+findbrush
+pixel

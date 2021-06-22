@@ -1,0 +1,8 @@
+png
+huffman
+tabl
+pnghuffmant
+code
+length
+info
+codelengthinfo

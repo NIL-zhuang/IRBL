@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+boolean
+kill
+timer
+killtim
+int
+wnd
+hwnd
+int
+event
+uidev

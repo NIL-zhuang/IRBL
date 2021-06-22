@@ -1,0 +1,11 @@
+public
+static
+final
+nativ
+int
+graphic
+get
+hdc
+gethdc
+int
+graphic

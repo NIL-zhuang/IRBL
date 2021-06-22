@@ -1,0 +1,7 @@
+lopn
+style
+lopnstyl
+lopn
+color
+lopncolor
+sizeof

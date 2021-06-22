@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+int
+imm
+get
+default
+ime
+wnd
+immgetdefaultimewnd
+int
+wnd
+hwnd

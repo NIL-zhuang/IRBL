@@ -1,0 +1,11 @@
+wvk
+scan
+wscan
+flag
+dwflag
+time
+extra
+info
+dwextrainfo
+sizeof
+keybdinput

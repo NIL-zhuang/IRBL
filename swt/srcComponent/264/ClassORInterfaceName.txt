@@ -1,0 +1,5 @@
+ole
+place
+activ
+object
+ioleinplaceactiveobject

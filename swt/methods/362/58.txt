@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+boolean
+get
+window
+rect
+getwindowrect
+int
+wnd
+hwnd
+rect
+rect
+lprect

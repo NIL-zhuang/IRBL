@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+int
+set
+pixel
+setpixel
+int
+hdc
+int
+int
+int
+color
+crcolor

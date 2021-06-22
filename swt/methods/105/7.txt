@@ -1,0 +1,11 @@
+privat
+int
+reset
+index
+return
+com
+the
+enumer
+sequenc
+the
+begin

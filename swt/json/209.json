@@ -1,0 +1,229 @@
+{
+	"variables":[
+		"componentParameters",
+		"compCount",
+		"i",
+		"ofs",
+		"cid",
+		"dc",
+		"ac",
+		"newParams",
+		"compCount",
+		"compSpecParams",
+		"i",
+		"ofs",
+		"compParams",
+		"start",
+		"end",
+		"low",
+		"high",
+		"count",
+		"reference",
+		"byteStream",
+		"reference",
+		"reference",
+		"reference",
+		"reference",
+		"reference",
+		"componentParameters",
+		"i",
+		"compCount",
+		"i",
+		"i",
+		"reference",
+		"ofs",
+		"reference",
+		"ofs",
+		"reference",
+		"ofs",
+		"componentParameters",
+		"cid",
+		"cid",
+		"System",
+		"componentParameters",
+		"newParams",
+		"componentParameters",
+		"componentParameters",
+		"newParams",
+		"componentParameters",
+		"cid",
+		"dc",
+		"ac",
+		"componentParameters",
+		"compCount",
+		"compCount",
+		"compSpecParams",
+		"SWT",
+		"SWT",
+		"i",
+		"compCount",
+		"i",
+		"i",
+		"compSpecParams",
+		"i",
+		"reference",
+		"ofs",
+		"i",
+		"reference",
+		"ofs",
+		"compParams",
+		"compParams",
+		"reference",
+		"anInteger",
+		"reference",
+		"anInteger",
+		"reference",
+		"anInteger",
+		"JPEGFileFormat",
+		"start",
+		"end",
+		"start",
+		"end",
+		"end",
+		"low",
+		"high",
+		"high",
+		"high",
+		"low",
+		"start",
+		"start",
+		"count",
+		"length",
+		"length",
+		"length",
+		"ERROR_INVALID_IMAGE",
+		"SOS",
+		"reference",
+		"byteStream",
+		"anInteger",
+		"anInteger",
+		"anInteger"
+	],
+	"extendORImplementFiles":[
+		"JPEGVariableSizeSegment"
+	],
+	"package":[
+		"org.eclipse.swt.internal.image"
+	],
+	"import":[
+		"org.eclipse.swt"
+	],
+	"methods":[
+		"getApproxBitPositionHigh",
+		"getApproxBitPositionLow",
+		"getEndOfSpectralSelection",
+		"getNumberOfImageComponents",
+		"getStartOfSpectralSelection",
+		"initializeComponentParameters",
+		"initializeContents",
+		"setEndOfSpectralSelection",
+		"setNumberOfImageComponents",
+		"setStartOfSpectralSelection",
+		"signature",
+		"verifyProgressiveScan",
+		"isACProgressiveScan",
+		"isDCProgressiveScan",
+		"isFirstScan",
+		"initializeComponentParameters",
+		"getNumberOfImageComponents",
+		"getNumberOfImageComponents",
+		"getNumberOfImageComponents",
+		"getNumberOfImageComponents",
+		"getNumberOfImageComponents",
+		"arraycopy",
+		"getNumberOfImageComponents",
+		"error",
+		"getNumberOfImageComponents",
+		"getNumberOfImageComponents",
+		"getStartOfSpectralSelection",
+		"getEndOfSpectralSelection",
+		"getApproxBitPositionLow",
+		"getApproxBitPositionHigh",
+		"getNumberOfImageComponents",
+		"getStartOfSpectralSelection",
+		"getEndOfSpectralSelection",
+		"getStartOfSpectralSelection",
+		"getEndOfSpectralSelection",
+		"getApproxBitPositionHigh"
+	],
+	"methodsBody":{
+		"public boolean isFirstScan()":{
+			"methodBody":"{\n    return getApproxBitPositionHigh() == 0;\n}",
+			"comments":"",
+			"methodName":"public boolean isFirstScan()"
+		},
+		"public boolean isACProgressiveScan()":{
+			"methodBody":"{\n    return getStartOfSpectralSelection() != 0 && getEndOfSpectralSelection() != 0;\n}",
+			"comments":"",
+			"methodName":"public boolean isACProgressiveScan()"
+		},
+		"public int signature()":{
+			"methodBody":"{\n    return JPEGFileFormat.SOS;\n}",
+			"comments":"",
+			"methodName":"public int signature()"
+		},
+		"public boolean verifyProgressiveScan()":{
+			"methodBody":"{\n    int start = getStartOfSpectralSelection();\n    int end = getEndOfSpectralSelection();\n    int low = getApproxBitPositionLow();\n    int high = getApproxBitPositionHigh();\n    int count = getNumberOfImageComponents();\n    if ((start == 0 && end == 00) || (start <= end && end <= 63)) {\n        if (low <= 13 && high <= 13 && (high == 0 || high == low + 1)) {\n            return start == 0 || (start > 0 && count == 1);\n        }\n    }\n    return false;\n}",
+			"comments":"",
+			"methodName":"public boolean verifyProgressiveScan()"
+		},
+		"public int getApproxBitPositionHigh()":{
+			"methodBody":"{\n    return (reference[(2 * getNumberOfImageComponents()) + 7] & 0xFF) / 16;\n}",
+			"comments":"",
+			"methodName":"public int getApproxBitPositionHigh()"
+		},
+		"public void setEndOfSpectralSelection(int anInteger)":{
+			"methodBody":"{\n    reference[(2 * getNumberOfImageComponents()) + 6] = (byte) anInteger;\n}",
+			"comments":"",
+			"methodName":"public void setEndOfSpectralSelection(int anInteger)"
+		},
+		"void initializeComponentParameters()":{
+			"methodBody":"{\n    int compCount = getNumberOfImageComponents();\n    componentParameters = new int[0][];\n    for (int i = 0; i < compCount; i++) {\n        int ofs = 5 + i * 2;\n        int cid = reference[ofs] & 0xFF;\n        int dc = (reference[ofs + 1] & 0xFF) / 16;\n        int ac = (reference[ofs + 1] & 0xFF) % 16;\n        if (componentParameters.length <= cid) {\n            int[][] newParams = new int[cid + 1][];\n            System.arraycopy(componentParameters, 0, newParams, 0, componentParameters.length);\n            componentParameters = newParams;\n        }\n        componentParameters[cid] = new int[] { dc, ac };\n    }\n}",
+			"comments":"/* Used when decoding. */\n",
+			"methodName":"void initializeComponentParameters()"
+		},
+		"public int getStartOfSpectralSelection()":{
+			"methodBody":"{\n    return (reference[(2 * getNumberOfImageComponents()) + 5] & 0xFF);\n}",
+			"comments":"",
+			"methodName":"public int getStartOfSpectralSelection()"
+		},
+		"public int getEndOfSpectralSelection()":{
+			"methodBody":"{\n    return (reference[(2 * getNumberOfImageComponents()) + 6] & 0xFF);\n}",
+			"comments":"",
+			"methodName":"public int getEndOfSpectralSelection()"
+		},
+		"public void initializeContents()":{
+			"methodBody":"{\n    int compCount = getNumberOfImageComponents();\n    int[][] compSpecParams = componentParameters;\n    if (compCount == 0 || compCount != compSpecParams.length) {\n        SWT.error(SWT.ERROR_INVALID_IMAGE);\n    }\n    for (int i = 0; i < compCount; i++) {\n        int ofs = i * 2 + 5;\n        int[] compParams = compSpecParams[i];\n        reference[ofs] = (byte) (i + 1);\n        reference[ofs + 1] = (byte) (compParams[0] * 16 + compParams[1]);\n    }\n}",
+			"comments":"/* Used when encoding. */\n",
+			"methodName":"public void initializeContents()"
+		},
+		"public int getApproxBitPositionLow()":{
+			"methodBody":"{\n    return (reference[(2 * getNumberOfImageComponents()) + 7] & 0xFF) % 16;\n}",
+			"comments":"",
+			"methodName":"public int getApproxBitPositionLow()"
+		},
+		"public void setNumberOfImageComponents(int anInteger)":{
+			"methodBody":"{\n    reference[4] = (byte) (anInteger & 0xFF);\n}",
+			"comments":"",
+			"methodName":"public void setNumberOfImageComponents(int anInteger)"
+		},
+		"public int getNumberOfImageComponents()":{
+			"methodBody":"{\n    return (reference[4] & 0xFF);\n}",
+			"comments":"",
+			"methodName":"public int getNumberOfImageComponents()"
+		},
+		"public boolean isDCProgressiveScan()":{
+			"methodBody":"{\n    return getStartOfSpectralSelection() == 0 && getEndOfSpectralSelection() == 0;\n}",
+			"comments":"",
+			"methodName":"public boolean isDCProgressiveScan()"
+		},
+		"public void setStartOfSpectralSelection(int anInteger)":{
+			"methodBody":"{\n    reference[(2 * getNumberOfImageComponents()) + 5] = (byte) anInteger;\n}",
+			"comments":"",
+			"methodName":"public void setStartOfSpectralSelection(int anInteger)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"JPEGScanHeader"
+	]
+}

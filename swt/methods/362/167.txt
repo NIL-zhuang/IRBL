@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+int
+get
+current
+object
+getcurrentobject
+int
+hdc
+int
+object
+type
+uobjecttyp

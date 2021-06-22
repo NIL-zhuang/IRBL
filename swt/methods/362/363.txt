@@ -1,0 +1,14 @@
+public
+static
+final
+nativ
+int
+global
+alloc
+globalalloc
+int
+flag
+uflag
+int
+byte
+dwbyte

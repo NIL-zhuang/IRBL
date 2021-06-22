@@ -1,0 +1,27 @@
+{
+	"variables":[
+		"event"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.custom"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"lineGetStyle"
+	],
+	"methodsBody":{
+		"public void lineGetStyle(LineStyleEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* This method is called when a line is about to be drawn in order to get the\n* line's style information.\n* <p>\n* The following event fields are used:<ul>\n* <li>event.lineOffset line start offset (input)</li>\n* <li>event.lineText line text (input)</li>\n* <li>event.styles array of StyleRanges, need to be in order (output)</li>\n* </ul>\n*\n* @param event the given event\n* @see LineStyleEvent\n*/\n",
+			"methodName":"public void lineGetStyle(LineStyleEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"LineStyleListener"
+	]
+}

@@ -1,0 +1,17 @@
+public
+static
+final
+nativ
+int
+ole
+save
+olesav
+int
+pps
+int
+stg
+pstg
+boolean
+same
+load
+fsameasload

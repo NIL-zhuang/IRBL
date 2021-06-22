@@ -1,0 +1,27 @@
+{
+	"variables":[
+		"event"
+	],
+	"extendORImplementFiles":[
+		"SWTEventListener"
+	],
+	"package":[
+		"org.eclipse.swt.browser"
+	],
+	"import":[
+		"org.eclipse.swt.internal.SWTEventListener"
+	],
+	"methods":[
+		"close"
+	],
+	"methodsBody":{
+		"public void close(WindowEvent event)":{
+			"methodBody":"",
+			"comments":"/**\n* This method is called when the window hosting a {@link Browser} should be closed.\n* Application would typically close the {@link org.eclipse.swt.widgets.Shell} that\n* hosts the <code>Browser</code>. The <code>Browser</code> is disposed after this\n* notification.\n*\n* <p>The following fields in the <code>WindowEvent</code> apply:\n* <ul>\n* <li>(in) widget the <code>Browser</code> that is going to be disposed\n* </ul></p>\n*\n* @param event the <code>WindowEvent</code> that specifies the <code>Browser</code>\n* that is going to be disposed\n*\n* @see org.eclipse.swt.widgets.Shell#close()\n*\n* @since 3.0\n*/\n",
+			"methodName":"public void close(WindowEvent event)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"CloseWindowListener"
+	]
+}

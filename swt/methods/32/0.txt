@@ -1,0 +1,14 @@
+privat
+static
+int
+check
+style
+checkstyl
+int
+style
+int
+mask
+swt
+none
+return
+style

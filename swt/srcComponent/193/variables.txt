@@ -1,0 +1,16 @@
+gdiplus
+version
+gdiplusvers
+debug
+event
+callback
+debugeventcallback
+suppress
+background
+thread
+suppressbackgroundthread
+suppress
+extern
+codec
+suppressexternalcodec
+sizeof

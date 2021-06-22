@@ -1,0 +1,8 @@
+public
+static
+final
+nativ
+boolean
+wait
+messag
+waitmessag

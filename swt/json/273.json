@@ -1,0 +1,33 @@
+{
+	"variables":[
+		"address",
+		"COM",
+		"address",
+		"dwGuidKind",
+		"pGUID",
+		"address",
+		"dwGuidKind",
+		"pGUID"
+	],
+	"extendORImplementFiles":[
+		"IProvideClassInfo"
+	],
+	"package":[
+		"org.eclipse.swt.internal.ole.win32"
+	],
+	"import":[],
+	"methods":[
+		"GetGUID",
+		"VtblCall"
+	],
+	"methodsBody":{
+		"public int GetGUID(int dwGuidKind, GUID pGUID)":{
+			"methodBody":"{\n    return COM.VtblCall(4, address, dwGuidKind, pGUID);\n}",
+			"comments":"",
+			"methodName":"public int GetGUID(int dwGuidKind, GUID pGUID)"
+		}
+	},
+	"ClassORInterfaceName":[
+		"IProvideClassInfo2"
+	]
+}

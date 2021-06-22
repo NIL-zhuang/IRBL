@@ -1,0 +1,10 @@
+lresult
+nccalcsiz
+int
+param
+wparam
+int
+param
+lparam
+return
+null

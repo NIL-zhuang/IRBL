@@ -1,0 +1,11 @@
+int
+get
+messag
+count
+getmessagecount
+return
+synchron
+get
+messag
+count
+getmessagecount

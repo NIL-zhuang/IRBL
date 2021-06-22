@@ -1,0 +1,18 @@
+{
+	"variables":[
+		"szText",
+		"sizeof"
+	],
+	"extendORImplementFiles":[
+		"NMTTDISPINFO"
+	],
+	"package":[
+		"org.eclipse.swt.internal.win32"
+	],
+	"import":[],
+	"methods":[],
+	"methodsBody":{},
+	"ClassORInterfaceName":[
+		"NMTTDISPINFOA"
+	]
+}

@@ -1,0 +1,6 @@
+cmdtextf
+actual
+cwactual
+buf
+cwbuf
+rgwz

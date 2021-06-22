@@ -1,0 +1,15 @@
+public
+static
+final
+nativ
+int
+ole
+translat
+color
+oletranslatecolor
+int
+clr
+int
+hpal
+int
+pcolorref
